@@ -1,0 +1,11 @@
+---
+nocite: |
+  @*
+---
+
+# Referencias generales {.unnumbered}
+
+Las referencias se presentan en una sola lista general para evitar duplicaciones. Cada capítulo conserva al final una nota breve que identifica sus fuentes principales.
+
+::: {#refs}
+:::

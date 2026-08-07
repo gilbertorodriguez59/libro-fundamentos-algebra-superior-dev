@@ -7,11 +7,14 @@ project:
 book:
   title: "Fundamentos Matemáticos del Álgebra Superior"
   subtitle: "Conceptos, demostraciones y métodos"
-  author: "MI Jesús Gilberto Rodríguez Escobedo"
+  author: "Jesús Gilberto Rodríguez Escobedo"
   date: "2026-08-07"
   chapters:
     - index.qmd
     - 01-logica-conjuntos.qmd
+    - 02-enteros-reales.qmd
+    - indices.qmd
+    - references.qmd
   page-footer:
     center: "Licencia CC BY-NC-SA 4.0"
   downloads: [pdf]
@@ -29,12 +32,15 @@ format:
     toc: true
     code-copy: true
     anchor-sections: true
+    search: true
   pdf:
     documentclass: scrreprt
     toc: true
     colorlinks: true
     keep-tex: false
     fig-pos: H
+    lof: true
+    lot: true
 
 execute:
   freeze: auto

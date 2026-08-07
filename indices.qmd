@@ -1,0 +1,87 @@
+# Índices de consulta {.unnumbered}
+
+Estos índices complementan el índice general del libro. Los conceptos remiten a la primera sección principal donde se desarrollan; algunos reaparecen en ejercicios, demostraciones y aplicaciones posteriores.
+
+## Índice temático {.unnumbered}
+
+| Término | Sección principal |
+|---|---|
+| **Algoritmo de Euclides** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
+| **Álgebra de Boole** | [1.3 Cuantificadores y equivalencias](01-logica-conjuntos.qmd#sec-cuantificadores) y aplicación del capítulo 1 |
+| **Bézout, identidad de** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
+| **Biyectiva, función** | [1.8 Tipos de funciones](01-logica-conjuntos.qmd#sec-tipos-funciones) |
+| **Buen orden** | [2.1 Propiedades de los enteros](02-enteros-reales.qmd#sec-propiedades-enteros) |
+| **Cardinalidad** | [1.5 Conjuntos finitos](01-logica-conjuntos.qmd#sec-cardinalidad-finita) y [1.9 Conjuntos infinitos](01-logica-conjuntos.qmd#sec-cardinalidad-infinita) |
+| **Completitud de los reales** | [2.6 Propiedades de los reales](02-enteros-reales.qmd#sec-propiedades-reales) |
+| **Conjunto potencia** | [1.1 Lenguaje de conjuntos](01-logica-conjuntos.qmd#sec-lenguaje-conjuntos) |
+| **Cuantificadores** | [1.3 Cuantificadores y equivalencias](01-logica-conjuntos.qmd#sec-cuantificadores) |
+| **Densidad** | [2.5 Racionales y reales](02-enteros-reales.qmd#sec-racionales-reales) |
+| **Divisibilidad** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
+| **Equipotencia** | [1.9 Cardinalidad infinita](01-logica-conjuntos.qmd#sec-cardinalidad-infinita) |
+| **Exponente racional** | [2.7 Exponentes](02-enteros-reales.qmd#sec-exponentes) |
+| **Factorización prima** | [2.4 Primos y factorización](02-enteros-reales.qmd#sec-primos-factorizacion) |
+| **Función** | [1.7 Funciones](01-logica-conjuntos.qmd#sec-funciones) |
+| **Inducción fuerte** | [2.2 Inducción](02-enteros-reales.qmd#sec-induccion) |
+| **Inducción matemática** | [2.2 Inducción](02-enteros-reales.qmd#sec-induccion) |
+| **Inyectiva, función** | [1.8 Tipos de funciones](01-logica-conjuntos.qmd#sec-tipos-funciones) |
+| **Irracional** | [2.5 Racionales y reales](02-enteros-reales.qmd#sec-racionales-reales) |
+| **Máximo común divisor** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
+| **Mínimo común múltiplo** | [2.4 Primos y factorización](02-enteros-reales.qmd#sec-primos-factorizacion) |
+| **Número primo** | [2.4 Primos y factorización](02-enteros-reales.qmd#sec-primos-factorizacion) |
+| **Producto cartesiano** | [1.6 Producto y relaciones](01-logica-conjuntos.qmd#sec-producto-relaciones) |
+| **Proposición** | [1.2 Proposiciones](01-logica-conjuntos.qmd#sec-proposiciones) |
+| **Racional** | [2.5 Racionales y reales](02-enteros-reales.qmd#sec-racionales-reales) |
+| **Relación** | [1.6 Producto y relaciones](01-logica-conjuntos.qmd#sec-producto-relaciones) |
+| **Residuo** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
+| **Suprayectiva, función** | [1.8 Tipos de funciones](01-logica-conjuntos.qmd#sec-tipos-funciones) |
+| **Supremo** | [2.6 Propiedades de los reales](02-enteros-reales.qmd#sec-propiedades-reales) |
+| **Valor absoluto** | [2.8 Valor absoluto](02-enteros-reales.qmd#sec-valor-absoluto) |
+
+: Índice alfabético de conceptos principales. {#tbl-indice-tematico}
+
+## Índice de símbolos {.unnumbered}
+
+| Símbolo | Significado | Primera sección de uso |
+|---:|---|---|
+| $x\in A$ | $x$ pertenece a $A$ | 1.1 |
+| $A\subseteq B$ | $A$ es subconjunto de $B$ | 1.1 |
+| $\mathcal P(A)$ | conjunto potencia de $A$ | 1.1 |
+| $\neg,\land,\lor$ | negación, conjunción y disyunción | 1.2 |
+| $\Rightarrow,\Leftrightarrow$ | implicación y bicondicional | 1.2 |
+| $\forall,\exists$ | cuantificadores universal y existencial | 1.3 |
+| $A\cup B,A\cap B,A^c$ | unión, intersección y complemento | 1.4 |
+| $|A|$ | cardinalidad de un conjunto | 1.5 |
+| $A\times B$ | producto cartesiano | 1.6 |
+| $f:A\to B$ | función de $A$ en $B$ | 1.7 |
+| $\mathbb N,\mathbb Z,\mathbb Q,\mathbb R$ | naturales, enteros, racionales y reales | 2.1 y 2.5 |
+| $a\mid b$ | $a$ divide a $b$ | 2.3 |
+| $\gcd(a,b)$ | máximo común divisor | 2.3 |
+| $\operatorname{mcm}(a,b)$ | mínimo común múltiplo | 2.4 |
+| $\sup A$ | supremo de $A$ | 2.6 |
+| $|x-a|$ | distancia entre $x$ y $a$ | 2.8 |
+
+: Símbolos utilizados en los capítulos 1 y 2. {#tbl-indice-simbolos}
+
+## Índice de figuras {.unnumbered}
+
+### Capítulo 1 {.unnumbered}
+
+1. **Operaciones con conjuntos:** unión, intersección, complemento y diferencia simétrica (sección 1.4).
+2. **Relaciones y funciones:** relación general, función y no-función (sección 1.7).
+3. **Composición de funciones:** recorrido de $g\circ f$ (sección 1.7).
+4. **Tipos de funciones:** inyectiva, suprayectiva y biyectiva (sección 1.8).
+
+### Capítulo 2 {.unnumbered}
+
+1. **Inducción y números impares:** construcción de cuadrados (sección 2.2).
+2. **Algoritmo de Euclides:** residuos sucesivos (sección 2.3).
+3. **Cadena de factorización:** descomposición prima de $756$ (sección 2.4).
+4. **Jerarquía de sistemas numéricos:** $\mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R$ (sección 2.5).
+5. **Valor absoluto:** distancia e intervalo central (sección 2.8).
+
+## Índice de cuadros {.unnumbered}
+
+1. Propiedades básicas de las operaciones en $\mathbb Z$ (sección 2.1).
+2. Correspondencia entre desigualdades e intervalos (sección 2.6).
+3. Índice alfabético de conceptos principales (este apartado).
+4. Símbolos utilizados en los capítulos 1 y 2 (este apartado).

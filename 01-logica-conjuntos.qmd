@@ -2,7 +2,7 @@
 
 *Lenguaje, operaciones, relaciones, funciones y cardinalidad*
 
-## Introducción {.unnumbered}
+## Introducción {.unnumbered .unlisted}
 
 La lógica y la teoría de conjuntos proporcionan el lenguaje con el que se expresan buena parte de las matemáticas. Cuando se afirma que una función es inyectiva, que un número pertenece a cierto conjunto o que una propiedad se cumple para todo elemento de un dominio, se están utilizando ideas que estudiaremos en este capítulo.
 
@@ -10,7 +10,7 @@ Lógica y conjuntos no son temas aislados. Existe una correspondencia profunda e
 
 El capítulo sigue la primera unidad del programa de Álgebra Superior de la Facultad de Ciencias de la UASLP y amplía su componente lógico para construir una base sólida para los capítulos posteriores [@uaslp2011]. La organización y varios énfasis didácticos retoman la tradición expositiva de @silvaLazo2007, con notación actualizada, demostraciones propias y ejemplos nuevos.
 
-### Objetivos del capítulo {.unnumbered}
+### Objetivos del capítulo {.unnumbered .unlisted}
 
 Al finalizar, el lector será capaz de:
 
@@ -30,9 +30,9 @@ Al finalizar, el lector será capaz de:
 Un sistema electrónico enciende una alarma cuando la fuente está habilitada y ocurre al menos una de estas dos condiciones: la temperatura es alta o la corriente rebasa el límite de seguridad. ¿Cómo se representa la regla?, ¿cómo se comprueba que dos expresiones distintas describen el mismo comportamiento? y ¿cómo se transforma la expresión en un circuito lógico? Al final del capítulo podremos responder las tres preguntas.
 :::
 
-## Lenguaje de conjuntos
+## Lenguaje de conjuntos {#sec-lenguaje-conjuntos}
 
-### Conjunto y elemento {.unnumbered}
+### Conjunto y elemento {.unnumbered .unlisted}
 
 Las palabras **conjunto** y **elemento** se consideran nociones primitivas: se comprenden mediante su uso y no se definen a partir de conceptos más simples. De manera intuitiva, un conjunto agrupa objetos que pueden distinguirse con claridad. Esos objetos son sus elementos.
 
@@ -42,7 +42,7 @@ Los conjuntos se denotan normalmente con letras mayúsculas y sus elementos con 
 La expresión $x\in A$ relaciona un **elemento** con un conjunto. La expresión $B\subseteq A$ relaciona **dos conjuntos**. Por ejemplo, si $A=\{1,2,3\}$, entonces $1\in A$ y $\{1\}\subseteq A$, pero $\{1\}\in A$ es falsa.
 :::
 
-### Formas de representar un conjunto {.unnumbered}
+### Formas de representar un conjunto {.unnumbered .unlisted}
 
 Un conjunto se representa **por extensión** cuando se enumeran sus elementos:
 
@@ -62,7 +62,7 @@ $$
 \{1,2,3\}=\{3,2,1\}=\{1,1,2,3\}.
 $$
 
-### Conjunto universal, vacío y unitario {.unnumbered}
+### Conjunto universal, vacío y unitario {.unnumbered .unlisted}
 
 El **conjunto universal** $U$ contiene todos los objetos considerados en una situación. Su elección depende del problema. El **conjunto vacío** no contiene elementos y se denota por $\varnothing$. Un **conjunto unitario** contiene exactamente un elemento.
 
@@ -73,7 +73,7 @@ $$
 $$
 :::
 
-### Subconjuntos, igualdad y conjunto potencia {.unnumbered}
+### Subconjuntos, igualdad y conjunto potencia {.unnumbered .unlisted}
 
 ::: {.callout-note title="Definición: subconjunto"}
 Sean $A$ y $B$ conjuntos. Se dice que $A$ es subconjunto de $B$, y se escribe $A\subseteq B$, cuando todo elemento de $A$ también pertenece a $B$:
@@ -100,7 +100,7 @@ $$
 
 Si $A$ tiene $n$ elementos, entonces $\mathcal P(A)$ tiene $2^n$ elementos. Esto ocurre porque, al formar un subconjunto, cada elemento presenta dos posibilidades independientes: incluirse o no incluirse.
 
-### Ejemplo resuelto {.unnumbered}
+### Ejemplo resuelto {.unnumbered .unlisted}
 
 Sea $B=\{1,\{2\},3\}$. Determinemos el valor de verdad de cuatro afirmaciones:
 
@@ -109,9 +109,9 @@ Sea $B=\{1,\{2\},3\}$. Determinemos el valor de verdad de cuatro afirmaciones:
 3. $\{2\}\subseteq B$ es falsa, porque exigiría $2\in B$.
 4. $\{\{2\}\}\subseteq B$ es verdadera, porque $\{2\}\in B$.
 
-## Proposiciones y conectivos lógicos
+## Proposiciones y conectivos lógicos {#sec-proposiciones}
 
-### Proposiciones y valores de verdad {.unnumbered}
+### Proposiciones y valores de verdad {.unnumbered .unlisted}
 
 ::: {.callout-note title="Definición: proposición"}
 Una **proposición** es un enunciado declarativo al que puede asignarse exactamente uno de dos valores de verdad: verdadero ($V$) o falso ($F$).
@@ -121,7 +121,7 @@ Una **proposición** es un enunciado declarativo al que puede asignarse exactame
 
 Una expresión como $p(x):x+2=5$ se denomina **proposición abierta** o **predicado**. Al fijar un dominio, los valores que la hacen verdadera forman su **conjunto solución**. Si el dominio es $\mathbb Z$, entonces el conjunto solución es $\{3\}$.
 
-### Conectivos fundamentales {.unnumbered}
+### Conectivos fundamentales {.unnumbered .unlisted}
 
 Sean $p$ y $q$ proposiciones.
 
@@ -149,7 +149,7 @@ p\Rightarrow q\equiv \neg p\lor q.
 $$
 :::
 
-### Tautología, contradicción y contingencia {.unnumbered}
+### Tautología, contradicción y contingencia {.unnumbered .unlisted}
 
 Una proposición compuesta es una **tautología** si resulta verdadera para todas las combinaciones de valores de verdad. Es una **contradicción** si siempre es falsa y una **contingencia** si en algunas filas es verdadera y en otras falsa.
 
@@ -159,7 +159,7 @@ $$
 
 es una tautología, mientras que $p\land\neg p$ es una contradicción.
 
-### Ejemplo: distribución de la implicación {.unnumbered}
+### Ejemplo: distribución de la implicación {.unnumbered .unlisted}
 
 Comprobemos que
 
@@ -178,9 +178,9 @@ $$
 
 Como la igualdad se obtuvo mediante equivalencias válidas, el bicondicional entre ambas expresiones es una tautología.
 
-## Cuantificadores y equivalencias lógicas
+## Cuantificadores y equivalencias lógicas {#sec-cuantificadores}
 
-### Dominio y cuantificadores {.unnumbered}
+### Dominio y cuantificadores {.unnumbered .unlisted}
 
 El valor de verdad de un predicado depende de su dominio. Por ejemplo, $x^2=2$ no tiene solución en $\mathbb Q$, pero sí en $\mathbb R$.
 
@@ -208,7 +208,7 @@ $$
 es falsa: un único $y$ no puede cancelar a todos los números reales.
 :::
 
-### Negación de proposiciones cuantificadas {.unnumbered}
+### Negación de proposiciones cuantificadas {.unnumbered .unlisted}
 
 Negar “todos” produce “existe al menos uno que no”; negar “existe” produce “ninguno”:
 
@@ -222,7 +222,7 @@ $$
 
 La negación de “todo sensor está calibrado” no es “ningún sensor está calibrado”, sino “existe al menos un sensor que no está calibrado”.
 
-### Recíproca, contraria y contrarrecíproca {.unnumbered}
+### Recíproca, contraria y contrarrecíproca {.unnumbered .unlisted}
 
 Para la implicación $p\Rightarrow q$:
 
@@ -238,7 +238,7 @@ $$
 p\Rightarrow q\equiv\neg q\Rightarrow\neg p.
 $$
 
-### Leyes fundamentales de equivalencia {.unnumbered}
+### Leyes fundamentales de equivalencia {.unnumbered .unlisted}
 
 | Ley | Equivalencia lógica |
 |---|---|
@@ -255,11 +255,11 @@ $$
 
 Estas leyes pueden demostrarse con tablas de verdad. También pueden utilizarse como reglas de transformación, siempre que cada paso se justifique.
 
-## Operaciones y propiedades de los conjuntos
+## Operaciones y propiedades de los conjuntos {#sec-operaciones-conjuntos}
 
 Sea $U$ un conjunto universal y sean $A,B\subseteq U$.
 
-### Operaciones fundamentales {.unnumbered}
+### Operaciones fundamentales {.unnumbered .unlisted}
 
 ::: {.callout-note title="Definiciones"}
 $$
@@ -278,7 +278,7 @@ $$
 A\triangle B=(A\setminus B)\cup(B\setminus A).
 $$
 
-### Ejemplo {.unnumbered}
+### Ejemplo {.unnumbered .unlisted}
 
 Sean $U=\{1,2,3,4,5,6\}$, $A=\{1,2,4,6\}$ y $B=\{2,3,4\}$. Entonces
 
@@ -296,7 +296,7 @@ $$
 
 La @fig-venn-operaciones permite reconocer visualmente qué elementos deben conservarse en cada operación. El diagrama ayuda a formular y revisar una respuesta, pero una identidad general debe justificarse mediante las definiciones o una demostración por pertenencia.
 
-### Correspondencia entre lógica y conjuntos {.unnumbered}
+### Correspondencia entre lógica y conjuntos {.unnumbered .unlisted}
 
 Si $p(x)$ y $q(x)$ son predicados sobre $U$, con conjuntos solución $A$ y $B$, entonces:
 
@@ -309,7 +309,7 @@ Si $p(x)$ y $q(x)$ son predicados sobre $U$, con conjuntos solución $A$ y $B$, 
 | $p(x)\Rightarrow q(x)$ para todo $x$ | $A\subseteq B$ |
 | $p(x)\Leftrightarrow q(x)$ para todo $x$ | $A=B$ |
 
-### Leyes del álgebra de conjuntos {.unnumbered}
+### Leyes del álgebra de conjuntos {.unnumbered .unlisted}
 
 $$
 \begin{aligned}
@@ -322,7 +322,7 @@ A\cup(A\cap B)&=A &&&\text{(absorción)},\\
 \end{aligned}
 $$
 
-### Demostración por pertenencia {.unnumbered}
+### Demostración por pertenencia {.unnumbered .unlisted}
 
 Demostremos
 
@@ -348,9 +348,9 @@ Como la equivalencia se cumple para todo $x$, ambos conjuntos son iguales.
 Puede emplearse una cadena de equivalencias de pertenencia, como en el ejemplo, o demostrar por separado $A\subseteq B$ y $B\subseteq A$. Un diagrama de Venn ayuda a formular una conjetura, pero no sustituye una demostración general.
 :::
 
-## Cardinalidad de conjuntos finitos y problemas de conteo
+## Cardinalidad de conjuntos finitos y problemas de conteo {#sec-cardinalidad-finita}
 
-### Cardinalidad {.unnumbered}
+### Cardinalidad {.unnumbered .unlisted}
 
 La **cardinalidad** de un conjunto finito $A$, denotada por $|A|$, es su número de elementos. Para dos conjuntos finitos:
 
@@ -371,7 +371,7 @@ $$
 
 Este resultado es un caso del **principio de inclusión-exclusión**.
 
-### Ejemplo resuelto con tres conjuntos {.unnumbered}
+### Ejemplo resuelto con tres conjuntos {.unnumbered .unlisted}
 
 En un laboratorio se revisan $400$ dispositivos. Sean $T$, $P$ y $H$ los que utilizan sensores de temperatura, presión y humedad, respectivamente. Se conoce que
 
@@ -399,9 +399,9 @@ $$
 El dato $|T\cap P|=70$ incluye normalmente a quienes también pertenecen a $H$. “Exactamente $T$ y $P$” exige restar la intersección triple.
 :::
 
-## Producto cartesiano y relaciones
+## Producto cartesiano y relaciones {#sec-producto-relaciones}
 
-### Pares ordenados y producto cartesiano {.unnumbered}
+### Pares ordenados y producto cartesiano {.unnumbered .unlisted}
 
 Dos pares ordenados son iguales si coinciden componente a componente:
 
@@ -423,7 +423,7 @@ $$
 
 En general $A\times B\ne B\times A$, pues el orden de las componentes importa.
 
-### Distribución respecto de la unión {.unnumbered}
+### Distribución respecto de la unión {.unnumbered .unlisted}
 
 La igualdad correcta es
 
@@ -442,7 +442,7 @@ $$
 \end{aligned}
 $$
 
-### Relaciones {.unnumbered}
+### Relaciones {.unnumbered .unlisted}
 
 ::: {.callout-note title="Definición: relación binaria"}
 Una relación $R$ de $A$ en $B$ es cualquier subconjunto de $A\times B$. Si $(a,b)\in R$, también se escribe $aRb$.
@@ -464,7 +464,7 @@ $$
 R^{-1}=\{(b,a):(a,b)\in R\}.
 $$
 
-### Propiedades de relaciones sobre un conjunto {.unnumbered}
+### Propiedades de relaciones sobre un conjunto {.unnumbered .unlisted}
 
 Cuando $R\subseteq A\times A$, puede ser:
 
@@ -475,13 +475,13 @@ Cuando $R\subseteq A\times A$, puede ser:
 
 Una relación reflexiva, simétrica y transitiva es una **relación de equivalencia**. Una relación reflexiva, antisimétrica y transitiva es una **relación de orden parcial**.
 
-### Ejemplo {.unnumbered}
+### Ejemplo {.unnumbered .unlisted}
 
 En $\mathbb Z$, definamos $aRb$ si $a-b$ es múltiplo de $3$. La relación es reflexiva porque $a-a=0$, simétrica porque si $3\mid(a-b)$, entonces $3\mid(b-a)$, y transitiva porque la suma de dos múltiplos de $3$ vuelve a ser múltiplo de $3$. Por tanto, es una relación de equivalencia.
 
-## Funciones: definición, representación y operaciones
+## Funciones: definición, representación y operaciones {#sec-funciones}
 
-### Definición formal {.unnumbered}
+### Definición formal {.unnumbered .unlisted}
 
 ::: {.callout-note title="Definición: función"}
 Una función $f:A\to B$ es una relación que asigna a **cada** elemento $x\in A$ **exactamente un** elemento $y\in B$. Escribimos $y=f(x)$.
@@ -503,13 +503,13 @@ Para ser función, ningún elemento del dominio puede quedar sin imagen y ningú
 
 En la @fig-relacion-funcion, el diagrama central sí representa una función aunque dos entradas compartan la imagen $a$. Esa repetición afecta la inyectividad, no la definición de función.
 
-### Representaciones e igualdad {.unnumbered}
+### Representaciones e igualdad {.unnumbered .unlisted}
 
 Una función puede representarse mediante una regla algebraica, una tabla, pares ordenados, un diagrama sagital o una gráfica. Dos funciones son iguales cuando tienen el mismo dominio, el mismo codominio y asignan el mismo valor a cada elemento del dominio.
 
 Por ello, $f(x)=x^2$ definida de $\mathbb R$ en $\mathbb R$ y $g(x)=x^2$ definida de $[0,\infty)$ en $[0,\infty)$ no son la misma función, aunque compartan fórmula.
 
-### Composición e identidad {.unnumbered}
+### Composición e identidad {.unnumbered .unlisted}
 
 Sean $f:A\to B$ y $g:B\to C$. La composición $g\circ f:A\to C$ se define por
 
@@ -531,7 +531,7 @@ La composición es asociativa cuando las composiciones están definidas, pero en
 
 La @fig-composicion-funciones ayuda a recordar el orden: aunque $g\circ f$ se escribe con $g$ a la izquierda, al evaluar se aplica primero $f$.
 
-### Ejemplo {.unnumbered}
+### Ejemplo {.unnumbered .unlisted}
 
 Sean $f(x)=2x+1$ y $g(x)=x^2$, ambas de $\mathbb R$ en $\mathbb R$. Entonces
 
@@ -543,7 +543,7 @@ $$
 
 Como estas expresiones no son iguales para todo $x$, $g\circ f\ne f\circ g$.
 
-### Imagen inversa y relación inversa {.unnumbered}
+### Imagen inversa y relación inversa {.unnumbered .unlisted}
 
 Para $C\subseteq B$, la **preimagen** de $C$ es
 
@@ -553,9 +553,9 @@ $$
 
 Esta notación se utiliza aun cuando $f$ no tenga función inversa. Debe distinguirse entre la preimagen de un conjunto, la relación inversa y la función inversa.
 
-## Funciones inyectivas, suprayectivas y biyectivas
+## Funciones inyectivas, suprayectivas y biyectivas {#sec-tipos-funciones}
 
-### Tres formas de comportamiento {.unnumbered}
+### Tres formas de comportamiento {.unnumbered .unlisted}
 
 Sea $f:A\to B$.
 
@@ -571,7 +571,7 @@ Para demostrar inyectividad suele partirse de $f(x_1)=f(x_2)$. Para refutarla ba
 
 La @fig-tipos-funciones muestra dos preguntas diferentes: para la inyectividad se revisa si dos flechas llegan al mismo punto; para la suprayectividad se revisa si todo elemento del codominio recibe al menos una flecha.
 
-### Ejemplos y contraejemplos {.unnumbered}
+### Ejemplos y contraejemplos {.unnumbered .unlisted}
 
 La función $f:\mathbb R\to\mathbb R$, $f(x)=2x-3$, es biyectiva:
 
@@ -580,7 +580,7 @@ La función $f:\mathbb R\to\mathbb R$, $f(x)=2x-3$, es biyectiva:
 
 La función $g:\mathbb R\to\mathbb R$, $g(x)=x^2$, no es inyectiva porque $g(1)=g(-1)$, y no es suprayectiva porque ningún número real tiene imagen negativa. Al restringir dominio y codominio, $g:[0,\infty)\to[0,\infty)$ sí es biyectiva.
 
-### Función inversa {.unnumbered}
+### Función inversa {.unnumbered .unlisted}
 
 ::: {.callout-important title="Teorema"}
 Una función $f:A\to B$ posee una función inversa $f^{-1}:B\to A$ si y solo si $f$ es biyectiva.
@@ -590,7 +590,7 @@ Una función $f:A\to B$ posee una función inversa $f^{-1}:B\to A$ si y solo si 
 
 Recíprocamente, si $f$ es biyectiva, para cada $y\in B$ existe, por suprayectividad, al menos un $x\in A$ con $f(x)=y$; y por inyectividad ese $x$ es único. Podemos definir $f^{-1}(y)=x$. Así, $f^{-1}$ es una función. $\square$
 
-### Composición y clasificación {.unnumbered}
+### Composición y clasificación {.unnumbered .unlisted}
 
 - La composición de funciones inyectivas es inyectiva.
 - La composición de funciones suprayectivas es suprayectiva.
@@ -598,9 +598,9 @@ Recíprocamente, si $f$ es biyectiva, para cada $y\in B$ existe, por suprayectiv
 
 Las recíprocas requieren cuidado. Por ejemplo, si $g\circ f$ es inyectiva, entonces $f$ es inyectiva, pero $g$ no necesariamente lo es en todo su dominio.
 
-## Cardinalidad, equipotencia y conjuntos infinitos
+## Cardinalidad, equipotencia y conjuntos infinitos {#sec-cardinalidad-infinita}
 
-### Equipotencia {.unnumbered}
+### Equipotencia {.unnumbered .unlisted}
 
 ::: {.callout-note title="Definición"}
 Dos conjuntos $A$ y $B$ tienen la misma cardinalidad, o son **equipotentes**, si existe una biyección $f:A\to B$. Se escribe $|A|=|B|$.
@@ -610,7 +610,7 @@ En conjuntos finitos esta definición coincide con contar elementos. Su verdader
 
 Un conjunto es **infinito** si no es finito. Una propiedad sorprendente de los conjuntos infinitos usuales es que pueden tener la misma cardinalidad que un subconjunto propio. Por ejemplo, $\mathbb N$ y el conjunto de números pares tienen la misma cardinalidad mediante $f(n)=2n$.
 
-### Conjuntos numerables {.unnumbered}
+### Conjuntos numerables {.unnumbered .unlisted}
 
 Un conjunto es **numerable** o **contable** si es finito o si sus elementos pueden colocarse en una lista infinita $a_0,a_1,a_2,\ldots$. Equivalentemente, es equipotente con $\mathbb N_0=\{0,1,2,\ldots\}$.
 
@@ -622,7 +622,7 @@ $$
 
 Los racionales también son numerables, aunque parezcan más abundantes: pueden ordenarse por diagonales en una cuadrícula de numeradores y denominadores, omitiendo repeticiones.
 
-### Los números reales no son numerables {.unnumbered}
+### Los números reales no son numerables {.unnumbered .unlisted}
 
 La idea del argumento diagonal de Cantor demuestra que el intervalo $(0,1)$ no puede listarse por completo. Supongamos que existe una lista de todos sus números escritos en expansión decimal:
 
@@ -637,7 +637,7 @@ Construimos un número $y=0.b_1b_2b_3\ldots$ eligiendo cada $b_i$ distinto de $a
 En la sección 1.5 contamos elementos de conjuntos finitos. Aquí comparamos tamaños mediante biyecciones, una definición que también funciona para conjuntos infinitos. La segunda idea amplía a la primera; no la reemplaza.
 :::
 
-## Aplicación integradora: álgebra de Boole y circuitos lógicos {.unnumbered}
+## Aplicación integradora: álgebra de Boole y circuitos lógicos {.unnumbered .unlisted}
 
 El álgebra de Boole trabaja con variables que toman los valores $0$ y $1$, interpretados como falso y verdadero, apagado y encendido, o nivel lógico bajo y alto. En notación de circuitos:
 
@@ -649,7 +649,7 @@ $$
 
 La presentación que sigue adapta la progresión del capítulo 3 de @tocci2003: variables y tablas de verdad; compuertas básicas; traducción entre expresiones y circuitos; evaluación de salidas; teoremas de Boole y De Morgan; compuertas universales; y lectura de símbolos lógicos.
 
-### Compuertas y expresiones {.unnumbered}
+### Compuertas y expresiones {.unnumbered .unlisted}
 
 | Compuerta | Expresión de salida | La salida vale $1$ cuando... |
 |---|---|---|
@@ -662,7 +662,7 @@ La presentación que sigue adapta la progresión del capítulo 3 de @tocci2003: 
 
 Para obtener la expresión de un circuito se avanza desde las entradas hasta la salida y se asigna una expresión a la salida de cada compuerta. Para implantar una expresión se respeta su jerarquía: primero las negaciones y operaciones entre paréntesis, después los productos lógicos y al final las sumas lógicas.
 
-### Evaluación y diagramas de temporización {.unnumbered}
+### Evaluación y diagramas de temporización {.unnumbered .unlisted}
 
 Una tabla de verdad describe todas las combinaciones estáticas. Un **diagrama de temporización** muestra cómo cambian las entradas y salidas con el tiempo. Para trazar una salida:
 
@@ -673,7 +673,7 @@ Una tabla de verdad describe todas las combinaciones estáticas. Un **diagrama d
 
 En este primer tratamiento ideal se omiten los retardos de propagación. Estos se incorporarán en un estudio posterior de circuitos digitales.
 
-### Señales activas en alto y activas en bajo {.unnumbered}
+### Señales activas en alto y activas en bajo {.unnumbered .unlisted}
 
 Una señal es **activa en alto** si realiza su función cuando vale $1$. Es **activa en bajo** si realiza su función cuando vale $0$. En diagramas digitales, una burbuja en una terminal indica inversión o activación en bajo. En los nombres de señales, una barra superior o una notación equivalente puede indicar que la señal se activa con nivel bajo.
 
@@ -695,7 +695,7 @@ a+a\cdot b&=a, & a(a+b)&=a,\\
 \end{aligned}
 $$
 
-### Ejemplo de simplificación {.unnumbered}
+### Ejemplo de simplificación {.unnumbered .unlisted}
 
 $$
 F=a+a\cdot\overline b=a
@@ -710,7 +710,7 @@ G=a\cdot b+a\cdot\overline b
 =a(b+\overline b)=a\cdot1=a.
 $$
 
-### Compuertas NAND y NOR {.unnumbered}
+### Compuertas NAND y NOR {.unnumbered .unlisted}
 
 NAND y NOR combinan una operación básica con una negación:
 
@@ -722,7 +722,7 @@ $$
 
 Los teoremas de De Morgan permiten cambiar entre representaciones equivalentes. Al negar una suma, esta se transforma en producto de variables negadas; al negar un producto, se transforma en suma de variables negadas. Esta idea explica las representaciones alternativas mediante burbujas que se utilizan al analizar circuitos.
 
-### Universalidad de NAND y NOR {.unnumbered}
+### Universalidad de NAND y NOR {.unnumbered .unlisted}
 
 La compuerta NOR se define por $a\downarrow b=\overline{a+b}$. Es **universal** porque permite construir las tres operaciones básicas:
 
@@ -754,7 +754,7 @@ $$
 a+b=(a\uparrow a)\uparrow(b\uparrow b).
 $$
 
-### Símbolos y representaciones alternativas {.unnumbered}
+### Símbolos y representaciones alternativas {.unnumbered .unlisted}
 
 Una misma función puede dibujarse con símbolos equivalentes obtenidos mediante De Morgan. El criterio esencial no es la apariencia aislada de una compuerta, sino la función que resulta al considerar su forma y las burbujas de sus entradas y salida. Las figuras definitivas del libro utilizarán una convención uniforme basada en símbolos lógicos estándar IEEE/ANSI y explicarán, mediante pares de diagramas, cuándo conviene una representación AND-OR, NAND-NAND, OR-AND o NOR-NOR [@tocci2003].
 
@@ -768,7 +768,7 @@ Una misma función puede dibujarse con símbolos equivalentes obtenidos mediante
 7. Verificar que la polaridad activa de las señales se haya interpretado correctamente.
 :::
 
-## Síntesis del capítulo {.unnumbered}
+## Síntesis del capítulo {.unnumbered .unlisted}
 
 - Los conjuntos organizan objetos; la lógica organiza afirmaciones sobre ellos.
 - La conjunción, disyunción y negación corresponden a intersección, unión y complemento.
@@ -781,7 +781,7 @@ Una misma función puede dibujarse con símbolos equivalentes obtenidos mediante
 - Las biyecciones permiten comparar cardinalidades finitas e infinitas.
 - Las leyes lógicas permiten simplificar expresiones booleanas y circuitos.
 
-## Errores frecuentes {.unnumbered}
+## Errores frecuentes {.unnumbered .unlisted}
 
 1. Confundir $x\in A$ con $\{x\}\subseteq A$.
 2. Omitir el conjunto universal al calcular un complemento.
@@ -794,9 +794,9 @@ Una misma función puede dibujarse con símbolos equivalentes obtenidos mediante
 9. Decidir inyectividad o suprayectividad solo por la fórmula, ignorando dominio y codominio.
 10. Perder una barra de negación al transcribir una expresión booleana.
 
-## Ejercicios {.unnumbered}
+## Ejercicios {.unnumbered .unlisted}
 
-### Nivel básico {.unnumbered}
+### Nivel básico {.unnumbered .unlisted}
 
 1. Sea $A=\{0,\{0\},1\}$. Determine cuáles son verdaderas: $0\in A$, $\{0\}\in A$, $\{0\}\subseteq A$, $\varnothing\subseteq A$.
 2. Escriba por extensión $B=\{x\in\mathbb Z:-3\le x<4\}$ y calcule $\mathcal P(\{a,b,c\})$.
@@ -804,7 +804,7 @@ Una misma función puede dibujarse con símbolos equivalentes obtenidos mediante
 4. Niegue correctamente: “Todos los dispositivos aprobaron al menos una prueba”.
 5. Sean $U=\{1,2,\ldots,10\}$, $A=\{2,4,6,8,10\}$ y $B=\{2,3,5,7\}$. Calcule $A\cup B$, $A\cap B$, $A^c$ y $A\setminus B$.
 
-### Nivel intermedio {.unnumbered}
+### Nivel intermedio {.unnumbered .unlisted}
 
 6. Demuestre mediante equivalencias que $\neg(p\Rightarrow q)\equiv p\land\neg q$.
 7. Demuestre por doble inclusión que $A\setminus(B\cup C)=(A\setminus B)\cap(A\setminus C)$.
@@ -813,7 +813,7 @@ Una misma función puede dibujarse con símbolos equivalentes obtenidos mediante
 10. Calcule $g\circ f$ y $f\circ g$ para $f(x)=x+1$ y $g(x)=3x$. Determine si son iguales.
 11. Clasifique $f:\mathbb Z\to\mathbb Z$, $f(n)=2n$, como inyectiva, suprayectiva o biyectiva.
 
-### Nivel formal y aplicado {.unnumbered}
+### Nivel formal y aplicado {.unnumbered .unlisted}
 
 12. Pruebe que si $g\circ f$ es inyectiva, entonces $f$ es inyectiva.
 13. Pruebe que si $g\circ f$ es suprayectiva, entonces $g$ es suprayectiva.
@@ -826,7 +826,7 @@ Después dibuje el circuito original y el simplificado.
 16. Demuestre la universalidad de NOR construyendo NOT, OR y AND.
 17. Un sistema de seguridad activa una alarma cuando $h\land(t\lor c)$, donde $h$ indica sistema habilitado, $t$ temperatura alta y $c$ corriente peligrosa. Construya la tabla de verdad, simplifique cuando sea posible y proponga el circuito.
 
-## Respuestas breves a ejercicios seleccionados {.unnumbered}
+## Respuestas breves a ejercicios seleccionados {.unnumbered .unlisted}
 
 1. Las cuatro afirmaciones son verdaderas.
 3. Es falsa únicamente cuando $p=F$ y $q=V$; es una contingencia.
@@ -836,7 +836,7 @@ Después dibuje el circuito original y el simplificado.
 11. Es inyectiva, pero no suprayectiva sobre $\mathbb Z$.
 15. $F=a+b$.
 
-## Proyecto integrador {.unnumbered}
+## Proyecto integrador {.unnumbered .unlisted}
 
 Diseñe la lógica de un sistema de monitoreo con tres entradas binarias. El proyecto debe incluir:
 
@@ -848,6 +848,6 @@ Diseñe la lógica de un sistema de monitoreo con tres entradas binarias. El pro
 6. circuito lógico original y simplificado;
 7. explicación de por qué ambos circuitos son equivalentes.
 
-## Referencias del capítulo {.unnumbered}
+## Referencias del capítulo {.unnumbered .unlisted}
 
 La exposición se apoya en el programa de la asignatura [@uaslp2011], en el tratamiento integrado de lógica y conjuntos de @silvaLazo2007 y en textos de matemáticas discretas como @epp2011 y @rosen2019. Para una introducción clásica al lenguaje de conjuntos puede consultarse @halmos1960. La aplicación a compuertas y álgebra de Boole sigue como referencia principal el capítulo 3 de @tocci2003.

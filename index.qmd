@@ -6,7 +6,7 @@ Este libro presenta los fundamentos del Álgebra Superior con rigor matemático 
 
 La obra está concebida como complemento teórico de *Álgebra Superior con aplicaciones en R y GeoGebra*. La numeración de los capítulos y de las secciones principales será compatible entre ambos libros para facilitar la consulta cruzada.
 
-## Propósito {.unnumbered}
+## Propósito {.unnumbered .unlisted}
 
 El lector no solo aprenderá a efectuar operaciones. También aprenderá a:
 
@@ -17,6 +17,13 @@ El lector no solo aprenderá a efectuar operaciones. También aprenderá a:
 - identificar hipótesis, conclusiones y contraejemplos;
 - relacionar lógica, conjuntos, relaciones y funciones.
 
-## Organización didáctica {.unnumbered}
+## Organización didáctica {.unnumbered .unlisted}
 
 Los capítulos contienen objetivos, definiciones destacadas, ejemplos resueltos, demostraciones, errores frecuentes, ejercicios por nivel, síntesis y referencias. Los apartados internos no se numeran para conservar un índice claro.
+
+La obra incluye, al final, un índice temático, un índice de símbolos, un índice de figuras, un índice de cuadros y una bibliografía general. En la versión PDF, el índice general y las listas automáticas de figuras y cuadros se generan junto con la numeración de páginas.
+
+## Estructura actual {.unnumbered .unlisted}
+
+- **Capítulo 1. Lógica y conjuntos:** proposiciones, operaciones, relaciones, funciones, cardinalidad y álgebra de Boole.
+- **Capítulo 2. Números enteros y reales:** inducción, divisibilidad, primos, estructura de los reales, exponentes y valor absoluto.

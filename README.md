@@ -1,8 +1,8 @@
 # Fundamentos Matemáticos del Álgebra Superior
 
-Versión de desarrollo del libro de **MI Jesús Gilberto Rodríguez Escobedo**.
+Versión de desarrollo del libro de **Jesús Gilberto Rodríguez Escobedo**.
 
-El capítulo 1 presenta lógica, conjuntos, relaciones, funciones y cardinalidad con rigor matemático, demostraciones, ejemplos, contraejemplos y ejercicios graduados. Esta versión incorpora diagramas propios de Venn, relaciones, composición y clasificación de funciones.
+Los capítulos 1 y 2 presentan lógica, conjuntos, relaciones, funciones, números enteros y números reales con rigor matemático, demostraciones, ejemplos, contraejemplos y ejercicios graduados. La versión incorpora índices temático, de figuras y de símbolos, además de referencias generales.
 
 Sitio de desarrollo: <https://gilbertorodriguez59.github.io/libro-fundamentos-algebra-superior-dev/>
 
