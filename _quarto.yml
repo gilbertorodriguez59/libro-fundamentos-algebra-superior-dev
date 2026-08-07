@@ -1,0 +1,40 @@
+project:
+  type: book
+  output-dir: docs
+  resources:
+    - figures/**
+
+book:
+  title: "Fundamentos Matemáticos del Álgebra Superior"
+  subtitle: "Conceptos, demostraciones y métodos"
+  author: "MI Jesús Gilberto Rodríguez Escobedo"
+  date: "2026-08-07"
+  chapters:
+    - index.qmd
+    - 01-logica-conjuntos.qmd
+  page-footer:
+    center: "Licencia CC BY-NC-SA 4.0"
+  downloads: [pdf]
+  repo-url: https://github.com/gilbertorodriguez59/libro-fundamentos-algebra-superior-dev
+
+bibliography: references.bib
+lang: es
+number-depth: 2
+toc-depth: 2
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-copy: true
+    anchor-sections: true
+  pdf:
+    documentclass: scrreprt
+    toc: true
+    colorlinks: true
+    keep-tex: false
+    fig-pos: H
+
+execute:
+  freeze: auto

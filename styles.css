@@ -1,0 +1,44 @@
+:root {
+  --azul-uaslp: #123b6d;
+  --azul-claro: #eaf2fb;
+  --dorado: #b58a2a;
+  --gris: #f5f6f8;
+}
+
+body {
+  color: #18344f;
+  line-height: 1.58;
+}
+
+a { color: #1769a6; }
+img { max-width: 100%; height: auto; }
+code { color: #155f43; }
+
+h1, h2, h3 { color: var(--azul-uaslp); }
+
+.quarto-title-banner {
+  background: linear-gradient(120deg, #123b6d, #215f9a);
+}
+
+.callout,
+.callout-note,
+.callout-tip,
+.callout-warning,
+.callout-important {
+  border-radius: 0.45rem;
+  border-left: 4px solid var(--dorado);
+  background: var(--gris);
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+}
+
+pre.sourceCode {
+  border-left: 4px solid var(--dorado);
+  background: #f8fafc;
+}
+
+table { font-size: 0.96rem; }
+
+.quarto-figure img {
+  border-radius: 0.4rem;
+}

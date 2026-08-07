@@ -1,0 +1,22 @@
+---
+title: "Presentación"
+---
+
+Este libro presenta los fundamentos del Álgebra Superior con rigor matemático y una exposición accesible. Cada tema parte de su significado intuitivo, establece después la definición formal y desarrolla propiedades, demostraciones, ejemplos, contraejemplos y ejercicios graduados.
+
+La obra está concebida como complemento teórico de *Álgebra Superior con aplicaciones en R y GeoGebra*. La numeración de los capítulos y de las secciones principales será compatible entre ambos libros para facilitar la consulta cruzada.
+
+## Propósito {.unnumbered}
+
+El lector no solo aprenderá a efectuar operaciones. También aprenderá a:
+
+- interpretar la notación matemática;
+- distinguir una definición de una propiedad;
+- reconocer por qué una afirmación es verdadera o falsa;
+- construir demostraciones elementales;
+- identificar hipótesis, conclusiones y contraejemplos;
+- relacionar lógica, conjuntos, relaciones y funciones.
+
+## Organización didáctica {.unnumbered}
+
+Los capítulos contienen objetivos, definiciones destacadas, ejemplos resueltos, demostraciones, errores frecuentes, ejercicios por nivel, síntesis y referencias. Los apartados internos no se numeran para conservar un índice claro.
