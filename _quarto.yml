@@ -3,12 +3,14 @@ project:
   output-dir: docs
   resources:
     - figures/**
+    - html/**
 
 book:
   title: "Fundamentos Matemáticos del Álgebra Superior"
   subtitle: "Conceptos, demostraciones y métodos"
   author: "Jesús Gilberto Rodríguez Escobedo"
   date: "2026-08-07"
+  output-file: "Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-2"
   chapters:
     - index.qmd
     - 01-logica-conjuntos.qmd
@@ -17,6 +19,11 @@ book:
     - references.qmd
   page-footer:
     center: "Licencia CC BY-NC-SA 4.0"
+  page-navigation: true
+  sidebar:
+    title: "Contenido del libro"
+    style: docked
+    collapse-level: 1
   downloads: [pdf]
   repo-url: https://github.com/gilbertorodriguez59/libro-fundamentos-algebra-superior-dev
 
@@ -33,9 +40,11 @@ format:
       method: mathjax
       url: "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"
     toc: true
+    toc-title: "En este capítulo"
     code-copy: true
     anchor-sections: true
     search: true
+    include-after-body: html/sidebar.html
   pdf:
     documentclass: scrreprt
     toc: true

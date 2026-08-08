@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es-MX" xml:lang="es-MX">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
@@ -42,19 +42,8 @@
       margin-left: 2em;
     }  </style>
   <link rel="stylesheet" href="styles.css" />
-  <script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['\\(', '\\)']],
-      displayMath: [['\\[', '\\]']],
-      processEscapes: true
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-  };
-  </script>
-  <script defer
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
   src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"
   type="text/javascript"></script>
 </head>
@@ -155,7 +144,14 @@ graduados.</p>
 Superior con aplicaciones en R y GeoGebra</em>. La numeración de los
 capítulos y de las secciones principales será compatible entre ambos
 libros para facilitar la consulta cruzada.</p>
-<h2 class="unnumbered unlisted" id="propósito">Propósito</h2>
+<div class="content-visible" data-when-format="html">
+<p class="pdf-download-hero">
+<a class="btn btn-primary" href="Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-2.pdf" download>Descargar
+el libro en PDF</a>
+</p>
+</div>
+<section id="propósito" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Propósito</h2>
 <p>El lector no solo aprenderá a efectuar operaciones. También aprenderá
 a:</p>
 <ul>
@@ -166,8 +162,9 @@ a:</p>
 <li>identificar hipótesis, conclusiones y contraejemplos;</li>
 <li>relacionar lógica, conjuntos, relaciones y funciones.</li>
 </ul>
-<h2 class="unnumbered unlisted" id="organización-didáctica">Organización
-didáctica</h2>
+</section>
+<section id="organización-didáctica" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Organización didáctica</h2>
 <p>Los capítulos contienen objetivos, definiciones destacadas, ejemplos
 resueltos, demostraciones, errores frecuentes, ejercicios por nivel,
 síntesis y referencias. Los apartados internos no se numeran para
@@ -176,8 +173,9 @@ conservar un índice claro.</p>
 un índice de figuras, un índice de cuadros y una bibliografía general.
 En la versión PDF, el índice general y las listas automáticas de figuras
 y cuadros se generan junto con la numeración de páginas.</p>
-<h2 class="unnumbered unlisted" id="estructura-actual">Estructura
-actual</h2>
+</section>
+<section id="estructura-actual" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Estructura actual</h2>
 <ul>
 <li><strong>Capítulo 1. Lógica y conjuntos:</strong> proposiciones,
 operaciones, relaciones, funciones, cardinalidad y álgebra de
@@ -186,11 +184,14 @@ Boole.</li>
 divisibilidad, primos, estructura de los reales, exponentes y valor
 absoluto.</li>
 </ul>
-<h1 data-number="1" id="lógica-y-conjuntos"><span
-class="header-section-number">1</span> Lógica y conjuntos</h1>
+</section>
+<section id="lógica-y-conjuntos" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Lógica
+y conjuntos</h1>
 <p><em>Lenguaje, operaciones, relaciones, funciones y
 cardinalidad</em></p>
-<h2 class="unnumbered unlisted" id="introducción">Introducción</h2>
+<section id="introducción" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Introducción</h2>
 <p>La lógica y la teoría de conjuntos proporcionan el lenguaje con el
 que se expresan buena parte de las matemáticas. Cuando se afirma que una
 función es inyectiva, que un número pertenece a cierto conjunto o que
@@ -210,8 +211,8 @@ Luis Potosí, Facultad de Ciencias 2011)</span>. La organización y varios
 énfasis didácticos retoman la tradición expositiva de <span
 class="citation" data-cites="silvaLazo2007">Silva y Lazo (2007)</span>,
 con notación actualizada, demostraciones propias y ejemplos nuevos.</p>
-<h3 class="unnumbered unlisted" id="objetivos-del-capítulo">Objetivos
-del capítulo</h3>
+<section id="objetivos-del-capítulo" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Objetivos del capítulo</h3>
 <p>Al finalizar, el lector será capaz de:</p>
 <ul>
 <li>emplear con precisión el lenguaje y la notación de conjuntos;</li>
@@ -232,7 +233,6 @@ biyectivas;</li>
 lógicos.</li>
 </ul>
 <div class="callout-tip" title="Pregunta inicial">
-<p><strong>Pregunta inicial</strong></p>
 <p>Un sistema electrónico enciende una alarma cuando la fuente está
 habilitada y ocurre al menos una de estas dos condiciones: la
 temperatura es alta o la corriente rebasa el límite de seguridad. ¿Cómo
@@ -241,10 +241,13 @@ distintas describen el mismo comportamiento? y ¿cómo se transforma la
 expresión en un circuito lógico? Al final del capítulo podremos
 responder las tres preguntas.</p>
 </div>
-<h2 data-number="1.1" id="sec-lenguaje-conjuntos"><span
-class="header-section-number">1.1</span> Lenguaje de conjuntos</h2>
-<h3 class="unnumbered unlisted" id="conjunto-y-elemento">Conjunto y
-elemento</h3>
+</section>
+</section>
+<section id="sec-lenguaje-conjuntos" class="level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span>
+Lenguaje de conjuntos</h2>
+<section id="conjunto-y-elemento" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Conjunto y elemento</h3>
 <p>Las palabras <strong>conjunto</strong> y <strong>elemento</strong> se
 consideran nociones primitivas: se comprenden mediante su uso y no se
 definen a partir de conceptos más simples. De manera intuitiva, un
@@ -258,7 +261,6 @@ class="math inline">\(x\in A\)</span>. Si no pertenece, escribimos <span
 class="math inline">\(x\notin A\)</span>.</p>
 <div class="callout-note"
 title="Importante: pertenencia no es inclusión">
-<p><strong>Importante: pertenencia no es inclusión</strong></p>
 <p>La expresión <span class="math inline">\(x\in A\)</span> relaciona un
 <strong>elemento</strong> con un conjunto. La expresión <span
 class="math inline">\(B\subseteq A\)</span> relaciona <strong>dos
@@ -268,9 +270,10 @@ class="math inline">\(1\in A\)</span> y <span
 class="math inline">\(\{1\}\subseteq A\)</span>, pero <span
 class="math inline">\(\{1\}\in A\)</span> es falsa.</p>
 </div>
-<h3 class="unnumbered unlisted"
-id="formas-de-representar-un-conjunto">Formas de representar un
-conjunto</h3>
+</section>
+<section id="formas-de-representar-un-conjunto"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Formas de representar un conjunto</h3>
 <p>Un conjunto se representa <strong>por extensión</strong> cuando se
 enumeran sus elementos:</p>
 <p><span class="math display">\[
@@ -285,8 +288,10 @@ A=\{x\in\mathbb N:x\text{ es par y }2\le x\le 8\}.
 <p><span class="math display">\[
 \{1,2,3\}=\{3,2,1\}=\{1,1,2,3\}.
 \]</span></p>
-<h3 class="unnumbered unlisted"
-id="conjunto-universal-vacío-y-unitario">Conjunto universal, vacío y
+</section>
+<section id="conjunto-universal-vacío-y-unitario"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Conjunto universal, vacío y
 unitario</h3>
 <p>El <strong>conjunto universal</strong> <span
 class="math inline">\(U\)</span> contiene todos los objetos considerados
@@ -295,7 +300,6 @@ vacío</strong> no contiene elementos y se denota por <span
 class="math inline">\(\varnothing\)</span>. Un <strong>conjunto
 unitario</strong> contiene exactamente un elemento.</p>
 <div class="callout-warning" title="Error frecuente">
-<p><strong>Error frecuente</strong></p>
 <p><span class="math inline">\(\varnothing\)</span> y <span
 class="math inline">\(\{\varnothing\}\)</span> no son iguales. El
 primero no tiene elementos; el segundo tiene un elemento, que es
@@ -303,11 +307,12 @@ precisamente el conjunto vacío. Por tanto, <span class="math display">\[
 |\varnothing|=0,\qquad |\{\varnothing\}|=1.
 \]</span></p>
 </div>
-<h3 class="unnumbered unlisted"
-id="subconjuntos-igualdad-y-conjunto-potencia">Subconjuntos, igualdad y
-conjunto potencia</h3>
+</section>
+<section id="subconjuntos-igualdad-y-conjunto-potencia"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Subconjuntos, igualdad y conjunto
+potencia</h3>
 <div class="callout-note" title="Definición: subconjunto">
-<p><strong>Definición: subconjunto</strong></p>
 <p>Sean <span class="math inline">\(A\)</span> y <span
 class="math inline">\(B\)</span> conjuntos. Se dice que <span
 class="math inline">\(A\)</span> es subconjunto de <span
@@ -346,8 +351,9 @@ class="math inline">\(\mathcal P(A)\)</span> tiene <span
 class="math inline">\(2^n\)</span> elementos. Esto ocurre porque, al
 formar un subconjunto, cada elemento presenta dos posibilidades
 independientes: incluirse o no incluirse.</p>
-<h3 class="unnumbered unlisted" id="ejemplo-resuelto">Ejemplo
-resuelto</h3>
+</section>
+<section id="ejemplo-resuelto" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Ejemplo resuelto</h3>
 <p>Sea <span class="math inline">\(B=\{1,\{2\},3\}\)</span>.
 Determinemos el valor de verdad de cuatro afirmaciones:</p>
 <ol type="1">
@@ -361,14 +367,15 @@ porque exigiría <span class="math inline">\(2\in B\)</span>.</li>
 <li><span class="math inline">\(\{\{2\}\}\subseteq B\)</span> es
 verdadera, porque <span class="math inline">\(\{2\}\in B\)</span>.</li>
 </ol>
-<h2 data-number="1.2" id="sec-proposiciones"><span
-class="header-section-number">1.2</span> Proposiciones y conectivos
-lógicos</h2>
-<h3 class="unnumbered unlisted"
-id="proposiciones-y-valores-de-verdad">Proposiciones y valores de
-verdad</h3>
+</section>
+</section>
+<section id="sec-proposiciones" class="level2" data-number="1.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span>
+Proposiciones y conectivos lógicos</h2>
+<section id="proposiciones-y-valores-de-verdad"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Proposiciones y valores de verdad</h3>
 <div class="callout-note" title="Definición: proposición">
-<p><strong>Definición: proposición</strong></p>
 <p>Una <strong>proposición</strong> es un enunciado declarativo al que
 puede asignarse exactamente uno de dos valores de verdad: verdadero
 (<span class="math inline">\(V\)</span>) o falso (<span
@@ -386,8 +393,10 @@ denomina <strong>proposición abierta</strong> o
 hacen verdadera forman su <strong>conjunto solución</strong>. Si el
 dominio es <span class="math inline">\(\mathbb Z\)</span>, entonces el
 conjunto solución es <span class="math inline">\(\{3\}\)</span>.</p>
-<h3 class="unnumbered unlisted" id="conectivos-fundamentales">Conectivos
-fundamentales</h3>
+</section>
+<section id="conectivos-fundamentales"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Conectivos fundamentales</h3>
 <p>Sean <span class="math inline">\(p\)</span> y <span
 class="math inline">\(q\)</span> proposiciones.</p>
 <table style="width:100%;">
@@ -521,7 +530,6 @@ class="math inline">\(p\Leftrightarrow q\)</span></th>
 </tbody>
 </table>
 <div class="callout-tip" title="Cómo entender la implicación">
-<p><strong>Cómo entender la implicación</strong></p>
 <p><span class="math inline">\(p\Rightarrow q\)</span> expresa que no
 puede ocurrir <span class="math inline">\(p\)</span> sin que ocurra
 <span class="math inline">\(q\)</span>. Por ello solo es falsa en el
@@ -531,8 +539,10 @@ class="math display">\[
 p\Rightarrow q\equiv \neg p\lor q.
 \]</span></p>
 </div>
-<h3 class="unnumbered unlisted"
-id="tautología-contradicción-y-contingencia">Tautología, contradicción y
+</section>
+<section id="tautología-contradicción-y-contingencia"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Tautología, contradicción y
 contingencia</h3>
 <p>Una proposición compuesta es una <strong>tautología</strong> si
 resulta verdadera para todas las combinaciones de valores de verdad. Es
@@ -544,8 +554,10 @@ p\lor\neg p
 \]</span></p>
 <p>es una tautología, mientras que <span
 class="math inline">\(p\land\neg p\)</span> es una contradicción.</p>
-<h3 class="unnumbered unlisted"
-id="ejemplo-distribución-de-la-implicación">Ejemplo: distribución de la
+</section>
+<section id="ejemplo-distribución-de-la-implicación"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Ejemplo: distribución de la
 implicación</h3>
 <p>Comprobemos que</p>
 <p><span class="math display">\[
@@ -561,11 +573,14 @@ p\Rightarrow(q\land r)
 \]</span></p>
 <p>Como la igualdad se obtuvo mediante equivalencias válidas, el
 bicondicional entre ambas expresiones es una tautología.</p>
-<h2 data-number="1.3" id="sec-cuantificadores"><span
-class="header-section-number">1.3</span> Cuantificadores y equivalencias
-lógicas</h2>
-<h3 class="unnumbered unlisted" id="dominio-y-cuantificadores">Dominio y
-cuantificadores</h3>
+</section>
+</section>
+<section id="sec-cuantificadores" class="level2" data-number="1.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span>
+Cuantificadores y equivalencias lógicas</h2>
+<section id="dominio-y-cuantificadores"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Dominio y cuantificadores</h3>
 <p>El valor de verdad de un predicado depende de su dominio. Por
 ejemplo, <span class="math inline">\(x^2=2\)</span> no tiene solución en
 <span class="math inline">\(\mathbb Q\)</span>, pero sí en <span
@@ -581,7 +596,6 @@ para al menos uno:</p>
 \exists x\in D\text{ tal que }p(x).
 \]</span></p>
 <div class="callout-note" title="Orden de los cuantificadores">
-<p><strong>Orden de los cuantificadores</strong></p>
 <p>El orden puede cambiar el significado. En <span
 class="math inline">\(\mathbb R\)</span>, <span class="math display">\[
 \forall x\,\exists y\;(x+y=0)
@@ -592,8 +606,10 @@ tiene su propio <span class="math inline">\(y=-x\)</span>. En cambio,
 \]</span> es falsa: un único <span class="math inline">\(y\)</span> no
 puede cancelar a todos los números reales.</p>
 </div>
-<h3 class="unnumbered unlisted"
-id="negación-de-proposiciones-cuantificadas">Negación de proposiciones
+</section>
+<section id="negación-de-proposiciones-cuantificadas"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Negación de proposiciones
 cuantificadas</h3>
 <p>Negar “todos” produce “existe al menos uno que no”; negar “existe”
 produce “ninguno”:</p>
@@ -605,8 +621,10 @@ produce “ninguno”:</p>
 \]</span></p>
 <p>La negación de “todo sensor está calibrado” no es “ningún sensor está
 calibrado”, sino “existe al menos un sensor que no está calibrado”.</p>
-<h3 class="unnumbered unlisted"
-id="recíproca-contraria-y-contrarrecíproca">Recíproca, contraria y
+</section>
+<section id="recíproca-contraria-y-contrarrecíproca"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Recíproca, contraria y
 contrarrecíproca</h3>
 <p>Para la implicación <span class="math inline">\(p\Rightarrow
 q\)</span>:</p>
@@ -637,9 +655,10 @@ necesariamente a su recíproca ni a su contraria:</p>
 <p><span class="math display">\[
 p\Rightarrow q\equiv\neg q\Rightarrow\neg p.
 \]</span></p>
-<h3 class="unnumbered unlisted"
-id="leyes-fundamentales-de-equivalencia">Leyes fundamentales de
-equivalencia</h3>
+</section>
+<section id="leyes-fundamentales-de-equivalencia"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Leyes fundamentales de equivalencia</h3>
 <table>
 <colgroup>
 <col style="width: 50%" />
@@ -707,15 +726,18 @@ q)\land(q\Rightarrow p)\)</span></td>
 <p>Estas leyes pueden demostrarse con tablas de verdad. También pueden
 utilizarse como reglas de transformación, siempre que cada paso se
 justifique.</p>
-<h2 data-number="1.4" id="sec-operaciones-conjuntos"><span
-class="header-section-number">1.4</span> Operaciones y propiedades de
-los conjuntos</h2>
+</section>
+</section>
+<section id="sec-operaciones-conjuntos" class="level2"
+data-number="1.4">
+<h2 data-number="1.4"><span class="header-section-number">1.4</span>
+Operaciones y propiedades de los conjuntos</h2>
 <p>Sea <span class="math inline">\(U\)</span> un conjunto universal y
 sean <span class="math inline">\(A,B\subseteq U\)</span>.</p>
-<h3 class="unnumbered unlisted"
-id="operaciones-fundamentales">Operaciones fundamentales</h3>
+<section id="operaciones-fundamentales"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Operaciones fundamentales</h3>
 <div class="callout-note" title="Definiciones">
-<p><strong>Definiciones</strong></p>
 <p><span class="math display">\[
 \begin{aligned}
 A\cup B &amp;= \{x\in U:x\in A\lor x\in B\},\\
@@ -732,7 +754,9 @@ pertenecen exactamente a uno de los dos conjuntos:</p>
 <p><span class="math display">\[
 A\triangle B=(A\setminus B)\cup(B\setminus A).
 \]</span></p>
-<h3 class="unnumbered unlisted" id="ejemplo">Ejemplo</h3>
+</section>
+<section id="ejemplo" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Ejemplo</h3>
 <p>Sean <span class="math inline">\(U=\{1,2,3,4,5,6\}\)</span>, <span
 class="math inline">\(A=\{1,2,4,6\}\)</span> y <span
 class="math inline">\(B=\{2,3,4\}\)</span>. Entonces</p>
@@ -754,13 +778,16 @@ class="math inline">\(A\)</span> y la diferencia simétrica. El
 rectángulo representa el conjunto universal <span
 class="math inline">\(U\)</span>.</figcaption>
 </figure>
-<p>La figura permite reconocer visualmente qué elementos deben
-conservarse en cada operación. El diagrama ayuda a formular y revisar
-una respuesta, pero una identidad general debe justificarse mediante las
-definiciones o una demostración por pertenencia.</p>
-<h3 class="unnumbered unlisted"
-id="correspondencia-entre-lógica-y-conjuntos">Correspondencia entre
-lógica y conjuntos</h3>
+<p>La <a href="#fig-venn-operaciones">Figura 1</a> permite reconocer
+visualmente qué elementos deben conservarse en cada operación. El
+diagrama ayuda a formular y revisar una respuesta, pero una identidad
+general debe justificarse mediante las definiciones o una demostración
+por pertenencia.</p>
+</section>
+<section id="correspondencia-entre-lógica-y-conjuntos"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Correspondencia entre lógica y
+conjuntos</h3>
 <p>Si <span class="math inline">\(p(x)\)</span> y <span
 class="math inline">\(q(x)\)</span> son predicados sobre <span
 class="math inline">\(U\)</span>, con conjuntos solución <span
@@ -802,8 +829,10 @@ todo <span class="math inline">\(x\)</span></td>
 </tr>
 </tbody>
 </table>
-<h3 class="unnumbered unlisted"
-id="leyes-del-álgebra-de-conjuntos">Leyes del álgebra de conjuntos</h3>
+</section>
+<section id="leyes-del-álgebra-de-conjuntos"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Leyes del álgebra de conjuntos</h3>
 <p><span class="math display">\[
 \begin{aligned}
 A\cup A&amp;=A,&amp; A\cap A&amp;=A &amp;&amp;\text{(idempotencia)},\\
@@ -816,8 +845,10 @@ A\cup(A\cap B)&amp;=A &amp;&amp;&amp;\text{(absorción)},\\
 (A\cap B)^c&amp;=A^c\cup B^c &amp;&amp;&amp;\text{(De Morgan)}.
 \end{aligned}
 \]</span></p>
-<h3 class="unnumbered unlisted"
-id="demostración-por-pertenencia">Demostración por pertenencia</h3>
+</section>
+<section id="demostración-por-pertenencia"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Demostración por pertenencia</h3>
 <p>Demostremos</p>
 <p><span class="math display">\[
 A\cap(B\cup C)=(A\cap B)\cup(A\cap C).
@@ -837,17 +868,19 @@ x\in A\cap(B\cup C)
 class="math inline">\(x\)</span>, ambos conjuntos son iguales.</p>
 <div class="callout-tip"
 title="Estructura de una demostración de igualdad">
-<p><strong>Estructura de una demostración de igualdad</strong></p>
 <p>Puede emplearse una cadena de equivalencias de pertenencia, como en
 el ejemplo, o demostrar por separado <span
 class="math inline">\(A\subseteq B\)</span> y <span
 class="math inline">\(B\subseteq A\)</span>. Un diagrama de Venn ayuda a
 formular una conjetura, pero no sustituye una demostración general.</p>
 </div>
-<h2 data-number="1.5" id="sec-cardinalidad-finita"><span
-class="header-section-number">1.5</span> Cardinalidad de conjuntos
-finitos y problemas de conteo</h2>
-<h3 class="unnumbered unlisted" id="cardinalidad">Cardinalidad</h3>
+</section>
+</section>
+<section id="sec-cardinalidad-finita" class="level2" data-number="1.5">
+<h2 data-number="1.5"><span class="header-section-number">1.5</span>
+Cardinalidad de conjuntos finitos y problemas de conteo</h2>
+<section id="cardinalidad" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Cardinalidad</h3>
 <p>La <strong>cardinalidad</strong> de un conjunto finito <span
 class="math inline">\(A\)</span>, denotada por <span
 class="math inline">\(|A|\)</span>, es su número de elementos. Para dos
@@ -868,9 +901,10 @@ class="math inline">\(|B|\)</span>. Para tres conjuntos:</p>
 \]</span></p>
 <p>Este resultado es un caso del <strong>principio de
 inclusión-exclusión</strong>.</p>
-<h3 class="unnumbered unlisted"
-id="ejemplo-resuelto-con-tres-conjuntos">Ejemplo resuelto con tres
-conjuntos</h3>
+</section>
+<section id="ejemplo-resuelto-con-tres-conjuntos"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Ejemplo resuelto con tres conjuntos</h3>
 <p>En un laboratorio se revisan <span class="math inline">\(400\)</span>
 dispositivos. Sean <span class="math inline">\(T\)</span>, <span
 class="math inline">\(P\)</span> y <span
@@ -894,7 +928,6 @@ son</p>
 |(T\cap P)\setminus H|=|T\cap P|-|T\cap P\cap H|=70-20=50.
 \]</span></p>
 <div class="callout-warning" title="Error frecuente">
-<p><strong>Error frecuente</strong></p>
 <p>El dato <span class="math inline">\(|T\cap P|=70\)</span> incluye
 normalmente a quienes también pertenecen a <span
 class="math inline">\(H\)</span>. “Exactamente <span
@@ -902,11 +935,14 @@ class="math inline">\(T\)</span> y <span
 class="math inline">\(P\)</span>” exige restar la intersección
 triple.</p>
 </div>
-<h2 data-number="1.6" id="sec-producto-relaciones"><span
-class="header-section-number">1.6</span> Producto cartesiano y
-relaciones</h2>
-<h3 class="unnumbered unlisted"
-id="pares-ordenados-y-producto-cartesiano">Pares ordenados y producto
+</section>
+</section>
+<section id="sec-producto-relaciones" class="level2" data-number="1.6">
+<h2 data-number="1.6"><span class="header-section-number">1.6</span>
+Producto cartesiano y relaciones</h2>
+<section id="pares-ordenados-y-producto-cartesiano"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Pares ordenados y producto
 cartesiano</h3>
 <p>Dos pares ordenados son iguales si coinciden componente a
 componente:</p>
@@ -928,9 +964,10 @@ conjuntos finitos,</p>
 \]</span></p>
 <p>En general <span class="math inline">\(A\times B\ne B\times
 A\)</span>, pues el orden de las componentes importa.</p>
-<h3 class="unnumbered unlisted"
-id="distribución-respecto-de-la-unión">Distribución respecto de la
-unión</h3>
+</section>
+<section id="distribución-respecto-de-la-unión"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Distribución respecto de la unión</h3>
 <p>La igualdad correcta es</p>
 <p><span class="math display">\[
 A\times(B\cup C)=(A\times B)\cup(A\times C).
@@ -944,9 +981,10 @@ A\times(B\cup C)=(A\times B)\cup(A\times C).
 &amp;\Longleftrightarrow (a,b)\in(A\times B)\cup(A\times C).
 \end{aligned}
 \]</span></p>
-<h3 class="unnumbered unlisted" id="relaciones">Relaciones</h3>
+</section>
+<section id="relaciones" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Relaciones</h3>
 <div class="callout-note" title="Definición: relación binaria">
-<p><strong>Definición: relación binaria</strong></p>
 <p>Una relación <span class="math inline">\(R\)</span> de <span
 class="math inline">\(A\)</span> en <span
 class="math inline">\(B\)</span> es cualquier subconjunto de <span
@@ -968,9 +1006,11 @@ relacionadas:</p>
 <p><span class="math display">\[
 R^{-1}=\{(b,a):(a,b)\in R\}.
 \]</span></p>
-<h3 class="unnumbered unlisted"
-id="propiedades-de-relaciones-sobre-un-conjunto">Propiedades de
-relaciones sobre un conjunto</h3>
+</section>
+<section id="propiedades-de-relaciones-sobre-un-conjunto"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Propiedades de relaciones sobre un
+conjunto</h3>
 <p>Cuando <span class="math inline">\(R\subseteq A\times A\)</span>,
 puede ser:</p>
 <ul>
@@ -988,7 +1028,9 @@ bRc\Rightarrow aRc\)</span>.</li>
 <strong>relación de equivalencia</strong>. Una relación reflexiva,
 antisimétrica y transitiva es una <strong>relación de orden
 parcial</strong>.</p>
-<h3 class="unnumbered unlisted" id="ejemplo-1">Ejemplo</h3>
+</section>
+<section id="ejemplo-1" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Ejemplo</h3>
 <p>En <span class="math inline">\(\mathbb Z\)</span>, definamos <span
 class="math inline">\(aRb\)</span> si <span
 class="math inline">\(a-b\)</span> es múltiplo de <span
@@ -999,13 +1041,14 @@ class="math inline">\(3\mid(b-a)\)</span>, y transitiva porque la suma
 de dos múltiplos de <span class="math inline">\(3\)</span> vuelve a ser
 múltiplo de <span class="math inline">\(3\)</span>. Por tanto, es una
 relación de equivalencia.</p>
-<h2 data-number="1.7" id="sec-funciones"><span
-class="header-section-number">1.7</span> Funciones: definición,
-representación y operaciones</h2>
-<h3 class="unnumbered unlisted" id="definición-formal">Definición
-formal</h3>
+</section>
+</section>
+<section id="sec-funciones" class="level2" data-number="1.7">
+<h2 data-number="1.7"><span class="header-section-number">1.7</span>
+Funciones: definición, representación y operaciones</h2>
+<section id="definición-formal" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Definición formal</h3>
 <div class="callout-note" title="Definición: función">
-<p><strong>Definición: función</strong></p>
 <p>Una función <span class="math inline">\(f:A\to B\)</span> es una
 relación que asigna a <strong>cada</strong> elemento <span
 class="math inline">\(x\in A\)</span> <strong>exactamente un</strong>
@@ -1025,7 +1068,6 @@ class="math inline">\(y=f(x)\)</span>.</p>
 B\)</span>, pero la imagen no tiene que ser todo el codominio.</p>
 <div class="callout-warning"
 title="Dos condiciones que no deben olvidarse">
-<p><strong>Dos condiciones que no deben olvidarse</strong></p>
 <p>Para ser función, ningún elemento del dominio puede quedar sin imagen
 y ningún elemento del dominio puede tener dos imágenes distintas. En
 cambio, varios elementos del dominio sí pueden compartir una misma
@@ -1040,11 +1082,14 @@ del dominio. El tercer diagrama falla por dos razones: <span
 class="math inline">\(1\)</span> tiene dos imágenes y <span
 class="math inline">\(3\)</span> no tiene ninguna.</figcaption>
 </figure>
-<p>En la figura, el diagrama central sí representa una función aunque
-dos entradas compartan la imagen <span class="math inline">\(a\)</span>.
-Esa repetición afecta la inyectividad, no la definición de función.</p>
-<h3 class="unnumbered unlisted"
-id="representaciones-e-igualdad">Representaciones e igualdad</h3>
+<p>En la <a href="#fig-relacion-funcion">Figura 2</a>, el diagrama
+central sí representa una función aunque dos entradas compartan la
+imagen <span class="math inline">\(a\)</span>. Esa repetición afecta la
+inyectividad, no la definición de función.</p>
+</section>
+<section id="representaciones-e-igualdad"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Representaciones e igualdad</h3>
 <p>Una función puede representarse mediante una regla algebraica, una
 tabla, pares ordenados, un diagrama sagital o una gráfica. Dos funciones
 son iguales cuando tienen el mismo dominio, el mismo codominio y asignan
@@ -1056,8 +1101,10 @@ class="math inline">\(g(x)=x^2\)</span> definida de <span
 class="math inline">\([0,\infty)\)</span> en <span
 class="math inline">\([0,\infty)\)</span> no son la misma función,
 aunque compartan fórmula.</p>
-<h3 class="unnumbered unlisted" id="composición-e-identidad">Composición
-e identidad</h3>
+</section>
+<section id="composición-e-identidad"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Composición e identidad</h3>
 <p>Sean <span class="math inline">\(f:A\to B\)</span> y <span
 class="math inline">\(g:B\to C\)</span>. La composición <span
 class="math inline">\(g\circ f:A\to C\)</span> se define por</p>
@@ -1083,11 +1130,13 @@ class="math inline">\(g\circ f\)</span> sigue primero la flecha de <span
 class="math inline">\(f\)</span> y después la de <span
 class="math inline">\(g\)</span>.</figcaption>
 </figure>
-<p>La figura ayuda a recordar el orden: aunque <span
-class="math inline">\(g\circ f\)</span> se escribe con <span
-class="math inline">\(g\)</span> a la izquierda, al evaluar se aplica
-primero <span class="math inline">\(f\)</span>.</p>
-<h3 class="unnumbered unlisted" id="ejemplo-2">Ejemplo</h3>
+<p>La <a href="#fig-composicion-funciones">Figura 3</a> ayuda a recordar
+el orden: aunque <span class="math inline">\(g\circ f\)</span> se
+escribe con <span class="math inline">\(g\)</span> a la izquierda, al
+evaluar se aplica primero <span class="math inline">\(f\)</span>.</p>
+</section>
+<section id="ejemplo-2" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Ejemplo</h3>
 <p>Sean <span class="math inline">\(f(x)=2x+1\)</span> y <span
 class="math inline">\(g(x)=x^2\)</span>, ambas de <span
 class="math inline">\(\mathbb R\)</span> en <span
@@ -1100,9 +1149,10 @@ class="math inline">\(\mathbb R\)</span>. Entonces</p>
 <p>Como estas expresiones no son iguales para todo <span
 class="math inline">\(x\)</span>, <span class="math inline">\(g\circ
 f\ne f\circ g\)</span>.</p>
-<h3 class="unnumbered unlisted"
-id="imagen-inversa-y-relación-inversa">Imagen inversa y relación
-inversa</h3>
+</section>
+<section id="imagen-inversa-y-relación-inversa"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Imagen inversa y relación inversa</h3>
 <p>Para <span class="math inline">\(C\subseteq B\)</span>, la
 <strong>preimagen</strong> de <span class="math inline">\(C\)</span>
 es</p>
@@ -1113,14 +1163,16 @@ f^{-1}(C)=\{x\in A:f(x)\in C\}.
 class="math inline">\(f\)</span> no tenga función inversa. Debe
 distinguirse entre la preimagen de un conjunto, la relación inversa y la
 función inversa.</p>
-<h2 data-number="1.8" id="sec-tipos-funciones"><span
-class="header-section-number">1.8</span> Funciones inyectivas,
-suprayectivas y biyectivas</h2>
-<h3 class="unnumbered unlisted" id="tres-formas-de-comportamiento">Tres
-formas de comportamiento</h3>
+</section>
+</section>
+<section id="sec-tipos-funciones" class="level2" data-number="1.8">
+<h2 data-number="1.8"><span class="header-section-number">1.8</span>
+Funciones inyectivas, suprayectivas y biyectivas</h2>
+<section id="tres-formas-de-comportamiento"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Tres formas de comportamiento</h3>
 <p>Sea <span class="math inline">\(f:A\to B\)</span>.</p>
 <div class="callout-note" title="Definiciones">
-<p><strong>Definiciones</strong></p>
 <ul>
 <li><span class="math inline">\(f\)</span> es <strong>inyectiva</strong>
 si <span class="math inline">\(f(x_1)=f(x_2)\Rightarrow
@@ -1150,11 +1202,14 @@ alt="Comparación mediante diagramas sagitales: inyectiva no suprayectiva, supra
 inyectiva no suprayectiva, suprayectiva no inyectiva y
 biyectiva.</figcaption>
 </figure>
-<p>La figura muestra dos preguntas diferentes: para la inyectividad se
-revisa si dos flechas llegan al mismo punto; para la suprayectividad se
-revisa si todo elemento del codominio recibe al menos una flecha.</p>
-<h3 class="unnumbered unlisted" id="ejemplos-y-contraejemplos">Ejemplos
-y contraejemplos</h3>
+<p>La <a href="#fig-tipos-funciones">Figura 4</a> muestra dos preguntas
+diferentes: para la inyectividad se revisa si dos flechas llegan al
+mismo punto; para la suprayectividad se revisa si todo elemento del
+codominio recibe al menos una flecha.</p>
+</section>
+<section id="ejemplos-y-contraejemplos"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Ejemplos y contraejemplos</h3>
 <p>La función <span class="math inline">\(f:\mathbb R\to\mathbb
 R\)</span>, <span class="math inline">\(f(x)=2x-3\)</span>, es
 biyectiva:</p>
@@ -1173,10 +1228,10 @@ es suprayectiva porque ningún número real tiene imagen negativa. Al
 restringir dominio y codominio, <span
 class="math inline">\(g:[0,\infty)\to[0,\infty)\)</span> sí es
 biyectiva.</p>
-<h3 class="unnumbered unlisted" id="función-inversa">Función
-inversa</h3>
+</section>
+<section id="función-inversa" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Función inversa</h3>
 <div class="callout-important" title="Teorema">
-<p><strong>Teorema</strong></p>
 <p>Una función <span class="math inline">\(f:A\to B\)</span> posee una
 función inversa <span class="math inline">\(f^{-1}:B\to A\)</span> si y
 solo si <span class="math inline">\(f\)</span> es biyectiva.</p>
@@ -1199,8 +1254,10 @@ inyectividad ese <span class="math inline">\(x\)</span> es único.
 Podemos definir <span class="math inline">\(f^{-1}(y)=x\)</span>. Así,
 <span class="math inline">\(f^{-1}\)</span> es una función. <span
 class="math inline">\(\square\)</span></p>
-<h3 class="unnumbered unlisted"
-id="composición-y-clasificación">Composición y clasificación</h3>
+</section>
+<section id="composición-y-clasificación"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Composición y clasificación</h3>
 <ul>
 <li>La composición de funciones inyectivas es inyectiva.</li>
 <li>La composición de funciones suprayectivas es suprayectiva.</li>
@@ -1211,12 +1268,15 @@ class="math inline">\(g\circ f\)</span> es inyectiva, entonces <span
 class="math inline">\(f\)</span> es inyectiva, pero <span
 class="math inline">\(g\)</span> no necesariamente lo es en todo su
 dominio.</p>
-<h2 data-number="1.9" id="sec-cardinalidad-infinita"><span
-class="header-section-number">1.9</span> Cardinalidad, equipotencia y
-conjuntos infinitos</h2>
-<h3 class="unnumbered unlisted" id="equipotencia">Equipotencia</h3>
+</section>
+</section>
+<section id="sec-cardinalidad-infinita" class="level2"
+data-number="1.9">
+<h2 data-number="1.9"><span class="header-section-number">1.9</span>
+Cardinalidad, equipotencia y conjuntos infinitos</h2>
+<section id="equipotencia" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Equipotencia</h3>
 <div class="callout-note" title="Definición">
-<p><strong>Definición</strong></p>
 <p>Dos conjuntos <span class="math inline">\(A\)</span> y <span
 class="math inline">\(B\)</span> tienen la misma cardinalidad, o son
 <strong>equipotentes</strong>, si existe una biyección <span
@@ -1231,8 +1291,9 @@ tener la misma cardinalidad que un subconjunto propio. Por ejemplo,
 <span class="math inline">\(\mathbb N\)</span> y el conjunto de números
 pares tienen la misma cardinalidad mediante <span
 class="math inline">\(f(n)=2n\)</span>.</p>
-<h3 class="unnumbered unlisted" id="conjuntos-numerables">Conjuntos
-numerables</h3>
+</section>
+<section id="conjuntos-numerables" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Conjuntos numerables</h3>
 <p>Un conjunto es <strong>numerable</strong> o <strong>contable</strong>
 si es finito o si sus elementos pueden colocarse en una lista infinita
 <span class="math inline">\(a_0,a_1,a_2,\ldots\)</span>.
@@ -1245,8 +1306,10 @@ N_0=\{0,1,2,\ldots\}\)</span>.</p>
 <p>Los racionales también son numerables, aunque parezcan más
 abundantes: pueden ordenarse por diagonales en una cuadrícula de
 numeradores y denominadores, omitiendo repeticiones.</p>
-<h3 class="unnumbered unlisted"
-id="los-números-reales-no-son-numerables">Los números reales no son
+</section>
+<section id="los-números-reales-no-son-numerables"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Los números reales no son
 numerables</h3>
 <p>La idea del argumento diagonal de Cantor demuestra que el intervalo
 <span class="math inline">\((0,1)\)</span> no puede listarse por
@@ -1271,15 +1334,18 @@ elemento de la lista. Esto contradice que la lista fuera completa. Por
 tanto, <span class="math inline">\((0,1)\)</span>, y en consecuencia
 <span class="math inline">\(\mathbb R\)</span>, no es numerable.</p>
 <div class="callout-tip" title="Dos usos de la palabra cardinalidad">
-<p><strong>Dos usos de la palabra cardinalidad</strong></p>
 <p>En la sección 1.5 contamos elementos de conjuntos finitos. Aquí
 comparamos tamaños mediante biyecciones, una definición que también
 funciona para conjuntos infinitos. La segunda idea amplía a la primera;
 no la reemplaza.</p>
 </div>
-<h2 class="unnumbered unlisted"
-id="aplicación-integradora-álgebra-de-boole-y-circuitos-lógicos">Aplicación
-integradora: álgebra de Boole y circuitos lógicos</h2>
+</section>
+</section>
+<section
+id="aplicación-integradora-álgebra-de-boole-y-circuitos-lógicos"
+class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Aplicación integradora: álgebra de Boole
+y circuitos lógicos</h2>
 <p>El álgebra de Boole trabaja con variables que toman los valores <span
 class="math inline">\(0\)</span> y <span
 class="math inline">\(1\)</span>, interpretados como falso y verdadero,
@@ -1296,8 +1362,9 @@ a+b\quad\text{representa OR},\qquad
 traducción entre expresiones y circuitos; evaluación de salidas;
 teoremas de Boole y De Morgan; compuertas universales; y lectura de
 símbolos lógicos.</p>
-<h3 class="unnumbered unlisted" id="compuertas-y-expresiones">Compuertas
-y expresiones</h3>
+<section id="compuertas-y-expresiones"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Compuertas y expresiones</h3>
 <table>
 <thead>
 <tr class="header">
@@ -1346,8 +1413,10 @@ hasta la salida y se asigna una expresión a la salida de cada compuerta.
 Para implantar una expresión se respeta su jerarquía: primero las
 negaciones y operaciones entre paréntesis, después los productos lógicos
 y al final las sumas lógicas.</p>
-<h3 class="unnumbered unlisted"
-id="evaluación-y-diagramas-de-temporización">Evaluación y diagramas de
+</section>
+<section id="evaluación-y-diagramas-de-temporización"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Evaluación y diagramas de
 temporización</h3>
 <p>Una tabla de verdad describe todas las combinaciones estáticas. Un
 <strong>diagrama de temporización</strong> muestra cómo cambian las
@@ -1362,9 +1431,11 @@ constantes;</li>
 <p>En este primer tratamiento ideal se omiten los retardos de
 propagación. Estos se incorporarán en un estudio posterior de circuitos
 digitales.</p>
-<h3 class="unnumbered unlisted"
-id="señales-activas-en-alto-y-activas-en-bajo">Señales activas en alto y
-activas en bajo</h3>
+</section>
+<section id="señales-activas-en-alto-y-activas-en-bajo"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Señales activas en alto y activas en
+bajo</h3>
 <p>Una señal es <strong>activa en alto</strong> si realiza su función
 cuando vale <span class="math inline">\(1\)</span>. Es <strong>activa en
 bajo</strong> si realiza su función cuando vale <span
@@ -1374,7 +1445,6 @@ señales, una barra superior o una notación equivalente puede indicar que
 la señal se activa con nivel bajo.</p>
 <div class="callout-warning"
 title="No confundir nivel lógico con voltaje exacto">
-<p><strong>No confundir nivel lógico con voltaje exacto</strong></p>
 <p>Los valores booleanos <span class="math inline">\(0\)</span> y <span
 class="math inline">\(1\)</span> representan estados lógicos. En un
 circuito físico corresponden a intervalos de voltaje definidos por la
@@ -1395,8 +1465,10 @@ a+a\cdot b&amp;=a, &amp; a(a+b)&amp;=a,\\
 &amp;\overline{a\cdot b}&amp;=\overline a+\overline b.
 \end{aligned}
 \]</span></p>
-<h3 class="unnumbered unlisted" id="ejemplo-de-simplificación">Ejemplo
-de simplificación</h3>
+</section>
+<section id="ejemplo-de-simplificación"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Ejemplo de simplificación</h3>
 <p><span class="math display">\[
 F=a+a\cdot\overline b=a
 \]</span></p>
@@ -1410,8 +1482,9 @@ implementación utiliza menos componentes.</p>
 G=a\cdot b+a\cdot\overline b
 =a(b+\overline b)=a\cdot1=a.
 \]</span></p>
-<h3 class="unnumbered unlisted" id="compuertas-nand-y-nor">Compuertas
-NAND y NOR</h3>
+</section>
+<section id="compuertas-nand-y-nor" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Compuertas NAND y NOR</h3>
 <p>NAND y NOR combinan una operación básica con una negación:</p>
 <p><span class="math display">\[
 a\uparrow b=\overline{a\cdot b},
@@ -1423,8 +1496,10 @@ equivalentes. Al negar una suma, esta se transforma en producto de
 variables negadas; al negar un producto, se transforma en suma de
 variables negadas. Esta idea explica las representaciones alternativas
 mediante burbujas que se utilizan al analizar circuitos.</p>
-<h3 class="unnumbered unlisted"
-id="universalidad-de-nand-y-nor">Universalidad de NAND y NOR</h3>
+</section>
+<section id="universalidad-de-nand-y-nor"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Universalidad de NAND y NOR</h3>
 <p>La compuerta NOR se define por <span
 class="math inline">\(a\downarrow b=\overline{a+b}\)</span>. Es
 <strong>universal</strong> porque permite construir las tres operaciones
@@ -1450,9 +1525,11 @@ a\cdot b=(a\uparrow b)\uparrow(a\uparrow b),
 <p><span class="math display">\[
 a+b=(a\uparrow a)\uparrow(b\uparrow b).
 \]</span></p>
-<h3 class="unnumbered unlisted"
-id="símbolos-y-representaciones-alternativas">Símbolos y
-representaciones alternativas</h3>
+</section>
+<section id="símbolos-y-representaciones-alternativas"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Símbolos y representaciones
+alternativas</h3>
 <p>Una misma función puede dibujarse con símbolos equivalentes obtenidos
 mediante De Morgan. El criterio esencial no es la apariencia aislada de
 una compuerta, sino la función que resulta al considerar su forma y las
@@ -1463,7 +1540,6 @@ representación AND-OR, NAND-NAND, OR-AND o NOR-NOR <span
 class="citation" data-cites="tocci2003">(Tocci y Widmer
 2003)</span>.</p>
 <div class="callout-note" title="Método para simplificar y diseñar">
-<p><strong>Método para simplificar y diseñar</strong></p>
 <ol type="1">
 <li>Transcribir con cuidado todas las negaciones.</li>
 <li>Identificar términos comunes o complementarios.</li>
@@ -1475,8 +1551,10 @@ class="citation" data-cites="tocci2003">(Tocci y Widmer
 interpretado correctamente.</li>
 </ol>
 </div>
-<h2 class="unnumbered unlisted" id="síntesis-del-capítulo">Síntesis del
-capítulo</h2>
+</section>
+</section>
+<section id="síntesis-del-capítulo" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Síntesis del capítulo</h2>
 <ul>
 <li>Los conjuntos organizan objetos; la lógica organiza afirmaciones
 sobre ellos.</li>
@@ -1497,8 +1575,9 @@ infinitas.</li>
 <li>Las leyes lógicas permiten simplificar expresiones booleanas y
 circuitos.</li>
 </ul>
-<h2 class="unnumbered unlisted" id="errores-frecuentes">Errores
-frecuentes</h2>
+</section>
+<section id="errores-frecuentes" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Errores frecuentes</h2>
 <ol type="1">
 <li>Confundir <span class="math inline">\(x\in A\)</span> con <span
 class="math inline">\(\{x\}\subseteq A\)</span>.</li>
@@ -1519,8 +1598,11 @@ ignorando dominio y codominio.</li>
 <li>Perder una barra de negación al transcribir una expresión
 booleana.</li>
 </ol>
-<h2 class="unnumbered unlisted" id="ejercicios">Ejercicios</h2>
-<h3 class="unnumbered unlisted" id="nivel-básico">Nivel básico</h3>
+</section>
+<section id="ejercicios" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Ejercicios</h2>
+<section id="nivel-básico" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Nivel básico</h3>
 <ol type="1">
 <li>Sea <span class="math inline">\(A=\{0,\{0\},1\}\)</span>. Determine
 cuáles son verdaderas: <span class="math inline">\(0\in A\)</span>,
@@ -1542,8 +1624,9 @@ class="math inline">\(A\cap B\)</span>, <span
 class="math inline">\(A^c\)</span> y <span
 class="math inline">\(A\setminus B\)</span>.</li>
 </ol>
-<h3 class="unnumbered unlisted" id="nivel-intermedio">Nivel
-intermedio</h3>
+</section>
+<section id="nivel-intermedio" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Nivel intermedio</h3>
 <ol start="6" type="1">
 <li>Demuestre mediante equivalencias que <span
 class="math inline">\(\neg(p\Rightarrow q)\equiv p\land\neg
@@ -1568,8 +1651,10 @@ class="math inline">\(g(x)=3x\)</span>. Determine si son iguales.</li>
 Z\)</span>, <span class="math inline">\(f(n)=2n\)</span>, como
 inyectiva, suprayectiva o biyectiva.</li>
 </ol>
-<h3 class="unnumbered unlisted" id="nivel-formal-y-aplicado">Nivel
-formal y aplicado</h3>
+</section>
+<section id="nivel-formal-y-aplicado"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Nivel formal y aplicado</h3>
 <ol start="12" type="1">
 <li>Pruebe que si <span class="math inline">\(g\circ f\)</span> es
 inyectiva, entonces <span class="math inline">\(f\)</span> es
@@ -1592,9 +1677,12 @@ class="math inline">\(t\)</span> temperatura alta y <span
 class="math inline">\(c\)</span> corriente peligrosa. Construya la tabla
 de verdad, simplifique cuando sea posible y proponga el circuito.</li>
 </ol>
-<h2 class="unnumbered unlisted"
-id="respuestas-breves-a-ejercicios-seleccionados">Respuestas breves a
-ejercicios seleccionados</h2>
+</section>
+</section>
+<section id="respuestas-breves-a-ejercicios-seleccionados"
+class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Respuestas breves a ejercicios
+seleccionados</h2>
 <ol type="1">
 <li>Las cuatro afirmaciones son verdaderas.</li>
 <li>Es falsa únicamente cuando <span class="math inline">\(p=F\)</span>
@@ -1608,8 +1696,9 @@ class="math inline">\((f\circ g)(x)=3x+1\)</span>; no son iguales.</li>
 class="math inline">\(\mathbb Z\)</span>.</li>
 <li><span class="math inline">\(F=a+b\)</span>.</li>
 </ol>
-<h2 class="unnumbered unlisted" id="proyecto-integrador">Proyecto
-integrador</h2>
+</section>
+<section id="proyecto-integrador" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Proyecto integrador</h2>
 <p>Diseñe la lógica de un sistema de monitoreo con tres entradas
 binarias. El proyecto debe incluir:</p>
 <ol type="1">
@@ -1621,8 +1710,10 @@ binarias. El proyecto debe incluir:</p>
 <li>circuito lógico original y simplificado;</li>
 <li>explicación de por qué ambos circuitos son equivalentes.</li>
 </ol>
-<h2 class="unnumbered unlisted"
-id="referencias-del-capítulo">Referencias del capítulo</h2>
+</section>
+<section id="referencias-del-capítulo"
+class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Referencias del capítulo</h2>
 <p>La exposición se apoya en el programa de la asignatura <span
 class="citation" data-cites="uaslp2011">(Universidad Autónoma de San
 Luis Potosí, Facultad de Ciencias 2011)</span>, en el tratamiento
@@ -1636,11 +1727,15 @@ class="citation" data-cites="halmos1960">Halmos (1960)</span>. La
 aplicación a compuertas y álgebra de Boole sigue como referencia
 principal el capítulo 3 de <span class="citation"
 data-cites="tocci2003">Tocci y Widmer (2003)</span>.</p>
-<h1 data-number="2" id="números-enteros-y-reales"><span
-class="header-section-number">2</span> Números enteros y reales</h1>
+</section>
+</section>
+<section id="números-enteros-y-reales" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Números
+enteros y reales</h1>
 <p><em>Estructura, inducción, divisibilidad, primos, orden y
 distancia</em></p>
-<h2 class="unnumbered unlisted" id="introducción-1">Introducción</h2>
+<section id="introducción-1" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Introducción</h2>
 <p>Los números se aprenden primero como herramientas para contar y
 medir. En Álgebra Superior interesa además comprender <strong>por
 qué</strong> sus reglas funcionan, qué propiedades distinguen a cada
@@ -1654,8 +1749,9 @@ tres niveles: las propiedades que se aceptan como estructura, los
 teoremas que se deducen de ellas y los procedimientos que permiten
 calcular. La inducción, el algoritmo de Euclides y la factorización
 prima son ejemplos centrales de esta relación.</p>
-<h3 class="unnumbered unlisted" id="objetivos-del-capítulo-1">Objetivos
-del capítulo</h3>
+<section id="objetivos-del-capítulo-1"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Objetivos del capítulo</h3>
 <p>Al finalizar, el lector será capaz de:</p>
 <ul>
 <li>reconocer las propiedades algebraicas y de orden de los
@@ -1675,7 +1771,6 @@ racionales;</li>
 inecuaciones.</li>
 </ul>
 <div class="callout-tip" title="Pregunta inicial">
-<p><strong>Pregunta inicial</strong></p>
 <p>¿Cómo puede demostrarse que <span class="math inline">\(1+3+5+\cdots
 +(2n-1)=n^2\)</span> para <strong>todo</strong> entero positivo <span
 class="math inline">\(n\)</span>? ¿Por qué el algoritmo que divide
@@ -1685,11 +1780,14 @@ estructural existe entre <span class="math inline">\(\mathbb Q\)</span>
 y <span class="math inline">\(\mathbb R\)</span>? Este capítulo
 desarrolla las herramientas para responder estas preguntas.</p>
 </div>
-<h2 data-number="2.1" id="sec-propiedades-enteros"><span
-class="header-section-number">2.1</span> Propiedades de los números
-enteros</h2>
-<h3 class="unnumbered unlisted" id="el-conjunto-de-los-enteros">El
-conjunto de los enteros</h3>
+</section>
+</section>
+<section id="sec-propiedades-enteros" class="level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span>
+Propiedades de los números enteros</h2>
+<section id="el-conjunto-de-los-enteros"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">El conjunto de los enteros</h3>
 <p>Denotamos por</p>
 <p><span class="math display">\[
 \mathbb Z=\{\ldots,-3,-2,-1,0,1,2,3,\ldots\}
@@ -1706,13 +1804,16 @@ bajo cero y operaciones inversas de la suma.</p>
 N=\{1,2,3,\ldots\}\)</span> y escribiremos <span
 class="math inline">\(\mathbb N_0=\mathbb N\cup\{0\}\)</span> cuando sea
 necesario incluir el cero.</p>
-<h3 class="unnumbered unlisted" id="propiedades-algebraicas">Propiedades
-algebraicas</h3>
+</section>
+<section id="propiedades-algebraicas"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Propiedades algebraicas</h3>
 <p>Para cualesquiera <span class="math inline">\(a,b,c\in\mathbb
 Z\)</span> se cumplen las propiedades siguientes.</p>
 <table>
 <caption>Propiedades básicas de las operaciones en <span
-class="math inline">\(\mathbb Z\)</span>. </caption>
+class="math inline">\(\mathbb Z\)</span>.
+{#tbl-propiedades-enteros}</caption>
 <thead>
 <tr class="header">
 <th>Propiedad</th>
@@ -1761,9 +1862,10 @@ class="math inline">\(-1\)</span> no tiene inverso multiplicativo dentro
 de <span class="math inline">\(\mathbb Z\)</span>. Por ejemplo, el
 inverso de <span class="math inline">\(2\)</span> es <span
 class="math inline">\(1/2\)</span>, que no es entero.</p>
-<h3 class="unnumbered unlisted"
-id="orden-y-principio-del-buen-orden">Orden y principio del buen
-orden</h3>
+</section>
+<section id="orden-y-principio-del-buen-orden"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Orden y principio del buen orden</h3>
 <p>El orden en <span class="math inline">\(\mathbb Z\)</span> es total:
 dados <span class="math inline">\(a,b\in\mathbb Z\)</span>, exactamente
 una de estas afirmaciones es verdadera:</p>
@@ -1782,7 +1884,6 @@ class="math inline">\(c&lt;0\)</span>, entonces <span
 class="math inline">\(ac&gt;bc\)</span>.</li>
 </ul>
 <div class="callout-note" title="Principio del buen orden">
-<p><strong>Principio del buen orden</strong></p>
 <p>Todo subconjunto no vacío de <span class="math inline">\(\mathbb
 N\)</span> posee un elemento mínimo.</p>
 </div>
@@ -1790,8 +1891,9 @@ N\)</span> posee un elemento mínimo.</p>
 importantes. Por ejemplo, permite justificar el algoritmo de la división
 y es equivalente, en un sentido lógico preciso, al principio de
 inducción.</p>
-<h3 class="unnumbered unlisted" id="consecuencias-útiles">Consecuencias
-útiles</h3>
+</section>
+<section id="consecuencias-útiles" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Consecuencias útiles</h3>
 <p>Las reglas de signos no son convenciones aisladas: se deducen de las
 propiedades anteriores. Como</p>
 <p><span class="math display">\[
@@ -1807,16 +1909,18 @@ class="math inline">\(a\cdot0=0\)</span>. Además,</p>
 <p><span class="math display">\[
 (-a)(-b)=ab.
 \]</span></p>
-<h2 data-number="2.2" id="sec-induccion"><span
-class="header-section-number">2.2</span> Inducción matemática</h2>
-<h3 class="unnumbered unlisted" id="idea-fundamental">Idea
-fundamental</h3>
+</section>
+</section>
+<section id="sec-induccion" class="level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span>
+Inducción matemática</h2>
+<section id="idea-fundamental" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Idea fundamental</h3>
 <p>Una afirmación <span class="math inline">\(P(n)\)</span> puede
 verificarse para muchos valores particulares sin quedar demostrada para
 todos los naturales. La <strong>inducción matemática</strong> permite
 pasar de un caso inicial a una cadena infinita de casos.</p>
 <div class="callout-note" title="Principio de inducción">
-<p><strong>Principio de inducción</strong></p>
 <p>Sea <span class="math inline">\(P(n)\)</span> una proposición
 definida para todo <span class="math inline">\(n\ge n_0\)</span>.
 Si:</p>
@@ -1843,8 +1947,10 @@ lado <span class="math inline">\(n\)</span>. Agregar el siguiente impar
 produce el cuadrado de lado <span
 class="math inline">\(n+1\)</span>.</figcaption>
 </figure>
-<h3 class="unnumbered unlisted"
-id="ejemplo-suma-de-los-primeros-impares">Ejemplo: suma de los primeros
+</section>
+<section id="ejemplo-suma-de-los-primeros-impares"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Ejemplo: suma de los primeros
 impares</h3>
 <p>Demostremos que</p>
 <p><span class="math display">\[
@@ -1872,8 +1978,10 @@ class="math inline">\(2(k+1)-1=2k+1\)</span>, obtenemos</p>
 \]</span></p>
 <p>Por inducción, la igualdad se cumple para todo <span
 class="math inline">\(n\ge1\)</span>.</p>
-<h3 class="unnumbered unlisted" id="otro-ejemplo-suma-geométrica">Otro
-ejemplo: suma geométrica</h3>
+</section>
+<section id="otro-ejemplo-suma-geométrica"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Otro ejemplo: suma geométrica</h3>
 <p>Para <span class="math inline">\(r\ne1\)</span> y <span
 class="math inline">\(n\in\mathbb N_0\)</span>,</p>
 <p><span class="math display">\[
@@ -1889,8 +1997,9 @@ class="math inline">\(1=(r-1)/(r-1)\)</span>. Si la fórmula vale para
 &amp;=\frac{r^{k+2}-1}{r-1}.
 \end{aligned}
 \]</span></p>
-<h3 class="unnumbered unlisted" id="inducción-fuerte">Inducción
-fuerte</h3>
+</section>
+<section id="inducción-fuerte" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Inducción fuerte</h3>
 <p>En la inducción fuerte, para demostrar <span
 class="math inline">\(P(k+1)\)</span> se permite utilizar todos los
 casos anteriores:</p>
@@ -1906,7 +2015,6 @@ class="math inline">\(1&lt;a,b&lt;n\)</span> y se aplica la hipótesis
 fuerte a <span class="math inline">\(a\)</span> y <span
 class="math inline">\(b\)</span>.</p>
 <div class="callout-warning" title="Errores frecuentes en inducción">
-<p><strong>Errores frecuentes en inducción</strong></p>
 <ul>
 <li>Comprobar solo varios valores y llamarlo demostración.</li>
 <li>Omitir el caso base.</li>
@@ -1916,10 +2024,14 @@ class="math inline">\(b\)</span>.</p>
 class="math inline">\(k+1\)</span>.</li>
 </ul>
 </div>
-<h2 data-number="2.3" id="sec-divisibilidad"><span
-class="header-section-number">2.3</span> Divisibilidad</h2>
-<h3 class="unnumbered unlisted" id="definición-y-propiedades">Definición
-y propiedades</h3>
+</section>
+</section>
+<section id="sec-divisibilidad" class="level2" data-number="2.3">
+<h2 data-number="2.3"><span class="header-section-number">2.3</span>
+Divisibilidad</h2>
+<section id="definición-y-propiedades"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Definición y propiedades</h3>
 <p>Sean <span class="math inline">\(a,b\in\mathbb Z\)</span> con <span
 class="math inline">\(a\ne0\)</span>. Decimos que <strong><span
 class="math inline">\(a\)</span> divide a <span
@@ -1943,10 +2055,11 @@ a\mid(mb+nc).
 <p>En efecto, si <span class="math inline">\(b=ar\)</span> y <span
 class="math inline">\(c=as\)</span>, entonces <span
 class="math inline">\(mb+nc=a(mr+ns)\)</span>.</p>
-<h3 class="unnumbered unlisted" id="algoritmo-de-la-división">Algoritmo
-de la división</h3>
+</section>
+<section id="algoritmo-de-la-división"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Algoritmo de la división</h3>
 <div class="callout-note" title="Teorema: algoritmo de la división">
-<p><strong>Teorema: algoritmo de la división</strong></p>
 <p>Dados <span class="math inline">\(a\in\mathbb Z\)</span> y <span
 class="math inline">\(d\in\mathbb Z\)</span> con <span
 class="math inline">\(d&gt;0\)</span>, existen enteros únicos <span
@@ -1969,9 +2082,11 @@ r&lt;d\)</span>:</p>
 <p><span class="math display">\[
 -47=6(-8)+1.
 \]</span></p>
-<h3 class="unnumbered unlisted"
-id="máximo-común-divisor-y-algoritmo-de-euclides">Máximo común divisor y
-algoritmo de Euclides</h3>
+</section>
+<section id="máximo-común-divisor-y-algoritmo-de-euclides"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Máximo común divisor y algoritmo de
+Euclides</h3>
 <p>El <strong>máximo común divisor</strong> de enteros <span
 class="math inline">\(a\)</span> y <span
 class="math inline">\(b\)</span>, no ambos cero, es el mayor entero
@@ -2009,8 +2124,9 @@ alt="Cada fila del algoritmo de Euclides sustituye el par anterior por divisor y
 sustituye el par anterior por divisor y residuo. El último residuo no
 nulo es el máximo común divisor.</figcaption>
 </figure>
-<h3 class="unnumbered unlisted" id="identidad-de-bézout">Identidad de
-Bézout</h3>
+</section>
+<section id="identidad-de-bézout" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Identidad de Bézout</h3>
 <p>El máximo común divisor puede expresarse como combinación lineal:</p>
 <p><span class="math display">\[
 \gcd(a,b)=ax+by
@@ -2022,11 +2138,13 @@ recorrer hacia atrás el ejemplo,</p>
 \]</span></p>
 <p>Así, <span class="math inline">\(x=4\)</span> y <span
 class="math inline">\(y=-5\)</span> son coeficientes de Bézout.</p>
-<h2 data-number="2.4" id="sec-primos-factorizacion"><span
-class="header-section-number">2.4</span> Números primos y
-factorización</h2>
-<h3 class="unnumbered unlisted" id="primos-y-compuestos">Primos y
-compuestos</h3>
+</section>
+</section>
+<section id="sec-primos-factorizacion" class="level2" data-number="2.4">
+<h2 data-number="2.4"><span class="header-section-number">2.4</span>
+Números primos y factorización</h2>
+<section id="primos-y-compuestos" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Primos y compuestos</h3>
 <p>Un entero <span class="math inline">\(p&gt;1\)</span> es
 <strong>primo</strong> si sus únicos divisores positivos son <span
 class="math inline">\(1\)</span> y <span
@@ -2040,18 +2158,18 @@ class="math inline">\(\sqrt n\)</span>. Si <span
 class="math inline">\(n=ab\)</span> y ambos factores fueran mayores que
 <span class="math inline">\(\sqrt n\)</span>, entonces <span
 class="math inline">\(ab&gt;n\)</span>, lo cual es imposible.</p>
-<h3 class="unnumbered unlisted"
-id="lema-de-euclides-y-teorema-fundamental">Lema de Euclides y teorema
+</section>
+<section id="lema-de-euclides-y-teorema-fundamental"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Lema de Euclides y teorema
 fundamental</h3>
 <div class="callout-note" title="Lema de Euclides">
-<p><strong>Lema de Euclides</strong></p>
 <p>Si <span class="math inline">\(p\)</span> es primo y <span
 class="math inline">\(p\mid ab\)</span>, entonces <span
 class="math inline">\(p\mid a\)</span> o <span
 class="math inline">\(p\mid b\)</span>.</p>
 </div>
 <div class="callout-note" title="Teorema fundamental de la aritmética">
-<p><strong>Teorema fundamental de la aritmética</strong></p>
 <p>Todo entero <span class="math inline">\(n&gt;1\)</span> puede
 expresarse como producto de números primos. Esa factorización es única,
 salvo el orden de los factores.</p>
@@ -2068,8 +2186,10 @@ alt="Cadena de factorización de 756. En cada paso se sustituye un factor compue
 class="math inline">\(756\)</span>. En cada paso se sustituye un factor
 compuesto hasta obtener únicamente factores primos.</figcaption>
 </figure>
-<h3 class="unnumbered unlisted"
-id="mcd-y-mcm-mediante-exponentes-primos">MCD y MCM mediante exponentes
+</section>
+<section id="mcd-y-mcm-mediante-exponentes-primos"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">MCD y MCM mediante exponentes
 primos</h3>
 <p>Si</p>
 <p><span class="math display">\[
@@ -2088,8 +2208,10 @@ además</p>
 <p><span class="math display">\[
 \gcd(a,b)\operatorname{mcm}(a,b)=ab.
 \]</span></p>
-<h3 class="unnumbered unlisted" id="infinitud-de-los-primos">Infinitud
-de los primos</h3>
+</section>
+<section id="infinitud-de-los-primos"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Infinitud de los primos</h3>
 <p>Supongamos que solo existieran los primos <span
 class="math inline">\(p_1,\ldots,p_n\)</span> y consideremos</p>
 <p><span class="math display">\[
@@ -2101,10 +2223,13 @@ class="math inline">\(1\)</span>. Sin embargo, <span
 class="math inline">\(N&gt;1\)</span> debe ser primo o tener un divisor
 primo. En ambos casos aparece un primo que no estaba en la lista,
 contradicción. Por tanto, existen infinitos números primos.</p>
-<h2 data-number="2.5" id="sec-racionales-reales"><span
-class="header-section-number">2.5</span> Números racionales y números
-reales</h2>
-<h3 class="unnumbered unlisted" id="racionales">Racionales</h3>
+</section>
+</section>
+<section id="sec-racionales-reales" class="level2" data-number="2.5">
+<h2 data-number="2.5"><span class="header-section-number">2.5</span>
+Números racionales y números reales</h2>
+<section id="racionales" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Racionales</h3>
 <p>Un número racional es un cociente de enteros:</p>
 <p><span class="math display">\[
 \mathbb Q=\left\{\frac ab:a,b\in\mathbb Z,\ b\ne0\right\}.
@@ -2117,8 +2242,9 @@ ejemplo,</p>
 <p>Todo racional posee una expansión decimal finita o periódica.
 Recíprocamente, toda expansión decimal finita o periódica representa un
 racional.</p>
-<h3 class="unnumbered unlisted" id="irracionales-y-reales">Irracionales
-y reales</h3>
+</section>
+<section id="irracionales-y-reales" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Irracionales y reales</h3>
 <p>Los números que no son racionales se llaman
 <strong>irracionales</strong>. Ejemplos clásicos son <span
 class="math inline">\(\sqrt2\)</span>, <span
@@ -2151,7 +2277,9 @@ class="math inline">\(a=2k\)</span>. Sustituyendo,</p>
 contradice que <span class="math inline">\(a/b\)</span> estuviera
 reducida. Luego <span class="math inline">\(\sqrt2\notin\mathbb
 Q\)</span>.</p>
-<h3 class="unnumbered unlisted" id="densidad">Densidad</h3>
+</section>
+<section id="densidad" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Densidad</h3>
 <p>Entre dos números reales distintos siempre existe un racional y
 también un irracional. En particular, si <span
 class="math inline">\(a&lt;b\)</span>, entonces su punto medio</p>
@@ -2163,10 +2291,13 @@ class="math inline">\(a\)</span> y <span
 class="math inline">\(b\)</span> son reales arbitrarios. La densidad
 muestra que racionales e irracionales están entrelazados en la recta
 real.</p>
-<h2 data-number="2.6" id="sec-propiedades-reales"><span
-class="header-section-number">2.6</span> Propiedades de los números
-reales</h2>
-<h3 class="unnumbered unlisted" id="campo-ordenado">Campo ordenado</h3>
+</section>
+</section>
+<section id="sec-propiedades-reales" class="level2" data-number="2.6">
+<h2 data-number="2.6"><span class="header-section-number">2.6</span>
+Propiedades de los números reales</h2>
+<section id="campo-ordenado" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Campo ordenado</h3>
 <p>Los reales forman un <strong>campo ordenado</strong>. Además de las
 propiedades de suma y producto vistas para los enteros, todo <span
 class="math inline">\(a\ne0\)</span> tiene inverso multiplicativo <span
@@ -2184,12 +2315,13 @@ ejemplo, que</p>
 x^2+1&gt;0
 \]</span></p>
 <p>para todo <span class="math inline">\(x\in\mathbb R\)</span>.</p>
-<h3 class="unnumbered unlisted" id="completitud">Completitud</h3>
+</section>
+<section id="completitud" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Completitud</h3>
 <p>La propiedad que distingue a <span class="math inline">\(\mathbb
 R\)</span> de <span class="math inline">\(\mathbb Q\)</span> es la
 <strong>completitud</strong>.</p>
 <div class="callout-note" title="Axioma del supremo">
-<p><strong>Axioma del supremo</strong></p>
 <p>Todo subconjunto no vacío de <span class="math inline">\(\mathbb
 R\)</span> que está acotado superiormente posee un supremo en <span
 class="math inline">\(\mathbb R\)</span>.</p>
@@ -2208,9 +2340,10 @@ falla: el conjunto</p>
 \{q\in\mathbb Q:q^2&lt;2\}
 \]</span></p>
 <p>está acotado superiormente, pero no tiene supremo racional.</p>
-<h3 class="unnumbered unlisted"
-id="propiedad-arquimediana-e-intervalos">Propiedad arquimediana e
-intervalos</h3>
+</section>
+<section id="propiedad-arquimediana-e-intervalos"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Propiedad arquimediana e intervalos</h3>
 <p>Para todo real <span class="math inline">\(x\)</span> existe <span
 class="math inline">\(n\in\mathbb N\)</span> tal que <span
 class="math inline">\(n&gt;x\)</span>. Esta propiedad impide que existan
@@ -2218,7 +2351,8 @@ reales infinitamente grandes o infinitesimales distintos de cero dentro
 del sistema usual.</p>
 <p>Los intervalos expresan conjuntos definidos por desigualdades:</p>
 <table>
-<caption>Correspondencia entre desigualdades e intervalos. </caption>
+<caption>Correspondencia entre desigualdades e intervalos.
+{#tbl-intervalos}</caption>
 <thead>
 <tr class="header">
 <th>Desigualdad</th>
@@ -2249,11 +2383,13 @@ sentido. Por ejemplo,</p>
 <p><span class="math display">\[
 -3x&lt;12\quad\Longleftrightarrow\quad x&gt;-4.
 \]</span></p>
-<h2 data-number="2.7" id="sec-exponentes"><span
-class="header-section-number">2.7</span> Exponentes racionales y
-negativos</h2>
-<h3 class="unnumbered unlisted" id="exponentes-enteros">Exponentes
-enteros</h3>
+</section>
+</section>
+<section id="sec-exponentes" class="level2" data-number="2.7">
+<h2 data-number="2.7"><span class="header-section-number">2.7</span>
+Exponentes racionales y negativos</h2>
+<section id="exponentes-enteros" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Exponentes enteros</h3>
 <p>Para <span class="math inline">\(a\ne0\)</span> y <span
 class="math inline">\(n\in\mathbb N\)</span> se define</p>
 <p><span class="math display">\[
@@ -2263,8 +2399,9 @@ a^{-n}=\frac1{a^n},\qquad a^0=1.
 a^n=a^{m+n}\)</span>. El caso <span class="math inline">\(0^0\)</span>
 no se define de manera universal en álgebra elemental, y <span
 class="math inline">\(0^{-n}\)</span> no existe.</p>
-<h3 class="unnumbered unlisted" id="exponentes-racionales">Exponentes
-racionales</h3>
+</section>
+<section id="exponentes-racionales" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Exponentes racionales</h3>
 <p>Sea <span class="math inline">\(m/n\)</span> una fracción reducida
 con <span class="math inline">\(n&gt;0\)</span>. Para <span
 class="math inline">\(a&gt;0\)</span> definimos</p>
@@ -2278,8 +2415,9 @@ número real. Así,</p>
 <p><span class="math display">\[
 (-8)^{1/3}=-2,qquad (-8)^{1/2}\notin\mathbb R.
 \]</span></p>
-<h3 class="unnumbered unlisted" id="leyes-y-restricciones">Leyes y
-restricciones</h3>
+</section>
+<section id="leyes-y-restricciones" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Leyes y restricciones</h3>
 <p>Para bases positivas y exponentes racionales se cumplen</p>
 <p><span class="math display">\[
 a^r a^s=a^{r+s},\qquad \frac{a^r}{a^s}=a^{r-s},
@@ -2296,18 +2434,20 @@ class="math inline">\(x\)</span>. Si <span
 class="math inline">\(x=-3\)</span>, entonces <span
 class="math inline">\(\sqrt{x^2}=3\ne-3\)</span>.</p>
 <div class="callout-warning" title="Error frecuente">
-<p><strong>Error frecuente</strong></p>
 <p>En general, <span class="math display">\[
 \sqrt{a+b}\ne\sqrt a+\sqrt b.
 \]</span> Con <span class="math inline">\(a=b=1\)</span>, el lado
 izquierdo es <span class="math inline">\(\sqrt2\)</span> y el derecho es
 <span class="math inline">\(2\)</span>.</p>
 </div>
-<h2 data-number="2.8" id="sec-valor-absoluto"><span
-class="header-section-number">2.8</span> Valor absoluto</h2>
-<h3 class="unnumbered unlisted"
-id="definición-y-significado-geométrico">Definición y significado
-geométrico</h3>
+</section>
+</section>
+<section id="sec-valor-absoluto" class="level2" data-number="2.8">
+<h2 data-number="2.8"><span class="header-section-number">2.8</span>
+Valor absoluto</h2>
+<section id="definición-y-significado-geométrico"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Definición y significado geométrico</h3>
 <p>El valor absoluto de <span class="math inline">\(x\in\mathbb
 R\)</span> se define por</p>
 <p><span class="math display">\[
@@ -2330,7 +2470,9 @@ class="math inline">\(|x-a|\le r\)</span> como los puntos cuya distancia
 al centro <span class="math inline">\(a\)</span> no excede el radio
 <span class="math inline">\(r\)</span>.</figcaption>
 </figure>
-<h3 class="unnumbered unlisted" id="propiedades">Propiedades</h3>
+</section>
+<section id="propiedades" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Propiedades</h3>
 <p>Para <span class="math inline">\(x,y\in\mathbb R\)</span>:</p>
 <p><span class="math display">\[
 |x|\ge0,qquad |x|=0\Longleftrightarrow x=0,
@@ -2353,8 +2495,10 @@ se obtiene</p>
 \]</span></p>
 <p>lo que implica <span
 class="math inline">\(|x+y|\le|x|+|y|\)</span>.</p>
-<h3 class="unnumbered unlisted"
-id="ecuaciones-e-inecuaciones">Ecuaciones e inecuaciones</h3>
+</section>
+<section id="ecuaciones-e-inecuaciones"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Ecuaciones e inecuaciones</h3>
 <p>Para <span class="math inline">\(r&gt;0\)</span>:</p>
 <p><span class="math display">\[
 |x-a|=r\quad\Longleftrightarrow\quad x=a-r\text{ o }x=a+r,
@@ -2377,8 +2521,11 @@ id="ecuaciones-e-inecuaciones">Ecuaciones e inecuaciones</h3>
 <p><span class="math display">\[
 -1\le x\le4.
 \]</span></p>
-<h2 class="unnumbered unlisted" id="síntesis-del-capítulo-1">Síntesis
-del capítulo</h2>
+</section>
+</section>
+<section id="síntesis-del-capítulo-1"
+class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Síntesis del capítulo</h2>
 <ul>
 <li>Los enteros son cerrados bajo suma, resta y producto, pero no bajo
 división.</li>
@@ -2396,8 +2543,9 @@ paridad del índice.</li>
 <li>El valor absoluto mide distancia y convierte problemas geométricos
 en desigualdades.</li>
 </ul>
-<h2 class="unnumbered unlisted" id="errores-frecuentes-1">Errores
-frecuentes</h2>
+</section>
+<section id="errores-frecuentes-1" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Errores frecuentes</h2>
 <ol type="1">
 <li>Confundir comprobar muchos casos con demostrar por inducción.</li>
 <li>Dividir una desigualdad por un número negativo sin invertir el
@@ -2418,8 +2566,11 @@ base.</li>
 <li>Interpretar <span class="math inline">\(|x-a|&gt;r\)</span> como un
 intervalo central; describe dos regiones exteriores.</li>
 </ol>
-<h2 class="unnumbered unlisted" id="ejercicios-1">Ejercicios</h2>
-<h3 class="unnumbered unlisted" id="nivel-básico-1">Nivel básico</h3>
+</section>
+<section id="ejercicios-1" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Ejercicios</h2>
+<section id="nivel-básico-1" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Nivel básico</h3>
 <ol type="1">
 <li>Clasifique como naturales, enteros, racionales, irracionales o
 reales: <span class="math inline">\(-7\)</span>, <span
@@ -2442,8 +2593,9 @@ class="math inline">\(12\)</span>.</li>
 <li>Resuelva <span class="math inline">\(|x-4|=7\)</span> y <span
 class="math inline">\(|x-4|&lt;7\)</span>.</li>
 </ol>
-<h3 class="unnumbered unlisted" id="nivel-intermedio-1">Nivel
-intermedio</h3>
+</section>
+<section id="nivel-intermedio-1" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Nivel intermedio</h3>
 <ol start="8" type="1">
 <li>Demuestre por inducción que <span
 class="math inline">\(1+2+\cdots+n=n(n+1)/2\)</span>.</li>
@@ -2464,8 +2616,10 @@ racional.</li>
 <li>Resuelva <span class="math inline">\(|3x+2|&gt;8\)</span> y exprese
 la solución con intervalos.</li>
 </ol>
-<h3 class="unnumbered unlisted" id="nivel-formal-y-aplicado-1">Nivel
-formal y aplicado</h3>
+</section>
+<section id="nivel-formal-y-aplicado-1"
+class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted">Nivel formal y aplicado</h3>
 <ol start="15" type="1">
 <li>Demuestre por inducción fuerte que todo entero <span
 class="math inline">\(n&gt;1\)</span> es primo o producto de
@@ -2486,9 +2640,12 @@ class="math display">\[
 <span class="math inline">\(2\)</span> de <span
 class="math inline">\(-1\)</span> y represéntelo en la recta real.</li>
 </ol>
-<h2 class="unnumbered unlisted"
-id="respuestas-breves-a-ejercicios-seleccionados-1">Respuestas breves a
-ejercicios seleccionados</h2>
+</section>
+</section>
+<section id="respuestas-breves-a-ejercicios-seleccionados-1"
+class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Respuestas breves a ejercicios
+seleccionados</h2>
 <ol type="1">
 <li><span class="math inline">\(-7\)</span> es entero; <span
 class="math inline">\(0\)</span> es entero y racional; <span
@@ -2514,8 +2671,9 @@ class="math inline">\(-3&lt;x&lt;11\)</span>.</li>
 <li><span class="math inline">\(x&lt;-10/3\)</span> o <span
 class="math inline">\(x&gt;2\)</span>.</li>
 </ol>
-<h2 class="unnumbered unlisted" id="proyecto-integrador-1">Proyecto
-integrador</h2>
+</section>
+<section id="proyecto-integrador-1" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Proyecto integrador</h2>
 <p>Construya un estudio completo de dos enteros positivos <span
 class="math inline">\(a\)</span> y <span
 class="math inline">\(b\)</span> elegidos por el equipo:</p>
@@ -2531,8 +2689,10 @@ datos;</li>
 <li>demuestre la conjetura o construya un contraejemplo;</li>
 <li>presente una representación visual clara de los resultados.</li>
 </ol>
-<h2 class="unnumbered unlisted"
-id="referencias-del-capítulo-1">Referencias del capítulo</h2>
+</section>
+<section id="referencias-del-capítulo-1"
+class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted">Referencias del capítulo</h2>
 <p>La secuencia corresponde a la segunda unidad del programa de Álgebra
 Superior <span class="citation" data-cites="uaslp2011">(Universidad
 Autónoma de San Luis Potosí, Facultad de Ciencias 2011)</span>. Las
@@ -2543,13 +2703,18 @@ Lazo (2007)</span> y <span class="citation" data-cites="rosen2019">Rosen
 consultaron <span class="citation" data-cites="burton2011">Burton
 (2011)</span> y <span class="citation" data-cites="niven1991">Niven,
 Zuckerman, y Montgomery (1991)</span>.</p>
-<h1 class="unnumbered" id="índices-de-consulta">Índices de consulta</h1>
+</section>
+</section>
+<section id="índices-de-consulta" class="level1 unnumbered">
+<h1 class="unnumbered">Índices de consulta</h1>
 <p>Estos índices complementan el índice general del libro. Los conceptos
 remiten a la primera sección principal donde se desarrollan; algunos
 reaparecen en ejercicios, demostraciones y aplicaciones posteriores.</p>
-<h2 class="unnumbered" id="índice-temático">Índice temático</h2>
+<section id="índice-temático" class="level2 unnumbered">
+<h2 class="unnumbered">Índice temático</h2>
 <table>
-<caption>Índice alfabético de conceptos principales. </caption>
+<caption>Índice alfabético de conceptos principales.
+{#tbl-indice-tematico}</caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -2563,141 +2728,162 @@ reaparecen en ejercicios, demostraciones y aplicaciones posteriores.</p>
 <tbody>
 <tr class="odd">
 <td><strong>Algoritmo de Euclides</strong></td>
-<td><a href="#sec-divisibilidad">2.3 Divisibilidad</a></td>
+<td><a href="02-enteros-reales.qmd#sec-divisibilidad">2.3
+Divisibilidad</a></td>
 </tr>
 <tr class="even">
 <td><strong>Álgebra de Boole</strong></td>
-<td><a href="#sec-cuantificadores">1.3 Cuantificadores y
-equivalencias</a> y aplicación del capítulo 1</td>
+<td><a href="01-logica-conjuntos.qmd#sec-cuantificadores">1.3
+Cuantificadores y equivalencias</a> y aplicación del capítulo 1</td>
 </tr>
 <tr class="odd">
 <td><strong>Bézout, identidad de</strong></td>
-<td><a href="#sec-divisibilidad">2.3 Divisibilidad</a></td>
+<td><a href="02-enteros-reales.qmd#sec-divisibilidad">2.3
+Divisibilidad</a></td>
 </tr>
 <tr class="even">
 <td><strong>Biyectiva, función</strong></td>
-<td><a href="#sec-tipos-funciones">1.8 Tipos de funciones</a></td>
+<td><a href="01-logica-conjuntos.qmd#sec-tipos-funciones">1.8 Tipos de
+funciones</a></td>
 </tr>
 <tr class="odd">
 <td><strong>Buen orden</strong></td>
-<td><a href="#sec-propiedades-enteros">2.1 Propiedades de los
-enteros</a></td>
+<td><a href="02-enteros-reales.qmd#sec-propiedades-enteros">2.1
+Propiedades de los enteros</a></td>
 </tr>
 <tr class="even">
 <td><strong>Cardinalidad</strong></td>
-<td><a href="#sec-cardinalidad-finita">1.5 Conjuntos finitos</a> y <a
-href="#sec-cardinalidad-infinita">1.9 Conjuntos infinitos</a></td>
+<td><a href="01-logica-conjuntos.qmd#sec-cardinalidad-finita">1.5
+Conjuntos finitos</a> y <a
+href="01-logica-conjuntos.qmd#sec-cardinalidad-infinita">1.9 Conjuntos
+infinitos</a></td>
 </tr>
 <tr class="odd">
 <td><strong>Completitud de los reales</strong></td>
-<td><a href="#sec-propiedades-reales">2.6 Propiedades de los
-reales</a></td>
+<td><a href="02-enteros-reales.qmd#sec-propiedades-reales">2.6
+Propiedades de los reales</a></td>
 </tr>
 <tr class="even">
 <td><strong>Conjunto potencia</strong></td>
-<td><a href="#sec-lenguaje-conjuntos">1.1 Lenguaje de conjuntos</a></td>
+<td><a href="01-logica-conjuntos.qmd#sec-lenguaje-conjuntos">1.1
+Lenguaje de conjuntos</a></td>
 </tr>
 <tr class="odd">
 <td><strong>Cuantificadores</strong></td>
-<td><a href="#sec-cuantificadores">1.3 Cuantificadores y
-equivalencias</a></td>
+<td><a href="01-logica-conjuntos.qmd#sec-cuantificadores">1.3
+Cuantificadores y equivalencias</a></td>
 </tr>
 <tr class="even">
 <td><strong>Densidad</strong></td>
-<td><a href="#sec-racionales-reales">2.5 Racionales y reales</a></td>
+<td><a href="02-enteros-reales.qmd#sec-racionales-reales">2.5 Racionales
+y reales</a></td>
 </tr>
 <tr class="odd">
 <td><strong>Divisibilidad</strong></td>
-<td><a href="#sec-divisibilidad">2.3 Divisibilidad</a></td>
+<td><a href="02-enteros-reales.qmd#sec-divisibilidad">2.3
+Divisibilidad</a></td>
 </tr>
 <tr class="even">
 <td><strong>Equipotencia</strong></td>
-<td><a href="#sec-cardinalidad-infinita">1.9 Cardinalidad
-infinita</a></td>
+<td><a href="01-logica-conjuntos.qmd#sec-cardinalidad-infinita">1.9
+Cardinalidad infinita</a></td>
 </tr>
 <tr class="odd">
 <td><strong>Exponente racional</strong></td>
-<td><a href="#sec-exponentes">2.7 Exponentes</a></td>
+<td><a href="02-enteros-reales.qmd#sec-exponentes">2.7
+Exponentes</a></td>
 </tr>
 <tr class="even">
 <td><strong>Factorización prima</strong></td>
-<td><a href="#sec-primos-factorizacion">2.4 Primos y
-factorización</a></td>
+<td><a href="02-enteros-reales.qmd#sec-primos-factorizacion">2.4 Primos
+y factorización</a></td>
 </tr>
 <tr class="odd">
 <td><strong>Función</strong></td>
-<td><a href="#sec-funciones">1.7 Funciones</a></td>
+<td><a href="01-logica-conjuntos.qmd#sec-funciones">1.7
+Funciones</a></td>
 </tr>
 <tr class="even">
 <td><strong>Inducción fuerte</strong></td>
-<td><a href="#sec-induccion">2.2 Inducción</a></td>
+<td><a href="02-enteros-reales.qmd#sec-induccion">2.2 Inducción</a></td>
 </tr>
 <tr class="odd">
 <td><strong>Inducción matemática</strong></td>
-<td><a href="#sec-induccion">2.2 Inducción</a></td>
+<td><a href="02-enteros-reales.qmd#sec-induccion">2.2 Inducción</a></td>
 </tr>
 <tr class="even">
 <td><strong>Inyectiva, función</strong></td>
-<td><a href="#sec-tipos-funciones">1.8 Tipos de funciones</a></td>
+<td><a href="01-logica-conjuntos.qmd#sec-tipos-funciones">1.8 Tipos de
+funciones</a></td>
 </tr>
 <tr class="odd">
 <td><strong>Irracional</strong></td>
-<td><a href="#sec-racionales-reales">2.5 Racionales y reales</a></td>
+<td><a href="02-enteros-reales.qmd#sec-racionales-reales">2.5 Racionales
+y reales</a></td>
 </tr>
 <tr class="even">
 <td><strong>Máximo común divisor</strong></td>
-<td><a href="#sec-divisibilidad">2.3 Divisibilidad</a></td>
+<td><a href="02-enteros-reales.qmd#sec-divisibilidad">2.3
+Divisibilidad</a></td>
 </tr>
 <tr class="odd">
 <td><strong>Mínimo común múltiplo</strong></td>
-<td><a href="#sec-primos-factorizacion">2.4 Primos y
-factorización</a></td>
+<td><a href="02-enteros-reales.qmd#sec-primos-factorizacion">2.4 Primos
+y factorización</a></td>
 </tr>
 <tr class="even">
 <td><strong>Número primo</strong></td>
-<td><a href="#sec-primos-factorizacion">2.4 Primos y
-factorización</a></td>
+<td><a href="02-enteros-reales.qmd#sec-primos-factorizacion">2.4 Primos
+y factorización</a></td>
 </tr>
 <tr class="odd">
 <td><strong>Producto cartesiano</strong></td>
-<td><a href="#sec-producto-relaciones">1.6 Producto y
-relaciones</a></td>
+<td><a href="01-logica-conjuntos.qmd#sec-producto-relaciones">1.6
+Producto y relaciones</a></td>
 </tr>
 <tr class="even">
 <td><strong>Proposición</strong></td>
-<td><a href="#sec-proposiciones">1.2 Proposiciones</a></td>
+<td><a href="01-logica-conjuntos.qmd#sec-proposiciones">1.2
+Proposiciones</a></td>
 </tr>
 <tr class="odd">
 <td><strong>Racional</strong></td>
-<td><a href="#sec-racionales-reales">2.5 Racionales y reales</a></td>
+<td><a href="02-enteros-reales.qmd#sec-racionales-reales">2.5 Racionales
+y reales</a></td>
 </tr>
 <tr class="even">
 <td><strong>Relación</strong></td>
-<td><a href="#sec-producto-relaciones">1.6 Producto y
-relaciones</a></td>
+<td><a href="01-logica-conjuntos.qmd#sec-producto-relaciones">1.6
+Producto y relaciones</a></td>
 </tr>
 <tr class="odd">
 <td><strong>Residuo</strong></td>
-<td><a href="#sec-divisibilidad">2.3 Divisibilidad</a></td>
+<td><a href="02-enteros-reales.qmd#sec-divisibilidad">2.3
+Divisibilidad</a></td>
 </tr>
 <tr class="even">
 <td><strong>Suprayectiva, función</strong></td>
-<td><a href="#sec-tipos-funciones">1.8 Tipos de funciones</a></td>
+<td><a href="01-logica-conjuntos.qmd#sec-tipos-funciones">1.8 Tipos de
+funciones</a></td>
 </tr>
 <tr class="odd">
 <td><strong>Supremo</strong></td>
-<td><a href="#sec-propiedades-reales">2.6 Propiedades de los
-reales</a></td>
+<td><a href="02-enteros-reales.qmd#sec-propiedades-reales">2.6
+Propiedades de los reales</a></td>
 </tr>
 <tr class="even">
 <td><strong>Valor absoluto</strong></td>
-<td><a href="#sec-valor-absoluto">2.8 Valor absoluto</a></td>
+<td><a href="02-enteros-reales.qmd#sec-valor-absoluto">2.8 Valor
+absoluto</a></td>
 </tr>
 </tbody>
 </table>
-<h2 class="unnumbered" id="índice-de-símbolos">Índice de símbolos</h2>
+</section>
+<section id="índice-de-símbolos" class="level2 unnumbered">
+<h2 class="unnumbered">Índice de símbolos</h2>
 <table>
-<caption>Símbolos utilizados en los capítulos 1 y 2. </caption>
+<caption>Símbolos utilizados en los capítulos 1 y 2.
+{#tbl-indice-simbolos}</caption>
 <colgroup>
 <col style="width: 40%" />
 <col style="width: 30%" />
@@ -2814,8 +3000,11 @@ class="math inline">\(a\)</span></td>
 </tr>
 </tbody>
 </table>
-<h2 class="unnumbered" id="índice-de-figuras">Índice de figuras</h2>
-<h3 class="unnumbered" id="capítulo-1">Capítulo 1</h3>
+</section>
+<section id="índice-de-figuras" class="level2 unnumbered">
+<h2 class="unnumbered">Índice de figuras</h2>
+<section id="capítulo-1" class="level3 unnumbered">
+<h3 class="unnumbered">Capítulo 1</h3>
 <ol type="1">
 <li><strong>Operaciones con conjuntos:</strong> unión, intersección,
 complemento y diferencia simétrica (sección 1.4).</li>
@@ -2826,7 +3015,9 @@ class="math inline">\(g\circ f\)</span> (sección 1.7).</li>
 <li><strong>Tipos de funciones:</strong> inyectiva, suprayectiva y
 biyectiva (sección 1.8).</li>
 </ol>
-<h3 class="unnumbered" id="capítulo-2">Capítulo 2</h3>
+</section>
+<section id="capítulo-2" class="level3 unnumbered">
+<h3 class="unnumbered">Capítulo 2</h3>
 <ol type="1">
 <li><strong>Inducción y números impares:</strong> construcción de
 cuadrados (sección 2.2).</li>
@@ -2840,7 +3031,10 @@ Q\subseteq\mathbb R\)</span> (sección 2.5).</li>
 <li><strong>Valor absoluto:</strong> distancia e intervalo central
 (sección 2.8).</li>
 </ol>
-<h2 class="unnumbered" id="índice-de-cuadros">Índice de cuadros</h2>
+</section>
+</section>
+<section id="índice-de-cuadros" class="level2 unnumbered">
+<h2 class="unnumbered">Índice de cuadros</h2>
 <ol type="1">
 <li>Propiedades básicas de las operaciones en <span
 class="math inline">\(\mathbb Z\)</span> (sección 2.1).</li>
@@ -2848,20 +3042,22 @@ class="math inline">\(\mathbb Z\)</span> (sección 2.1).</li>
 <li>Índice alfabético de conceptos principales (este apartado).</li>
 <li>Símbolos utilizados en los capítulos 1 y 2 (este apartado).</li>
 </ol>
-<h1 class="unnumbered" id="referencias-generales">Referencias
-generales</h1>
+</section>
+</section>
+<section id="referencias-generales" class="level1 unnumbered">
+<h1 class="unnumbered">Referencias generales</h1>
 <p>Las referencias se presentan en una sola lista general para evitar
 duplicaciones. Cada capítulo conserva al final una nota breve que
 identifica sus fuentes principales.</p>
 <div id="refs" class="references csl-bib-body hanging-indent"
 role="list">
 <div id="ref-burton2011" class="csl-entry" role="listitem">
-Burton, David M. 2011. <em>Elementary Number Theory</em>. 7a ed.
+Burton, David M. 2011. <em>Elementary Number Theory</em>. 7.ª ed.
 McGraw-Hill.
 </div>
 <div id="ref-epp2011" class="csl-entry" role="listitem">
 Epp, Susanna S. 2011. <em>Discrete Mathematics with Applications</em>.
-4a ed. Brooks/Cole, Cengage Learning.
+4.ª ed. Brooks/Cole, Cengage Learning.
 </div>
 <div id="ref-halmos1960" class="csl-entry" role="listitem">
 Halmos, Paul R. 1960. <em>Naive Set Theory</em>. D. Van Nostrand
@@ -2869,27 +3065,82 @@ Company.
 </div>
 <div id="ref-niven1991" class="csl-entry" role="listitem">
 Niven, Ivan, Herbert S. Zuckerman, y Hugh L. Montgomery. 1991. <em>An
-Introduction to the Theory of Numbers</em>. 5a ed. John Wiley &amp;
+Introduction to the Theory of Numbers</em>. 5.ª ed. John Wiley &amp;
 Sons.
 </div>
 <div id="ref-rosen2019" class="csl-entry" role="listitem">
 Rosen, Kenneth H. 2019. <em>Discrete Mathematics and Its
-Applications</em>. 8a ed. McGraw-Hill Education.
+Applications</em>. 8.ª ed. McGraw-Hill Education.
 </div>
 <div id="ref-silvaLazo2007" class="csl-entry" role="listitem">
 Silva, Juan Manuel, y Adriana Lazo. 2007. <em>Fundamentos de
 Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo</em>.
-7a ed. México: Limusa.
+7.ª ed. México: Limusa.
 </div>
 <div id="ref-tocci2003" class="csl-entry" role="listitem">
 Tocci, Ronald J., y Neal S. Widmer. 2003. <em>Sistemas digitales:
-principios y aplicaciones</em>. 8a ed. México: Pearson Educación.
+principios y aplicaciones</em>. 8.ª ed. México: Pearson Educación.
 </div>
 <div id="ref-uaslp2011" class="csl-entry" role="listitem">
 Universidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011.
-<span>“Programa sintético de Álgebra Superior, carrera de Ingeniero
-Electrónico”</span>. Propuesta de modificación curricular.
+<span>«Programa sintético de Álgebra Superior, carrera de Ingeniero
+Electrónico»</span>. Propuesta de modificación curricular.
 </div>
 </div>
+</section>
+<button class="book-menu-toggle" type="button" aria-controls="TOC" aria-expanded="false">
+  <span aria-hidden="true">☰</span> Menú del libro
+</button>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toc = document.querySelector("body > nav#TOC");
+  if (!toc) return;
+
+  toc.setAttribute("aria-label", "Capítulos y subtemas");
+
+  const download = document.createElement("a");
+  download.className = "sidebar-pdf-download";
+  download.href = "Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-2.pdf";
+  download.setAttribute("download", "");
+  download.textContent = "Descargar PDF";
+  toc.appendChild(download);
+
+  const toggle = document.querySelector(".book-menu-toggle");
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      const open = document.body.classList.toggle("book-menu-open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+  }
+
+  toc.querySelectorAll("a[href^='#']").forEach(function (link) {
+    link.addEventListener("click", function () {
+      document.body.classList.remove("book-menu-open");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  const links = Array.from(toc.querySelectorAll("a[href^='#']"));
+  const targets = links.map(function (link) {
+    const id = decodeURIComponent(link.getAttribute("href").slice(1));
+    return { link: link, target: document.getElementById(id) };
+  }).filter(function (item) { return item.target; });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      const visible = entries.filter(function (entry) { return entry.isIntersecting; })
+        .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
+      if (!visible.length) return;
+      links.forEach(function (link) { link.classList.remove("active"); });
+      const current = targets.find(function (item) { return item.target === visible[0].target; });
+      if (current) {
+        current.link.classList.add("active");
+        current.link.scrollIntoView({ block: "nearest" });
+      }
+    }, { rootMargin: "-12% 0px -76% 0px", threshold: 0 });
+    targets.forEach(function (item) { observer.observe(item.target); });
+  }
+});
+</script>
 </body>
 </html>

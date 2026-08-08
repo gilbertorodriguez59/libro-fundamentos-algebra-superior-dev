@@ -6,6 +6,10 @@ Este libro presenta los fundamentos del Álgebra Superior con rigor matemático 
 
 La obra está concebida como complemento teórico de *Álgebra Superior con aplicaciones en R y GeoGebra*. La numeración de los capítulos y de las secciones principales será compatible entre ambos libros para facilitar la consulta cruzada.
 
+::: {.content-visible when-format="html"}
+<p class="pdf-download-hero"><a class="btn btn-primary" href="Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-2.pdf" download>Descargar el libro en PDF</a></p>
+:::
+
 ## Propósito {.unnumbered .unlisted}
 
 El lector no solo aprenderá a efectuar operaciones. También aprenderá a:
