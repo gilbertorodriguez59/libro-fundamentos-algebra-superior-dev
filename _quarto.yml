@@ -10,11 +10,12 @@ book:
   subtitle: "Conceptos, demostraciones y métodos"
   author: "Jesús Gilberto Rodríguez Escobedo"
   date: "2026-08-07"
-  output-file: "Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-2"
+  output-file: "Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-3"
   chapters:
     - index.qmd
     - 01-logica-conjuntos.qmd
     - 02-enteros-reales.qmd
+    - 03-numeros-complejos.qmd
     - indices.qmd
     - references.qmd
   page-footer:

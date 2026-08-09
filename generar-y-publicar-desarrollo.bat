@@ -14,7 +14,7 @@ where quarto >nul 2>&1 || (
   goto :error_carpeta
 )
 
-set "PDF_NOMBRE=Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-2.pdf"
+set "PDF_NOMBRE=Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-3.pdf"
 set "PDF_TEMP=%TEMP%\%PDF_NOMBRE%"
 
 echo Generando el PDF...
@@ -44,6 +44,10 @@ if not exist "docs\01-logica-conjuntos.html" (
 )
 if not exist "docs\02-enteros-reales.html" (
   echo ERROR: No se genero la pagina del capitulo 2.
+  goto :error_carpeta
+)
+if not exist "docs\03-numeros-complejos.html" (
+  echo ERROR: No se genero la pagina del capitulo 3.
   goto :error_carpeta
 )
 if not exist "docs\%PDF_NOMBRE%" (
@@ -78,7 +82,7 @@ if not errorlevel 1 (
   echo No hay cambios nuevos para subir.
   goto :fin
 )
-git commit -m "Agrega navegacion lateral y descarga PDF"
+git commit -m "Agrega capitulo 3 de numeros complejos"
 if errorlevel 1 goto :error_git
 git push origin main
 if errorlevel 1 goto :error_git

@@ -36,6 +36,14 @@ Estos índices complementan el índice general del libro. Los conceptos remiten 
 | **Suprayectiva, función** | [1.8 Tipos de funciones](01-logica-conjuntos.qmd#sec-tipos-funciones) |
 | **Supremo** | [2.6 Propiedades de los reales](02-enteros-reales.qmd#sec-propiedades-reales) |
 | **Valor absoluto** | [2.8 Valor absoluto](02-enteros-reales.qmd#sec-valor-absoluto) |
+| **Argumento de un complejo** | [3.4 Módulo y argumento](03-numeros-complejos.qmd#sec-modulo-argumento) |
+| **Complejo conjugado** | [3.7 Conjugado](03-numeros-complejos.qmd#sec-conjugado) |
+| **División de complejos** | [3.8 División](03-numeros-complejos.qmd#sec-division-complejos) |
+| **Fórmula de De Moivre** | [3.9 Potencias y raíces](03-numeros-complejos.qmd#sec-potencias-raices) |
+| **Forma polar** | [3.2 Representaciones cartesiana y polar](03-numeros-complejos.qmd#sec-cartesiana-polar) |
+| **Módulo de un complejo** | [3.4 Módulo y argumento](03-numeros-complejos.qmd#sec-modulo-argumento) |
+| **Número complejo** | [3.5 Imaginarios y complejos](03-numeros-complejos.qmd#sec-imaginarios-complejos) |
+| **Raíces de la unidad** | [3.9 Potencias y raíces](03-numeros-complejos.qmd#sec-potencias-raices) |
 
 : Índice alfabético de conceptos principales. {#tbl-indice-tematico}
 
@@ -59,8 +67,13 @@ Estos índices complementan el índice general del libro. Los conceptos remiten 
 | $\operatorname{mcm}(a,b)$ | mínimo común múltiplo | 2.4 |
 | $\sup A$ | supremo de $A$ | 2.6 |
 | $|x-a|$ | distancia entre $x$ y $a$ | 2.8 |
+| $\mathbb R^2,\mathbb C$ | plano real y números complejos | 3.1 y 3.5 |
+| $i^2=-1$ | unidad imaginaria | 3.5 |
+| $\overline z$ | conjugado de $z$ | 3.7 |
+| $|z|,\arg(z)$ | módulo y argumento | 3.4 |
+| $e^{i\theta}$ | forma exponencial compleja | 3.9 |
 
-: Símbolos utilizados en los capítulos 1 y 2. {#tbl-indice-simbolos}
+: Símbolos utilizados en los capítulos 1 a 3. {#tbl-indice-simbolos}
 
 ## Índice de figuras {.unnumbered}
 
@@ -79,9 +92,16 @@ Estos índices complementan el índice general del libro. Los conceptos remiten 
 4. **Jerarquía de sistemas numéricos:** $\mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R$ (sección 2.5).
 5. **Valor absoluto:** distancia e intervalo central (sección 2.8).
 
+### Capítulo 3 {.unnumbered}
+
+1. **Plano complejo:** representación cartesiana y polar (sección 3.2).
+2. **Suma vectorial:** regla del paralelogramo (sección 3.3).
+3. **Complejo conjugado:** reflexión respecto del eje real (sección 3.7).
+4. **Raíces de la unidad:** distribución sobre la circunferencia unitaria (sección 3.9).
+
 ## Índice de cuadros {.unnumbered}
 
 1. Propiedades básicas de las operaciones en $\mathbb Z$ (sección 2.1).
 2. Correspondencia entre desigualdades e intervalos (sección 2.6).
 3. Índice alfabético de conceptos principales (este apartado).
-4. Símbolos utilizados en los capítulos 1 y 2 (este apartado).
+4. Símbolos utilizados en los capítulos 1 a 3 (este apartado).

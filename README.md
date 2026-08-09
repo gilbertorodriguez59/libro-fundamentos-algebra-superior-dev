@@ -2,7 +2,7 @@
 
 Versión de desarrollo del libro de **Jesús Gilberto Rodríguez Escobedo**.
 
-Los capítulos 1 y 2 presentan lógica, conjuntos, relaciones, funciones, números enteros y números reales con rigor matemático, demostraciones, ejemplos, contraejemplos y ejercicios graduados. La versión incorpora índices temático, de figuras y de símbolos, además de referencias generales.
+Los capítulos 1 a 3 presentan lógica, conjuntos, relaciones, funciones, números enteros, reales y complejos con rigor matemático, demostraciones, ejemplos, contraejemplos y ejercicios graduados. La versión incorpora índices temático, de figuras y de símbolos, además de referencias generales.
 
 Sitio de desarrollo: <https://gilbertorodriguez59.github.io/libro-fundamentos-algebra-superior-dev/>
 
