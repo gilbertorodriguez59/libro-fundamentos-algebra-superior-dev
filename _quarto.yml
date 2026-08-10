@@ -9,13 +9,14 @@ book:
   title: "Fundamentos Matemáticos del Álgebra Superior"
   subtitle: "Conceptos, demostraciones y métodos"
   author: "Jesús Gilberto Rodríguez Escobedo"
-  date: "2026-08-07"
-  output-file: "Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-3"
+  date: "2026-08-10"
+  output-file: "Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-4"
   chapters:
     - index.qmd
     - 01-logica-conjuntos.qmd
     - 02-enteros-reales.qmd
     - 03-numeros-complejos.qmd
+    - 04-polinomios.qmd
     - indices.qmd
     - references.qmd
   page-footer:

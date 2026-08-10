@@ -44,6 +44,18 @@ Estos índices complementan el índice general del libro. Los conceptos remiten 
 | **Módulo de un complejo** | [3.4 Módulo y argumento](03-numeros-complejos.qmd#sec-modulo-argumento) |
 | **Número complejo** | [3.5 Imaginarios y complejos](03-numeros-complejos.qmd#sec-imaginarios-complejos) |
 | **Raíces de la unidad** | [3.9 Potencias y raíces](03-numeros-complejos.qmd#sec-potencias-raices) |
+| **Algoritmo de la división polinomial** | [4.3 Divisibilidad](04-polinomios.qmd#sec-divisibilidad-polinomios) |
+| **División sintética** | [4.5 Residuo y división sintética](04-polinomios.qmd#sec-residuo-sintetica) |
+| **Factorización lineal** | [4.8 Factores lineales](04-polinomios.qmd#sec-factorizacion-lineal) |
+| **Fracciones parciales** | [4.11 Fracciones parciales](04-polinomios.qmd#sec-fracciones-parciales) |
+| **Función racional** | [4.10 Funciones racionales](04-polinomios.qmd#sec-funciones-racionales) |
+| **Multiplicidad de una raíz** | [4.6 Raíces múltiples](04-polinomios.qmd#sec-raices-multiples) |
+| **Polinomio** | [4.1 Definición](04-polinomios.qmd#sec-definicion-polinomio) |
+| **Raíz de un polinomio** | [4.4 Raíz](04-polinomios.qmd#sec-raiz-polinomio) |
+| **Raíces conjugadas** | [4.9 Polinomios reales](04-polinomios.qmd#sec-polinomios-reales) |
+| **Teorema del factor** | [4.4 Raíz](04-polinomios.qmd#sec-raiz-polinomio) |
+| **Teorema del residuo** | [4.5 Residuo y división sintética](04-polinomios.qmd#sec-residuo-sintetica) |
+| **Teorema fundamental del álgebra** | [4.7 Teorema fundamental](04-polinomios.qmd#sec-teorema-fundamental-algebra) |
 
 : Índice alfabético de conceptos principales. {#tbl-indice-tematico}
 
@@ -72,8 +84,13 @@ Estos índices complementan el índice general del libro. Los conceptos remiten 
 | $\overline z$ | conjugado de $z$ | 3.7 |
 | $|z|,\arg(z)$ | módulo y argumento | 3.4 |
 | $e^{i\theta}$ | forma exponencial compleja | 3.9 |
+| $K[x]$ | polinomios en $x$ con coeficientes en $K$ | 4.1 |
+| $\deg p$ | grado del polinomio $p$ | 4.1 |
+| $d\mid p$ | el polinomio $d$ divide a $p$ | 4.3 |
+| $p=dq+r$ | identidad de la división polinomial | 4.3 |
+| $p(\alpha)=0$ | $\alpha$ es raíz de $p$ | 4.4 |
 
-: Símbolos utilizados en los capítulos 1 a 3. {#tbl-indice-simbolos}
+: Símbolos utilizados en los capítulos 1 a 4. {#tbl-indice-simbolos}
 
 ## Índice de figuras {.unnumbered}
 
@@ -99,9 +116,16 @@ Estos índices complementan el índice general del libro. Los conceptos remiten 
 3. **Complejo conjugado:** reflexión respecto del eje real (sección 3.7).
 4. **Raíces de la unidad:** distribución sobre la circunferencia unitaria (sección 3.9).
 
+### Capítulo 4 {.unnumbered}
+
+1. **División polinomial:** relación entre dividendo, divisor, cociente y residuo (sección 4.3).
+2. **Multiplicidad:** comportamiento local de raíces simples, dobles y triples (sección 4.6).
+3. **Raíces conjugadas:** simetría respecto del eje real (sección 4.9).
+4. **Funciones racionales:** huecos y asíntotas (sección 4.10).
+
 ## Índice de cuadros {.unnumbered}
 
 1. Propiedades básicas de las operaciones en $\mathbb Z$ (sección 2.1).
 2. Correspondencia entre desigualdades e intervalos (sección 2.6).
 3. Índice alfabético de conceptos principales (este apartado).
-4. Símbolos utilizados en los capítulos 1 a 3 (este apartado).
+4. Símbolos utilizados en los capítulos 1 a 4 (este apartado).

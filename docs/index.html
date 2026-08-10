@@ -152,6 +152,48 @@ class="toc-section-number">3.8</span> División de complejos</a></li>
 class="toc-section-number">3.9</span> Potencias y raíces de
 complejos</a></li>
 </ul></li>
+<li><a href="#polinomios" id="toc-polinomios"><span
+class="toc-section-number">4</span> Polinomios</a>
+<ul>
+<li><a href="#sec-definicion-polinomio"
+id="toc-sec-definicion-polinomio"><span
+class="toc-section-number">4.1</span> Definición de polinomio</a></li>
+<li><a href="#sec-aritmetica-polinomios"
+id="toc-sec-aritmetica-polinomios"><span
+class="toc-section-number">4.2</span> Aritmética y propiedades de los
+polinomios</a></li>
+<li><a href="#sec-divisibilidad-polinomios"
+id="toc-sec-divisibilidad-polinomios"><span
+class="toc-section-number">4.3</span> Divisibilidad</a></li>
+<li><a href="#sec-raiz-polinomio" id="toc-sec-raiz-polinomio"><span
+class="toc-section-number">4.4</span> Definición de raíz de un
+polinomio</a></li>
+<li><a href="#sec-residuo-sintetica"
+id="toc-sec-residuo-sintetica"><span
+class="toc-section-number">4.5</span> Teorema del residuo y división
+sintética</a></li>
+<li><a href="#sec-raices-multiples" id="toc-sec-raices-multiples"><span
+class="toc-section-number">4.6</span> Obtención de raíces
+múltiples</a></li>
+<li><a href="#sec-teorema-fundamental-algebra"
+id="toc-sec-teorema-fundamental-algebra"><span
+class="toc-section-number">4.7</span> Teorema fundamental del
+álgebra</a></li>
+<li><a href="#sec-factorizacion-lineal"
+id="toc-sec-factorizacion-lineal"><span
+class="toc-section-number">4.8</span> Descomposición de un polinomio en
+factores lineales</a></li>
+<li><a href="#sec-polinomios-reales"
+id="toc-sec-polinomios-reales"><span
+class="toc-section-number">4.9</span> Propiedades de polinomios con
+coeficientes reales</a></li>
+<li><a href="#sec-funciones-racionales"
+id="toc-sec-funciones-racionales"><span
+class="toc-section-number">4.10</span> Funciones racionales</a></li>
+<li><a href="#sec-fracciones-parciales"
+id="toc-sec-fracciones-parciales"><span
+class="toc-section-number">4.11</span> Fracciones parciales</a></li>
+</ul></li>
 <li><a href="#índices-de-consulta" id="toc-índices-de-consulta">Índices
 de consulta</a>
 <ul>
@@ -179,7 +221,7 @@ capítulos y de las secciones principales será compatible entre ambos
 libros para facilitar la consulta cruzada.</p>
 <div class="content-visible" data-when-format="html">
 <p class="pdf-download-hero">
-<a class="btn btn-primary" href="Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-3.pdf" download>Descargar
+<a class="btn btn-primary" href="Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-4.pdf" download>Descargar
 el libro en PDF</a>
 </p>
 </div>
@@ -216,6 +258,9 @@ absoluto.</li>
 <li><strong>Capítulo 3. Números complejos:</strong> plano real, forma
 polar, construcción de <span class="math inline">\(\mathbb C\)</span>,
 operaciones, conjugado, división, potencias y raíces.</li>
+<li><strong>Capítulo 4. Polinomios:</strong> aritmética y división,
+raíces y multiplicidades, teorema fundamental del álgebra,
+factorización, funciones racionales y fracciones parciales.</li>
 </ul>
 <h1 data-number="1" id="lógica-y-conjuntos"><span
 class="header-section-number">1</span> Lógica y conjuntos</h1>
@@ -263,7 +308,6 @@ biyectivas;</li>
 lógicos.</li>
 </ul>
 <div class="callout-tip" title="Pregunta inicial">
-<p><strong>Pregunta inicial</strong></p>
 <p>Un sistema electrónico enciende una alarma cuando la fuente está
 habilitada y ocurre al menos una de estas dos condiciones: la
 temperatura es alta o la corriente rebasa el límite de seguridad. ¿Cómo
@@ -289,7 +333,6 @@ class="math inline">\(x\in A\)</span>. Si no pertenece, escribimos <span
 class="math inline">\(x\notin A\)</span>.</p>
 <div class="callout-note"
 title="Importante: pertenencia no es inclusión">
-<p><strong>Importante: pertenencia no es inclusión</strong></p>
 <p>La expresión <span class="math inline">\(x\in A\)</span> relaciona un
 <strong>elemento</strong> con un conjunto. La expresión <span
 class="math inline">\(B\subseteq A\)</span> relaciona <strong>dos
@@ -326,7 +369,6 @@ vacío</strong> no contiene elementos y se denota por <span
 class="math inline">\(\varnothing\)</span>. Un <strong>conjunto
 unitario</strong> contiene exactamente un elemento.</p>
 <div class="callout-warning" title="Error frecuente">
-<p><strong>Error frecuente</strong></p>
 <p><span class="math inline">\(\varnothing\)</span> y <span
 class="math inline">\(\{\varnothing\}\)</span> no son iguales. El
 primero no tiene elementos; el segundo tiene un elemento, que es
@@ -338,7 +380,6 @@ precisamente el conjunto vacío. Por tanto, <span class="math display">\[
 id="subconjuntos-igualdad-y-conjunto-potencia">Subconjuntos, igualdad y
 conjunto potencia</h3>
 <div class="callout-note" title="Definición: subconjunto">
-<p><strong>Definición: subconjunto</strong></p>
 <p>Sean <span class="math inline">\(A\)</span> y <span
 class="math inline">\(B\)</span> conjuntos. Se dice que <span
 class="math inline">\(A\)</span> es subconjunto de <span
@@ -399,7 +440,6 @@ lógicos</h2>
 id="proposiciones-y-valores-de-verdad">Proposiciones y valores de
 verdad</h3>
 <div class="callout-note" title="Definición: proposición">
-<p><strong>Definición: proposición</strong></p>
 <p>Una <strong>proposición</strong> es un enunciado declarativo al que
 puede asignarse exactamente uno de dos valores de verdad: verdadero
 (<span class="math inline">\(V\)</span>) o falso (<span
@@ -552,7 +592,6 @@ class="math inline">\(p\Leftrightarrow q\)</span></th>
 </tbody>
 </table>
 <div class="callout-tip" title="Cómo entender la implicación">
-<p><strong>Cómo entender la implicación</strong></p>
 <p><span class="math inline">\(p\Rightarrow q\)</span> expresa que no
 puede ocurrir <span class="math inline">\(p\)</span> sin que ocurra
 <span class="math inline">\(q\)</span>. Por ello solo es falsa en el
@@ -612,7 +651,6 @@ para al menos uno:</p>
 \exists x\in D\text{ tal que }p(x).
 \]</span></p>
 <div class="callout-note" title="Orden de los cuantificadores">
-<p><strong>Orden de los cuantificadores</strong></p>
 <p>El orden puede cambiar el significado. En <span
 class="math inline">\(\mathbb R\)</span>, <span class="math display">\[
 \forall x\,\exists y\;(x+y=0)
@@ -746,7 +784,6 @@ sean <span class="math inline">\(A,B\subseteq U\)</span>.</p>
 <h3 class="unnumbered unlisted"
 id="operaciones-fundamentales">Operaciones fundamentales</h3>
 <div class="callout-note" title="Definiciones">
-<p><strong>Definiciones</strong></p>
 <p><span class="math display">\[
 \begin{aligned}
 A\cup B &amp;= \{x\in U:x\in A\lor x\in B\},\\
@@ -779,9 +816,9 @@ A\triangle B&amp;=\{1,3,6\}.
 <figure id="fig-venn-operaciones">
 <img src="figures/venn-operaciones.png" style="width:96.0%"
 alt="Las regiones sombreadas representan, respectivamente, la unión, la intersección, el complemento de A y la diferencia simétrica. El rectángulo representa el conjunto universal U." />
-<figcaption aria-hidden="true">Las regiones sombreadas representan,
-respectivamente, la unión, la intersección, el complemento de <span
-class="math inline">\(A\)</span> y la diferencia simétrica. El
+<figcaption><strong>Figura 1.1.</strong> Las regiones sombreadas
+representan, respectivamente, la unión, la intersección, el complemento
+de <span class="math inline">\(A\)</span> y la diferencia simétrica. El
 rectángulo representa el conjunto universal <span
 class="math inline">\(U\)</span>.</figcaption>
 </figure>
@@ -869,7 +906,6 @@ x\in A\cap(B\cup C)
 class="math inline">\(x\)</span>, ambos conjuntos son iguales.</p>
 <div class="callout-tip"
 title="Estructura de una demostración de igualdad">
-<p><strong>Estructura de una demostración de igualdad</strong></p>
 <p>Puede emplearse una cadena de equivalencias de pertenencia, como en
 el ejemplo, o demostrar por separado <span
 class="math inline">\(A\subseteq B\)</span> y <span
@@ -926,7 +962,6 @@ son</p>
 |(T\cap P)\setminus H|=|T\cap P|-|T\cap P\cap H|=70-20=50.
 \]</span></p>
 <div class="callout-warning" title="Error frecuente">
-<p><strong>Error frecuente</strong></p>
 <p>El dato <span class="math inline">\(|T\cap P|=70\)</span> incluye
 normalmente a quienes también pertenecen a <span
 class="math inline">\(H\)</span>. “Exactamente <span
@@ -978,7 +1013,6 @@ A\times(B\cup C)=(A\times B)\cup(A\times C).
 \]</span></p>
 <h3 class="unnumbered unlisted" id="relaciones">Relaciones</h3>
 <div class="callout-note" title="Definición: relación binaria">
-<p><strong>Definición: relación binaria</strong></p>
 <p>Una relación <span class="math inline">\(R\)</span> de <span
 class="math inline">\(A\)</span> en <span
 class="math inline">\(B\)</span> es cualquier subconjunto de <span
@@ -1037,7 +1071,6 @@ representación y operaciones</h2>
 <h3 class="unnumbered unlisted" id="definición-formal">Definición
 formal</h3>
 <div class="callout-note" title="Definición: función">
-<p><strong>Definición: función</strong></p>
 <p>Una función <span class="math inline">\(f:A\to B\)</span> es una
 relación que asigna a <strong>cada</strong> elemento <span
 class="math inline">\(x\in A\)</span> <strong>exactamente un</strong>
@@ -1057,7 +1090,6 @@ class="math inline">\(y=f(x)\)</span>.</p>
 B\)</span>, pero la imagen no tiene que ser todo el codominio.</p>
 <div class="callout-warning"
 title="Dos condiciones que no deben olvidarse">
-<p><strong>Dos condiciones que no deben olvidarse</strong></p>
 <p>Para ser función, ningún elemento del dominio puede quedar sin imagen
 y ningún elemento del dominio puede tener dos imágenes distintas. En
 cambio, varios elementos del dominio sí pueden compartir una misma
@@ -1066,10 +1098,10 @@ imagen.</p>
 <figure id="fig-relacion-funcion">
 <img src="figures/relacion-funcion.png" style="width:98.0%"
 alt="Una relación puede asociar elementos con libertad. Una función exige exactamente una imagen para cada elemento del dominio. El tercer diagrama falla por dos razones: 1 tiene dos imágenes y 3 no tiene ninguna." />
-<figcaption aria-hidden="true">Una relación puede asociar elementos con
-libertad. Una función exige exactamente una imagen para cada elemento
-del dominio. El tercer diagrama falla por dos razones: <span
-class="math inline">\(1\)</span> tiene dos imágenes y <span
+<figcaption><strong>Figura 1.2.</strong> Una relación puede asociar
+elementos con libertad. Una función exige exactamente una imagen para
+cada elemento del dominio. El tercer diagrama falla por dos razones:
+<span class="math inline">\(1\)</span> tiene dos imágenes y <span
 class="math inline">\(3\)</span> no tiene ninguna.</figcaption>
 </figure>
 <p>En la <a href="#fig-relacion-funcion">Figura 1.2</a>, el diagrama
@@ -1111,7 +1143,7 @@ definidas, pero en general no es conmutativa.</p>
 <figure id="fig-composicion-funciones">
 <img src="figures/composicion-funciones.png" style="width:90.0%"
 alt="La composición g\circ f sigue primero la flecha de f y después la de g." />
-<figcaption aria-hidden="true">La composición <span
+<figcaption><strong>Figura 1.3.</strong> La composición <span
 class="math inline">\(g\circ f\)</span> sigue primero la flecha de <span
 class="math inline">\(f\)</span> y después la de <span
 class="math inline">\(g\)</span>.</figcaption>
@@ -1153,7 +1185,6 @@ suprayectivas y biyectivas</h2>
 formas de comportamiento</h3>
 <p>Sea <span class="math inline">\(f:A\to B\)</span>.</p>
 <div class="callout-note" title="Definiciones">
-<p><strong>Definiciones</strong></p>
 <ul>
 <li><span class="math inline">\(f\)</span> es <strong>inyectiva</strong>
 si <span class="math inline">\(f(x_1)=f(x_2)\Rightarrow
@@ -1179,8 +1210,8 @@ class="math inline">\(f(x)=y\)</span>.</p>
 <figure id="fig-tipos-funciones">
 <img src="figures/tipos-funciones.png" style="width:98.0%"
 alt="Comparación mediante diagramas sagitales: inyectiva no suprayectiva, suprayectiva no inyectiva y biyectiva." />
-<figcaption aria-hidden="true">Comparación mediante diagramas sagitales:
-inyectiva no suprayectiva, suprayectiva no inyectiva y
+<figcaption><strong>Figura 1.4.</strong> Comparación mediante diagramas
+sagitales: inyectiva no suprayectiva, suprayectiva no inyectiva y
 biyectiva.</figcaption>
 </figure>
 <p>La <a href="#fig-tipos-funciones">Figura 1.4</a> muestra dos
@@ -1210,7 +1241,6 @@ biyectiva.</p>
 <h3 class="unnumbered unlisted" id="función-inversa">Función
 inversa</h3>
 <div class="callout-important" title="Teorema">
-<p><strong>Teorema</strong></p>
 <p>Una función <span class="math inline">\(f:A\to B\)</span> posee una
 función inversa <span class="math inline">\(f^{-1}:B\to A\)</span> si y
 solo si <span class="math inline">\(f\)</span> es biyectiva.</p>
@@ -1250,7 +1280,6 @@ class="header-section-number">1.9</span> Cardinalidad, equipotencia y
 conjuntos infinitos</h2>
 <h3 class="unnumbered unlisted" id="equipotencia">Equipotencia</h3>
 <div class="callout-note" title="Definición">
-<p><strong>Definición</strong></p>
 <p>Dos conjuntos <span class="math inline">\(A\)</span> y <span
 class="math inline">\(B\)</span> tienen la misma cardinalidad, o son
 <strong>equipotentes</strong>, si existe una biyección <span
@@ -1305,7 +1334,6 @@ elemento de la lista. Esto contradice que la lista fuera completa. Por
 tanto, <span class="math inline">\((0,1)\)</span>, y en consecuencia
 <span class="math inline">\(\mathbb R\)</span>, no es numerable.</p>
 <div class="callout-tip" title="Dos usos de la palabra cardinalidad">
-<p><strong>Dos usos de la palabra cardinalidad</strong></p>
 <p>En la sección 1.5 contamos elementos de conjuntos finitos. Aquí
 comparamos tamaños mediante biyecciones, una definición que también
 funciona para conjuntos infinitos. La segunda idea amplía a la primera;
@@ -1408,7 +1436,6 @@ señales, una barra superior o una notación equivalente puede indicar que
 la señal se activa con nivel bajo.</p>
 <div class="callout-warning"
 title="No confundir nivel lógico con voltaje exacto">
-<p><strong>No confundir nivel lógico con voltaje exacto</strong></p>
 <p>Los valores booleanos <span class="math inline">\(0\)</span> y <span
 class="math inline">\(1\)</span> representan estados lógicos. En un
 circuito físico corresponden a intervalos de voltaje definidos por la
@@ -1497,7 +1524,6 @@ representación AND-OR, NAND-NAND, OR-AND o NOR-NOR <span
 class="citation" data-cites="tocci2003">(Tocci y Widmer
 2003)</span>.</p>
 <div class="callout-note" title="Método para simplificar y diseñar">
-<p><strong>Método para simplificar y diseñar</strong></p>
 <ol type="1">
 <li>Transcribir con cuidado todas las negaciones.</li>
 <li>Identificar términos comunes o complementarios.</li>
@@ -1709,7 +1735,6 @@ racionales;</li>
 inecuaciones.</li>
 </ul>
 <div class="callout-tip" title="Pregunta inicial">
-<p><strong>Pregunta inicial</strong></p>
 <p>¿Cómo puede demostrarse que <span class="math inline">\(1+3+5+\cdots
 +(2n-1)=n^2\)</span> para <strong>todo</strong> entero positivo <span
 class="math inline">\(n\)</span>? ¿Por qué el algoritmo que divide
@@ -1746,7 +1771,8 @@ algebraicas</h3>
 Z\)</span> se cumplen las propiedades siguientes.</p>
 <table>
 <caption>Propiedades básicas de las operaciones en <span
-class="math inline">\(\mathbb Z\)</span>. </caption>
+class="math inline">\(\mathbb Z\)</span>.
+{#tbl-propiedades-enteros}</caption>
 <thead>
 <tr class="header">
 <th>Propiedad</th>
@@ -1816,7 +1842,6 @@ class="math inline">\(c&lt;0\)</span>, entonces <span
 class="math inline">\(ac&gt;bc\)</span>.</li>
 </ul>
 <div class="callout-note" title="Principio del buen orden">
-<p><strong>Principio del buen orden</strong></p>
 <p>Todo subconjunto no vacío de <span class="math inline">\(\mathbb
 N\)</span> posee un elemento mínimo.</p>
 </div>
@@ -1850,7 +1875,6 @@ verificarse para muchos valores particulares sin quedar demostrada para
 todos los naturales. La <strong>inducción matemática</strong> permite
 pasar de un caso inicial a una cadena infinita de casos.</p>
 <div class="callout-note" title="Principio de inducción">
-<p><strong>Principio de inducción</strong></p>
 <p>Sea <span class="math inline">\(P(n)\)</span> una proposición
 definida para todo <span class="math inline">\(n\ge n_0\)</span>.
 Si:</p>
@@ -1871,7 +1895,7 @@ P(k+1)\)</span>.</p>
 <figure id="fig-induccion-impares">
 <img src="figures/induccion-impares.png" style="width:88.0%"
 alt="La suma de los primeros n números impares forma un cuadrado de lado n. Agregar el siguiente impar produce el cuadrado de lado n+1." />
-<figcaption aria-hidden="true">La suma de los primeros <span
+<figcaption><strong>Figura 2.1.</strong> La suma de los primeros <span
 class="math inline">\(n\)</span> números impares forma un cuadrado de
 lado <span class="math inline">\(n\)</span>. Agregar el siguiente impar
 produce el cuadrado de lado <span
@@ -1940,7 +1964,6 @@ class="math inline">\(1&lt;a,b&lt;n\)</span> y se aplica la hipótesis
 fuerte a <span class="math inline">\(a\)</span> y <span
 class="math inline">\(b\)</span>.</p>
 <div class="callout-warning" title="Errores frecuentes en inducción">
-<p><strong>Errores frecuentes en inducción</strong></p>
 <ul>
 <li>Comprobar solo varios valores y llamarlo demostración.</li>
 <li>Omitir el caso base.</li>
@@ -1980,7 +2003,6 @@ class="math inline">\(mb+nc=a(mr+ns)\)</span>.</p>
 <h3 class="unnumbered unlisted" id="algoritmo-de-la-división">Algoritmo
 de la división</h3>
 <div class="callout-note" title="Teorema: algoritmo de la división">
-<p><strong>Teorema: algoritmo de la división</strong></p>
 <p>Dados <span class="math inline">\(a\in\mathbb Z\)</span> y <span
 class="math inline">\(d\in\mathbb Z\)</span> con <span
 class="math inline">\(d&gt;0\)</span>, existen enteros únicos <span
@@ -2039,9 +2061,9 @@ por lo que <span class="math inline">\(\gcd(252,198)=18\)</span>.</p>
 <figure id="fig-algoritmo-euclides">
 <img src="figures/algoritmo-euclides.png" style="width:88.0%"
 alt="Cada fila del algoritmo de Euclides sustituye el par anterior por divisor y residuo. El último residuo no nulo es el máximo común divisor." />
-<figcaption aria-hidden="true">Cada fila del algoritmo de Euclides
-sustituye el par anterior por divisor y residuo. El último residuo no
-nulo es el máximo común divisor.</figcaption>
+<figcaption><strong>Figura 2.2.</strong> Cada fila del algoritmo de
+Euclides sustituye el par anterior por divisor y residuo. El último
+residuo no nulo es el máximo común divisor.</figcaption>
 </figure>
 <h3 class="unnumbered unlisted" id="identidad-de-bézout">Identidad de
 Bézout</h3>
@@ -2078,14 +2100,12 @@ class="math inline">\(ab&gt;n\)</span>, lo cual es imposible.</p>
 id="lema-de-euclides-y-teorema-fundamental">Lema de Euclides y teorema
 fundamental</h3>
 <div class="callout-note" title="Lema de Euclides">
-<p><strong>Lema de Euclides</strong></p>
 <p>Si <span class="math inline">\(p\)</span> es primo y <span
 class="math inline">\(p\mid ab\)</span>, entonces <span
 class="math inline">\(p\mid a\)</span> o <span
 class="math inline">\(p\mid b\)</span>.</p>
 </div>
 <div class="callout-note" title="Teorema fundamental de la aritmética">
-<p><strong>Teorema fundamental de la aritmética</strong></p>
 <p>Todo entero <span class="math inline">\(n&gt;1\)</span> puede
 expresarse como producto de números primos. Esa factorización es única,
 salvo el orden de los factores.</p>
@@ -2098,9 +2118,9 @@ apoya en el lema de Euclides. Por ejemplo,</p>
 <figure id="fig-arbol-factorizacion">
 <img src="figures/arbol-factorizacion.png" style="width:82.0%"
 alt="Cadena de factorización de 756. En cada paso se sustituye un factor compuesto hasta obtener únicamente factores primos." />
-<figcaption aria-hidden="true">Cadena de factorización de <span
-class="math inline">\(756\)</span>. En cada paso se sustituye un factor
-compuesto hasta obtener únicamente factores primos.</figcaption>
+<figcaption><strong>Figura 2.3.</strong> Cadena de factorización de
+<span class="math inline">\(756\)</span>. En cada paso se sustituye un
+factor compuesto hasta obtener únicamente factores primos.</figcaption>
 </figure>
 <h3 class="unnumbered unlisted"
 id="mcd-y-mcm-mediante-exponentes-primos">MCD y MCM mediante exponentes
@@ -2165,8 +2185,8 @@ irracionales:</p>
 <figure id="fig-jerarquia-numeros">
 <img src="figures/jerarquia-numeros.png" style="width:92.0%"
 alt="Inclusión de los principales sistemas numéricos y ejemplos representativos." />
-<figcaption aria-hidden="true">Inclusión de los principales sistemas
-numéricos y ejemplos representativos.</figcaption>
+<figcaption><strong>Figura 2.4.</strong> Inclusión de los principales
+sistemas numéricos y ejemplos representativos.</figcaption>
 </figure>
 <p>Demostremos que <span class="math inline">\(\sqrt2\)</span> es
 irracional. Supongamos que <span
@@ -2223,7 +2243,6 @@ x^2+1&gt;0
 R\)</span> de <span class="math inline">\(\mathbb Q\)</span> es la
 <strong>completitud</strong>.</p>
 <div class="callout-note" title="Axioma del supremo">
-<p><strong>Axioma del supremo</strong></p>
 <p>Todo subconjunto no vacío de <span class="math inline">\(\mathbb
 R\)</span> que está acotado superiormente posee un supremo en <span
 class="math inline">\(\mathbb R\)</span>.</p>
@@ -2252,7 +2271,8 @@ reales infinitamente grandes o infinitesimales distintos de cero dentro
 del sistema usual.</p>
 <p>Los intervalos expresan conjuntos definidos por desigualdades:</p>
 <table>
-<caption>Correspondencia entre desigualdades e intervalos. </caption>
+<caption>Correspondencia entre desigualdades e intervalos.
+{#tbl-intervalos}</caption>
 <thead>
 <tr class="header">
 <th>Desigualdad</th>
@@ -2330,7 +2350,6 @@ class="math inline">\(x\)</span>. Si <span
 class="math inline">\(x=-3\)</span>, entonces <span
 class="math inline">\(\sqrt{x^2}=3\ne-3\)</span>.</p>
 <div class="callout-warning" title="Error frecuente">
-<p><strong>Error frecuente</strong></p>
 <p>En general, <span class="math display">\[
 \sqrt{a+b}\ne\sqrt a+\sqrt b.
 \]</span> Con <span class="math inline">\(a=b=1\)</span>, el lado
@@ -2359,7 +2378,7 @@ class="math inline">\(a\)</span>.</p>
 <figure id="fig-valor-absoluto">
 <img src="figures/valor-absoluto.png" style="width:90.0%"
 alt="Interpretación de |x-a|\le r como los puntos cuya distancia al centro a no excede el radio r." />
-<figcaption aria-hidden="true">Interpretación de <span
+<figcaption><strong>Figura 2.5.</strong> Interpretación de <span
 class="math inline">\(|x-a|\le r\)</span> como los puntos cuya distancia
 al centro <span class="math inline">\(a\)</span> no excede el radio
 <span class="math inline">\(r\)</span>.</figcaption>
@@ -2624,7 +2643,6 @@ plano.</li>
 class="header-section-number">3.1</span> Definición de <span
 class="math inline">\(\mathbb R^2\)</span></h2>
 <div class="callout-note" title="Definición">
-<p><strong>Definición</strong></p>
 <p>El plano real es el producto cartesiano</p>
 <p><span class="math display">\[
 \mathbb R^2=\mathbb R\times\mathbb R
@@ -2667,7 +2685,6 @@ d(P,Q)=\sqrt{(x-u)^2+(y-v)^2}.
 class="math inline">\((x,y)\)</span> es <span
 class="math inline">\(\sqrt{x^2+y^2}\)</span>.</p>
 <div class="callout-tip" title="Ejemplo">
-<p><strong>Ejemplo</strong></p>
 <p>Si <span class="math inline">\(P=(-2,3)\)</span> y <span
 class="math inline">\(Q=(4,-1)\)</span>, entonces</p>
 <p><span class="math display">\[
@@ -2702,8 +2719,9 @@ class="math inline">\(\pi\)</span> y no distingue puntos opuestos.</p>
 <figure id="fig-plano-complejo">
 <img src="figures/plano-complejo.png" style="width:78.0%"
 alt="Representación cartesiana y polar del punto z=(3,4)." />
-<figcaption aria-hidden="true">Representación cartesiana y polar del
-punto <span class="math inline">\(z=(3,4)\)</span>.</figcaption>
+<figcaption><strong>Figura 3.1.</strong> Representación cartesiana y
+polar del punto <span
+class="math inline">\(z=(3,4)\)</span>.</figcaption>
 </figure>
 <h3 class="unnumbered unlisted" id="no-unicidad-del-ángulo">No unicidad
 del ángulo</h3>
@@ -2717,7 +2735,6 @@ class="math inline">\(k\in\mathbb Z\)</span>. Para evitar ambigüedad se
 elige un <strong>argumento principal</strong>, usualmente en <span
 class="math inline">\((-\pi,\pi]\)</span>.</p>
 <div class="callout-warning" title="Caso especial">
-<p><strong>Caso especial</strong></p>
 <p>El origen tiene radio <span class="math inline">\(r=0\)</span>, pero
 no tiene un ángulo determinado. Cualquier dirección termina en el mismo
 punto cuando la distancia es cero.</p>
@@ -2742,7 +2759,6 @@ class="header-section-number">3.3</span> Operaciones con vectores en
 class="math inline">\(\mathbf v=(v_1,v_2)\)</span> y <span
 class="math inline">\(\lambda\in\mathbb R\)</span>.</p>
 <div class="callout-note" title="Definiciones">
-<p><strong>Definiciones</strong></p>
 <p><span class="math display">\[
 \begin{aligned}
 \mathbf u+\mathbf v&amp;=(u_1+v_1,u_2+v_2),\\
@@ -2760,8 +2776,8 @@ u+\mathbf v\)</span>.</p>
 <figure id="fig-suma-vectores">
 <img src="figures/suma-vectores.png" style="width:78.0%"
 alt="Suma vectorial mediante la regla del paralelogramo." />
-<figcaption aria-hidden="true">Suma vectorial mediante la regla del
-paralelogramo.</figcaption>
+<figcaption><strong>Figura 3.2.</strong> Suma vectorial mediante la
+regla del paralelogramo.</figcaption>
 </figure>
 <h3 class="unnumbered unlisted"
 id="propiedades-algebraicas-1">Propiedades algebraicas</h3>
@@ -2798,7 +2814,6 @@ dos vectores no nulos, entonces</p>
 u\perp\mathbf v\)</span> si y solo si <span
 class="math inline">\(\mathbf u\cdot\mathbf v=0\)</span>.</p>
 <div class="callout-tip" title="Ejemplo">
-<p><strong>Ejemplo</strong></p>
 <p>Para <span class="math inline">\(\mathbf u=(2,1)\)</span> y <span
 class="math inline">\(\mathbf v=(-1,2)\)</span>,</p>
 <p><span class="math display">\[
@@ -2877,7 +2892,6 @@ i^2=(0,1)(0,1)=(-1,0)=-1.
 (a,b)=(a,0)+(0,b)=a(1,0)+b(0,1)=a+bi.
 \]</span></p>
 <div class="callout-note" title="Definición">
-<p><strong>Definición</strong></p>
 <p>Un número complejo es una expresión</p>
 <p><span class="math display">\[
 z=a+bi,\qquad a,b\in\mathbb R,\qquad i^2=-1.
@@ -2915,7 +2929,6 @@ class="math inline">\(-1\)</span>:</p>
 (a+bi)(c+di)=ac+adi+bci+bd i^2.
 \]</span></p>
 <div class="callout-tip" title="Ejemplo resuelto">
-<p><strong>Ejemplo resuelto</strong></p>
 <p>Para <span class="math inline">\(z=3-2i\)</span> y <span
 class="math inline">\(w=1+4i\)</span>:</p>
 <p><span class="math display">\[
@@ -2956,7 +2969,6 @@ class="math inline">\(90^\circ\)</span> en sentido antihorario.</p>
 class="header-section-number">3.7</span> Complejo conjugado y sus
 propiedades</h2>
 <div class="callout-note" title="Definición">
-<p><strong>Definición</strong></p>
 <p>El conjugado de <span class="math inline">\(z=a+bi\)</span> es</p>
 <p><span class="math display">\[
 \overline z=a-bi.
@@ -2967,7 +2979,7 @@ real.</p>
 <figure id="fig-conjugado-complejo">
 <img src="figures/conjugado-complejo.png" style="width:72.0%"
 alt="El conjugado \overline z es el reflejo de z respecto del eje real." />
-<figcaption aria-hidden="true">El conjugado <span
+<figcaption><strong>Figura 3.3.</strong> El conjugado <span
 class="math inline">\(\overline z\)</span> es el reflejo de <span
 class="math inline">\(z\)</span> respecto del eje real.</figcaption>
 </figure>
@@ -3028,7 +3040,6 @@ class="math inline">\(\overline w\)</span>:</p>
 z^{-1}=\frac{\overline z}{|z|^2}.
 \]</span></p>
 <div class="callout-tip" title="Ejemplo resuelto">
-<p><strong>Ejemplo resuelto</strong></p>
 <p><span class="math display">\[
 \frac{2+3i}{1-2i}
 =\frac{(2+3i)(1+2i)}{(1-2i)(1+2i)}
@@ -3065,7 +3076,6 @@ z^n=r^n\bigl(\cos(n\theta)+i\sin(n\theta)\bigr).
 obtiene por inducción usando las fórmulas de suma del seno y el coseno.
 Para exponentes negativos se aplica el inverso.</p>
 <div class="callout-tip" title="Ejemplo: una potencia grande">
-<p><strong>Ejemplo: una potencia grande</strong></p>
 <p>Como</p>
 <p><span class="math display">\[
 1+i=\sqrt2\left(\cos\frac\pi4+i\sin\frac\pi4\right),
@@ -3105,12 +3115,11 @@ unitaria.</p>
 <figure id="fig-raices-unidad">
 <img src="figures/raices-unidad.png" style="width:72.0%"
 alt="Las seis raíces de z^6=1 forman un hexágono regular." />
-<figcaption aria-hidden="true">Las seis raíces de <span
+<figcaption><strong>Figura 3.4.</strong> Las seis raíces de <span
 class="math inline">\(z^6=1\)</span> forman un hexágono
 regular.</figcaption>
 </figure>
 <div class="callout-tip" title="Ejemplo: raíces cúbicas de $-8$">
-<p><strong>Ejemplo: raíces cúbicas de $-8$</strong></p>
 <p>Escribimos</p>
 <p><span class="math display">\[
 -8=8(\cos\pi+i\sin\pi).
@@ -3302,13 +3311,719 @@ data-cites="silvaLazo2007">Silva y Lazo (2007)</span>, <span
 class="citation" data-cites="brownChurchill2014">Brown y Churchill
 (2014)</span> y <span class="citation" data-cites="needham1997">Needham
 (1997)</span>.</p>
+<h1 data-number="4" id="polinomios"><span
+class="header-section-number">4</span> Polinomios</h1>
+<p>Este capítulo desarrolla la Unidad 4 del programa oficial de Álgebra
+Superior de la Facultad de Ciencias de la UASLP <span class="citation"
+data-cites="uaslp2011">(Universidad Autónoma de San Luis Potosí,
+Facultad de Ciencias 2011)</span>. El propósito es pasar de las
+operaciones formales con polinomios a la comprensión de sus raíces, su
+factorización y las funciones racionales.</p>
+<h2 class="unnumbered unlisted" id="introducción-3">Introducción</h2>
+<p>Los polinomios aparecen al modelar trayectorias, señales, costos,
+aproximaciones y ecuaciones. Tienen una doble naturaleza: son
+expresiones algebraicas que pueden sumarse y multiplicarse, y también
+funciones cuyos ceros se observan en una gráfica. La división conecta
+ambas perspectivas: una raíz produce un factor y un factor produce una
+raíz.</p>
+<h3 class="unnumbered unlisted" id="objetivos-del-capítulo-3">Objetivos
+del capítulo</h3>
+<p>Al terminar el capítulo, el lector podrá:</p>
+<ul>
+<li>identificar coeficientes, grado y coeficiente principal;</li>
+<li>efectuar operaciones y justificar sus propiedades;</li>
+<li>aplicar el algoritmo de la división en <span
+class="math inline">\(K[x]\)</span>;</li>
+<li>relacionar raíces, factores y residuos;</li>
+<li>usar división sintética y detectar raíces múltiples;</li>
+<li>explicar el alcance del teorema fundamental del álgebra;</li>
+<li>factorizar sobre <span class="math inline">\(\mathbb C\)</span> y
+sobre <span class="math inline">\(\mathbb R\)</span>;</li>
+<li>analizar dominio, ceros, discontinuidades y asíntotas de funciones
+racionales;</li>
+<li>descomponer fracciones racionales en fracciones parciales.</li>
+</ul>
+<h2 data-number="4.1" id="sec-definicion-polinomio"><span
+class="header-section-number">4.1</span> Definición de polinomio</h2>
+<p>Sea <span class="math inline">\(K\)</span> un campo, normalmente
+<span class="math inline">\(\mathbb Q\)</span>, <span
+class="math inline">\(\mathbb R\)</span> o <span
+class="math inline">\(\mathbb C\)</span>.</p>
+<div class="callout-note" title="Definición">
+<p>Un polinomio en la variable <span class="math inline">\(x\)</span>
+con coeficientes en <span class="math inline">\(K\)</span> es una
+expresión</p>
+<p><span class="math display">\[
+p(x)=a_0+a_1x+\cdots+a_nx^n,
+\qquad a_j\in K,
+\]</span></p>
+<p>en la que solo un número finito de coeficientes es distinto de cero.
+El conjunto de todos ellos se denota por <span
+class="math inline">\(K[x]\)</span>.</p>
+</div>
+<p>Si <span class="math inline">\(p\ne0\)</span> y <span
+class="math inline">\(a_n\ne0\)</span>, el <strong>grado</strong> de
+<span class="math inline">\(p\)</span> es <span
+class="math inline">\(\deg p=n\)</span>, <span
+class="math inline">\(a_n\)</span> es el coeficiente principal y <span
+class="math inline">\(a_0\)</span> el término independiente. Un
+polinomio es <strong>mónico</strong> cuando su coeficiente principal es
+<span class="math inline">\(1\)</span>. Por convenio, al polinomio cero
+no se le asigna un grado ordinario; a veces se escribe <span
+class="math inline">\(\deg 0=-\infty\)</span> para conservar algunas
+fórmulas.</p>
+<div class="callout-tip" title="Ejemplo">
+<p>En</p>
+<p><span class="math display">\[
+p(x)=-2x^5+3x^2-7
+\]</span></p>
+<p>los coeficientes omitidos son cero, el grado es <span
+class="math inline">\(5\)</span>, el coeficiente principal es <span
+class="math inline">\(-2\)</span> y el término independiente es <span
+class="math inline">\(-7\)</span>.</p>
+</div>
+<h3 class="unnumbered unlisted" id="igualdad-y-evaluación">Igualdad y
+evaluación</h3>
+<p>Dos polinomios son iguales si tienen el mismo coeficiente en cada
+potencia de <span class="math inline">\(x\)</span>. Por ejemplo,</p>
+<p><span class="math display">\[
+(x+1)^2=x^2+2x+1
+\]</span></p>
+<p>como polinomios, porque al desarrollar coinciden todos sus
+coeficientes.</p>
+<p>La evaluación en <span class="math inline">\(c\in K\)</span> es</p>
+<p><span class="math display">\[
+p(c)=a_0+a_1c+\cdots+a_nc^n.
+\]</span></p>
+<p>No debe confundirse el polinomio formal con la función que induce.
+Sobre campos infinitos, como <span class="math inline">\(\mathbb
+R\)</span> y <span class="math inline">\(\mathbb C\)</span>, dos
+polinomios que dan el mismo valor para todo <span
+class="math inline">\(x\)</span> tienen los mismos coeficientes. Sobre
+un campo finito pueden existir polinomios distintos que representan la
+misma función.</p>
+<h2 data-number="4.2" id="sec-aritmetica-polinomios"><span
+class="header-section-number">4.2</span> Aritmética y propiedades de los
+polinomios</h2>
+<p>Para sumar polinomios se suman coeficientes de términos del mismo
+grado. Para multiplicarlos se aplica la distributividad y se agrupan
+potencias iguales.</p>
+<p>Sean</p>
+<p><span class="math display">\[
+p(x)=\sum_{j=0}^{m}a_jx^j,
+\qquad
+q(x)=\sum_{k=0}^{n}b_kx^k.
+\]</span></p>
+<p>Entonces</p>
+<p><span class="math display">\[
+p(x)+q(x)=\sum_{r\ge0}(a_r+b_r)x^r
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+p(x)q(x)=\sum_{r=0}^{m+n}
+\left(\sum_{j+k=r}a_jb_k\right)x^r.
+\]</span></p>
+<p>La suma interior es una <strong>convolución</strong> de las
+sucesiones de coeficientes.</p>
+<div class="callout-tip" title="Ejemplo resuelto">
+<p>Si <span class="math inline">\(p(x)=2x^2-x+3\)</span> y <span
+class="math inline">\(q(x)=x^2+4x-1\)</span>, entonces</p>
+<p><span class="math display">\[
+p+q=3x^2+3x+2,
+\]</span></p>
+<p><span class="math display">\[
+pq=2x^4+7x^3-3x^2+13x-3.
+\]</span></p>
+</div>
+<h3 class="unnumbered unlisted" id="propiedades-de-grado">Propiedades de
+grado</h3>
+<p>Para polinomios no nulos sobre un campo:</p>
+<p><span class="math display">\[
+\deg(pq)=\deg p+\deg q,
+\]</span></p>
+<p><span class="math display">\[
+\deg(p+q)\leq\max\{\deg p,\deg q\}.
+\]</span></p>
+<p>En la suma puede disminuir el grado si se cancelan los términos
+principales. Por ejemplo, <span
+class="math inline">\((x^3+1)+(-x^3+x)=x+1\)</span>.</p>
+<p>Con la suma y el producto, <span class="math inline">\(K[x]\)</span>
+es un anillo conmutativo con identidad. No es un campo: un polinomio no
+constante no tiene inverso polinomial. Sus unidades son precisamente las
+constantes no nulas.</p>
+<h2 data-number="4.3" id="sec-divisibilidad-polinomios"><span
+class="header-section-number">4.3</span> Divisibilidad</h2>
+<div class="callout-note" title="Definición">
+<p>Dados <span class="math inline">\(p,d\in K[x]\)</span>, con <span
+class="math inline">\(d\ne0\)</span>, se dice que <span
+class="math inline">\(d\)</span> divide a <span
+class="math inline">\(p\)</span>, y se escribe <span
+class="math inline">\(d\mid p\)</span>, si existe <span
+class="math inline">\(q\in K[x]\)</span> tal que</p>
+<p><span class="math display">\[
+p=dq.
+\]</span></p>
+</div>
+<p>El resultado fundamental es análogo al algoritmo de la división de
+enteros.</p>
+<div class="callout-important" title="Algoritmo de la división">
+<p>Para <span class="math inline">\(p,d\in K[x]\)</span>, con <span
+class="math inline">\(d\ne0\)</span>, existen polinomios únicos <span
+class="math inline">\(q\)</span> y <span
+class="math inline">\(r\)</span> tales que</p>
+<p><span class="math display">\[
+p=dq+r,
+\qquad r=0\quad\text{o}\quad\deg r&lt;\deg d.
+\]</span></p>
+</div>
+<p>El polinomio <span class="math inline">\(q\)</span> es el cociente y
+<span class="math inline">\(r\)</span> el residuo.</p>
+<h3 class="unnumbered unlisted" id="por-qué-termina-el-algoritmo">Por
+qué termina el algoritmo</h3>
+<p>Si <span class="math inline">\(\deg p\geq\deg d\)</span>, se elige un
+monomio que cancele el término principal de <span
+class="math inline">\(p\)</span>. Después de restar ese múltiplo de
+<span class="math inline">\(d\)</span>, el grado disminuye. Como los
+grados son enteros no negativos, el proceso debe terminar.</p>
+<h3 class="unnumbered unlisted" id="ejemplo-de-división-larga">Ejemplo
+de división larga</h3>
+<p>Dividamos</p>
+<p><span class="math display">\[
+p(x)=2x^4-3x^3+4x-5
+\]</span></p>
+<p>entre <span class="math inline">\(d(x)=x^2-x+1\)</span>. El resultado
+es</p>
+<p><span class="math display">\[
+q(x)=2x^2-x-3,
+\qquad r(x)=2x-2.
+\]</span></p>
+<p>La comprobación decisiva es</p>
+<p><span class="math display">\[
+2x^4-3x^3+4x-5
+=(x^2-x+1)(2x^2-x-3)+(2x-2).
+\]</span></p>
+<figure id="fig-division-polinomios">
+<img src="figures/division-polinomios.png" style="width:88.0%"
+alt="La división polinomial produce un cociente y un residuo de grado menor que el divisor." />
+<figcaption><strong>Figura 4.1.</strong> La división polinomial produce
+un cociente y un residuo de grado menor que el divisor.</figcaption>
+</figure>
+<h2 data-number="4.4" id="sec-raiz-polinomio"><span
+class="header-section-number">4.4</span> Definición de raíz de un
+polinomio</h2>
+<div class="callout-note" title="Definición">
+<p>Un número <span class="math inline">\(\alpha\in K\)</span> es raíz o
+cero de <span class="math inline">\(p\in K[x]\)</span> si</p>
+<p><span class="math display">\[
+p(\alpha)=0.
+\]</span></p>
+</div>
+<p>La conexión entre evaluación y divisibilidad es inmediata al dividir
+entre <span class="math inline">\(x-\alpha\)</span>.</p>
+<div class="callout-important" title="Teorema del factor">
+<p><span class="math inline">\(\alpha\)</span> es raíz de <span
+class="math inline">\(p\)</span> si y solo si <span
+class="math inline">\(x-\alpha\)</span> divide a <span
+class="math inline">\(p\)</span>.</p>
+</div>
+<p>En efecto, por el algoritmo de la división,</p>
+<p><span class="math display">\[
+p(x)=(x-\alpha)q(x)+r,
+\]</span></p>
+<p>donde <span class="math inline">\(r\)</span> es constante. Al evaluar
+en <span class="math inline">\(x=\alpha\)</span> se obtiene <span
+class="math inline">\(r=p(\alpha)\)</span>. Por tanto, <span
+class="math inline">\(p(\alpha)=0\)</span> exactamente cuando el residuo
+es cero.</p>
+<h3 class="unnumbered unlisted" id="número-máximo-de-raíces">Número
+máximo de raíces</h3>
+<p>Un polinomio no nulo de grado <span class="math inline">\(n\)</span>
+tiene como máximo <span class="math inline">\(n\)</span> raíces
+distintas en un campo. La prueba es inductiva: cada raíz extrae un
+factor lineal y reduce el grado en uno.</p>
+<div class="callout-warning" title="Una distinción esencial">
+<p>Que un polinomio de grado <span class="math inline">\(n\)</span>
+tenga a lo sumo <span class="math inline">\(n\)</span> raíces no afirma
+que tenga <span class="math inline">\(n\)</span> raíces reales. Por
+ejemplo, <span class="math inline">\(x^2+1\)</span> no tiene raíces en
+<span class="math inline">\(\mathbb R\)</span>, aunque sí tiene dos en
+<span class="math inline">\(\mathbb C\)</span>.</p>
+</div>
+<h2 data-number="4.5" id="sec-residuo-sintetica"><span
+class="header-section-number">4.5</span> Teorema del residuo y división
+sintética</h2>
+<div class="callout-important" title="Teorema del residuo">
+<p>El residuo de dividir <span class="math inline">\(p(x)\)</span> entre
+<span class="math inline">\(x-c\)</span> es <span
+class="math inline">\(p(c)\)</span>.</p>
+</div>
+<p>Esto permite evaluar un polinomio sin completar toda la división. La
+<strong>división sintética</strong> organiza las operaciones solo con
+coeficientes.</p>
+<h3 class="unnumbered unlisted" id="ejemplo-resuelto-2">Ejemplo
+resuelto</h3>
+<p>Para dividir</p>
+<p><span class="math display">\[
+p(x)=2x^3-3x^2-11x+6
+\]</span></p>
+<p>entre <span class="math inline">\(x-3\)</span>, se usan los
+coeficientes <span class="math inline">\(2,-3,-11,6\)</span>:</p>
+<p><span class="math display">\[
+\begin{array}{r|rrrr}
+3&amp;2&amp;-3&amp;-11&amp;6\\
+&amp; &amp;6&amp;9&amp;-6\\ \hline
+&amp;2&amp;3&amp;-2&amp;0
+\end{array}
+\]</span></p>
+<p>El cociente es <span class="math inline">\(2x^2+3x-2\)</span> y el
+residuo es <span class="math inline">\(0\)</span>. En consecuencia,</p>
+<p><span class="math display">\[
+p(x)=(x-3)(2x^2+3x-2).
+\]</span></p>
+<div class="callout-warning" title="Coeficientes faltantes">
+<p>En <span class="math inline">\(x^4-5x^2+4\)</span> deben escribirse
+los coeficientes <span class="math inline">\(1,0,-5,0,4\)</span>. Omitir
+los ceros desplaza las columnas y cambia el resultado.</p>
+</div>
+<h3 class="unnumbered unlisted" id="evaluación-de-horner">Evaluación de
+Horner</h3>
+<p>La misma organización conduce a</p>
+<p><span class="math display">\[
+p(c)=(((a_nc+a_{n-1})c+a_{n-2})c+\cdots)c+a_0.
+\]</span></p>
+<p>El esquema de Horner necesita <span class="math inline">\(n\)</span>
+multiplicaciones y <span class="math inline">\(n\)</span> sumas, y evita
+calcular por separado todas las potencias de <span
+class="math inline">\(c\)</span>.</p>
+<h2 data-number="4.6" id="sec-raices-multiples"><span
+class="header-section-number">4.6</span> Obtención de raíces
+múltiples</h2>
+<div class="callout-note" title="Multiplicidad">
+<p>Una raíz <span class="math inline">\(\alpha\)</span> tiene
+multiplicidad <span class="math inline">\(m\geq1\)</span> si</p>
+<p><span class="math display">\[
+p(x)=(x-\alpha)^m q(x),
+\qquad q(\alpha)\ne0.
+\]</span></p>
+</div>
+<p>La raíz es simple cuando <span class="math inline">\(m=1\)</span>,
+doble cuando <span class="math inline">\(m=2\)</span>, triple cuando
+<span class="math inline">\(m=3\)</span>, etcétera.</p>
+<p>La derivada permite reconocer multiplicidades:</p>
+<p><span class="math display">\[
+\alpha\text{ tiene multiplicidad al menos }m
+\iff
+p(\alpha)=p&#39;(\alpha)=\cdots=p^{(m-1)}(\alpha)=0.
+\]</span></p>
+<p>Si además <span class="math inline">\(p^{(m)}(\alpha)\ne0\)</span>,
+la multiplicidad es exactamente <span
+class="math inline">\(m\)</span>.</p>
+<h3 class="unnumbered unlisted" id="ejemplo-3">Ejemplo</h3>
+<p>Sea</p>
+<p><span class="math display">\[
+p(x)=(x-1)^3(x+2)^2.
+\]</span></p>
+<p>La raíz <span class="math inline">\(1\)</span> tiene multiplicidad
+<span class="math inline">\(3\)</span> y la raíz <span
+class="math inline">\(-2\)</span> multiplicidad <span
+class="math inline">\(2\)</span>. En la gráfica, una raíz de
+multiplicidad par toca el eje y regresa; una raíz de multiplicidad impar
+lo cruza. Para multiplicidades impares mayores que uno, el cruce se
+aplana.</p>
+<figure id="fig-multiplicidad-raices">
+<img src="figures/multiplicidad-raices.png" style="width:88.0%"
+alt="Comportamiento local de raíces de multiplicidad uno, dos y tres." />
+<figcaption><strong>Figura 4.2.</strong> Comportamiento local de raíces
+de multiplicidad uno, dos y tres.</figcaption>
+</figure>
+<div class="callout-tip" title="Procedimiento con divisiones sucesivas">
+<p>Si <span class="math inline">\(p(\alpha)=0\)</span>, divida entre
+<span class="math inline">\(x-\alpha\)</span>. Vuelva a evaluar el
+cociente en <span class="math inline">\(\alpha\)</span> y repita. El
+número de divisiones exactas es la multiplicidad.</p>
+</div>
+<h2 data-number="4.7" id="sec-teorema-fundamental-algebra"><span
+class="header-section-number">4.7</span> Teorema fundamental del
+álgebra</h2>
+<div class="callout-important" title="Teorema fundamental del álgebra">
+<p>Todo polinomio no constante con coeficientes complejos posee al menos
+una raíz compleja.</p>
+</div>
+<p>Aunque el enunciado garantiza una raíz, al dividir por su factor
+lineal y repetir se obtiene la forma completa:</p>
+<p><span class="math display">\[
+p(x)=a_n\prod_{j=1}^{n}(x-\alpha_j),
+\]</span></p>
+<p>donde las raíces se cuentan con multiplicidad.</p>
+<h3 class="unnumbered unlisted" id="alcance-del-teorema">Alcance del
+teorema</h3>
+<ul>
+<li>Garantiza existencia, pero no proporciona por sí solo un algoritmo
+práctico para calcular las raíces.</li>
+<li>El campo <span class="math inline">\(\mathbb C\)</span> es
+algebraicamente cerrado.</li>
+<li>Un polinomio real puede no factorizarse completamente en factores
+lineales reales, pero sí en factores lineales complejos.</li>
+<li>Las fórmulas generales por radicales existen hasta grado cuatro;
+para grado cinco o mayor no existe una fórmula por radicales válida para
+todos los polinomios.</li>
+</ul>
+<div class="callout-warning" title="No es un método numérico">
+<p>El teorema fundamental del álgebra no dice que todas las raíces
+puedan escribirse con una fórmula elemental. La aproximación numérica
+será el tema del capítulo 5.</p>
+</div>
+<h2 data-number="4.8" id="sec-factorizacion-lineal"><span
+class="header-section-number">4.8</span> Descomposición de un polinomio
+en factores lineales</h2>
+<p>Si <span class="math inline">\(p\in\mathbb C[x]\)</span> tiene grado
+<span class="math inline">\(n\geq1\)</span>, entonces</p>
+<p><span class="math display">\[
+p(x)=a_n(x-\alpha_1)^{m_1}\cdots(x-\alpha_s)^{m_s},
+\]</span></p>
+<p>donde <span class="math inline">\(\alpha_1,\ldots,\alpha_s\)</span>
+son raíces distintas y</p>
+<p><span class="math display">\[
+m_1+\cdots+m_s=n.
+\]</span></p>
+<p>Esta factorización es única salvo por el orden de los factores.</p>
+<h3 class="unnumbered unlisted" id="ejemplo-completo">Ejemplo
+completo</h3>
+<p>Factoricemos</p>
+<p><span class="math display">\[
+p(x)=x^4-5x^2+4.
+\]</span></p>
+<p>Al verlo como cuadrático en <span
+class="math inline">\(u=x^2\)</span>:</p>
+<p><span class="math display">\[
+u^2-5u+4=(u-1)(u-4).
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+p(x)=(x^2-1)(x^2-4)
+=(x-1)(x+1)(x-2)(x+2).
+\]</span></p>
+<p>Las raíces son <span class="math inline">\(-2,-1,1,2\)</span>, todas
+simples.</p>
+<h3 class="unnumbered unlisted"
+id="estrategia-para-coeficientes-enteros">Estrategia para coeficientes
+enteros</h3>
+<p>Para un polinomio</p>
+<p><span class="math display">\[
+a_nx^n+\cdots+a_0
+\]</span></p>
+<p>con coeficientes enteros, toda raíz racional reducida <span
+class="math inline">\(r/s\)</span> satisface <span
+class="math inline">\(r\mid a_0\)</span> y <span
+class="math inline">\(s\mid a_n\)</span>. Este <strong>teorema de la
+raíz racional</strong> produce candidatos; cada candidato debe
+evaluarse. No asegura que exista una raíz racional.</p>
+<h2 data-number="4.9" id="sec-polinomios-reales"><span
+class="header-section-number">4.9</span> Propiedades de polinomios con
+coeficientes reales</h2>
+<p>Si <span class="math inline">\(p\)</span> tiene coeficientes reales,
+la conjugación conmuta con la evaluación:</p>
+<p><span class="math display">\[
+p(\overline z)=\overline{p(z)}.
+\]</span></p>
+<p>Por consiguiente, si <span class="math inline">\(p(z)=0\)</span>,
+entonces</p>
+<p><span class="math display">\[
+p(\overline z)=\overline{0}=0.
+\]</span></p>
+<div class="callout-important" title="Raíces conjugadas">
+<p>Las raíces complejas no reales de un polinomio con coeficientes
+reales aparecen en pares conjugados y con la misma multiplicidad.</p>
+</div>
+<p>El producto de los factores conjugados tiene coeficientes reales:</p>
+<p><span class="math display">\[
+(x-z)(x-\overline z)
+=x^2-2\operatorname{Re}(z)x+|z|^2.
+\]</span></p>
+<p>Así, todo polinomio real se factoriza sobre <span
+class="math inline">\(\mathbb R\)</span> como producto de factores
+lineales reales y factores cuadráticos irreducibles.</p>
+<h3 class="unnumbered unlisted" id="ejemplo-4">Ejemplo</h3>
+<p>Si <span class="math inline">\(2+i\)</span> es raíz de un polinomio
+real, también lo es <span class="math inline">\(2-i\)</span>, y</p>
+<p><span class="math display">\[
+[x-(2+i)][x-(2-i)]=x^2-4x+5.
+\]</span></p>
+<figure id="fig-raices-conjugadas">
+<img src="figures/raices-conjugadas.png" style="width:76.0%"
+alt="Las raíces no reales de un polinomio real son simétricas respecto del eje real." />
+<figcaption><strong>Figura 4.3.</strong> Las raíces no reales de un
+polinomio real son simétricas respecto del eje real.</figcaption>
+</figure>
+<h3 class="unnumbered unlisted" id="relaciones-de-viète">Relaciones de
+Viète</h3>
+<p>Para el polinomio mónico</p>
+<p><span class="math display">\[
+p(x)=x^n+a_{n-1}x^{n-1}+\cdots+a_0
+=\prod_{j=1}^{n}(x-\alpha_j),
+\]</span></p>
+<p>se cumple, contando multiplicidades,</p>
+<p><span class="math display">\[
+\sum_{j=1}^{n}\alpha_j=-a_{n-1},
+\qquad
+\prod_{j=1}^{n}\alpha_j=(-1)^n a_0.
+\]</span></p>
+<h2 data-number="4.10" id="sec-funciones-racionales"><span
+class="header-section-number">4.10</span> Funciones racionales</h2>
+<div class="callout-note" title="Definición">
+<p>Una función racional es un cociente</p>
+<p><span class="math display">\[
+R(x)=\frac{p(x)}{q(x)},
+\]</span></p>
+<p>donde <span class="math inline">\(p,q\in K[x]\)</span> y <span
+class="math inline">\(q\ne0\)</span>. Su dominio excluye los ceros de
+<span class="math inline">\(q\)</span>.</p>
+</div>
+<p>Antes de simplificar debe registrarse el dominio original. Por
+ejemplo,</p>
+<p><span class="math display">\[
+R(x)=\frac{x^2-1}{x-1}=x+1,
+\qquad x\ne1.
+\]</span></p>
+<p>La gráfica es la recta <span class="math inline">\(y=x+1\)</span> con
+un hueco en <span class="math inline">\((1,2)\)</span>. La
+simplificación algebraica no vuelve a incluir <span
+class="math inline">\(x=1\)</span>.</p>
+<h3 class="unnumbered unlisted" id="ceros-polos-y-asíntotas">Ceros,
+polos y asíntotas</h3>
+<ul>
+<li>Los ceros provienen de factores del numerador que no se
+cancelan.</li>
+<li>Los ceros del denominador no cancelados producen polos y,
+usualmente, asíntotas verticales.</li>
+<li>Si <span class="math inline">\(\deg p&lt;\deg q\)</span>, la
+asíntota horizontal es <span class="math inline">\(y=0\)</span>.</li>
+<li>Si <span class="math inline">\(\deg p=\deg q\)</span>, la asíntota
+horizontal es el cociente de coeficientes principales.</li>
+<li>Si <span class="math inline">\(\deg p\geq\deg q\)</span>, la
+división polinomial separa una parte polinomial y una fracción
+propia.</li>
+</ul>
+<figure id="fig-funcion-racional">
+<img src="figures/funcion-racional.png" style="width:88.0%"
+alt="Una función racional puede presentar huecos y asíntotas determinadas por sus factores." />
+<figcaption><strong>Figura 4.4.</strong> Una función racional puede
+presentar huecos y asíntotas determinadas por sus factores.</figcaption>
+</figure>
+<div class="callout-tip" title="Ejemplo">
+<p>Para</p>
+<p><span class="math display">\[
+R(x)=\frac{2x^2+1}{x-1},
+\]</span></p>
+<p>la división da</p>
+<p><span class="math display">\[
+R(x)=2x+2+\frac{3}{x-1}.
+\]</span></p>
+<p>Tiene asíntota vertical <span class="math inline">\(x=1\)</span> y
+asíntota oblicua <span class="math inline">\(y=2x+2\)</span>.</p>
+</div>
+<h2 data-number="4.11" id="sec-fracciones-parciales"><span
+class="header-section-number">4.11</span> Fracciones parciales</h2>
+<p>La descomposición en fracciones parciales expresa una fracción
+racional propia como suma de términos simples. Es útil para integrar,
+resolver ecuaciones diferenciales y transformar señales.</p>
+<p>Primero, si <span class="math inline">\(\deg p\geq\deg q\)</span>, se
+efectúa la división. Después se factoriza el denominador.</p>
+<h3 class="unnumbered unlisted"
+id="factores-lineales-distintos">Factores lineales distintos</h3>
+<p>Si</p>
+<p><span class="math display">\[
+\frac{p(x)}{(x-a)(x-b)}
+\]</span></p>
+<p>es propia y <span class="math inline">\(a\ne b\)</span>, se
+propone</p>
+<p><span class="math display">\[
+\frac{A}{x-a}+\frac{B}{x-b}.
+\]</span></p>
+<p>Por ejemplo,</p>
+<p><span class="math display">\[
+\frac{5x+1}{(x-1)(x+2)}
+=\frac{2}{x-1}+\frac{3}{x+2}.
+\]</span></p>
+<p>La comprobación reúne el lado derecho sobre el denominador común.</p>
+<h3 class="unnumbered unlisted"
+id="factores-lineales-repetidos">Factores lineales repetidos</h3>
+<p>Para <span class="math inline">\((x-a)^m\)</span> se requieren todos
+los términos</p>
+<p><span class="math display">\[
+\frac{A_1}{x-a}+\frac{A_2}{(x-a)^2}
++\cdots+\frac{A_m}{(x-a)^m}.
+\]</span></p>
+<h3 class="unnumbered unlisted"
+id="factores-cuadráticos-irreducibles">Factores cuadráticos
+irreducibles</h3>
+<p>Por cada potencia <span class="math inline">\((x^2+bx+c)^m\)</span>
+irreducible sobre <span class="math inline">\(\mathbb R\)</span> se
+incluyen numeradores lineales:</p>
+<p><span class="math display">\[
+\frac{A_1x+B_1}{x^2+bx+c}
++\cdots+
+\frac{A_mx+B_m}{(x^2+bx+c)^m}.
+\]</span></p>
+<div class="callout-tip" title="Ejemplo mixto">
+<p>La forma de descomposición para</p>
+<p><span class="math display">\[
+\frac{x^2+1}{(x-1)^2(x^2+4)}
+\]</span></p>
+<p>es</p>
+<p><span class="math display">\[
+\frac{A}{x-1}+\frac{B}{(x-1)^2}
++\frac{Cx+D}{x^2+4}.
+\]</span></p>
+<p>Los coeficientes se obtienen al multiplicar por el denominador común
+y comparar coeficientes o evaluar valores convenientes.</p>
+</div>
+<h2 class="unnumbered unlisted" id="síntesis-del-capítulo-3">Síntesis
+del capítulo</h2>
+<ul>
+<li><span class="math inline">\(K[x]\)</span> es un anillo de
+expresiones con un número finito de coeficientes no nulos.</li>
+<li>El algoritmo de la división escribe <span
+class="math inline">\(p=dq+r\)</span> con <span
+class="math inline">\(\deg r&lt;\deg d\)</span>.</li>
+<li><span class="math inline">\(p(c)\)</span> es el residuo de dividir
+por <span class="math inline">\(x-c\)</span>.</li>
+<li><span class="math inline">\(c\)</span> es raíz si y solo si <span
+class="math inline">\(x-c\)</span> es factor.</li>
+<li>La multiplicidad cuenta cuántas veces aparece el factor lineal.</li>
+<li>Todo polinomio complejo no constante se descompone en factores
+lineales.</li>
+<li>En polinomios reales, las raíces no reales aparecen en pares
+conjugados.</li>
+<li>Una función racional conserva las exclusiones de su denominador
+original.</li>
+<li>Las fracciones parciales dependen de la factorización y
+multiplicidad del denominador.</li>
+</ul>
+<h2 class="unnumbered unlisted" id="errores-frecuentes-3">Errores
+frecuentes</h2>
+<ol type="1">
+<li><strong>Asignar grado al polinomio cero como si fuera
+ordinario.</strong> Su grado se deja indefinido o se usa <span
+class="math inline">\(-\infty\)</span> por convenio.</li>
+<li><strong>Olvidar términos ausentes.</strong> En división sintética
+deben colocarse coeficientes cero.</li>
+<li><strong>Confundir raíz con factor.</strong> La raíz es un número; el
+factor correspondiente es <span
+class="math inline">\(x-\alpha\)</span>.</li>
+<li><strong>Creer que todo polinomio tiene raíces reales.</strong> La
+garantía completa corresponde a <span class="math inline">\(\mathbb
+C\)</span>.</li>
+<li><strong>Contar solo raíces distintas.</strong> El grado coincide con
+el número de raíces complejas cuando se cuentan multiplicidades.</li>
+<li><strong>Cancelar un factor y ampliar el dominio.</strong> Una
+discontinuidad removible sigue excluida del dominio original.</li>
+<li><strong>Omitir términos en fracciones parciales.</strong> Cada
+potencia repetida necesita su propio término.</li>
+<li><strong>Usar una constante sobre un cuadrático irreducible.</strong>
+El numerador debe tener grado menor, por lo que es lineal.</li>
+</ol>
+<h2 class="unnumbered unlisted" id="ejercicios-3">Ejercicios</h2>
+<h3 class="unnumbered unlisted" id="nivel-básico-3">Nivel básico</h3>
+<ol type="1">
+<li>Indique grado, coeficiente principal y término independiente de
+<span class="math inline">\(4x^6-3x^2+8\)</span>.</li>
+<li>Sume y multiplique <span
+class="math inline">\(p(x)=x^2-2x+3\)</span> y <span
+class="math inline">\(q(x)=2x+1\)</span>.</li>
+<li>Evalúe <span class="math inline">\(p(x)=2x^4-x^2+5x-7\)</span> en
+<span class="math inline">\(x=-2\)</span> mediante Horner.</li>
+<li>Divida <span class="math inline">\(x^3-2x^2+4x-8\)</span> entre
+<span class="math inline">\(x-2\)</span>.</li>
+<li>Determine si <span class="math inline">\(-1\)</span> es raíz de
+<span class="math inline">\(x^4+3x^3-x-3\)</span>.</li>
+<li>Factorice <span class="math inline">\(x^4-16\)</span> sobre <span
+class="math inline">\(\mathbb R\)</span> y sobre <span
+class="math inline">\(\mathbb C\)</span>.</li>
+<li>Determine el dominio de <span
+class="math inline">\((x^2-9)/(x-3)\)</span> y describa el hueco.</li>
+</ol>
+<h3 class="unnumbered unlisted" id="nivel-intermedio-3">Nivel
+intermedio</h3>
+<ol start="8" type="1">
+<li>Divida <span class="math inline">\(3x^5-2x^3+x-4\)</span> entre
+<span class="math inline">\(x^2+x-1\)</span> y compruebe el
+resultado.</li>
+<li>Use el teorema de la raíz racional para factorizar <span
+class="math inline">\(2x^3-x^2-8x+4\)</span>.</li>
+<li>Determine las multiplicidades de las raíces de <span
+class="math inline">\(x^5-2x^4+x^3\)</span>.</li>
+<li>Construya un polinomio real mónico de grado cuatro cuyas raíces sean
+<span class="math inline">\(2\)</span>, <span
+class="math inline">\(-1\)</span> y <span
+class="math inline">\(3+i\)</span>, <span
+class="math inline">\(3-i\)</span>.</li>
+<li>Use Viète para comprobar la suma y el producto de las raíces de
+<span class="math inline">\(2x^3-3x^2-11x+6\)</span>.</li>
+<li>Encuentre ceros, huecos y asíntotas de <span
+class="math inline">\((x^2-4)/(x^2-x-2)\)</span>.</li>
+<li>Descomponga <span class="math inline">\((7x+5)/[(x-1)(x+3)]\)</span>
+en fracciones parciales.</li>
+</ol>
+<h3 class="unnumbered unlisted" id="nivel-formal-y-aplicado-3">Nivel
+formal y aplicado</h3>
+<ol start="15" type="1">
+<li>Demuestre la unicidad del cociente y el residuo en el algoritmo de
+la división.</li>
+<li>Pruebe que un polinomio no nulo de grado <span
+class="math inline">\(n\)</span> tiene a lo sumo <span
+class="math inline">\(n\)</span> raíces distintas.</li>
+<li>Demuestre que las raíces conjugadas de un polinomio real tienen la
+misma multiplicidad.</li>
+<li>Determine la forma real más general de un polinomio de grado cinco
+con raíces <span class="math inline">\(1\)</span> doble y <span
+class="math inline">\(2+3i\)</span> simple.</li>
+<li>Descomponga <span
+class="math inline">\((2x^3+x^2+4)/[(x-1)^2(x^2+1)]\)</span> en
+fracciones parciales.</li>
+<li>Diseñe un polinomio cuya gráfica cruce el eje en <span
+class="math inline">\(x=-2\)</span>, toque el eje en <span
+class="math inline">\(x=1\)</span> y tenga grado mínimo.</li>
+</ol>
+<h2 class="unnumbered unlisted" id="proyecto-integrador-3">Proyecto
+integrador</h2>
+<p>Elija un polinomio real de grado entre cuatro y seis y presente un
+estudio completo:</p>
+<ol type="1">
+<li>identifique grado y coeficientes;</li>
+<li>localice candidatos racionales;</li>
+<li>aplique división sintética;</li>
+<li>determine todas las raíces y multiplicidades;</li>
+<li>factorice sobre <span class="math inline">\(\mathbb R\)</span> y
+sobre <span class="math inline">\(\mathbb C\)</span>;</li>
+<li>compruebe dos relaciones de Viète;</li>
+<li>construya una función racional usando el polinomio como numerador o
+denominador;</li>
+<li>analice dominio, ceros, huecos y asíntotas;</li>
+<li>obtenga, cuando corresponda, una descomposición en fracciones
+parciales;</li>
+<li>acompañe los cálculos con una representación gráfica y
+conclusiones.</li>
+</ol>
+<h2 class="unnumbered unlisted"
+id="referencias-del-capítulo-3">Referencias del capítulo</h2>
+<p>La secuencia temática sigue la Unidad 4 del programa de Álgebra
+Superior <span class="citation" data-cites="uaslp2011">(Universidad
+Autónoma de San Luis Potosí, Facultad de Ciencias 2011)</span>. Las
+definiciones, el algoritmo de la división, la factorización y las
+funciones racionales se apoyan en <span class="citation"
+data-cites="silvaLazo2007">Silva y Lazo (2007)</span>, <span
+class="citation" data-cites="cardenas1999">Cárdenas et al. (1999)</span>
+y <span class="citation" data-cites="cox2015">Cox, Little, y O’Shea
+(2015)</span>.</p>
 <h1 class="unnumbered" id="índices-de-consulta">Índices de consulta</h1>
 <p>Estos índices complementan el índice general del libro. Los conceptos
 remiten a la primera sección principal donde se desarrollan; algunos
 reaparecen en ejercicios, demostraciones y aplicaciones posteriores.</p>
 <h2 class="unnumbered" id="índice-temático">Índice temático</h2>
 <table>
-<caption>Índice alfabético de conceptos principales. </caption>
+<caption>Índice alfabético de conceptos principales.
+{#tbl-indice-tematico}</caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -3486,11 +4201,65 @@ complejos</a></td>
 <td><strong>Raíces de la unidad</strong></td>
 <td><a href="#sec-potencias-raices">3.9 Potencias y raíces</a></td>
 </tr>
+<tr class="odd">
+<td><strong>Algoritmo de la división polinomial</strong></td>
+<td><a href="#sec-divisibilidad-polinomios">4.3 Divisibilidad</a></td>
+</tr>
+<tr class="even">
+<td><strong>División sintética</strong></td>
+<td><a href="#sec-residuo-sintetica">4.5 Residuo y división
+sintética</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Factorización lineal</strong></td>
+<td><a href="#sec-factorizacion-lineal">4.8 Factores lineales</a></td>
+</tr>
+<tr class="even">
+<td><strong>Fracciones parciales</strong></td>
+<td><a href="#sec-fracciones-parciales">4.11 Fracciones
+parciales</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Función racional</strong></td>
+<td><a href="#sec-funciones-racionales">4.10 Funciones
+racionales</a></td>
+</tr>
+<tr class="even">
+<td><strong>Multiplicidad de una raíz</strong></td>
+<td><a href="#sec-raices-multiples">4.6 Raíces múltiples</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Polinomio</strong></td>
+<td><a href="#sec-definicion-polinomio">4.1 Definición</a></td>
+</tr>
+<tr class="even">
+<td><strong>Raíz de un polinomio</strong></td>
+<td><a href="#sec-raiz-polinomio">4.4 Raíz</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Raíces conjugadas</strong></td>
+<td><a href="#sec-polinomios-reales">4.9 Polinomios reales</a></td>
+</tr>
+<tr class="even">
+<td><strong>Teorema del factor</strong></td>
+<td><a href="#sec-raiz-polinomio">4.4 Raíz</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Teorema del residuo</strong></td>
+<td><a href="#sec-residuo-sintetica">4.5 Residuo y división
+sintética</a></td>
+</tr>
+<tr class="even">
+<td><strong>Teorema fundamental del álgebra</strong></td>
+<td><a href="#sec-teorema-fundamental-algebra">4.7 Teorema
+fundamental</a></td>
+</tr>
 </tbody>
 </table>
 <h2 class="unnumbered" id="índice-de-símbolos">Índice de símbolos</h2>
 <table>
-<caption>Símbolos utilizados en los capítulos 1 a 3. </caption>
+<caption>Símbolos utilizados en los capítulos 1 a 4.
+{#tbl-indice-simbolos}</caption>
 <colgroup>
 <col style="width: 40%" />
 <col style="width: 30%" />
@@ -3635,6 +4404,39 @@ class="math inline">\(e^{i\theta}\)</span></td>
 <td>forma exponencial compleja</td>
 <td>3.9</td>
 </tr>
+<tr class="even">
+<td style="text-align: right;"><span
+class="math inline">\(K[x]\)</span></td>
+<td>polinomios en <span class="math inline">\(x\)</span> con
+coeficientes en <span class="math inline">\(K\)</span></td>
+<td>4.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(\deg
+p\)</span></td>
+<td>grado del polinomio <span class="math inline">\(p\)</span></td>
+<td>4.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(d\mid
+p\)</span></td>
+<td>el polinomio <span class="math inline">\(d\)</span> divide a <span
+class="math inline">\(p\)</span></td>
+<td>4.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span
+class="math inline">\(p=dq+r\)</span></td>
+<td>identidad de la división polinomial</td>
+<td>4.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span
+class="math inline">\(p(\alpha)=0\)</span></td>
+<td><span class="math inline">\(\alpha\)</span> es raíz de <span
+class="math inline">\(p\)</span></td>
+<td>4.4</td>
+</tr>
 </tbody>
 </table>
 <h2 class="unnumbered" id="índice-de-figuras">Índice de figuras</h2>
@@ -3674,13 +4476,24 @@ Q\subseteq\mathbb R\)</span> (sección 2.5).</li>
 <li><strong>Raíces de la unidad:</strong> distribución sobre la
 circunferencia unitaria (sección 3.9).</li>
 </ol>
+<h3 class="unnumbered" id="capítulo-4">Capítulo 4</h3>
+<ol type="1">
+<li><strong>División polinomial:</strong> relación entre dividendo,
+divisor, cociente y residuo (sección 4.3).</li>
+<li><strong>Multiplicidad:</strong> comportamiento local de raíces
+simples, dobles y triples (sección 4.6).</li>
+<li><strong>Raíces conjugadas:</strong> simetría respecto del eje real
+(sección 4.9).</li>
+<li><strong>Funciones racionales:</strong> huecos y asíntotas (sección
+4.10).</li>
+</ol>
 <h2 class="unnumbered" id="índice-de-cuadros">Índice de cuadros</h2>
 <ol type="1">
 <li>Propiedades básicas de las operaciones en <span
 class="math inline">\(\mathbb Z\)</span> (sección 2.1).</li>
 <li>Correspondencia entre desigualdades e intervalos (sección 2.6).</li>
 <li>Índice alfabético de conceptos principales (este apartado).</li>
-<li>Símbolos utilizados en los capítulos 1 a 3 (este apartado).</li>
+<li>Símbolos utilizados en los capítulos 1 a 4 (este apartado).</li>
 </ol>
 <h1 class="unnumbered" id="referencias-generales">Referencias
 generales</h1>
@@ -3696,6 +4509,14 @@ Applications</em>. 9.ª ed. McGraw-Hill Education.
 <div id="ref-burton2011" class="csl-entry" role="listitem">
 Burton, David M. 2011. <em>Elementary Number Theory</em>. 7.ª ed.
 McGraw-Hill.
+</div>
+<div id="ref-cardenas1999" class="csl-entry" role="listitem">
+Cárdenas, Humberto, Emilio Lluis, Francisco Raggi, y Francisco Tomás.
+1999. <em>Álgebra superior</em>. 2.ª ed. México: Trillas.
+</div>
+<div id="ref-cox2015" class="csl-entry" role="listitem">
+Cox, David A., John Little, y Donal O’Shea. 2015. <em>Ideals, Varieties,
+and Algorithms</em>. 4.ª ed. Cham: Springer.
 </div>
 <div id="ref-epp2011" class="csl-entry" role="listitem">
 Epp, Susanna S. 2011. <em>Discrete Mathematics with Applications</em>.
@@ -3745,7 +4566,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const download = document.createElement("a");
   download.className = "sidebar-pdf-download";
-  download.href = "Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-3.pdf";
+  download.href = "Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-4.pdf";
   download.setAttribute("download", "");
   download.textContent = "Descargar PDF";
   toc.appendChild(download);
