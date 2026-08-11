@@ -1,0 +1,942 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Fundamentos Matemáticos del Álgebra Superior",
+    "section": "",
+    "text": "Presentación\nEste libro presenta los fundamentos del Álgebra Superior con rigor matemático y una exposición accesible. Cada tema parte de su significado intuitivo, establece después la definición formal y desarrolla propiedades, demostraciones, ejemplos, contraejemplos y ejercicios graduados.\nLa obra está concebida como complemento teórico de Álgebra Superior con aplicaciones en R y GeoGebra. La numeración de los capítulos y de las secciones principales será compatible entre ambos libros para facilitar la consulta cruzada.\nDescargar el libro en PDF",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#propósito",
+    "href": "index.html#propósito",
+    "title": "Fundamentos Matemáticos del Álgebra Superior",
+    "section": "Propósito",
+    "text": "Propósito\nEl lector no solo aprenderá a efectuar operaciones. También aprenderá a:\n\ninterpretar la notación matemática;\ndistinguir una definición de una propiedad;\nreconocer por qué una afirmación es verdadera o falsa;\nconstruir demostraciones elementales;\nidentificar hipótesis, conclusiones y contraejemplos;\nrelacionar lógica, conjuntos, relaciones y funciones.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#organización-didáctica",
+    "href": "index.html#organización-didáctica",
+    "title": "Fundamentos Matemáticos del Álgebra Superior",
+    "section": "Organización didáctica",
+    "text": "Organización didáctica\nLos capítulos contienen objetivos, definiciones destacadas, ejemplos resueltos, demostraciones, errores frecuentes, ejercicios por nivel, síntesis y referencias. Los apartados internos no se numeran para conservar un índice claro.\nLa obra incluye, al final, un índice temático, un índice de símbolos, un índice de figuras, un índice de cuadros y una bibliografía general. En la versión PDF, el índice general y las listas automáticas de figuras y cuadros se generan junto con la numeración de páginas.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#estructura-actual",
+    "href": "index.html#estructura-actual",
+    "title": "Fundamentos Matemáticos del Álgebra Superior",
+    "section": "Estructura actual",
+    "text": "Estructura actual\n\nCapítulo 1. Lógica y conjuntos: proposiciones, operaciones, relaciones, funciones, cardinalidad y álgebra de Boole.\nCapítulo 2. Números enteros y reales: inducción, divisibilidad, primos, estructura de los reales, exponentes y valor absoluto.\nCapítulo 3. Números complejos: plano real, forma polar, construcción de \\(\\mathbb C\\), operaciones, conjugado, división, potencias y raíces.\nCapítulo 4. Polinomios: aritmética y división, raíces y multiplicidades, teorema fundamental del álgebra, factorización, funciones racionales y fracciones parciales.\nCapítulo 5. Métodos numéricos para la estimación de raíces: acotación, separación, Sturm, Descartes, bisección, secante y Newton, con criterios de error y evaluación mediante Horner.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html",
+    "href": "01-logica-conjuntos.html",
+    "title": "1  Lógica y conjuntos",
+    "section": "",
+    "text": "Introducción\nLenguaje, operaciones, relaciones, funciones y cardinalidad\nLa lógica y la teoría de conjuntos proporcionan el lenguaje con el que se expresan buena parte de las matemáticas. Cuando se afirma que una función es inyectiva, que un número pertenece a cierto conjunto o que una propiedad se cumple para todo elemento de un dominio, se están utilizando ideas que estudiaremos en este capítulo.\nLógica y conjuntos no son temas aislados. Existe una correspondencia profunda entre ellos: la conjunción de dos condiciones se relaciona con la intersección de sus conjuntos solución; la disyunción, con la unión; y la negación, con el complemento. Esta relación permitirá pasar de una afirmación verbal a una expresión simbólica y de ella a una representación gráfica o algebraica.\nEl capítulo sigue la primera unidad del programa de Álgebra Superior de la Facultad de Ciencias de la UASLP y amplía su componente lógico para construir una base sólida para los capítulos posteriores (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). La organización y varios énfasis didácticos retoman la tradición expositiva de Silva y Lazo (2007), con notación actualizada, demostraciones propias y ejemplos nuevos.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#introducción",
+    "href": "01-logica-conjuntos.html#introducción",
+    "title": "1  Lógica y conjuntos",
+    "section": "",
+    "text": "Objetivos del capítulo\nAl finalizar, el lector será capaz de:\n\nemplear con precisión el lenguaje y la notación de conjuntos;\nreconocer proposiciones, conectivos y proposiciones abiertas;\nconstruir e interpretar tablas de verdad;\nexpresar afirmaciones mediante cuantificadores y negar correctamente esas afirmaciones;\noperar con conjuntos y demostrar sus propiedades;\nresolver problemas de conteo mediante cardinalidad e inclusión-exclusión;\ndefinir relaciones y reconocer algunas de sus propiedades;\ndistinguir dominio, codominio e imagen de una función;\nclasificar funciones como inyectivas, suprayectivas o biyectivas;\ncomparar conjuntos finitos e infinitos mediante correspondencias biyectivas;\nsimplificar expresiones booleanas y relacionarlas con circuitos lógicos.\n\n\n\n\n\n\n\nTipPregunta inicial\n\n\n\nUn sistema electrónico enciende una alarma cuando la fuente está habilitada y ocurre al menos una de estas dos condiciones: la temperatura es alta o la corriente rebasa el límite de seguridad. ¿Cómo se representa la regla?, ¿cómo se comprueba que dos expresiones distintas describen el mismo comportamiento? y ¿cómo se transforma la expresión en un circuito lógico? Al final del capítulo podremos responder las tres preguntas.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-lenguaje-conjuntos",
+    "href": "01-logica-conjuntos.html#sec-lenguaje-conjuntos",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.1 Lenguaje de conjuntos",
+    "text": "1.1 Lenguaje de conjuntos\n\nConjunto y elemento\nLas palabras conjunto y elemento se consideran nociones primitivas: se comprenden mediante su uso y no se definen a partir de conceptos más simples. De manera intuitiva, un conjunto agrupa objetos que pueden distinguirse con claridad. Esos objetos son sus elementos.\nLos conjuntos se denotan normalmente con letras mayúsculas y sus elementos con letras minúsculas. Si \\(x\\) es un elemento de \\(A\\), escribimos \\(x\\in A\\). Si no pertenece, escribimos \\(x\\notin A\\).\n\n\n\n\n\n\nNotaImportante: pertenencia no es inclusión\n\n\n\nLa expresión \\(x\\in A\\) relaciona un elemento con un conjunto. La expresión \\(B\\subseteq A\\) relaciona dos conjuntos. Por ejemplo, si \\(A=\\{1,2,3\\}\\), entonces \\(1\\in A\\) y \\(\\{1\\}\\subseteq A\\), pero \\(\\{1\\}\\in A\\) es falsa.\n\n\n\n\nFormas de representar un conjunto\nUn conjunto se representa por extensión cuando se enumeran sus elementos:\n\\[\nA=\\{2,4,6,8\\}.\n\\]\nSe representa por comprensión cuando se especifica la propiedad que caracteriza a sus elementos:\n\\[\nA=\\{x\\in\\mathbb N:x\\text{ es par y }2\\le x\\le 8\\}.\n\\]\nEl orden y la repetición no modifican un conjunto:\n\\[\n\\{1,2,3\\}=\\{3,2,1\\}=\\{1,1,2,3\\}.\n\\]\n\n\nConjunto universal, vacío y unitario\nEl conjunto universal \\(U\\) contiene todos los objetos considerados en una situación. Su elección depende del problema. El conjunto vacío no contiene elementos y se denota por \\(\\varnothing\\). Un conjunto unitario contiene exactamente un elemento.\n\n\n\n\n\n\nAdvertenciaError frecuente\n\n\n\n\\(\\varnothing\\) y \\(\\{\\varnothing\\}\\) no son iguales. El primero no tiene elementos; el segundo tiene un elemento, que es precisamente el conjunto vacío. Por tanto, \\[\n|\\varnothing|=0,\\qquad |\\{\\varnothing\\}|=1.\n\\]\n\n\n\n\nSubconjuntos, igualdad y conjunto potencia\n\n\n\n\n\n\nNotaDefinición: subconjunto\n\n\n\nSean \\(A\\) y \\(B\\) conjuntos. Se dice que \\(A\\) es subconjunto de \\(B\\), y se escribe \\(A\\subseteq B\\), cuando todo elemento de \\(A\\) también pertenece a \\(B\\): \\[\nA\\subseteq B \\quad\\Longleftrightarrow\\quad \\forall x\\,(x\\in A\\Rightarrow x\\in B).\n\\]\n\n\nSi \\(A\\subseteq B\\) y \\(A\\ne B\\), entonces \\(A\\) es un subconjunto propio de \\(B\\), escrito \\(A\\subsetneq B\\).\nDos conjuntos son iguales si contienen exactamente los mismos elementos:\n\\[\nA=B\\quad\\Longleftrightarrow\\quad A\\subseteq B\\text{ y }B\\subseteq A.\n\\]\nEsta equivalencia origina el método de doble inclusión, que utilizaremos para demostrar igualdades de conjuntos.\nEl conjunto potencia de \\(A\\), denotado por \\(\\mathcal P(A)\\), es el conjunto de todos los subconjuntos de \\(A\\). Si \\(A=\\{a,b\\}\\), entonces\n\\[\n\\mathcal P(A)=\\{\\varnothing,\\{a\\},\\{b\\},\\{a,b\\}\\}.\n\\]\nSi \\(A\\) tiene \\(n\\) elementos, entonces \\(\\mathcal P(A)\\) tiene \\(2^n\\) elementos. Esto ocurre porque, al formar un subconjunto, cada elemento presenta dos posibilidades independientes: incluirse o no incluirse.\n\n\nEjemplo resuelto\nSea \\(B=\\{1,\\{2\\},3\\}\\). Determinemos el valor de verdad de cuatro afirmaciones:\n\n\\(2\\in B\\) es falsa, porque el elemento de \\(B\\) es \\(\\{2\\}\\), no \\(2\\).\n\\(\\{2\\}\\in B\\) es verdadera.\n\\(\\{2\\}\\subseteq B\\) es falsa, porque exigiría \\(2\\in B\\).\n\\(\\{\\{2\\}\\}\\subseteq B\\) es verdadera, porque \\(\\{2\\}\\in B\\).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-proposiciones",
+    "href": "01-logica-conjuntos.html#sec-proposiciones",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.2 Proposiciones y conectivos lógicos",
+    "text": "1.2 Proposiciones y conectivos lógicos\n\nProposiciones y valores de verdad\n\n\n\n\n\n\nNotaDefinición: proposición\n\n\n\nUna proposición es un enunciado declarativo al que puede asignarse exactamente uno de dos valores de verdad: verdadero (\\(V\\)) o falso (\\(F\\)).\n\n\n“\\(7\\) es primo” es una proposición verdadera. “\\(9&lt;4\\)” es una proposición falsa. Una pregunta o una orden no es una proposición. Tampoco lo es \\(x+2=5\\) mientras no se especifique el valor de \\(x\\) o se cuantifique la variable.\nUna expresión como \\(p(x):x+2=5\\) se denomina proposición abierta o predicado. Al fijar un dominio, los valores que la hacen verdadera forman su conjunto solución. Si el dominio es \\(\\mathbb Z\\), entonces el conjunto solución es \\(\\{3\\}\\).\n\n\nConectivos fundamentales\nSean \\(p\\) y \\(q\\) proposiciones.\n\n\n\n\n\n\n\n\n\nOperación\nSímbolo\nLectura\nCondición de verdad\n\n\n\n\nNegación\n\\(\\neg p\\)\nno \\(p\\)\nverdadera cuando \\(p\\) es falsa\n\n\nConjunción\n\\(p\\land q\\)\n\\(p\\) y \\(q\\)\nverdadera solo si ambas son verdaderas\n\n\nDisyunción\n\\(p\\lor q\\)\n\\(p\\) o \\(q\\)\nfalsa solo si ambas son falsas\n\n\nImplicación\n\\(p\\Rightarrow q\\)\nsi \\(p\\), entonces \\(q\\)\nfalsa solo si \\(p\\) es verdadera y \\(q\\) falsa\n\n\nBicondicional\n\\(p\\Leftrightarrow q\\)\n\\(p\\) si y solo si \\(q\\)\nverdadera cuando tienen el mismo valor\n\n\n\nLa disyunción matemática es normalmente inclusiva: \\(p\\lor q\\) permite que \\(p\\), \\(q\\) o ambas sean verdaderas.\n\n\n\n\n\n\n\n\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(\\neg p\\)\n\\(p\\land q\\)\n\\(p\\lor q\\)\n\\(p\\Rightarrow q\\)\n\\(p\\Leftrightarrow q\\)\n\n\n\n\nV\nV\nF\nV\nV\nV\nV\n\n\nV\nF\nF\nF\nV\nF\nF\n\n\nF\nV\nV\nF\nV\nV\nF\n\n\nF\nF\nV\nF\nF\nV\nV\n\n\n\n\n\n\n\n\n\nTipCómo entender la implicación\n\n\n\n\\(p\\Rightarrow q\\) expresa que no puede ocurrir \\(p\\) sin que ocurra \\(q\\). Por ello solo es falsa en el caso \\(p=V\\) y \\(q=F\\). Además, \\[\np\\Rightarrow q\\equiv \\neg p\\lor q.\n\\]\n\n\n\n\nTautología, contradicción y contingencia\nUna proposición compuesta es una tautología si resulta verdadera para todas las combinaciones de valores de verdad. Es una contradicción si siempre es falsa y una contingencia si en algunas filas es verdadera y en otras falsa.\n\\[\np\\lor\\neg p\n\\]\nes una tautología, mientras que \\(p\\land\\neg p\\) es una contradicción.\n\n\nEjemplo: distribución de la implicación\nComprobemos que\n\\[\np\\Rightarrow(q\\land r)\\equiv (p\\Rightarrow q)\\land(p\\Rightarrow r).\n\\]\n\\[\n\\begin{aligned}\np\\Rightarrow(q\\land r)\n&\\equiv \\neg p\\lor(q\\land r)\\\\\n&\\equiv (\\neg p\\lor q)\\land(\\neg p\\lor r)\\\\\n&\\equiv (p\\Rightarrow q)\\land(p\\Rightarrow r).\n\\end{aligned}\n\\]\nComo la igualdad se obtuvo mediante equivalencias válidas, el bicondicional entre ambas expresiones es una tautología.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-cuantificadores",
+    "href": "01-logica-conjuntos.html#sec-cuantificadores",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.3 Cuantificadores y equivalencias lógicas",
+    "text": "1.3 Cuantificadores y equivalencias lógicas\n\nDominio y cuantificadores\nEl valor de verdad de un predicado depende de su dominio. Por ejemplo, \\(x^2=2\\) no tiene solución en \\(\\mathbb Q\\), pero sí en \\(\\mathbb R\\).\nEl cuantificador universal afirma que una propiedad se cumple para todos los elementos del dominio:\n\\[\n\\forall x\\in D,\\;p(x).\n\\]\nEl cuantificador existencial afirma que se cumple para al menos uno:\n\\[\n\\exists x\\in D\\text{ tal que }p(x).\n\\]\n\n\n\n\n\n\nNotaOrden de los cuantificadores\n\n\n\nEl orden puede cambiar el significado. En \\(\\mathbb R\\), \\[\n\\forall x\\,\\exists y\\;(x+y=0)\n\\] es verdadera, pues cada \\(x\\) tiene su propio \\(y=-x\\). En cambio, \\[\n\\exists y\\,\\forall x\\;(x+y=0)\n\\] es falsa: un único \\(y\\) no puede cancelar a todos los números reales.\n\n\n\n\nNegación de proposiciones cuantificadas\nNegar “todos” produce “existe al menos uno que no”; negar “existe” produce “ninguno”:\n\\[\n\\neg(\\forall x\\in D\\;p(x))\\equiv\\exists x\\in D\\;\\neg p(x),\n\\]\n\\[\n\\neg(\\exists x\\in D\\;p(x))\\equiv\\forall x\\in D\\;\\neg p(x).\n\\]\nLa negación de “todo sensor está calibrado” no es “ningún sensor está calibrado”, sino “existe al menos un sensor que no está calibrado”.\n\n\nRecíproca, contraria y contrarrecíproca\nPara la implicación \\(p\\Rightarrow q\\):\n\n\n\nNombre\nForma\n\n\n\n\nRecíproca\n\\(q\\Rightarrow p\\)\n\n\nContraria\n\\(\\neg p\\Rightarrow\\neg q\\)\n\n\nContrarrecíproca\n\\(\\neg q\\Rightarrow\\neg p\\)\n\n\n\nLa implicación original es equivalente a su contrarrecíproca, pero no necesariamente a su recíproca ni a su contraria:\n\\[\np\\Rightarrow q\\equiv\\neg q\\Rightarrow\\neg p.\n\\]\n\n\nLeyes fundamentales de equivalencia\n\n\n\n\n\n\n\nLey\nEquivalencia lógica\n\n\n\n\nDoble negación\n\\(\\neg(\\neg p)\\equiv p\\)\n\n\nIdempotencia\n\\(p\\lor p\\equiv p\\), \\(p\\land p\\equiv p\\)\n\n\nConmutatividad\n\\(p\\lor q\\equiv q\\lor p\\), \\(p\\land q\\equiv q\\land p\\)\n\n\nAsociatividad\n\\((p\\lor q)\\lor r\\equiv p\\lor(q\\lor r)\\) y análoga para \\(\\land\\)\n\n\nDistributividad\n\\(p\\land(q\\lor r)\\equiv(p\\land q)\\lor(p\\land r)\\)\n\n\nDe Morgan\n\\(\\neg(p\\land q)\\equiv\\neg p\\lor\\neg q\\)\n\n\nDe Morgan\n\\(\\neg(p\\lor q)\\equiv\\neg p\\land\\neg q\\)\n\n\nAbsorción\n\\(p\\lor(p\\land q)\\equiv p\\), \\(p\\land(p\\lor q)\\equiv p\\)\n\n\nImplicación\n\\(p\\Rightarrow q\\equiv\\neg p\\lor q\\)\n\n\nBicondicional\n\\(p\\Leftrightarrow q\\equiv(p\\Rightarrow q)\\land(q\\Rightarrow p)\\)\n\n\n\nEstas leyes pueden demostrarse con tablas de verdad. También pueden utilizarse como reglas de transformación, siempre que cada paso se justifique.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-operaciones-conjuntos",
+    "href": "01-logica-conjuntos.html#sec-operaciones-conjuntos",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.4 Operaciones y propiedades de los conjuntos",
+    "text": "1.4 Operaciones y propiedades de los conjuntos\nSea \\(U\\) un conjunto universal y sean \\(A,B\\subseteq U\\).\n\nOperaciones fundamentales\n\n\n\n\n\n\nNotaDefiniciones\n\n\n\n\\[\n\\begin{aligned}\nA\\cup B &= \\{x\\in U:x\\in A\\lor x\\in B\\},\\\\\nA\\cap B &= \\{x\\in U:x\\in A\\land x\\in B\\},\\\\\nA^c &= \\{x\\in U:x\\notin A\\},\\\\\nA\\setminus B &= \\{x\\in U:x\\in A\\land x\\notin B\\}.\n\\end{aligned}\n\\]\n\n\nDos conjuntos son disjuntos si \\(A\\cap B=\\varnothing\\). La diferencia simétrica contiene los elementos que pertenecen exactamente a uno de los dos conjuntos:\n\\[\nA\\triangle B=(A\\setminus B)\\cup(B\\setminus A).\n\\]\n\n\nEjemplo\nSean \\(U=\\{1,2,3,4,5,6\\}\\), \\(A=\\{1,2,4,6\\}\\) y \\(B=\\{2,3,4\\}\\). Entonces\n\\[\n\\begin{aligned}\nA\\cup B&=\\{1,2,3,4,6\\},\\\\\nA\\cap B&=\\{2,4\\},\\\\\nA^c&=\\{3,5\\},\\\\\nA\\setminus B&=\\{1,6\\},\\\\\nA\\triangle B&=\\{1,3,6\\}.\n\\end{aligned}\n\\]\n\n\n\n\n\n\nFigura 1.1: Las regiones sombreadas representan, respectivamente, la unión, la intersección, el complemento de \\(A\\) y la diferencia simétrica. El rectángulo representa el conjunto universal \\(U\\).\n\n\n\nLa Figura 1.1 permite reconocer visualmente qué elementos deben conservarse en cada operación. El diagrama ayuda a formular y revisar una respuesta, pero una identidad general debe justificarse mediante las definiciones o una demostración por pertenencia.\n\n\nCorrespondencia entre lógica y conjuntos\nSi \\(p(x)\\) y \\(q(x)\\) son predicados sobre \\(U\\), con conjuntos solución \\(A\\) y \\(B\\), entonces:\n\n\n\nLógica\nConjuntos\n\n\n\n\n\\(p(x)\\land q(x)\\)\n\\(A\\cap B\\)\n\n\n\\(p(x)\\lor q(x)\\)\n\\(A\\cup B\\)\n\n\n\\(\\neg p(x)\\)\n\\(A^c\\)\n\n\n\\(p(x)\\land\\neg q(x)\\)\n\\(A\\setminus B\\)\n\n\n\\(p(x)\\Rightarrow q(x)\\) para todo \\(x\\)\n\\(A\\subseteq B\\)\n\n\n\\(p(x)\\Leftrightarrow q(x)\\) para todo \\(x\\)\n\\(A=B\\)\n\n\n\n\n\nLeyes del álgebra de conjuntos\n\\[\n\\begin{aligned}\nA\\cup A&=A,& A\\cap A&=A &&\\text{(idempotencia)},\\\\\nA\\cup B&=B\\cup A,& A\\cap B&=B\\cap A &&\\text{(conmutatividad)},\\\\\nA\\cap(B\\cup C)&=(A\\cap B)\\cup(A\\cap C) &&&\\text{(distributividad)},\\\\\nA\\cup(A\\cap B)&=A &&&\\text{(absorción)},\\\\\n(A\\cup B)^c&=A^c\\cap B^c &&&\\text{(De Morgan)},\\\\\n(A\\cap B)^c&=A^c\\cup B^c &&&\\text{(De Morgan)}.\n\\end{aligned}\n\\]\n\n\nDemostración por pertenencia\nDemostremos\n\\[\nA\\cap(B\\cup C)=(A\\cap B)\\cup(A\\cap C).\n\\]\nSea \\(x\\) un elemento arbitrario. Entonces:\n\\[\n\\begin{aligned}\nx\\in A\\cap(B\\cup C)\n&\\Longleftrightarrow x\\in A\\land x\\in(B\\cup C)\\\\\n&\\Longleftrightarrow x\\in A\\land(x\\in B\\lor x\\in C)\\\\\n&\\Longleftrightarrow (x\\in A\\land x\\in B)\\lor(x\\in A\\land x\\in C)\\\\\n&\\Longleftrightarrow x\\in(A\\cap B)\\cup(A\\cap C).\n\\end{aligned}\n\\]\nComo la equivalencia se cumple para todo \\(x\\), ambos conjuntos son iguales.\n\n\n\n\n\n\nTipEstructura de una demostración de igualdad\n\n\n\nPuede emplearse una cadena de equivalencias de pertenencia, como en el ejemplo, o demostrar por separado \\(A\\subseteq B\\) y \\(B\\subseteq A\\). Un diagrama de Venn ayuda a formular una conjetura, pero no sustituye una demostración general.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-cardinalidad-finita",
+    "href": "01-logica-conjuntos.html#sec-cardinalidad-finita",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.5 Cardinalidad de conjuntos finitos y problemas de conteo",
+    "text": "1.5 Cardinalidad de conjuntos finitos y problemas de conteo\n\nCardinalidad\nLa cardinalidad de un conjunto finito \\(A\\), denotada por \\(|A|\\), es su número de elementos. Para dos conjuntos finitos:\n\\[\n|A\\cup B|=|A|+|B|-|A\\cap B|.\n\\]\nLa intersección se resta porque sus elementos se contaron una vez en \\(|A|\\) y otra en \\(|B|\\). Para tres conjuntos:\n\\[\n\\begin{aligned}\n|A\\cup B\\cup C|\n={}&|A|+|B|+|C|\\\\\n&-|A\\cap B|-|A\\cap C|-|B\\cap C|\\\\\n&+|A\\cap B\\cap C|.\n\\end{aligned}\n\\]\nEste resultado es un caso del principio de inclusión-exclusión.\n\n\nEjemplo resuelto con tres conjuntos\nEn un laboratorio se revisan \\(400\\) dispositivos. Sean \\(T\\), \\(P\\) y \\(H\\) los que utilizan sensores de temperatura, presión y humedad, respectivamente. Se conoce que\n\\[\n\\begin{gathered}\n|T|=170,\\quad |P|=150,\\quad |H|=140,\\\\\n|T\\cap P|=70,\\quad |T\\cap H|=60,\\quad |P\\cap H|=50,\\\\\n|T\\cap P\\cap H|=20.\n\\end{gathered}\n\\]\nEl número de dispositivos que usan al menos uno es\n\\[\n170+150+140-70-60-50+20=300.\n\\]\nPor tanto, \\(400-300=100\\) no usan ninguno. Los que utilizan temperatura y presión, pero no humedad, son\n\\[\n|(T\\cap P)\\setminus H|=|T\\cap P|-|T\\cap P\\cap H|=70-20=50.\n\\]\n\n\n\n\n\n\nAdvertenciaError frecuente\n\n\n\nEl dato \\(|T\\cap P|=70\\) incluye normalmente a quienes también pertenecen a \\(H\\). “Exactamente \\(T\\) y \\(P\\)” exige restar la intersección triple.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-producto-relaciones",
+    "href": "01-logica-conjuntos.html#sec-producto-relaciones",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.6 Producto cartesiano y relaciones",
+    "text": "1.6 Producto cartesiano y relaciones\n\nPares ordenados y producto cartesiano\nDos pares ordenados son iguales si coinciden componente a componente:\n\\[\n(a,b)=(c,d)\\quad\\Longleftrightarrow\\quad a=c\\text{ y }b=d.\n\\]\nEl producto cartesiano de \\(A\\) y \\(B\\) es\n\\[\nA\\times B=\\{(a,b):a\\in A\\text{ y }b\\in B\\}.\n\\]\nSi \\(A=\\{1,2\\}\\) y \\(B=\\{x,y,z\\}\\), entonces \\(|A\\times B|=2\\cdot3=6\\). En general, para conjuntos finitos,\n\\[\n|A\\times B|=|A|\\,|B|.\n\\]\nEn general \\(A\\times B\\ne B\\times A\\), pues el orden de las componentes importa.\n\n\nDistribución respecto de la unión\nLa igualdad correcta es\n\\[\nA\\times(B\\cup C)=(A\\times B)\\cup(A\\times C).\n\\]\nEn efecto,\n\\[\n\\begin{aligned}\n(a,b)\\in A\\times(B\\cup C)\n&\\Longleftrightarrow a\\in A\\land(b\\in B\\lor b\\in C)\\\\\n&\\Longleftrightarrow (a\\in A\\land b\\in B)\\lor(a\\in A\\land b\\in C)\\\\\n&\\Longleftrightarrow (a,b)\\in(A\\times B)\\cup(A\\times C).\n\\end{aligned}\n\\]\n\n\nRelaciones\n\n\n\n\n\n\nNotaDefinición: relación binaria\n\n\n\nUna relación \\(R\\) de \\(A\\) en \\(B\\) es cualquier subconjunto de \\(A\\times B\\). Si \\((a,b)\\in R\\), también se escribe \\(aRb\\).\n\n\nEl dominio de \\(R\\) es el conjunto de primeras componentes que aparecen y su recorrido es el conjunto de segundas componentes relacionadas:\n\\[\n\\operatorname{Dom}(R)=\\{a\\in A:\\exists b\\in B,\\,(a,b)\\in R\\},\n\\]\n\\[\n\\operatorname{Rec}(R)=\\{b\\in B:\\exists a\\in A,\\,(a,b)\\in R\\}.\n\\]\nLa relación inversa es\n\\[\nR^{-1}=\\{(b,a):(a,b)\\in R\\}.\n\\]\n\n\nPropiedades de relaciones sobre un conjunto\nCuando \\(R\\subseteq A\\times A\\), puede ser:\n\nreflexiva, si \\(aRa\\) para todo \\(a\\in A\\);\nsimétrica, si \\(aRb\\Rightarrow bRa\\);\nantisimétrica, si \\(aRb\\land bRa\\Rightarrow a=b\\);\ntransitiva, si \\(aRb\\land bRc\\Rightarrow aRc\\).\n\nUna relación reflexiva, simétrica y transitiva es una relación de equivalencia. Una relación reflexiva, antisimétrica y transitiva es una relación de orden parcial.\n\n\nEjemplo\nEn \\(\\mathbb Z\\), definamos \\(aRb\\) si \\(a-b\\) es múltiplo de \\(3\\). La relación es reflexiva porque \\(a-a=0\\), simétrica porque si \\(3\\mid(a-b)\\), entonces \\(3\\mid(b-a)\\), y transitiva porque la suma de dos múltiplos de \\(3\\) vuelve a ser múltiplo de \\(3\\). Por tanto, es una relación de equivalencia.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-funciones",
+    "href": "01-logica-conjuntos.html#sec-funciones",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.7 Funciones: definición, representación y operaciones",
+    "text": "1.7 Funciones: definición, representación y operaciones\n\nDefinición formal\n\n\n\n\n\n\nNotaDefinición: función\n\n\n\nUna función \\(f:A\\to B\\) es una relación que asigna a cada elemento \\(x\\in A\\) exactamente un elemento \\(y\\in B\\). Escribimos \\(y=f(x)\\).\n\n\nEn \\(f:A\\to B\\):\n\n\\(A\\) es el dominio;\n\\(B\\) es el codominio;\n\\(f(A)=\\{f(x):x\\in A\\}\\) es la imagen o recorrido.\n\nSiempre se cumple \\(f(A)\\subseteq B\\), pero la imagen no tiene que ser todo el codominio.\n\n\n\n\n\n\nAdvertenciaDos condiciones que no deben olvidarse\n\n\n\nPara ser función, ningún elemento del dominio puede quedar sin imagen y ningún elemento del dominio puede tener dos imágenes distintas. En cambio, varios elementos del dominio sí pueden compartir una misma imagen.\n\n\n\n\n\n\n\n\nFigura 1.2: Una relación puede asociar elementos con libertad. Una función exige exactamente una imagen para cada elemento del dominio. El tercer diagrama falla por dos razones: \\(1\\) tiene dos imágenes y \\(3\\) no tiene ninguna.\n\n\n\nEn la Figura 1.2, el diagrama central sí representa una función aunque dos entradas compartan la imagen \\(a\\). Esa repetición afecta la inyectividad, no la definición de función.\n\n\nRepresentaciones e igualdad\nUna función puede representarse mediante una regla algebraica, una tabla, pares ordenados, un diagrama sagital o una gráfica. Dos funciones son iguales cuando tienen el mismo dominio, el mismo codominio y asignan el mismo valor a cada elemento del dominio.\nPor ello, \\(f(x)=x^2\\) definida de \\(\\mathbb R\\) en \\(\\mathbb R\\) y \\(g(x)=x^2\\) definida de \\([0,\\infty)\\) en \\([0,\\infty)\\) no son la misma función, aunque compartan fórmula.\n\n\nComposición e identidad\nSean \\(f:A\\to B\\) y \\(g:B\\to C\\). La composición \\(g\\circ f:A\\to C\\) se define por\n\\[\n(g\\circ f)(x)=g(f(x)).\n\\]\nLa función identidad en \\(A\\) es \\(\\operatorname{id}_A:A\\to A\\), dada por \\(\\operatorname{id}_A(x)=x\\). Satisface\n\\[\nf\\circ\\operatorname{id}_A=f,\n\\qquad\n\\operatorname{id}_B\\circ f=f.\n\\]\nLa composición es asociativa cuando las composiciones están definidas, pero en general no es conmutativa.\n\n\n\n\n\n\nFigura 1.3: La composición \\(g\\circ f\\) sigue primero la flecha de \\(f\\) y después la de \\(g\\).\n\n\n\nLa Figura 1.3 ayuda a recordar el orden: aunque \\(g\\circ f\\) se escribe con \\(g\\) a la izquierda, al evaluar se aplica primero \\(f\\).\n\n\nEjemplo\nSean \\(f(x)=2x+1\\) y \\(g(x)=x^2\\), ambas de \\(\\mathbb R\\) en \\(\\mathbb R\\). Entonces\n\\[\n(g\\circ f)(x)=(2x+1)^2,\n\\qquad\n(f\\circ g)(x)=2x^2+1.\n\\]\nComo estas expresiones no son iguales para todo \\(x\\), \\(g\\circ f\\ne f\\circ g\\).\n\n\nImagen inversa y relación inversa\nPara \\(C\\subseteq B\\), la preimagen de \\(C\\) es\n\\[\nf^{-1}(C)=\\{x\\in A:f(x)\\in C\\}.\n\\]\nEsta notación se utiliza aun cuando \\(f\\) no tenga función inversa. Debe distinguirse entre la preimagen de un conjunto, la relación inversa y la función inversa.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-tipos-funciones",
+    "href": "01-logica-conjuntos.html#sec-tipos-funciones",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.8 Funciones inyectivas, suprayectivas y biyectivas",
+    "text": "1.8 Funciones inyectivas, suprayectivas y biyectivas\n\nTres formas de comportamiento\nSea \\(f:A\\to B\\).\n\n\n\n\n\n\nNotaDefiniciones\n\n\n\n\n\\(f\\) es inyectiva si \\(f(x_1)=f(x_2)\\Rightarrow x_1=x_2\\). Elementos distintos del dominio no comparten imagen.\n\\(f\\) es suprayectiva si para todo \\(y\\in B\\) existe \\(x\\in A\\) tal que \\(f(x)=y\\). En otras palabras, \\(f(A)=B\\).\n\\(f\\) es biyectiva si es inyectiva y suprayectiva.\n\n\n\nPara demostrar inyectividad suele partirse de \\(f(x_1)=f(x_2)\\). Para refutarla basta encontrar dos entradas distintas con la misma salida. Para demostrar suprayectividad se toma un \\(y\\) arbitrario del codominio y se construye una \\(x\\) del dominio tal que \\(f(x)=y\\).\n\n\n\n\n\n\nFigura 1.4: Comparación mediante diagramas sagitales: inyectiva no suprayectiva, suprayectiva no inyectiva y biyectiva.\n\n\n\nLa Figura 1.4 muestra dos preguntas diferentes: para la inyectividad se revisa si dos flechas llegan al mismo punto; para la suprayectividad se revisa si todo elemento del codominio recibe al menos una flecha.\n\n\nEjemplos y contraejemplos\nLa función \\(f:\\mathbb R\\to\\mathbb R\\), \\(f(x)=2x-3\\), es biyectiva:\n\nsi \\(2x_1-3=2x_2-3\\), entonces \\(x_1=x_2\\), por lo que es inyectiva;\ndado \\(y\\in\\mathbb R\\), elegir \\(x=(y+3)/2\\) produce \\(f(x)=y\\), por lo que es suprayectiva.\n\nLa función \\(g:\\mathbb R\\to\\mathbb R\\), \\(g(x)=x^2\\), no es inyectiva porque \\(g(1)=g(-1)\\), y no es suprayectiva porque ningún número real tiene imagen negativa. Al restringir dominio y codominio, \\(g:[0,\\infty)\\to[0,\\infty)\\) sí es biyectiva.\n\n\nFunción inversa\n\n\n\n\n\n\nImportanteTeorema\n\n\n\nUna función \\(f:A\\to B\\) posee una función inversa \\(f^{-1}:B\\to A\\) si y solo si \\(f\\) es biyectiva.\n\n\nDemostración. Supongamos primero que existe \\(f^{-1}\\). Si \\(f(x_1)=f(x_2)\\), aplicar \\(f^{-1}\\) a ambos lados da \\(x_1=x_2\\); por tanto, \\(f\\) es inyectiva. Para cada \\(y\\in B\\), el elemento \\(x=f^{-1}(y)\\) satisface \\(f(x)=y\\); por tanto, \\(f\\) es suprayectiva.\nRecíprocamente, si \\(f\\) es biyectiva, para cada \\(y\\in B\\) existe, por suprayectividad, al menos un \\(x\\in A\\) con \\(f(x)=y\\); y por inyectividad ese \\(x\\) es único. Podemos definir \\(f^{-1}(y)=x\\). Así, \\(f^{-1}\\) es una función. \\(\\square\\)\n\n\nComposición y clasificación\n\nLa composición de funciones inyectivas es inyectiva.\nLa composición de funciones suprayectivas es suprayectiva.\nLa composición de funciones biyectivas es biyectiva.\n\nLas recíprocas requieren cuidado. Por ejemplo, si \\(g\\circ f\\) es inyectiva, entonces \\(f\\) es inyectiva, pero \\(g\\) no necesariamente lo es en todo su dominio.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-cardinalidad-infinita",
+    "href": "01-logica-conjuntos.html#sec-cardinalidad-infinita",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.9 Cardinalidad, equipotencia y conjuntos infinitos",
+    "text": "1.9 Cardinalidad, equipotencia y conjuntos infinitos\n\nEquipotencia\n\n\n\n\n\n\nNotaDefinición\n\n\n\nDos conjuntos \\(A\\) y \\(B\\) tienen la misma cardinalidad, o son equipotentes, si existe una biyección \\(f:A\\to B\\). Se escribe \\(|A|=|B|\\).\n\n\nEn conjuntos finitos esta definición coincide con contar elementos. Su verdadero alcance aparece en conjuntos infinitos.\nUn conjunto es infinito si no es finito. Una propiedad sorprendente de los conjuntos infinitos usuales es que pueden tener la misma cardinalidad que un subconjunto propio. Por ejemplo, \\(\\mathbb N\\) y el conjunto de números pares tienen la misma cardinalidad mediante \\(f(n)=2n\\).\n\n\nConjuntos numerables\nUn conjunto es numerable o contable si es finito o si sus elementos pueden colocarse en una lista infinita \\(a_0,a_1,a_2,\\ldots\\). Equivalentemente, es equipotente con \\(\\mathbb N_0=\\{0,1,2,\\ldots\\}\\).\nLos enteros son numerables. Una enumeración posible es\n\\[\n0,1,-1,2,-2,3,-3,\\ldots\n\\]\nLos racionales también son numerables, aunque parezcan más abundantes: pueden ordenarse por diagonales en una cuadrícula de numeradores y denominadores, omitiendo repeticiones.\n\n\nLos números reales no son numerables\nLa idea del argumento diagonal de Cantor demuestra que el intervalo \\((0,1)\\) no puede listarse por completo. Supongamos que existe una lista de todos sus números escritos en expansión decimal:\n\\[\nx_1=0.a_{11}a_{12}a_{13}\\ldots,\\quad\nx_2=0.a_{21}a_{22}a_{23}\\ldots,\\quad\\ldots\n\\]\nConstruimos un número \\(y=0.b_1b_2b_3\\ldots\\) eligiendo cada \\(b_i\\) distinto de \\(a_{ii}\\), por ejemplo \\(b_i=1\\) si \\(a_{ii}\\ne1\\) y \\(b_i=2\\) si \\(a_{ii}=1\\). Entonces \\(y\\) difiere de \\(x_i\\) en la cifra \\(i\\), por lo que no coincide con ningún elemento de la lista. Esto contradice que la lista fuera completa. Por tanto, \\((0,1)\\), y en consecuencia \\(\\mathbb R\\), no es numerable.\n\n\n\n\n\n\nTipDos usos de la palabra cardinalidad\n\n\n\nEn la sección 1.5 contamos elementos de conjuntos finitos. Aquí comparamos tamaños mediante biyecciones, una definición que también funciona para conjuntos infinitos. La segunda idea amplía a la primera; no la reemplaza.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#aplicación-integradora-álgebra-de-boole-y-circuitos-lógicos",
+    "href": "01-logica-conjuntos.html#aplicación-integradora-álgebra-de-boole-y-circuitos-lógicos",
+    "title": "1  Lógica y conjuntos",
+    "section": "Aplicación integradora: álgebra de Boole y circuitos lógicos",
+    "text": "Aplicación integradora: álgebra de Boole y circuitos lógicos\nEl álgebra de Boole trabaja con variables que toman los valores \\(0\\) y \\(1\\), interpretados como falso y verdadero, apagado y encendido, o nivel lógico bajo y alto. En notación de circuitos:\n\\[\na\\cdot b\\quad\\text{representa AND},\\qquad\na+b\\quad\\text{representa OR},\\qquad\n\\overline a\\quad\\text{representa NOT}.\n\\]\nLa presentación que sigue adapta la progresión del capítulo 3 de Tocci y Widmer (2003): variables y tablas de verdad; compuertas básicas; traducción entre expresiones y circuitos; evaluación de salidas; teoremas de Boole y De Morgan; compuertas universales; y lectura de símbolos lógicos.\n\nCompuertas y expresiones\n\n\n\nCompuerta\nExpresión de salida\nLa salida vale \\(1\\) cuando…\n\n\n\n\nBuffer\n\\(X=a\\)\nla entrada vale \\(1\\)\n\n\nNOT\n\\(X=\\overline a\\)\nla entrada vale \\(0\\)\n\n\nOR\n\\(X=a+b\\)\nal menos una entrada vale \\(1\\)\n\n\nAND\n\\(X=a\\cdot b\\)\ntodas las entradas valen \\(1\\)\n\n\nNOR\n\\(X=\\overline{a+b}\\)\ntodas las entradas valen \\(0\\)\n\n\nNAND\n\\(X=\\overline{a\\cdot b}\\)\nal menos una entrada vale \\(0\\)\n\n\n\nPara obtener la expresión de un circuito se avanza desde las entradas hasta la salida y se asigna una expresión a la salida de cada compuerta. Para implantar una expresión se respeta su jerarquía: primero las negaciones y operaciones entre paréntesis, después los productos lógicos y al final las sumas lógicas.\n\n\nEvaluación y diagramas de temporización\nUna tabla de verdad describe todas las combinaciones estáticas. Un diagrama de temporización muestra cómo cambian las entradas y salidas con el tiempo. Para trazar una salida:\n\nse dividen las señales en intervalos donde las entradas permanecen constantes;\nse determina la combinación de entrada de cada intervalo;\nse evalúa la función booleana;\nse dibuja el nivel de salida correspondiente.\n\nEn este primer tratamiento ideal se omiten los retardos de propagación. Estos se incorporarán en un estudio posterior de circuitos digitales.\n\n\nSeñales activas en alto y activas en bajo\nUna señal es activa en alto si realiza su función cuando vale \\(1\\). Es activa en bajo si realiza su función cuando vale \\(0\\). En diagramas digitales, una burbuja en una terminal indica inversión o activación en bajo. En los nombres de señales, una barra superior o una notación equivalente puede indicar que la señal se activa con nivel bajo.\n\n\n\n\n\n\nAdvertenciaNo confundir nivel lógico con voltaje exacto\n\n\n\nLos valores booleanos \\(0\\) y \\(1\\) representan estados lógicos. En un circuito físico corresponden a intervalos de voltaje definidos por la familia lógica; no deben interpretarse automáticamente como \\(0\\) V y \\(1\\) V.\n\n\nLas leyes de la lógica proposicional se convierten en reglas de simplificación:\n\\[\n\\begin{aligned}\na+a&=a, & a\\cdot a&=a,\\\\\na+0&=a, & a\\cdot1&=a,\\\\\na+1&=1, & a\\cdot0&=0,\\\\\na+\\overline a&=1, & a\\cdot\\overline a&=0,\\\\\na+a\\cdot b&=a, & a(a+b)&=a,\\\\\n\\overline{a+b}&=\\overline a\\cdot\\overline b,\n&\\overline{a\\cdot b}&=\\overline a+\\overline b.\n\\end{aligned}\n\\]\n\n\nEjemplo de simplificación\n\\[\nF=a+a\\cdot\\overline b=a\n\\]\npor la ley de absorción. El circuito inicial usaría una compuerta NOT, una AND y una OR; el circuito simplificado solo requiere conectar la señal \\(a\\) a la salida. Ambas expresiones poseen la misma tabla de verdad, pero la segunda implementación utiliza menos componentes.\nOtro ejemplo es\n\\[\nG=a\\cdot b+a\\cdot\\overline b\n=a(b+\\overline b)=a\\cdot1=a.\n\\]\n\n\nCompuertas NAND y NOR\nNAND y NOR combinan una operación básica con una negación:\n\\[\na\\uparrow b=\\overline{a\\cdot b},\n\\qquad\na\\downarrow b=\\overline{a+b}.\n\\]\nLos teoremas de De Morgan permiten cambiar entre representaciones equivalentes. Al negar una suma, esta se transforma en producto de variables negadas; al negar un producto, se transforma en suma de variables negadas. Esta idea explica las representaciones alternativas mediante burbujas que se utilizan al analizar circuitos.\n\n\nUniversalidad de NAND y NOR\nLa compuerta NOR se define por \\(a\\downarrow b=\\overline{a+b}\\). Es universal porque permite construir las tres operaciones básicas:\n\\[\n\\overline a=a\\downarrow a,\n\\]\n\\[\na+b=(a\\downarrow b)\\downarrow(a\\downarrow b),\n\\]\n\\[\na\\cdot b=(a\\downarrow a)\\downarrow(b\\downarrow b).\n\\]\nComo NOT, OR y AND pueden obtenerse solamente con NOR, cualquier función booleana puede implementarse con compuertas NOR.\nNAND también es universal:\n\\[\n\\overline a=a\\uparrow a,\n\\]\n\\[\na\\cdot b=(a\\uparrow b)\\uparrow(a\\uparrow b),\n\\]\n\\[\na+b=(a\\uparrow a)\\uparrow(b\\uparrow b).\n\\]\n\n\nSímbolos y representaciones alternativas\nUna misma función puede dibujarse con símbolos equivalentes obtenidos mediante De Morgan. El criterio esencial no es la apariencia aislada de una compuerta, sino la función que resulta al considerar su forma y las burbujas de sus entradas y salida. Las figuras definitivas del libro utilizarán una convención uniforme basada en símbolos lógicos estándar IEEE/ANSI y explicarán, mediante pares de diagramas, cuándo conviene una representación AND-OR, NAND-NAND, OR-AND o NOR-NOR (Tocci y Widmer 2003).\n\n\n\n\n\n\nNotaMétodo para simplificar y diseñar\n\n\n\n\nTranscribir con cuidado todas las negaciones.\nIdentificar términos comunes o complementarios.\nAplicar una sola ley en cada paso y escribir su nombre.\nComprobar la expresión final mediante tabla de verdad.\nDibujar el circuito original y el simplificado.\nComparar número de compuertas y niveles de propagación.\nVerificar que la polaridad activa de las señales se haya interpretado correctamente.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#síntesis-del-capítulo",
+    "href": "01-logica-conjuntos.html#síntesis-del-capítulo",
+    "title": "1  Lógica y conjuntos",
+    "section": "Síntesis del capítulo",
+    "text": "Síntesis del capítulo\n\nLos conjuntos organizan objetos; la lógica organiza afirmaciones sobre ellos.\nLa conjunción, disyunción y negación corresponden a intersección, unión y complemento.\nLos cuantificadores expresan “para todo” y “existe”; su negación cambia el cuantificador.\nLas igualdades de conjuntos pueden demostrarse mediante pertenencia o doble inclusión.\nEl principio de inclusión-exclusión evita contar varias veces los elementos compartidos.\nUna relación es un subconjunto de un producto cartesiano.\nUna función asigna a cada elemento del dominio exactamente una imagen.\nUna función tiene inversa exactamente cuando es biyectiva.\nLas biyecciones permiten comparar cardinalidades finitas e infinitas.\nLas leyes lógicas permiten simplificar expresiones booleanas y circuitos.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#errores-frecuentes",
+    "href": "01-logica-conjuntos.html#errores-frecuentes",
+    "title": "1  Lógica y conjuntos",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nConfundir \\(x\\in A\\) con \\(\\{x\\}\\subseteq A\\).\nOmitir el conjunto universal al calcular un complemento.\nInterpretar “o” como exclusiva cuando se usa \\(\\lor\\).\nSuponer que \\(p\\Rightarrow q\\) y \\(q\\Rightarrow p\\) son equivalentes.\nNegar “todos” como “ninguno”.\nOlvidar sumar la intersección triple en inclusión-exclusión.\nEscribir \\(A\\times(B\\cup C)=(A\\times B)\\cup(B\\times C)\\); el segundo factor correcto es \\(A\\times C\\).\nConfundir codominio con imagen.\nDecidir inyectividad o suprayectividad solo por la fórmula, ignorando dominio y codominio.\nPerder una barra de negación al transcribir una expresión booleana.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#ejercicios",
+    "href": "01-logica-conjuntos.html#ejercicios",
+    "title": "1  Lógica y conjuntos",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\nNivel básico\n\nSea \\(A=\\{0,\\{0\\},1\\}\\). Determine cuáles son verdaderas: \\(0\\in A\\), \\(\\{0\\}\\in A\\), \\(\\{0\\}\\subseteq A\\), \\(\\varnothing\\subseteq A\\).\nEscriba por extensión \\(B=\\{x\\in\\mathbb Z:-3\\le x&lt;4\\}\\) y calcule \\(\\mathcal P(\\{a,b,c\\})\\).\nConstruya la tabla de verdad de \\((p\\lor q)\\Rightarrow p\\).\nNiegue correctamente: “Todos los dispositivos aprobaron al menos una prueba”.\nSean \\(U=\\{1,2,\\ldots,10\\}\\), \\(A=\\{2,4,6,8,10\\}\\) y \\(B=\\{2,3,5,7\\}\\). Calcule \\(A\\cup B\\), \\(A\\cap B\\), \\(A^c\\) y \\(A\\setminus B\\).\n\n\n\nNivel intermedio\n\nDemuestre mediante equivalencias que \\(\\neg(p\\Rightarrow q)\\equiv p\\land\\neg q\\).\nDemuestre por doble inclusión que \\(A\\setminus(B\\cup C)=(A\\setminus B)\\cap(A\\setminus C)\\).\nEn un grupo de \\(180\\) estudiantes, \\(95\\) usan R, \\(80\\) usan Python y \\(40\\) usan ambos. ¿Cuántos usan al menos uno? ¿Cuántos no usan ninguno?\nSea \\(R=\\{(1,1),(1,2),(2,2),(3,3)\\}\\) sobre \\(A=\\{1,2,3\\}\\). Analice reflexividad, simetría, antisimetría y transitividad.\nCalcule \\(g\\circ f\\) y \\(f\\circ g\\) para \\(f(x)=x+1\\) y \\(g(x)=3x\\). Determine si son iguales.\nClasifique \\(f:\\mathbb Z\\to\\mathbb Z\\), \\(f(n)=2n\\), como inyectiva, suprayectiva o biyectiva.\n\n\n\nNivel formal y aplicado\n\nPruebe que si \\(g\\circ f\\) es inyectiva, entonces \\(f\\) es inyectiva.\nPruebe que si \\(g\\circ f\\) es suprayectiva, entonces \\(g\\) es suprayectiva.\nConstruya una biyección explícita entre \\(\\mathbb N_0\\) y \\(\\mathbb Z\\).\nSimplifique y compruebe mediante tabla de verdad: \\[\nF=\\overline a\\,b+a b+a\\overline b.\n\\] Después dibuje el circuito original y el simplificado.\nDemuestre la universalidad de NOR construyendo NOT, OR y AND.\nUn sistema de seguridad activa una alarma cuando \\(h\\land(t\\lor c)\\), donde \\(h\\) indica sistema habilitado, \\(t\\) temperatura alta y \\(c\\) corriente peligrosa. Construya la tabla de verdad, simplifique cuando sea posible y proponga el circuito.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#respuestas-breves-a-ejercicios-seleccionados",
+    "href": "01-logica-conjuntos.html#respuestas-breves-a-ejercicios-seleccionados",
+    "title": "1  Lógica y conjuntos",
+    "section": "Respuestas breves a ejercicios seleccionados",
+    "text": "Respuestas breves a ejercicios seleccionados\n\nLas cuatro afirmaciones son verdaderas.\nEs falsa únicamente cuando \\(p=F\\) y \\(q=V\\); es una contingencia.\n“Existe al menos un dispositivo que no aprobó ninguna prueba”.\nUsan al menos uno \\(95+80-40=135\\); no usan ninguno \\(180-135=45\\).\n\\((g\\circ f)(x)=3x+3\\) y \\((f\\circ g)(x)=3x+1\\); no son iguales.\nEs inyectiva, pero no suprayectiva sobre \\(\\mathbb Z\\).\n\\(F=a+b\\).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#proyecto-integrador",
+    "href": "01-logica-conjuntos.html#proyecto-integrador",
+    "title": "1  Lógica y conjuntos",
+    "section": "Proyecto integrador",
+    "text": "Proyecto integrador\nDiseñe la lógica de un sistema de monitoreo con tres entradas binarias. El proyecto debe incluir:\n\ndescripción verbal de las entradas y la salida;\nproposición lógica;\ntabla de verdad;\nconjunto de combinaciones que activan la salida;\nsimplificación algebraica justificada;\ncircuito lógico original y simplificado;\nexplicación de por qué ambos circuitos son equivalentes.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#referencias-del-capítulo",
+    "href": "01-logica-conjuntos.html#referencias-del-capítulo",
+    "title": "1  Lógica y conjuntos",
+    "section": "Referencias del capítulo",
+    "text": "Referencias del capítulo\nLa exposición se apoya en el programa de la asignatura (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011), en el tratamiento integrado de lógica y conjuntos de Silva y Lazo (2007) y en textos de matemáticas discretas como Epp (2011) y Rosen (2019). Para una introducción clásica al lenguaje de conjuntos puede consultarse Halmos (1960). La aplicación a compuertas y álgebra de Boole sigue como referencia principal el capítulo 3 de Tocci y Widmer (2003).\n\n\n\n\nEpp, Susanna S. 2011. Discrete Mathematics with Applications. 4.ª ed. Brooks/Cole, Cengage Learning.\n\n\nHalmos, Paul R. 1960. Naive Set Theory. D. Van Nostrand Company.\n\n\nRosen, Kenneth H. 2019. Discrete Mathematics and Its Applications. 8.ª ed. McGraw-Hill Education.\n\n\nSilva, Juan Manuel, y Adriana Lazo. 2007. Fundamentos de Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo. 7.ª ed. Limusa.\n\n\nTocci, Ronald J., y Neal S. Widmer. 2003. Sistemas digitales: principios y aplicaciones. 8.ª ed. Pearson Educación.\n\n\nUniversidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico. Propuesta de modificación curricular.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html",
+    "href": "02-enteros-reales.html",
+    "title": "2  Números enteros y reales",
+    "section": "",
+    "text": "Introducción\nEstructura, inducción, divisibilidad, primos, orden y distancia\nLos números se aprenden primero como herramientas para contar y medir. En Álgebra Superior interesa además comprender por qué sus reglas funcionan, qué propiedades distinguen a cada sistema numérico y cómo se justifican afirmaciones que involucran infinitos casos.\nEl capítulo sigue la segunda unidad del programa de Álgebra Superior de la Facultad de Ciencias de la UASLP (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). La exposición distingue con cuidado tres niveles: las propiedades que se aceptan como estructura, los teoremas que se deducen de ellas y los procedimientos que permiten calcular. La inducción, el algoritmo de Euclides y la factorización prima son ejemplos centrales de esta relación.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#introducción",
+    "href": "02-enteros-reales.html#introducción",
+    "title": "2  Números enteros y reales",
+    "section": "",
+    "text": "Objetivos del capítulo\nAl finalizar, el lector será capaz de:\n\nreconocer las propiedades algebraicas y de orden de los enteros;\ndemostrar afirmaciones mediante inducción simple y fuerte;\naplicar el algoritmo de la división y el algoritmo de Euclides;\ntrabajar con divisibilidad, máximo común divisor y mínimo común múltiplo;\njustificar la existencia y unicidad de la factorización prima;\ndistinguir números naturales, enteros, racionales, irracionales y reales;\nutilizar las propiedades de campo ordenado y la completitud de los reales;\noperar correctamente con exponentes enteros, negativos y racionales;\ninterpretar el valor absoluto como distancia y resolver ecuaciones e inecuaciones.\n\n\n\n\n\n\n\nTipPregunta inicial\n\n\n\n¿Cómo puede demostrarse que \\(1+3+5+\\cdots +(2n-1)=n^2\\) para todo entero positivo \\(n\\)? ¿Por qué el algoritmo que divide repetidamente permite calcular \\(\\gcd(252,198)\\)? ¿Qué diferencia estructural existe entre \\(\\mathbb Q\\) y \\(\\mathbb R\\)? Este capítulo desarrolla las herramientas para responder estas preguntas.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-propiedades-enteros",
+    "href": "02-enteros-reales.html#sec-propiedades-enteros",
+    "title": "2  Números enteros y reales",
+    "section": "2.1 Propiedades de los números enteros",
+    "text": "2.1 Propiedades de los números enteros\n\nEl conjunto de los enteros\nDenotamos por\n\\[\n\\mathbb Z=\\{\\ldots,-3,-2,-1,0,1,2,3,\\ldots\\}\n\\]\nel conjunto de los números enteros. Los enteros positivos se utilizan para contar; el cero expresa ausencia o referencia, y los enteros negativos permiten representar desplazamientos, deudas, temperaturas bajo cero y operaciones inversas de la suma.\nLa relación de inclusión entre los primeros sistemas numéricos es\n\\[\n\\mathbb N\\subseteq\\mathbb Z\\subseteq\\mathbb Q\\subseteq\\mathbb R.\n\\]\nEn este libro tomaremos \\(\\mathbb N=\\{1,2,3,\\ldots\\}\\) y escribiremos \\(\\mathbb N_0=\\mathbb N\\cup\\{0\\}\\) cuando sea necesario incluir el cero.\n\n\nPropiedades algebraicas\nPara cualesquiera \\(a,b,c\\in\\mathbb Z\\) se cumplen las propiedades siguientes.\n\n\n\nTabla 2.1: Propiedades básicas de las operaciones en \\(\\mathbb Z\\).\n\n\n\n\n\nPropiedad\nSuma\nProducto\n\n\n\n\nCerradura\n\\(a+b\\in\\mathbb Z\\)\n\\(ab\\in\\mathbb Z\\)\n\n\nConmutatividad\n\\(a+b=b+a\\)\n\\(ab=ba\\)\n\n\nAsociatividad\n\\((a+b)+c=a+(b+c)\\)\n\\((ab)c=a(bc)\\)\n\n\nElemento neutro\n\\(a+0=a\\)\n\\(a\\cdot1=a\\)\n\n\nInverso\n\\(a+(-a)=0\\)\nsolo \\(1\\) y \\(-1\\) tienen inverso entero\n\n\n\n\n\n\nLa suma y el producto se relacionan mediante la propiedad distributiva:\n\\[\na(b+c)=ab+ac.\n\\]\nLos enteros forman un anillo conmutativo con identidad. No forman un campo, porque un entero distinto de \\(1\\) y \\(-1\\) no tiene inverso multiplicativo dentro de \\(\\mathbb Z\\). Por ejemplo, el inverso de \\(2\\) es \\(1/2\\), que no es entero.\n\n\nOrden y principio del buen orden\nEl orden en \\(\\mathbb Z\\) es total: dados \\(a,b\\in\\mathbb Z\\), exactamente una de estas afirmaciones es verdadera:\n\\[\na&lt;b,\\qquad a=b,\\qquad a&gt;b.\n\\]\nEl orden es compatible con las operaciones:\n\nsi \\(a&lt;b\\), entonces \\(a+c&lt;b+c\\);\nsi \\(a&lt;b\\) y \\(c&gt;0\\), entonces \\(ac&lt;bc\\);\nsi \\(a&lt;b\\) y \\(c&lt;0\\), entonces \\(ac&gt;bc\\).\n\n\n\n\n\n\n\nNotaPrincipio del buen orden\n\n\n\nTodo subconjunto no vacío de \\(\\mathbb N\\) posee un elemento mínimo.\n\n\nEste principio parece elemental, pero sostiene demostraciones importantes. Por ejemplo, permite justificar el algoritmo de la división y es equivalente, en un sentido lógico preciso, al principio de inducción.\n\n\nConsecuencias útiles\nLas reglas de signos no son convenciones aisladas: se deducen de las propiedades anteriores. Como\n\\[\n0=a\\cdot0=a(0+0)=a\\cdot0+a\\cdot0,\n\\]\nal sumar el inverso de \\(a\\cdot0\\) en ambos lados se obtiene \\(a\\cdot0=0\\). Además,\n\\[\n0=(-a)(b+(-b))=(-a)b+(-a)(-b),\n\\]\ny como \\((-a)b=-(ab)\\), resulta\n\\[\n(-a)(-b)=ab.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-induccion",
+    "href": "02-enteros-reales.html#sec-induccion",
+    "title": "2  Números enteros y reales",
+    "section": "2.2 Inducción matemática",
+    "text": "2.2 Inducción matemática\n\nIdea fundamental\nUna afirmación \\(P(n)\\) puede verificarse para muchos valores particulares sin quedar demostrada para todos los naturales. La inducción matemática permite pasar de un caso inicial a una cadena infinita de casos.\n\n\n\n\n\n\nNotaPrincipio de inducción\n\n\n\nSea \\(P(n)\\) una proposición definida para todo \\(n\\ge n_0\\). Si:\n\n\\(P(n_0)\\) es verdadera, y\npara todo \\(k\\ge n_0\\), la verdad de \\(P(k)\\) implica la verdad de \\(P(k+1)\\),\n\nentonces \\(P(n)\\) es verdadera para todo \\(n\\ge n_0\\).\n\n\nLa afirmación \\(P(k)\\) que se supone temporalmente verdadera se llama hipótesis inductiva. No se está suponiendo la conclusión completa; se demuestra una implicación: \\(P(k)\\Rightarrow P(k+1)\\).\n\n\n\n\n\n\nFigura 2.1: La suma de los primeros \\(n\\) números impares forma un cuadrado de lado \\(n\\). Agregar el siguiente impar produce el cuadrado de lado \\(n+1\\).\n\n\n\n\n\nEjemplo: suma de los primeros impares\nDemostremos que\n\\[\n1+3+5+\\cdots +(2n-1)=n^2\n\\]\npara todo \\(n\\in\\mathbb N\\).\nCaso base. Para \\(n=1\\),\n\\[\n1=1^2.\n\\]\nHipótesis inductiva. Supongamos que para algún \\(k\\ge1\\),\n\\[\n1+3+\\cdots +(2k-1)=k^2.\n\\]\nPaso inductivo. Al agregar el siguiente impar, \\(2(k+1)-1=2k+1\\), obtenemos\n\\[\n\\begin{aligned}\n1+3+\\cdots +(2k-1)+(2k+1)\n&=k^2+2k+1\\\\\n&=(k+1)^2.\n\\end{aligned}\n\\]\nPor inducción, la igualdad se cumple para todo \\(n\\ge1\\).\n\n\nOtro ejemplo: suma geométrica\nPara \\(r\\ne1\\) y \\(n\\in\\mathbb N_0\\),\n\\[\n1+r+r^2+\\cdots+r^n=\\frac{r^{n+1}-1}{r-1}.\n\\]\nEl caso \\(n=0\\) produce \\(1=(r-1)/(r-1)\\). Si la fórmula vale para \\(n=k\\), entonces\n\\[\n\\begin{aligned}\n1+r+\\cdots+r^k+r^{k+1}\n&=\\frac{r^{k+1}-1}{r-1}+r^{k+1}\\\\\n&=\\frac{r^{k+2}-1}{r-1}.\n\\end{aligned}\n\\]\n\n\nInducción fuerte\nEn la inducción fuerte, para demostrar \\(P(k+1)\\) se permite utilizar todos los casos anteriores:\n\\[\nP(n_0),P(n_0+1),\\ldots,P(k).\n\\]\nEs especialmente útil cuando un objeto se descompone en partes menores. Por ejemplo, para demostrar que todo entero \\(n&gt;1\\) es primo o producto de primos, si \\(n\\) no es primo se escribe \\(n=ab\\) con \\(1&lt;a,b&lt;n\\) y se aplica la hipótesis fuerte a \\(a\\) y \\(b\\).\n\n\n\n\n\n\nAdvertenciaErrores frecuentes en inducción\n\n\n\n\nComprobar solo varios valores y llamarlo demostración.\nOmitir el caso base.\nUsar en el paso inductivo una fórmula distinta de la hipótesis.\nTransformar únicamente el lado derecho sin conectar la expresión de \\(k\\) con la de \\(k+1\\).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-divisibilidad",
+    "href": "02-enteros-reales.html#sec-divisibilidad",
+    "title": "2  Números enteros y reales",
+    "section": "2.3 Divisibilidad",
+    "text": "2.3 Divisibilidad\n\nDefinición y propiedades\nSean \\(a,b\\in\\mathbb Z\\) con \\(a\\ne0\\). Decimos que \\(a\\) divide a \\(b\\), y escribimos \\(a\\mid b\\), si existe \\(k\\in\\mathbb Z\\) tal que\n\\[\nb=ak.\n\\]\nSi no existe tal entero, escribimos \\(a\\nmid b\\). Por ejemplo, \\(7\\mid42\\) porque \\(42=7\\cdot6\\), mientras que \\(7\\nmid40\\).\nSi \\(a\\mid b\\) y \\(a\\mid c\\), entonces para cualesquiera \\(m,n\\in\\mathbb Z\\),\n\\[\na\\mid(mb+nc).\n\\]\nEn efecto, si \\(b=ar\\) y \\(c=as\\), entonces \\(mb+nc=a(mr+ns)\\).\n\n\nAlgoritmo de la división\n\n\n\n\n\n\nNotaTeorema: algoritmo de la división\n\n\n\nDados \\(a\\in\\mathbb Z\\) y \\(d\\in\\mathbb Z\\) con \\(d&gt;0\\), existen enteros únicos \\(q\\) y \\(r\\) tales que\n\\[\na=dq+r,\\qquad 0\\le r&lt;d.\n\\]\n\\(q\\) es el cociente y \\(r\\) el residuo.\n\n\nPor ejemplo,\n\\[\n47=6(7)+5,\n\\]\nde modo que el cociente es \\(7\\) y el residuo es \\(5\\). Para un dividendo negativo debe conservarse la condición \\(0\\le r&lt;d\\):\n\\[\n-47=6(-8)+1.\n\\]\n\n\nMáximo común divisor y algoritmo de Euclides\nEl máximo común divisor de enteros \\(a\\) y \\(b\\), no ambos cero, es el mayor entero positivo que divide a ambos. Se denota por \\(\\gcd(a,b)\\).\nSi\n\\[\na=bq+r,\n\\]\nentonces los divisores comunes de \\(a\\) y \\(b\\) son exactamente los divisores comunes de \\(b\\) y \\(r\\). Por tanto,\n\\[\n\\gcd(a,b)=\\gcd(b,r).\n\\]\nEsta igualdad origina el algoritmo de Euclides. Para \\(252\\) y \\(198\\):\n\\[\n\\begin{aligned}\n252&=198(1)+54,\\\\\n198&=54(3)+36,\\\\\n54&=36(1)+18,\\\\\n36&=18(2)+0.\n\\end{aligned}\n\\]\nEl último residuo no nulo es \\(18\\), por lo que \\(\\gcd(252,198)=18\\).\n\n\n\n\n\n\nFigura 2.2: Cada fila del algoritmo de Euclides sustituye el par anterior por divisor y residuo. El último residuo no nulo es el máximo común divisor.\n\n\n\n\n\nIdentidad de Bézout\nEl máximo común divisor puede expresarse como combinación lineal:\n\\[\n\\gcd(a,b)=ax+by\n\\]\npara ciertos \\(x,y\\in\\mathbb Z\\). Al recorrer hacia atrás el ejemplo,\n\\[\n18=54-36=54-(198-3\\cdot54)=4\\cdot54-198=4\\cdot252-5\\cdot198.\n\\]\nAsí, \\(x=4\\) y \\(y=-5\\) son coeficientes de Bézout.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-primos-factorizacion",
+    "href": "02-enteros-reales.html#sec-primos-factorizacion",
+    "title": "2  Números enteros y reales",
+    "section": "2.4 Números primos y factorización",
+    "text": "2.4 Números primos y factorización\n\nPrimos y compuestos\nUn entero \\(p&gt;1\\) es primo si sus únicos divisores positivos son \\(1\\) y \\(p\\). Un entero mayor que \\(1\\) que no es primo se llama compuesto. El número \\(1\\) no es primo ni compuesto.\nPara decidir si \\(n&gt;1\\) es primo basta probar divisores primos no mayores que \\(\\sqrt n\\). Si \\(n=ab\\) y ambos factores fueran mayores que \\(\\sqrt n\\), entonces \\(ab&gt;n\\), lo cual es imposible.\n\n\nLema de Euclides y teorema fundamental\n\n\n\n\n\n\nNotaLema de Euclides\n\n\n\nSi \\(p\\) es primo y \\(p\\mid ab\\), entonces \\(p\\mid a\\) o \\(p\\mid b\\).\n\n\n\n\n\n\n\n\nNotaTeorema fundamental de la aritmética\n\n\n\nTodo entero \\(n&gt;1\\) puede expresarse como producto de números primos. Esa factorización es única, salvo el orden de los factores.\n\n\nLa existencia puede demostrarse por inducción fuerte. La unicidad se apoya en el lema de Euclides. Por ejemplo,\n\\[\n756=2^2\\cdot3^3\\cdot7.\n\\]\n\n\n\n\n\n\nFigura 2.3: Cadena de factorización de \\(756\\). En cada paso se sustituye un factor compuesto hasta obtener únicamente factores primos.\n\n\n\n\n\nMCD y MCM mediante exponentes primos\nSi\n\\[\na=\\prod_p p^{\\alpha_p},\\qquad b=\\prod_p p^{\\beta_p},\n\\]\nentonces\n\\[\n\\gcd(a,b)=\\prod_p p^{\\min(\\alpha_p,\\beta_p)},\n\\]\ny\n\\[\n\\operatorname{mcm}(a,b)=\\prod_p p^{\\max(\\alpha_p,\\beta_p)}.\n\\]\nPara \\(a,b&gt;0\\) se cumple además\n\\[\n\\gcd(a,b)\\operatorname{mcm}(a,b)=ab.\n\\]\n\n\nInfinitud de los primos\nSupongamos que solo existieran los primos \\(p_1,\\ldots,p_n\\) y consideremos\n\\[\nN=p_1p_2\\cdots p_n+1.\n\\]\nNingún \\(p_i\\) divide a \\(N\\), porque el residuo sería \\(1\\). Sin embargo, \\(N&gt;1\\) debe ser primo o tener un divisor primo. En ambos casos aparece un primo que no estaba en la lista, contradicción. Por tanto, existen infinitos números primos.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-racionales-reales",
+    "href": "02-enteros-reales.html#sec-racionales-reales",
+    "title": "2  Números enteros y reales",
+    "section": "2.5 Números racionales y números reales",
+    "text": "2.5 Números racionales y números reales\n\nRacionales\nUn número racional es un cociente de enteros:\n\\[\n\\mathbb Q=\\left\\{\\frac ab:a,b\\in\\mathbb Z,\\ b\\ne0\\right\\}.\n\\]\nFracciones distintas pueden representar el mismo racional; por ejemplo,\n\\[\n\\frac12=\\frac24=\\frac{-3}{-6}.\n\\]\nTodo racional posee una expansión decimal finita o periódica. Recíprocamente, toda expansión decimal finita o periódica representa un racional.\n\n\nIrracionales y reales\nLos números que no son racionales se llaman irracionales. Ejemplos clásicos son \\(\\sqrt2\\), \\(\\pi\\) y \\(e\\). Los números reales reúnen racionales e irracionales:\n\\[\n\\mathbb R=\\mathbb Q\\cup(\\mathbb R\\setminus\\mathbb Q).\n\\]\n\n\n\n\n\n\nFigura 2.4: Inclusión de los principales sistemas numéricos y ejemplos representativos.\n\n\n\nDemostremos que \\(\\sqrt2\\) es irracional. Supongamos que \\(\\sqrt2=a/b\\) en forma irreducible. Entonces\n\\[\na^2=2b^2.\n\\]\nPor tanto, \\(a^2\\) es par y \\(a\\) también es par; escribamos \\(a=2k\\). Sustituyendo,\n\\[\n4k^2=2b^2\\quad\\Longrightarrow\\quad b^2=2k^2,\n\\]\nasí que \\(b\\) también es par. Esto contradice que \\(a/b\\) estuviera reducida. Luego \\(\\sqrt2\\notin\\mathbb Q\\).\n\n\nDensidad\nEntre dos números reales distintos siempre existe un racional y también un irracional. En particular, si \\(a&lt;b\\), entonces su punto medio\n\\[\n\\frac{a+b}{2}\n\\]\nestá entre ambos, aunque no necesariamente sea racional cuando \\(a\\) y \\(b\\) son reales arbitrarios. La densidad muestra que racionales e irracionales están entrelazados en la recta real.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-propiedades-reales",
+    "href": "02-enteros-reales.html#sec-propiedades-reales",
+    "title": "2  Números enteros y reales",
+    "section": "2.6 Propiedades de los números reales",
+    "text": "2.6 Propiedades de los números reales\n\nCampo ordenado\nLos reales forman un campo ordenado. Además de las propiedades de suma y producto vistas para los enteros, todo \\(a\\ne0\\) tiene inverso multiplicativo \\(a^{-1}=1/a\\) en \\(\\mathbb R\\). El orden es compatible con las operaciones.\nUna consecuencia importante es que todo cuadrado es no negativo. Si \\(x\\ge0\\), entonces \\(x^2\\ge0\\). Si \\(x&lt;0\\), entonces \\(-x&gt;0\\) y \\(x^2=(-x)^2&gt;0\\). De aquí se obtiene, por ejemplo, que\n\\[\nx^2+1&gt;0\n\\]\npara todo \\(x\\in\\mathbb R\\).\n\n\nCompletitud\nLa propiedad que distingue a \\(\\mathbb R\\) de \\(\\mathbb Q\\) es la completitud.\n\n\n\n\n\n\nNotaAxioma del supremo\n\n\n\nTodo subconjunto no vacío de \\(\\mathbb R\\) que está acotado superiormente posee un supremo en \\(\\mathbb R\\).\n\n\nEl supremo de un conjunto \\(A\\) es su menor cota superior. No tiene que pertenecer a \\(A\\). Por ejemplo,\n\\[\nA=\\{x\\in\\mathbb R:x&lt;2\\}\n\\]\ntiene supremo \\(2\\), pero \\(2\\notin A\\).\nEn \\(\\mathbb Q\\) la completitud falla: el conjunto\n\\[\n\\{q\\in\\mathbb Q:q^2&lt;2\\}\n\\]\nestá acotado superiormente, pero no tiene supremo racional.\n\n\nPropiedad arquimediana e intervalos\nPara todo real \\(x\\) existe \\(n\\in\\mathbb N\\) tal que \\(n&gt;x\\). Esta propiedad impide que existan reales infinitamente grandes o infinitesimales distintos de cero dentro del sistema usual.\nLos intervalos expresan conjuntos definidos por desigualdades:\n\n\n\nTabla 2.2: Correspondencia entre desigualdades e intervalos.\n\n\n\n\n\nDesigualdad\nIntervalo\n\n\n\n\n\\(a&lt;x&lt;b\\)\n\\((a,b)\\)\n\n\n\\(a\\le x\\le b\\)\n\\([a,b]\\)\n\n\n\\(a&lt;x\\le b\\)\n\\((a,b]\\)\n\n\n\\(x\\ge a\\)\n\\([a,\\infty)\\)\n\n\n\n\n\n\nAl multiplicar una desigualdad por un número negativo se invierte su sentido. Por ejemplo,\n\\[\n-3x&lt;12\\quad\\Longleftrightarrow\\quad x&gt;-4.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-exponentes",
+    "href": "02-enteros-reales.html#sec-exponentes",
+    "title": "2  Números enteros y reales",
+    "section": "2.7 Exponentes racionales y negativos",
+    "text": "2.7 Exponentes racionales y negativos\n\nExponentes enteros\nPara \\(a\\ne0\\) y \\(n\\in\\mathbb N\\) se define\n\\[\na^{-n}=\\frac1{a^n},\\qquad a^0=1.\n\\]\nEstas definiciones conservan la ley \\(a^m a^n=a^{m+n}\\). El caso \\(0^0\\) no se define de manera universal en álgebra elemental, y \\(0^{-n}\\) no existe.\n\n\nExponentes racionales\nSea \\(m/n\\) una fracción reducida con \\(n&gt;0\\). Para \\(a&gt;0\\) definimos\n\\[\na^{m/n}=\\sqrt[n]{a^m}=\\left(\\sqrt[n]{a}\\right)^m.\n\\]\nSi \\(n\\) es impar, la definición puede extenderse a bases negativas. Si \\(n\\) es par, una base negativa no produce un número real. Así,\n\\[\n(-8)^{1/3}=-2,\\qquad (-8)^{1/2}\\notin\\mathbb R.\n\\]\n\n\nLeyes y restricciones\nPara bases positivas y exponentes racionales se cumplen\n\\[\na^r a^s=a^{r+s},\\qquad \\frac{a^r}{a^s}=a^{r-s},\n\\]\n\\[\n(a^r)^s=a^{rs},\\qquad (ab)^r=a^r b^r.\n\\]\nLas restricciones de signo no son detalles menores. Por ejemplo,\n\\[\n\\sqrt{x^2}=|x|,\n\\]\nno \\(x\\) para todo real \\(x\\). Si \\(x=-3\\), entonces \\(\\sqrt{x^2}=3\\ne-3\\).\n\n\n\n\n\n\nAdvertenciaError frecuente\n\n\n\nEn general, \\[\n\\sqrt{a+b}\\ne\\sqrt a+\\sqrt b.\n\\] Con \\(a=b=1\\), el lado izquierdo es \\(\\sqrt2\\) y el derecho es \\(2\\).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-valor-absoluto",
+    "href": "02-enteros-reales.html#sec-valor-absoluto",
+    "title": "2  Números enteros y reales",
+    "section": "2.8 Valor absoluto",
+    "text": "2.8 Valor absoluto\n\nDefinición y significado geométrico\nEl valor absoluto de \\(x\\in\\mathbb R\\) se define por\n\\[\n|x|=\n\\begin{cases}\nx, & x\\ge0,\\\\\n-x, & x&lt;0.\n\\end{cases}\n\\]\nGeométricamente, \\(|x|\\) es la distancia de \\(x\\) al origen y \\(|x-a|\\) es la distancia entre \\(x\\) y \\(a\\).\n\n\n\n\n\n\nFigura 2.5: Interpretación de \\(|x-a|\\le r\\) como los puntos cuya distancia al centro \\(a\\) no excede el radio \\(r\\).\n\n\n\n\n\nPropiedades\nPara \\(x,y\\in\\mathbb R\\):\n\\[\n|x|\\ge0,\\qquad |x|=0\\Longleftrightarrow x=0,\n\\]\n\\[\n|xy|=|x||y|,\\qquad \\left|\\frac xy\\right|=\\frac{|x|}{|y|}\\quad(y\\ne0),\n\\]\n\\[\n|x+y|\\le|x|+|y|.\n\\]\nLa última expresión es la desigualdad triangular. Como\n\\[\n-|x|\\le x\\le|x|,\n\\]\ny análogamente para \\(y\\), al sumar se obtiene\n\\[\n-(|x|+|y|)\\le x+y\\le |x|+|y|,\n\\]\nlo que implica \\(|x+y|\\le|x|+|y|\\).\n\n\nEcuaciones e inecuaciones\nPara \\(r&gt;0\\):\n\\[\n|x-a|=r\\quad\\Longleftrightarrow\\quad x=a-r\\text{ o }x=a+r,\n\\]\n\\[\n|x-a|&lt;r\\quad\\Longleftrightarrow\\quad a-r&lt;x&lt;a+r,\n\\]\n\\[\n|x-a|&gt;r\\quad\\Longleftrightarrow\\quad x&lt;a-r\\text{ o }x&gt;a+r.\n\\]\nEjemplo:\n\\[\n|2x-3|\\le5\n\\]\nequivale a\n\\[\n-5\\le2x-3\\le5,\n\\]\npor lo que\n\\[\n-1\\le x\\le4.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#síntesis-del-capítulo",
+    "href": "02-enteros-reales.html#síntesis-del-capítulo",
+    "title": "2  Números enteros y reales",
+    "section": "Síntesis del capítulo",
+    "text": "Síntesis del capítulo\n\nLos enteros son cerrados bajo suma, resta y producto, pero no bajo división.\nLa inducción demuestra una cadena infinita de afirmaciones a partir de un caso base y un paso inductivo.\nEl algoritmo de la división produce cociente y residuo únicos.\nEl algoritmo de Euclides calcula el MCD mediante residuos sucesivos.\nTodo entero mayor que uno tiene una factorización prima única.\nLos racionales tienen expansión decimal finita o periódica; los irracionales completan la recta real.\nLos reales forman un campo ordenado completo.\nLos exponentes racionales requieren atender a dominio, signo y paridad del índice.\nEl valor absoluto mide distancia y convierte problemas geométricos en desigualdades.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#errores-frecuentes",
+    "href": "02-enteros-reales.html#errores-frecuentes",
+    "title": "2  Números enteros y reales",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nConfundir comprobar muchos casos con demostrar por inducción.\nDividir una desigualdad por un número negativo sin invertir el signo.\nAfirmar que \\(a\\mid b\\) significa solamente que \\(b/a\\) puede calcularse; el cociente debe ser entero.\nConsiderar primo al número \\(1\\).\nDetener el algoritmo de Euclides en el residuo cero en vez de tomar el último residuo no nulo.\nSuponer que todo decimal es racional; debe ser finito o periódico.\nUsar \\(\\sqrt{x^2}=x\\) sin considerar \\(x&lt;0\\).\nAplicar leyes de exponentes sin revisar las restricciones de la base.\nInterpretar \\(|x-a|&gt;r\\) como un intervalo central; describe dos regiones exteriores.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#ejercicios",
+    "href": "02-enteros-reales.html#ejercicios",
+    "title": "2  Números enteros y reales",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\nNivel básico\n\nClasifique como naturales, enteros, racionales, irracionales o reales: \\(-7\\), \\(0\\), \\(3/5\\), \\(\\sqrt{49}\\), \\(\\sqrt7\\) y \\(\\pi\\).\nUse las propiedades de orden para resolver \\(5-3x\\le17\\).\nCalcule cociente y residuo al dividir \\(137\\) entre \\(12\\) y \\(-137\\) entre \\(12\\).\nDetermine si \\(11\\mid341\\) y si \\(13\\mid341\\).\nFactorice \\(1386\\) en primos.\nSimplifique \\(2^{-3}4^{3/2}\\).\nResuelva \\(|x-4|=7\\) y \\(|x-4|&lt;7\\).\n\n\n\nNivel intermedio\n\nDemuestre por inducción que \\(1+2+\\cdots+n=n(n+1)/2\\).\nDemuestre por inducción que \\(7\\mid(8^n-1)\\) para todo \\(n\\ge1\\).\nUse el algoritmo de Euclides para calcular \\(\\gcd(414,662)\\) y exprese el resultado como combinación lineal.\nCalcule \\(\\gcd(840,378)\\) y \\(\\operatorname{mcm}(840,378)\\) mediante factorización prima.\nDemuestre que si \\(a\\mid b\\) y \\(b\\mid a\\), entonces \\(a=\\pm b\\).\nDemuestre que entre dos racionales distintos existe otro racional.\nResuelva \\(|3x+2|&gt;8\\) y exprese la solución con intervalos.\n\n\n\nNivel formal y aplicado\n\nDemuestre por inducción fuerte que todo entero \\(n&gt;1\\) es primo o producto de primos.\nPruebe que si \\(\\gcd(a,b)=1\\) y \\(a\\mid bc\\), entonces \\(a\\mid c\\).\nDemuestre que existen infinitos primos de la forma necesaria para refutar cualquier lista finita de todos los primos.\nJustifique por qué \\(\\sqrt3\\) es irracional adaptando la demostración de \\(\\sqrt2\\).\nPruebe la desigualdad triangular inversa: \\[\n\\bigl||x|-|y|\\bigr|\\le|x-y|.\n\\]\nDescriba el conjunto de números que están a distancia mayor que \\(2\\) de \\(-1\\) y represéntelo en la recta real.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#respuestas-breves-a-ejercicios-seleccionados",
+    "href": "02-enteros-reales.html#respuestas-breves-a-ejercicios-seleccionados",
+    "title": "2  Números enteros y reales",
+    "section": "Respuestas breves a ejercicios seleccionados",
+    "text": "Respuestas breves a ejercicios seleccionados\n\n\\(-7\\) es entero; \\(0\\) es entero y racional; \\(3/5\\) es racional; \\(\\sqrt{49}=7\\) es natural; \\(\\sqrt7\\) y \\(\\pi\\) son irracionales. Todos son reales.\n\\(137=12(11)+5\\) y \\(-137=12(-12)+7\\).\n\\(11\\mid341\\) porque \\(341=11\\cdot31\\); también \\(341=13\\cdot26+3\\), así que \\(13\\nmid341\\).\n\\(1386=2\\cdot3^2\\cdot7\\cdot11\\).\n\\(2^{-3}4^{3/2}=2^{-3}(2^2)^{3/2}=2^{-3}2^3=1\\).\n\\(x=-3\\) o \\(x=11\\); para la desigualdad, \\(-3&lt;x&lt;11\\).\n\\(\\gcd(414,662)=2\\).\n\\(x&lt;-10/3\\) o \\(x&gt;2\\).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#proyecto-integrador",
+    "href": "02-enteros-reales.html#proyecto-integrador",
+    "title": "2  Números enteros y reales",
+    "section": "Proyecto integrador",
+    "text": "Proyecto integrador\nConstruya un estudio completo de dos enteros positivos \\(a\\) y \\(b\\) elegidos por el equipo:\n\naplique el algoritmo de Euclides paso a paso;\nobtenga coeficientes de Bézout;\nfactorice ambos números en primos;\ncalcule MCD y MCM mediante exponentes primos;\nverifique \\(\\gcd(a,b)\\operatorname{mcm}(a,b)=ab\\);\nformule una conjetura de divisibilidad relacionada con los datos;\ndemuestre la conjetura o construya un contraejemplo;\npresente una representación visual clara de los resultados.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#referencias-del-capítulo",
+    "href": "02-enteros-reales.html#referencias-del-capítulo",
+    "title": "2  Números enteros y reales",
+    "section": "Referencias del capítulo",
+    "text": "Referencias del capítulo\nLa secuencia corresponde a la segunda unidad del programa de Álgebra Superior (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). Las propiedades de los sistemas numéricos, la inducción y las desigualdades se apoyan en Silva y Lazo (2007) y Rosen (2019). Para divisibilidad, algoritmos y factorización se consultaron Burton (2011) y Niven et al. (1991).\n\n\n\n\nBurton, David M. 2011. Elementary Number Theory. 7.ª ed. McGraw-Hill.\n\n\nNiven, Ivan, Herbert S. Zuckerman, y Hugh L. Montgomery. 1991. An Introduction to the Theory of Numbers. 5.ª ed. John Wiley & Sons.\n\n\nRosen, Kenneth H. 2019. Discrete Mathematics and Its Applications. 8.ª ed. McGraw-Hill Education.\n\n\nSilva, Juan Manuel, y Adriana Lazo. 2007. Fundamentos de Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo. 7.ª ed. Limusa.\n\n\nUniversidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico. Propuesta de modificación curricular.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html",
+    "href": "03-numeros-complejos.html",
+    "title": "3  Números complejos",
+    "section": "",
+    "text": "Introducción\nEste capítulo desarrolla la Unidad 3 del programa oficial de Álgebra Superior de la Facultad de Ciencias de la UASLP (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). La idea central es construir los números complejos a partir del plano real: primero se estudia \\(\\mathbb R^2\\), después se dota a los pares ordenados de una multiplicación especial y, finalmente, se interpreta cada operación en forma algebraica y geométrica.\nEn \\(\\mathbb R\\) la ecuación \\(x^2+1=0\\) no tiene solución, porque \\(x^2\\geq 0\\) para todo número real. Para resolverla sin perder las leyes usuales del álgebra es necesario ampliar el sistema numérico. Esa ampliación es \\(\\mathbb C\\), el conjunto de los números complejos.\nLa construcción no surge de un símbolo misterioso. Un número complejo puede entenderse como un par \\((a,b)\\in\\mathbb R^2\\) con reglas precisas para sumar y multiplicar. La forma \\(a+bi\\) resume ese par, y la identidad \\(i^2=-1\\) es una consecuencia de la multiplicación definida en el plano.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#introducción",
+    "href": "03-numeros-complejos.html#introducción",
+    "title": "3  Números complejos",
+    "section": "",
+    "text": "Objetivos del capítulo\nAl terminar el capítulo, el lector podrá:\n\ndescribir puntos y vectores de \\(\\mathbb R^2\\);\nconvertir entre coordenadas cartesianas y polares;\noperar vectores y justificar sus propiedades;\ncalcular módulo y argumento;\nconstruir \\(\\mathbb C\\) a partir de \\(\\mathbb R^2\\);\nsumar, restar, multiplicar y dividir números complejos;\nutilizar el conjugado y demostrar sus propiedades;\ncalcular potencias mediante la fórmula de De Moivre;\nobtener todas las raíces \\(n\\)-ésimas de un complejo;\nrelacionar las operaciones algebraicas con movimientos del plano.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-r2",
+    "href": "03-numeros-complejos.html#sec-r2",
+    "title": "3  Números complejos",
+    "section": "3.1 Definición de \\(\\mathbb R^2\\)",
+    "text": "3.1 Definición de \\(\\mathbb R^2\\)\n\n\n\n\n\n\nNotaDefinición\n\n\n\nEl plano real es el producto cartesiano\n\\[\n\\mathbb R^2=\\mathbb R\\times\\mathbb R\n=\\{(x,y):x\\in\\mathbb R,\\ y\\in\\mathbb R\\}.\n\\]\nDos pares son iguales si y solo si coinciden sus componentes:\n\\[\n(x,y)=(u,v)\\iff x=u\\ \\text{y}\\ y=v.\n\\]\n\n\nUn par \\((x,y)\\) puede interpretarse como un punto del plano o como el vector que parte del origen y termina en ese punto. El contexto determina la interpretación, pero los cálculos con sus componentes son los mismos.\nLos vectores\n\\[\n\\mathbf e_1=(1,0),\\qquad \\mathbf e_2=(0,1)\n\\]\nforman la base canónica. Todo vector \\(\\mathbf v=(x,y)\\) tiene una expresión única\n\\[\n\\mathbf v=x\\mathbf e_1+y\\mathbf e_2.\n\\]\n\nEjes, cuadrantes y distancia\nEl eje horizontal corresponde a los puntos \\((x,0)\\) y el vertical a \\((0,y)\\). Los signos de \\(x\\) y \\(y\\) determinan los cuatro cuadrantes.\nPor el teorema de Pitágoras, la distancia de \\(P=(x,y)\\) a \\(Q=(u,v)\\) es\n\\[\nd(P,Q)=\\sqrt{(x-u)^2+(y-v)^2}.\n\\]\nEn particular, la longitud del vector \\((x,y)\\) es \\(\\sqrt{x^2+y^2}\\).\n\n\n\n\n\n\nTipEjemplo\n\n\n\nSi \\(P=(-2,3)\\) y \\(Q=(4,-1)\\), entonces\n\\[\nd(P,Q)=\\sqrt{(-2-4)^2+(3+1)^2}=\\sqrt{52}=2\\sqrt{13}.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-cartesiana-polar",
+    "href": "03-numeros-complejos.html#sec-cartesiana-polar",
+    "title": "3  Números complejos",
+    "section": "3.2 Representaciones cartesiana y polar de vectores en \\(\\mathbb R^2\\)",
+    "text": "3.2 Representaciones cartesiana y polar de vectores en \\(\\mathbb R^2\\)\nLa representación cartesiana \\((x,y)\\) indica cuánto se avanza horizontal y verticalmente. La representación polar \\((r,\\theta)\\) indica una distancia al origen y un ángulo medido desde el eje positivo \\(x\\).\nPara \\((x,y)\\neq(0,0)\\):\n\\[\nr=\\sqrt{x^2+y^2},\\qquad\nx=r\\cos\\theta,\\qquad\ny=r\\sin\\theta.\n\\]\nPor tanto,\n\\[\n\\cos\\theta=\\frac{x}{r},\\qquad\n\\sin\\theta=\\frac{y}{r}.\n\\]\nEl ángulo debe elegirse en el cuadrante correcto. La igualdad \\(\\tan\\theta=y/x\\) no basta por sí sola, porque la tangente tiene periodo \\(\\pi\\) y no distingue puntos opuestos.\n\n\n\n\n\n\nFigura 3.1: Representación cartesiana y polar del punto \\(z=(3,4)\\).\n\n\n\n\nNo unicidad del ángulo\nEl mismo vector queda representado por\n\\[\n(r,\\theta),\\ (r,\\theta+2\\pi),\\ (r,\\theta-2\\pi),\\ldots\n\\]\nEn general, todos sus ángulos son \\(\\theta+2k\\pi\\), con \\(k\\in\\mathbb Z\\). Para evitar ambigüedad se elige un argumento principal, usualmente en \\((-\\pi,\\pi]\\).\n\n\n\n\n\n\nAdvertenciaCaso especial\n\n\n\nEl origen tiene radio \\(r=0\\), pero no tiene un ángulo determinado. Cualquier dirección termina en el mismo punto cuando la distancia es cero.\n\n\n\n\nEjemplo resuelto\nPara el vector \\((-\\sqrt3,1)\\):\n\\[\nr=\\sqrt{3+1}=2.\n\\]\nComo está en el segundo cuadrante y\n\\[\n\\cos\\theta=-\\frac{\\sqrt3}{2},\\qquad \\sin\\theta=\\frac12,\n\\]\nse obtiene \\(\\theta=5\\pi/6\\). Su forma polar principal es \\((2,5\\pi/6)\\).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-operaciones-r2",
+    "href": "03-numeros-complejos.html#sec-operaciones-r2",
+    "title": "3  Números complejos",
+    "section": "3.3 Operaciones con vectores en \\(\\mathbb R^2\\)",
+    "text": "3.3 Operaciones con vectores en \\(\\mathbb R^2\\)\nSean \\(\\mathbf u=(u_1,u_2)\\), \\(\\mathbf v=(v_1,v_2)\\) y \\(\\lambda\\in\\mathbb R\\).\n\n\n\n\n\n\nNotaDefiniciones\n\n\n\n\\[\n\\begin{aligned}\n\\mathbf u+\\mathbf v&=(u_1+v_1,u_2+v_2),\\\\\n\\mathbf u-\\mathbf v&=(u_1-v_1,u_2-v_2),\\\\\n\\lambda\\mathbf u&=(\\lambda u_1,\\lambda u_2),\\\\\n\\mathbf u\\cdot\\mathbf v&=u_1v_1+u_2v_2.\n\\end{aligned}\n\\]\n\n\nLa suma obedece la regla del paralelogramo. Al colocar dos copias de \\(\\mathbf u\\) y \\(\\mathbf v\\) con el mismo origen, la diagonal del paralelogramo es \\(\\mathbf u+\\mathbf v\\).\n\n\n\n\n\n\nFigura 3.2: Suma vectorial mediante la regla del paralelogramo.\n\n\n\n\nPropiedades algebraicas\nPara cualesquiera \\(\\mathbf u,\\mathbf v,\\mathbf w\\in\\mathbb R^2\\) y \\(\\lambda,\\mu\\in\\mathbb R\\):\n\\[\n\\begin{aligned}\n\\mathbf u+\\mathbf v&=\\mathbf v+\\mathbf u,\\\\\n(\\mathbf u+\\mathbf v)+\\mathbf w&=\\mathbf u+(\\mathbf v+\\mathbf w),\\\\\n\\mathbf u+\\mathbf 0&=\\mathbf u,\\\\\n\\mathbf u+(-\\mathbf u)&=\\mathbf 0,\\\\\n\\lambda(\\mathbf u+\\mathbf v)&=\\lambda\\mathbf u+\\lambda\\mathbf v,\\\\\n(\\lambda+\\mu)\\mathbf u&=\\lambda\\mathbf u+\\mu\\mathbf u,\\\\\n(\\lambda\\mu)\\mathbf u&=\\lambda(\\mu\\mathbf u),\\\\\n1\\mathbf u&=\\mathbf u.\n\\end{aligned}\n\\]\nTodas se demuestran comparando componentes. Por ejemplo,\n\\[\n\\lambda(\\mathbf u+\\mathbf v)\n=(\\lambda(u_1+v_1),\\lambda(u_2+v_2))\n=\\lambda\\mathbf u+\\lambda\\mathbf v.\n\\]\n\n\nProducto punto y perpendicularidad\nSi \\(\\varphi\\) es el ángulo entre dos vectores no nulos, entonces\n\\[\n\\mathbf u\\cdot\\mathbf v=|\\mathbf u\\|\\|\\mathbf v\\|\\cos\\varphi.\n\\]\nDe aquí se deduce que \\(\\mathbf u\\perp\\mathbf v\\) si y solo si \\(\\mathbf u\\cdot\\mathbf v=0\\).\n\n\n\n\n\n\nTipEjemplo\n\n\n\nPara \\(\\mathbf u=(2,1)\\) y \\(\\mathbf v=(-1,2)\\),\n\\[\n\\mathbf u\\cdot\\mathbf v=2(-1)+1(2)=0.\n\\]\nPor tanto, los vectores son perpendiculares.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-modulo-argumento",
+    "href": "03-numeros-complejos.html#sec-modulo-argumento",
+    "title": "3  Números complejos",
+    "section": "3.4 Módulo y argumento",
+    "text": "3.4 Módulo y argumento\nPara un vector \\(\\mathbf v=(x,y)\\) se define su módulo o norma euclidiana como\n\\[\n\\|\\mathbf v\\|=\\sqrt{x^2+y^2}.\n\\]\nSi \\(\\mathbf v\\neq\\mathbf 0\\), un argumento de \\(\\mathbf v\\) es cualquier ángulo \\(\\theta\\) que cumple\n\\[\n\\mathbf v=\\|\\mathbf v\\|(\\cos\\theta,\\sin\\theta).\n\\]\n\nPropiedades del módulo\nPara \\(\\mathbf u,\\mathbf v\\in\\mathbb R^2\\) y \\(\\lambda\\in\\mathbb R\\):\n\\[\n\\begin{aligned}\n\\|\\mathbf v\\|&\\geq 0,\\\\\n\\|\\mathbf v\\|=0&\\iff \\mathbf v=\\mathbf 0,\\\\\n\\|\\lambda\\mathbf v\\|&=|\\lambda|\\,\\|\\mathbf v\\|,\\\\\n|\\mathbf u\\cdot\\mathbf v|&\\leq \\|\\mathbf u\\|\\|\\mathbf v\\|,\\\\\n\\|\\mathbf u+\\mathbf v\\|&\\leq \\|\\mathbf u\\|+\\|\\mathbf v\\|.\n\\end{aligned}\n\\]\nLa cuarta desigualdad es la de Cauchy-Schwarz y la quinta es la desigualdad triangular.\n\n\nDemostración de la desigualdad triangular\nUsando Cauchy-Schwarz:\n\\[\n\\begin{aligned}\n\\|\\mathbf u+\\mathbf v\\|^2\n&=(\\mathbf u+\\mathbf v)\\cdot(\\mathbf u+\\mathbf v)\\\\\n&=\\|\\mathbf u\\|^2+2\\mathbf u\\cdot\\mathbf v+\\|\\mathbf v\\|^2\\\\\n&\\leq \\|\\mathbf u\\|^2+2\\|\\mathbf u\\|\\|\\mathbf v\\|+\\|\\mathbf v\\|^2\\\\\n&=(\\|\\mathbf u\\|+\\|\\mathbf v\\|)^2.\n\\end{aligned}\n\\]\nAmbos lados son no negativos; al extraer raíz cuadrada se obtiene el resultado.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-imaginarios-complejos",
+    "href": "03-numeros-complejos.html#sec-imaginarios-complejos",
+    "title": "3  Números complejos",
+    "section": "3.5 Números imaginarios y complejos",
+    "text": "3.5 Números imaginarios y complejos\nDefinimos en \\(\\mathbb R^2\\) una suma usual y una multiplicación nueva:\n\\[\n(a,b)+(c,d)=(a+c,b+d),\n\\]\n\\[\n(a,b)(c,d)=(ac-bd,ad+bc).\n\\]\nCon estas operaciones, \\(\\mathbb R^2\\) se convierte en el campo de los números complejos \\(\\mathbb C\\).\nSea\n\\[\n1=(1,0),\\qquad i=(0,1).\n\\]\nEntonces\n\\[\ni^2=(0,1)(0,1)=(-1,0)=-1.\n\\]\nAdemás,\n\\[\n(a,b)=(a,0)+(0,b)=a(1,0)+b(0,1)=a+bi.\n\\]\n\n\n\n\n\n\nNotaDefinición\n\n\n\nUn número complejo es una expresión\n\\[\nz=a+bi,\\qquad a,b\\in\\mathbb R,\\qquad i^2=-1.\n\\]\nSe llama \\(a=\\operatorname{Re}(z)\\) a su parte real y \\(b=\\operatorname{Im}(z)\\) a su parte imaginaria.\n\n\nDos complejos son iguales exactamente cuando coinciden sus partes:\n\\[\na+bi=c+di\\iff a=c\\ \\text{y}\\ b=d.\n\\]\nLos reales están incluidos en \\(\\mathbb C\\) mediante \\(a=a+0i\\). Un complejo de la forma \\(bi\\) con \\(b\\neq0\\) se denomina imaginario puro.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-operaciones-complejos",
+    "href": "03-numeros-complejos.html#sec-operaciones-complejos",
+    "title": "3  Números complejos",
+    "section": "3.6 Operaciones básicas con números complejos",
+    "text": "3.6 Operaciones básicas con números complejos\nSean \\(z=a+bi\\) y \\(w=c+di\\).\n\\[\n\\begin{aligned}\nz+w&=(a+c)+(b+d)i,\\\\\nz-w&=(a-c)+(b-d)i,\\\\\nzw&=(ac-bd)+(ad+bc)i.\n\\end{aligned}\n\\]\nLa regla de multiplicación se obtiene distribuyendo y sustituyendo \\(i^2\\) por \\(-1\\):\n\\[\n(a+bi)(c+di)=ac+adi+bci+bd i^2.\n\\]\n\n\n\n\n\n\nTipEjemplo resuelto\n\n\n\nPara \\(z=3-2i\\) y \\(w=1+4i\\):\n\\[\nz+w=4+2i,\n\\]\n\\[\nzw=3+12i-2i-8i^2=11+10i.\n\\]\n\n\n\nInterpretación polar de la multiplicación\nSi\n\\[\nz=r(\\cos\\alpha+i\\sin\\alpha),\\qquad\nw=s(\\cos\\beta+i\\sin\\beta),\n\\]\nentonces, por las identidades de suma de ángulos,\n\\[\nzw=rs\\bigl(\\cos(\\alpha+\\beta)+i\\sin(\\alpha+\\beta)\\bigr).\n\\]\nPor tanto, multiplicar complejos significa multiplicar módulos y sumar argumentos. Geométricamente, multiplicar por \\(w\\) produce una dilatación de factor \\(|w|\\) y una rotación de ángulo \\(\\arg(w)\\).\n\n\nEjemplo geométrico\nMultiplicar por \\(i\\) conserva el módulo y suma \\(\\pi/2\\) al argumento. Por eso\n\\[\ni(a+bi)=-b+ai\n\\]\nrepresenta una rotación de \\(90^\\circ\\) en sentido antihorario.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-conjugado",
+    "href": "03-numeros-complejos.html#sec-conjugado",
+    "title": "3  Números complejos",
+    "section": "3.7 Complejo conjugado y sus propiedades",
+    "text": "3.7 Complejo conjugado y sus propiedades\n\n\n\n\n\n\nNotaDefinición\n\n\n\nEl conjugado de \\(z=a+bi\\) es\n\\[\n\\overline z=a-bi.\n\\]\n\n\nGeométricamente, la conjugación refleja el punto respecto del eje real.\n\n\n\n\n\n\nFigura 3.3: El conjugado \\(\\overline z\\) es el reflejo de \\(z\\) respecto del eje real.\n\n\n\n\nPropiedades\nPara \\(z,w\\in\\mathbb C\\):\n\\[\n\\begin{aligned}\n\\overline{\\overline z}&=z,\\\\\n\\overline{z+w}&=\\overline z+\\overline w,\\\\\n\\overline{zw}&=\\overline z\\,\\overline w,\\\\\nz\\overline z&=|z|^2,\\\\\n|\\overline z|&=|z|,\\\\\nz\\in\\mathbb R&\\iff z=\\overline z.\n\\end{aligned}\n\\]\nTambién permite recuperar las partes real e imaginaria:\n\\[\n\\operatorname{Re}(z)=\\frac{z+\\overline z}{2},\n\\qquad\n\\operatorname{Im}(z)=\\frac{z-\\overline z}{2i}.\n\\]\n\n\nDemostración de la propiedad multiplicativa\nSi \\(z=a+bi\\) y \\(w=c+di\\), entonces\n\\[\nzw=(ac-bd)+(ad+bc)i.\n\\]\nPor consiguiente,\n\\[\n\\overline{zw}=(ac-bd)-(ad+bc)i.\n\\]\nPor otro lado,\n\\[\n\\overline z\\,\\overline w=(a-bi)(c-di)\n=(ac-bd)-(ad+bc)i.\n\\]\nAmbas expresiones son iguales.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-division-complejos",
+    "href": "03-numeros-complejos.html#sec-division-complejos",
+    "title": "3  Números complejos",
+    "section": "3.8 División de complejos",
+    "text": "3.8 División de complejos\nPara dividir entre \\(w=c+di\\neq0\\) se multiplica numerador y denominador por \\(\\overline w\\):\n\\[\n\\frac{z}{w}\n=\\frac{z\\overline w}{w\\overline w}\n=\\frac{(a+bi)(c-di)}{c^2+d^2}.\n\\]\nAsí,\n\\[\n\\frac{a+bi}{c+di}\n=\\frac{ac+bd}{c^2+d^2}\n+\\frac{bc-ad}{c^2+d^2}i.\n\\]\nEl inverso de un complejo no nulo es\n\\[\nz^{-1}=\\frac{\\overline z}{|z|^2}.\n\\]\n\n\n\n\n\n\nTipEjemplo resuelto\n\n\n\n\\[\n\\frac{2+3i}{1-2i}\n=\\frac{(2+3i)(1+2i)}{(1-2i)(1+2i)}\n=\\frac{-4+7i}{5}\n=-\\frac45+\\frac75i.\n\\]\nLa comprobación consiste en multiplicar el resultado por \\(1-2i\\) y recuperar \\(2+3i\\).\n\n\n\nDivisión en forma polar\nSi \\(z=r(\\cos\\alpha+i\\sin\\alpha)\\) y \\(w=s(\\cos\\beta+i\\sin\\beta)\\), con \\(s&gt;0\\), entonces\n\\[\n\\frac zw=\\frac rs\\bigl(\\cos(\\alpha-\\beta)+i\\sin(\\alpha-\\beta)\\bigr).\n\\]\nDividir significa dividir módulos y restar argumentos.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-potencias-raices",
+    "href": "03-numeros-complejos.html#sec-potencias-raices",
+    "title": "3  Números complejos",
+    "section": "3.9 Potencias y raíces de complejos",
+    "text": "3.9 Potencias y raíces de complejos\n\nFórmula de De Moivre\nPara \\(n\\in\\mathbb Z\\) y\n\\[\nz=r(\\cos\\theta+i\\sin\\theta),\n\\]\nse cumple\n\\[\nz^n=r^n\\bigl(\\cos(n\\theta)+i\\sin(n\\theta)\\bigr).\n\\]\nPara \\(n\\geq1\\), la demostración se obtiene por inducción usando las fórmulas de suma del seno y el coseno. Para exponentes negativos se aplica el inverso.\n\n\n\n\n\n\nTipEjemplo: una potencia grande\n\n\n\nComo\n\\[\n1+i=\\sqrt2\\left(\\cos\\frac\\pi4+i\\sin\\frac\\pi4\\right),\n\\]\nentonces\n\\[\n(1+i)^8=(\\sqrt2)^8\\left(\\cos2\\pi+i\\sin2\\pi\\right)=16.\n\\]\n\n\n\n\nRaíces \\(n\\)-ésimas\nSea\n\\[\nz=r(\\cos\\theta+i\\sin\\theta),\\qquad r&gt;0.\n\\]\nLas soluciones de \\(w^n=z\\) son\n\\[\nw_k=\\sqrt[n]{r}\\left[\n\\cos\\left(\\frac{\\theta+2k\\pi}{n}\\right)\n+i\\sin\\left(\\frac{\\theta+2k\\pi}{n}\\right)\n\\right],\n\\]\npara \\(k=0,1,\\ldots,n-1\\).\nSon exactamente \\(n\\) puntos igualmente espaciados sobre la circunferencia de radio \\(\\sqrt[n]{r}\\).\n\n\nRaíces de la unidad\nLas soluciones de \\(w^n=1\\) son\n\\[\n\\omega_k=\\cos\\frac{2k\\pi}{n}+i\\sin\\frac{2k\\pi}{n}\n=e^{2k\\pi i/n},\n\\]\ncon \\(k=0,\\ldots,n-1\\). Forman los vértices de un polígono regular inscrito en la circunferencia unitaria.\n\n\n\n\n\n\nFigura 3.4: Las seis raíces de \\(z^6=1\\) forman un hexágono regular.\n\n\n\n\n\n\n\n\n\nTipEjemplo: raíces cúbicas de \\(-8\\)\n\n\n\nEscribimos\n\\[\n-8=8(\\cos\\pi+i\\sin\\pi).\n\\]\nLas raíces son\n\\[\nw_k=2\\left[\\cos\\left(\\frac{\\pi+2k\\pi}{3}\\right)\n+i\\sin\\left(\\frac{\\pi+2k\\pi}{3}\\right)\\right],\n\\quad k=0,1,2.\n\\]\nPor tanto,\n\\[\nw_0=1+\\sqrt3i,\\qquad w_1=-2,\\qquad w_2=1-\\sqrt3i.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#síntesis-del-capítulo",
+    "href": "03-numeros-complejos.html#síntesis-del-capítulo",
+    "title": "3  Números complejos",
+    "section": "Síntesis del capítulo",
+    "text": "Síntesis del capítulo\n\n\\(\\mathbb R^2\\) está formado por pares ordenados y proporciona el modelo geométrico de \\(\\mathbb C\\).\nLas coordenadas cartesianas describen componentes; las polares describen módulo y argumento.\nLa suma de complejos corresponde a suma vectorial.\nLa multiplicación compleja multiplica módulos y suma argumentos.\nEl conjugado refleja respecto del eje real y cumple \\(z\\overline z=|z|^2\\).\nLa división utiliza el conjugado o, en forma polar, divide módulos y resta argumentos.\nDe Moivre transforma potencias en multiplicación de ángulos.\nToda raíz \\(n\\)-ésima no nula tiene \\(n\\) valores igualmente espaciados.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#errores-frecuentes",
+    "href": "03-numeros-complejos.html#errores-frecuentes",
+    "title": "3  Números complejos",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nUsar \\(\\arctan(y/x)\\) sin revisar el cuadrante. Deben considerarse los signos de \\(x\\) y \\(y\\).\nAsignar argumento al cero. El número \\(0\\) no tiene argumento definido.\nOlvidar que \\(i^2=-1\\). Es la fuente principal de errores de signo al multiplicar.\nConjugar solo una parte de una expresión. Se cumple \\(\\overline{z+w}=\\overline z+\\overline w\\) y \\(\\overline{zw}=\\overline z\\,\\overline w\\).\nDividir componentes directamente. En general, \\((a+bi)/(c+di)\\) no es \\(a/c+(b/d)i\\).\nDar una sola raíz \\(n\\)-ésima. Para \\(z\\neq0\\) existen exactamente \\(n\\) raíces distintas.\nMezclar grados y radianes. Las fórmulas analíticas se escriben normalmente en radianes.\nConfundir \\(|z|\\) con \\(\\operatorname{Re}(z)\\). El módulo siempre es real no negativo.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#ejercicios",
+    "href": "03-numeros-complejos.html#ejercicios",
+    "title": "3  Números complejos",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\nNivel básico\n\nUbique en el plano \\((3,-2)\\), \\((-1,4)\\), \\((-3,-3)\\) y \\((0,5)\\) e indique su cuadrante o eje.\nCalcule la distancia entre \\(P=(2,-1)\\) y \\(Q=(-4,7)\\).\nConvierta \\((\\sqrt3,1)\\) y \\((-1,-\\sqrt3)\\) a forma polar principal.\nConvierta \\((r,\\theta)=(4,5\\pi/6)\\) a coordenadas cartesianas.\nSean \\(\\mathbf u=(2,-3)\\) y \\(\\mathbf v=(-1,5)\\). Calcule \\(\\mathbf u+\\mathbf v\\), \\(2\\mathbf u-\\mathbf v\\) y \\(\\mathbf u\\cdot\\mathbf v\\).\nCalcule \\(|3-4i|\\), \\(\\operatorname{Re}(3-4i)\\) y \\(\\operatorname{Im}(3-4i)\\).\nEfectúe \\((2+5i)+(-3+i)\\) y \\((2+5i)(-3+i)\\).\nHalle el conjugado de \\(-7+2i\\) y compruebe \\(z\\overline z=|z|^2\\).\n\n\n\nNivel intermedio\n\nDetermine el argumento principal de \\(-2+2i\\), \\(-3-3i\\) y \\(4-4i\\).\nPruebe por componentes que \\(\\lambda(\\mathbf u+\\mathbf v)=\\lambda\\mathbf u+\\lambda\\mathbf v\\).\nDetermine \\(x,y\\in\\mathbb R\\) si \\((2+i)(x+yi)=7-i\\).\nSimplifique \\((1-i)^6\\) mediante De Moivre y compruebe por multiplicación sucesiva.\nCalcule \\((3+4i)/(2-i)\\) en forma cartesiana y polar.\nEncuentre las cuatro raíces de \\(16\\) y represéntelas en el plano.\nResuelva \\(z^3=8i\\) y verifique cada resultado elevándolo al cubo.\nDescriba geométricamente la transformación \\(T(z)=(-1+i)z\\).\n\n\n\nNivel formal y aplicado\n\nDemuestre que \\(|z+w|\\leq|z|+|w|\\) usando \\(\\operatorname{Re}(z\\overline w)\\leq|z||w|\\).\nDemuestre que \\(|z-w|\\geq\\bigl||z|-|w|\\bigr|\\).\nPruebe que \\(z+\\overline z\\) es real y \\(z-\\overline z\\) es imaginario puro.\nDemuestre que las raíces de \\(z^n=1\\) son cerradas bajo la multiplicación.\nSi \\(|z|=1\\), pruebe que \\(z^{-1}=\\overline z\\).\nEn corriente alterna, un fasor tiene magnitud \\(120\\) y ángulo \\(-30^\\circ\\). Escríbalo en forma cartesiana y determine el resultado de multiplicarlo por un fasor de magnitud \\(2\\) y ángulo \\(45^\\circ\\).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#respuestas-breves-a-ejercicios-seleccionados",
+    "href": "03-numeros-complejos.html#respuestas-breves-a-ejercicios-seleccionados",
+    "title": "3  Números complejos",
+    "section": "Respuestas breves a ejercicios seleccionados",
+    "text": "Respuestas breves a ejercicios seleccionados\n\n\\(10\\).\n\\((2,\\pi/6)\\) y \\((2,-2\\pi/3)\\).\n\\((-2\\sqrt3,2)\\).\n\\((1,2)\\), \\((5,-11)\\) y \\(-17\\).\n\\(-1+6i\\) y \\(-11-13i\\).\n\\(x=13/5\\), \\(y=-9/5\\).\n\\(8i\\).\n\\(\\dfrac25+\\dfrac{11}{5}i\\).\n\\(2\\), \\(2i\\), \\(-2\\) y \\(-2i\\).\nDe \\(|z|^2=z\\overline z=1\\) se sigue \\(z^{-1}=\\overline z\\).\nPrimer fasor: \\(60\\sqrt3-60i\\); producto: magnitud \\(240\\) y ángulo \\(15^\\circ\\).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#proyecto-integrador",
+    "href": "03-numeros-complejos.html#proyecto-integrador",
+    "title": "3  Números complejos",
+    "section": "Proyecto integrador",
+    "text": "Proyecto integrador\nTransformaciones complejas y fasores. Construya un informe que incluya:\n\ntres números complejos en forma cartesiana y polar;\nsu representación en el plano;\nuna transformación \\(T(z)=az\\) interpretada como rotación y cambio de escala;\nla comprobación algebraica de módulos y argumentos;\nlas raíces cuartas de uno de los complejos;\nuna aplicación breve a fasores, señales sinusoidales o rotaciones bidimensionales;\nuna conclusión que conecte la geometría con las operaciones.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#referencias-del-capítulo",
+    "href": "03-numeros-complejos.html#referencias-del-capítulo",
+    "title": "3  Números complejos",
+    "section": "Referencias del capítulo",
+    "text": "Referencias del capítulo\nLa secuencia sigue la Unidad 3 del programa oficial (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). Para ampliar la teoría y la interpretación geométrica pueden consultarse Silva y Lazo (2007), Brown y Churchill (2014) y Needham (1997).\n\n\n\n\nBrown, James Ward, y Ruel V. Churchill. 2014. Complex Variables and Applications. 9.ª ed. McGraw-Hill Education.\n\n\nNeedham, Tristan. 1997. Visual Complex Analysis. Oxford University Press.\n\n\nSilva, Juan Manuel, y Adriana Lazo. 2007. Fundamentos de Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo. 7.ª ed. Limusa.\n\n\nUniversidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico. Propuesta de modificación curricular.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html",
+    "href": "04-polinomios.html",
+    "title": "4  Polinomios",
+    "section": "",
+    "text": "Introducción\nEste capítulo desarrolla la Unidad 4 del programa oficial de Álgebra Superior de la Facultad de Ciencias de la UASLP (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). El propósito es pasar de las operaciones formales con polinomios a la comprensión de sus raíces, su factorización y las funciones racionales.\nLos polinomios aparecen al modelar trayectorias, señales, costos, aproximaciones y ecuaciones. Tienen una doble naturaleza: son expresiones algebraicas que pueden sumarse y multiplicarse, y también funciones cuyos ceros se observan en una gráfica. La división conecta ambas perspectivas: una raíz produce un factor y un factor produce una raíz.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#introducción",
+    "href": "04-polinomios.html#introducción",
+    "title": "4  Polinomios",
+    "section": "",
+    "text": "Objetivos del capítulo\nAl terminar el capítulo, el lector podrá:\n\nidentificar coeficientes, grado y coeficiente principal;\nefectuar operaciones y justificar sus propiedades;\naplicar el algoritmo de la división en \\(K[x]\\);\nrelacionar raíces, factores y residuos;\nusar división sintética y detectar raíces múltiples;\nexplicar el alcance del teorema fundamental del álgebra;\nfactorizar sobre \\(\\mathbb C\\) y sobre \\(\\mathbb R\\);\nanalizar dominio, ceros, discontinuidades y asíntotas de funciones racionales;\ndescomponer fracciones racionales en fracciones parciales.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-definicion-polinomio",
+    "href": "04-polinomios.html#sec-definicion-polinomio",
+    "title": "4  Polinomios",
+    "section": "4.1 Definición de polinomio",
+    "text": "4.1 Definición de polinomio\nSea \\(K\\) un campo, normalmente \\(\\mathbb Q\\), \\(\\mathbb R\\) o \\(\\mathbb C\\).\n\n\n\n\n\n\nNotaDefinición\n\n\n\nUn polinomio en la variable \\(x\\) con coeficientes en \\(K\\) es una expresión\n\\[\np(x)=a_0+a_1x+\\cdots+a_nx^n,\n\\qquad a_j\\in K,\n\\]\nen la que solo un número finito de coeficientes es distinto de cero. El conjunto de todos ellos se denota por \\(K[x]\\).\n\n\nSi \\(p\\ne0\\) y \\(a_n\\ne0\\), el grado de \\(p\\) es \\(\\deg p=n\\), \\(a_n\\) es el coeficiente principal y \\(a_0\\) el término independiente. Un polinomio es mónico cuando su coeficiente principal es \\(1\\). Por convenio, al polinomio cero no se le asigna un grado ordinario; a veces se escribe \\(\\deg 0=-\\infty\\) para conservar algunas fórmulas.\n\n\n\n\n\n\nTipEjemplo\n\n\n\nEn\n\\[\np(x)=-2x^5+3x^2-7\n\\]\nlos coeficientes omitidos son cero, el grado es \\(5\\), el coeficiente principal es \\(-2\\) y el término independiente es \\(-7\\).\n\n\n\nIgualdad y evaluación\nDos polinomios son iguales si tienen el mismo coeficiente en cada potencia de \\(x\\). Por ejemplo,\n\\[\n(x+1)^2=x^2+2x+1\n\\]\ncomo polinomios, porque al desarrollar coinciden todos sus coeficientes.\nLa evaluación en \\(c\\in K\\) es\n\\[\np(c)=a_0+a_1c+\\cdots+a_nc^n.\n\\]\nNo debe confundirse el polinomio formal con la función que induce. Sobre campos infinitos, como \\(\\mathbb R\\) y \\(\\mathbb C\\), dos polinomios que dan el mismo valor para todo \\(x\\) tienen los mismos coeficientes. Sobre un campo finito pueden existir polinomios distintos que representan la misma función.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-aritmetica-polinomios",
+    "href": "04-polinomios.html#sec-aritmetica-polinomios",
+    "title": "4  Polinomios",
+    "section": "4.2 Aritmética y propiedades de los polinomios",
+    "text": "4.2 Aritmética y propiedades de los polinomios\nPara sumar polinomios se suman coeficientes de términos del mismo grado. Para multiplicarlos se aplica la distributividad y se agrupan potencias iguales.\nSean\n\\[\np(x)=\\sum_{j=0}^{m}a_jx^j,\n\\qquad\nq(x)=\\sum_{k=0}^{n}b_kx^k.\n\\]\nEntonces\n\\[\np(x)+q(x)=\\sum_{r\\ge0}(a_r+b_r)x^r\n\\]\ny\n\\[\np(x)q(x)=\\sum_{r=0}^{m+n}\n\\left(\\sum_{j+k=r}a_jb_k\\right)x^r.\n\\]\nLa suma interior es una convolución de las sucesiones de coeficientes.\n\n\n\n\n\n\nTipEjemplo resuelto\n\n\n\nSi \\(p(x)=2x^2-x+3\\) y \\(q(x)=x^2+4x-1\\), entonces\n\\[\np+q=3x^2+3x+2,\n\\]\n\\[\npq=2x^4+7x^3-3x^2+13x-3.\n\\]\n\n\n\nPropiedades de grado\nPara polinomios no nulos sobre un campo:\n\\[\n\\deg(pq)=\\deg p+\\deg q,\n\\]\n\\[\n\\deg(p+q)\\leq\\max\\{\\deg p,\\deg q\\}.\n\\]\nEn la suma puede disminuir el grado si se cancelan los términos principales. Por ejemplo, \\((x^3+1)+(-x^3+x)=x+1\\).\nCon la suma y el producto, \\(K[x]\\) es un anillo conmutativo con identidad. No es un campo: un polinomio no constante no tiene inverso polinomial. Sus unidades son precisamente las constantes no nulas.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-divisibilidad-polinomios",
+    "href": "04-polinomios.html#sec-divisibilidad-polinomios",
+    "title": "4  Polinomios",
+    "section": "4.3 Divisibilidad",
+    "text": "4.3 Divisibilidad\n\n\n\n\n\n\nNotaDefinición\n\n\n\nDados \\(p,d\\in K[x]\\), con \\(d\\ne0\\), se dice que \\(d\\) divide a \\(p\\), y se escribe \\(d\\mid p\\), si existe \\(q\\in K[x]\\) tal que\n\\[\np=dq.\n\\]\n\n\nEl resultado fundamental es análogo al algoritmo de la división de enteros.\n\n\n\n\n\n\nImportanteAlgoritmo de la división\n\n\n\nPara \\(p,d\\in K[x]\\), con \\(d\\ne0\\), existen polinomios únicos \\(q\\) y \\(r\\) tales que\n\\[\np=dq+r,\n\\qquad r=0\\quad\\text{o}\\quad\\deg r&lt;\\deg d.\n\\]\n\n\nEl polinomio \\(q\\) es el cociente y \\(r\\) el residuo.\n\nPor qué termina el algoritmo\nSi \\(\\deg p\\geq\\deg d\\), se elige un monomio que cancele el término principal de \\(p\\). Después de restar ese múltiplo de \\(d\\), el grado disminuye. Como los grados son enteros no negativos, el proceso debe terminar.\n\n\nEjemplo de división larga\nDividamos\n\\[\np(x)=2x^4-3x^3+4x-5\n\\]\nentre \\(d(x)=x^2-x+1\\). El resultado es\n\\[\nq(x)=2x^2-x-3,\n\\qquad r(x)=2x-2.\n\\]\nLa comprobación decisiva es\n\\[\n2x^4-3x^3+4x-5\n=(x^2-x+1)(2x^2-x-3)+(2x-2).\n\\]\n\n\n\n\n\n\nFigura 4.1: La división polinomial produce un cociente y un residuo de grado menor que el divisor.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-raiz-polinomio",
+    "href": "04-polinomios.html#sec-raiz-polinomio",
+    "title": "4  Polinomios",
+    "section": "4.4 Definición de raíz de un polinomio",
+    "text": "4.4 Definición de raíz de un polinomio\n\n\n\n\n\n\nNotaDefinición\n\n\n\nUn número \\(\\alpha\\in K\\) es raíz o cero de \\(p\\in K[x]\\) si\n\\[\np(\\alpha)=0.\n\\]\n\n\nLa conexión entre evaluación y divisibilidad es inmediata al dividir entre \\(x-\\alpha\\).\n\n\n\n\n\n\nImportanteTeorema del factor\n\n\n\n\\(\\alpha\\) es raíz de \\(p\\) si y solo si \\(x-\\alpha\\) divide a \\(p\\).\n\n\nEn efecto, por el algoritmo de la división,\n\\[\np(x)=(x-\\alpha)q(x)+r,\n\\]\ndonde \\(r\\) es constante. Al evaluar en \\(x=\\alpha\\) se obtiene \\(r=p(\\alpha)\\). Por tanto, \\(p(\\alpha)=0\\) exactamente cuando el residuo es cero.\n\nNúmero máximo de raíces\nUn polinomio no nulo de grado \\(n\\) tiene como máximo \\(n\\) raíces distintas en un campo. La prueba es inductiva: cada raíz extrae un factor lineal y reduce el grado en uno.\n\n\n\n\n\n\nAdvertenciaUna distinción esencial\n\n\n\nQue un polinomio de grado \\(n\\) tenga a lo sumo \\(n\\) raíces no afirma que tenga \\(n\\) raíces reales. Por ejemplo, \\(x^2+1\\) no tiene raíces en \\(\\mathbb R\\), aunque sí tiene dos en \\(\\mathbb C\\).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-residuo-sintetica",
+    "href": "04-polinomios.html#sec-residuo-sintetica",
+    "title": "4  Polinomios",
+    "section": "4.5 Teorema del residuo y división sintética",
+    "text": "4.5 Teorema del residuo y división sintética\n\n\n\n\n\n\nImportanteTeorema del residuo\n\n\n\nEl residuo de dividir \\(p(x)\\) entre \\(x-c\\) es \\(p(c)\\).\n\n\nEsto permite evaluar un polinomio sin completar toda la división. La división sintética organiza las operaciones solo con coeficientes.\n\nEjemplo resuelto\nPara dividir\n\\[\np(x)=2x^3-3x^2-11x+6\n\\]\nentre \\(x-3\\), se usan los coeficientes \\(2,-3,-11,6\\):\n\\[\n\\begin{array}{r|rrrr}\n3&2&-3&-11&6\\\\\n& &6&9&-6\\\\ \\hline\n&2&3&-2&0\n\\end{array}\n\\]\nEl cociente es \\(2x^2+3x-2\\) y el residuo es \\(0\\). En consecuencia,\n\\[\np(x)=(x-3)(2x^2+3x-2).\n\\]\n\n\n\n\n\n\nAdvertenciaCoeficientes faltantes\n\n\n\nEn \\(x^4-5x^2+4\\) deben escribirse los coeficientes \\(1,0,-5,0,4\\). Omitir los ceros desplaza las columnas y cambia el resultado.\n\n\n\n\nEvaluación de Horner\nLa misma organización conduce a\n\\[\np(c)=(((a_nc+a_{n-1})c+a_{n-2})c+\\cdots)c+a_0.\n\\]\nEl esquema de Horner necesita \\(n\\) multiplicaciones y \\(n\\) sumas, y evita calcular por separado todas las potencias de \\(c\\).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-raices-multiples",
+    "href": "04-polinomios.html#sec-raices-multiples",
+    "title": "4  Polinomios",
+    "section": "4.6 Obtención de raíces múltiples",
+    "text": "4.6 Obtención de raíces múltiples\n\n\n\n\n\n\nNotaMultiplicidad\n\n\n\nUna raíz \\(\\alpha\\) tiene multiplicidad \\(m\\geq1\\) si\n\\[\np(x)=(x-\\alpha)^m q(x),\n\\qquad q(\\alpha)\\ne0.\n\\]\n\n\nLa raíz es simple cuando \\(m=1\\), doble cuando \\(m=2\\), triple cuando \\(m=3\\), etcétera.\nLa derivada permite reconocer multiplicidades:\n\\[\n\\alpha\\text{ tiene multiplicidad al menos }m\n\\iff\np(\\alpha)=p'(\\alpha)=\\cdots=p^{(m-1)}(\\alpha)=0.\n\\]\nSi además \\(p^{(m)}(\\alpha)\\ne0\\), la multiplicidad es exactamente \\(m\\).\n\nEjemplo\nSea\n\\[\np(x)=(x-1)^3(x+2)^2.\n\\]\nLa raíz \\(1\\) tiene multiplicidad \\(3\\) y la raíz \\(-2\\) multiplicidad \\(2\\). En la gráfica, una raíz de multiplicidad par toca el eje y regresa; una raíz de multiplicidad impar lo cruza. Para multiplicidades impares mayores que uno, el cruce se aplana.\n\n\n\n\n\n\nFigura 4.2: Comportamiento local de raíces de multiplicidad uno, dos y tres.\n\n\n\n\n\n\n\n\n\nTipProcedimiento con divisiones sucesivas\n\n\n\nSi \\(p(\\alpha)=0\\), divida entre \\(x-\\alpha\\). Vuelva a evaluar el cociente en \\(\\alpha\\) y repita. El número de divisiones exactas es la multiplicidad.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-teorema-fundamental-algebra",
+    "href": "04-polinomios.html#sec-teorema-fundamental-algebra",
+    "title": "4  Polinomios",
+    "section": "4.7 Teorema fundamental del álgebra",
+    "text": "4.7 Teorema fundamental del álgebra\n\n\n\n\n\n\nImportanteTeorema fundamental del álgebra\n\n\n\nTodo polinomio no constante con coeficientes complejos posee al menos una raíz compleja.\n\n\nAunque el enunciado garantiza una raíz, al dividir por su factor lineal y repetir se obtiene la forma completa:\n\\[\np(x)=a_n\\prod_{j=1}^{n}(x-\\alpha_j),\n\\]\ndonde las raíces se cuentan con multiplicidad.\n\nAlcance del teorema\n\nGarantiza existencia, pero no proporciona por sí solo un algoritmo práctico para calcular las raíces.\nEl campo \\(\\mathbb C\\) es algebraicamente cerrado.\nUn polinomio real puede no factorizarse completamente en factores lineales reales, pero sí en factores lineales complejos.\nLas fórmulas generales por radicales existen hasta grado cuatro; para grado cinco o mayor no existe una fórmula por radicales válida para todos los polinomios.\n\n\n\n\n\n\n\nAdvertenciaNo es un método numérico\n\n\n\nEl teorema fundamental del álgebra no dice que todas las raíces puedan escribirse con una fórmula elemental. La aproximación numérica será el tema del capítulo 5.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-factorizacion-lineal",
+    "href": "04-polinomios.html#sec-factorizacion-lineal",
+    "title": "4  Polinomios",
+    "section": "4.8 Descomposición de un polinomio en factores lineales",
+    "text": "4.8 Descomposición de un polinomio en factores lineales\nSi \\(p\\in\\mathbb C[x]\\) tiene grado \\(n\\geq1\\), entonces\n\\[\np(x)=a_n(x-\\alpha_1)^{m_1}\\cdots(x-\\alpha_s)^{m_s},\n\\]\ndonde \\(\\alpha_1,\\ldots,\\alpha_s\\) son raíces distintas y\n\\[\nm_1+\\cdots+m_s=n.\n\\]\nEsta factorización es única salvo por el orden de los factores.\n\nEjemplo completo\nFactoricemos\n\\[\np(x)=x^4-5x^2+4.\n\\]\nAl verlo como cuadrático en \\(u=x^2\\):\n\\[\nu^2-5u+4=(u-1)(u-4).\n\\]\nPor tanto,\n\\[\np(x)=(x^2-1)(x^2-4)\n=(x-1)(x+1)(x-2)(x+2).\n\\]\nLas raíces son \\(-2,-1,1,2\\), todas simples.\n\n\nEstrategia para coeficientes enteros\nPara un polinomio\n\\[\na_nx^n+\\cdots+a_0\n\\]\ncon coeficientes enteros, toda raíz racional reducida \\(r/s\\) satisface \\(r\\mid a_0\\) y \\(s\\mid a_n\\). Este teorema de la raíz racional produce candidatos; cada candidato debe evaluarse. No asegura que exista una raíz racional.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-polinomios-reales",
+    "href": "04-polinomios.html#sec-polinomios-reales",
+    "title": "4  Polinomios",
+    "section": "4.9 Propiedades de polinomios con coeficientes reales",
+    "text": "4.9 Propiedades de polinomios con coeficientes reales\nSi \\(p\\) tiene coeficientes reales, la conjugación conmuta con la evaluación:\n\\[\np(\\overline z)=\\overline{p(z)}.\n\\]\nPor consiguiente, si \\(p(z)=0\\), entonces\n\\[\np(\\overline z)=\\overline{0}=0.\n\\]\n\n\n\n\n\n\nImportanteRaíces conjugadas\n\n\n\nLas raíces complejas no reales de un polinomio con coeficientes reales aparecen en pares conjugados y con la misma multiplicidad.\n\n\nEl producto de los factores conjugados tiene coeficientes reales:\n\\[\n(x-z)(x-\\overline z)\n=x^2-2\\operatorname{Re}(z)x+|z|^2.\n\\]\nAsí, todo polinomio real se factoriza sobre \\(\\mathbb R\\) como producto de factores lineales reales y factores cuadráticos irreducibles.\n\nEjemplo\nSi \\(2+i\\) es raíz de un polinomio real, también lo es \\(2-i\\), y\n\\[\n[x-(2+i)][x-(2-i)]=x^2-4x+5.\n\\]\n\n\n\n\n\n\nFigura 4.3: Las raíces no reales de un polinomio real son simétricas respecto del eje real.\n\n\n\n\n\nRelaciones de Viète\nPara el polinomio mónico\n\\[\np(x)=x^n+a_{n-1}x^{n-1}+\\cdots+a_0\n=\\prod_{j=1}^{n}(x-\\alpha_j),\n\\]\nse cumple, contando multiplicidades,\n\\[\n\\sum_{j=1}^{n}\\alpha_j=-a_{n-1},\n\\qquad\n\\prod_{j=1}^{n}\\alpha_j=(-1)^n a_0.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-funciones-racionales",
+    "href": "04-polinomios.html#sec-funciones-racionales",
+    "title": "4  Polinomios",
+    "section": "4.10 Funciones racionales",
+    "text": "4.10 Funciones racionales\n\n\n\n\n\n\nNotaDefinición\n\n\n\nUna función racional es un cociente\n\\[\nR(x)=\\frac{p(x)}{q(x)},\n\\]\ndonde \\(p,q\\in K[x]\\) y \\(q\\ne0\\). Su dominio excluye los ceros de \\(q\\).\n\n\nAntes de simplificar debe registrarse el dominio original. Por ejemplo,\n\\[\nR(x)=\\frac{x^2-1}{x-1}=x+1,\n\\qquad x\\ne1.\n\\]\nLa gráfica es la recta \\(y=x+1\\) con un hueco en \\((1,2)\\). La simplificación algebraica no vuelve a incluir \\(x=1\\).\n\nCeros, polos y asíntotas\n\nLos ceros provienen de factores del numerador que no se cancelan.\nLos ceros del denominador no cancelados producen polos y, usualmente, asíntotas verticales.\nSi \\(\\deg p&lt;\\deg q\\), la asíntota horizontal es \\(y=0\\).\nSi \\(\\deg p=\\deg q\\), la asíntota horizontal es el cociente de coeficientes principales.\nSi \\(\\deg p\\geq\\deg q\\), la división polinomial separa una parte polinomial y una fracción propia.\n\n\n\n\n\n\n\nFigura 4.4: Una función racional puede presentar huecos y asíntotas determinadas por sus factores.\n\n\n\n\n\n\n\n\n\nTipEjemplo\n\n\n\nPara\n\\[\nR(x)=\\frac{2x^2+1}{x-1},\n\\]\nla división da\n\\[\nR(x)=2x+2+\\frac{3}{x-1}.\n\\]\nTiene asíntota vertical \\(x=1\\) y asíntota oblicua \\(y=2x+2\\).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-fracciones-parciales",
+    "href": "04-polinomios.html#sec-fracciones-parciales",
+    "title": "4  Polinomios",
+    "section": "4.11 Fracciones parciales",
+    "text": "4.11 Fracciones parciales\nLa descomposición en fracciones parciales expresa una fracción racional propia como suma de términos simples. Es útil para integrar, resolver ecuaciones diferenciales y transformar señales.\nPrimero, si \\(\\deg p\\geq\\deg q\\), se efectúa la división. Después se factoriza el denominador.\n\nFactores lineales distintos\nSi\n\\[\n\\frac{p(x)}{(x-a)(x-b)}\n\\]\nes propia y \\(a\\ne b\\), se propone\n\\[\n\\frac{A}{x-a}+\\frac{B}{x-b}.\n\\]\nPor ejemplo,\n\\[\n\\frac{5x+1}{(x-1)(x+2)}\n=\\frac{2}{x-1}+\\frac{3}{x+2}.\n\\]\nLa comprobación reúne el lado derecho sobre el denominador común.\n\n\nFactores lineales repetidos\nPara \\((x-a)^m\\) se requieren todos los términos\n\\[\n\\frac{A_1}{x-a}+\\frac{A_2}{(x-a)^2}\n+\\cdots+\\frac{A_m}{(x-a)^m}.\n\\]\n\n\nFactores cuadráticos irreducibles\nPor cada potencia \\((x^2+bx+c)^m\\) irreducible sobre \\(\\mathbb R\\) se incluyen numeradores lineales:\n\\[\n\\frac{A_1x+B_1}{x^2+bx+c}\n+\\cdots+\n\\frac{A_mx+B_m}{(x^2+bx+c)^m}.\n\\]\n\n\n\n\n\n\nTipEjemplo mixto\n\n\n\nLa forma de descomposición para\n\\[\n\\frac{x^2+1}{(x-1)^2(x^2+4)}\n\\]\nes\n\\[\n\\frac{A}{x-1}+\\frac{B}{(x-1)^2}\n+\\frac{Cx+D}{x^2+4}.\n\\]\nLos coeficientes se obtienen al multiplicar por el denominador común y comparar coeficientes o evaluar valores convenientes.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#síntesis-del-capítulo",
+    "href": "04-polinomios.html#síntesis-del-capítulo",
+    "title": "4  Polinomios",
+    "section": "Síntesis del capítulo",
+    "text": "Síntesis del capítulo\n\n\\(K[x]\\) es un anillo de expresiones con un número finito de coeficientes no nulos.\nEl algoritmo de la división escribe \\(p=dq+r\\) con \\(\\deg r&lt;\\deg d\\).\n\\(p(c)\\) es el residuo de dividir por \\(x-c\\).\n\\(c\\) es raíz si y solo si \\(x-c\\) es factor.\nLa multiplicidad cuenta cuántas veces aparece el factor lineal.\nTodo polinomio complejo no constante se descompone en factores lineales.\nEn polinomios reales, las raíces no reales aparecen en pares conjugados.\nUna función racional conserva las exclusiones de su denominador original.\nLas fracciones parciales dependen de la factorización y multiplicidad del denominador.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#errores-frecuentes",
+    "href": "04-polinomios.html#errores-frecuentes",
+    "title": "4  Polinomios",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nAsignar grado al polinomio cero como si fuera ordinario. Su grado se deja indefinido o se usa \\(-\\infty\\) por convenio.\nOlvidar términos ausentes. En división sintética deben colocarse coeficientes cero.\nConfundir raíz con factor. La raíz es un número; el factor correspondiente es \\(x-\\alpha\\).\nCreer que todo polinomio tiene raíces reales. La garantía completa corresponde a \\(\\mathbb C\\).\nContar solo raíces distintas. El grado coincide con el número de raíces complejas cuando se cuentan multiplicidades.\nCancelar un factor y ampliar el dominio. Una discontinuidad removible sigue excluida del dominio original.\nOmitir términos en fracciones parciales. Cada potencia repetida necesita su propio término.\nUsar una constante sobre un cuadrático irreducible. El numerador debe tener grado menor, por lo que es lineal.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#ejercicios",
+    "href": "04-polinomios.html#ejercicios",
+    "title": "4  Polinomios",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\nNivel básico\n\nIndique grado, coeficiente principal y término independiente de \\(4x^6-3x^2+8\\).\nSume y multiplique \\(p(x)=x^2-2x+3\\) y \\(q(x)=2x+1\\).\nEvalúe \\(p(x)=2x^4-x^2+5x-7\\) en \\(x=-2\\) mediante Horner.\nDivida \\(x^3-2x^2+4x-8\\) entre \\(x-2\\).\nDetermine si \\(-1\\) es raíz de \\(x^4+3x^3-x-3\\).\nFactorice \\(x^4-16\\) sobre \\(\\mathbb R\\) y sobre \\(\\mathbb C\\).\nDetermine el dominio de \\((x^2-9)/(x-3)\\) y describa el hueco.\n\n\n\nNivel intermedio\n\nDivida \\(3x^5-2x^3+x-4\\) entre \\(x^2+x-1\\) y compruebe el resultado.\nUse el teorema de la raíz racional para factorizar \\(2x^3-x^2-8x+4\\).\nDetermine las multiplicidades de las raíces de \\(x^5-2x^4+x^3\\).\nConstruya un polinomio real mónico de grado cuatro cuyas raíces sean \\(2\\), \\(-1\\) y \\(3+i\\), \\(3-i\\).\nUse Viète para comprobar la suma y el producto de las raíces de \\(2x^3-3x^2-11x+6\\).\nEncuentre ceros, huecos y asíntotas de \\((x^2-4)/(x^2-x-2)\\).\nDescomponga \\((7x+5)/[(x-1)(x+3)]\\) en fracciones parciales.\n\n\n\nNivel formal y aplicado\n\nDemuestre la unicidad del cociente y el residuo en el algoritmo de la división.\nPruebe que un polinomio no nulo de grado \\(n\\) tiene a lo sumo \\(n\\) raíces distintas.\nDemuestre que las raíces conjugadas de un polinomio real tienen la misma multiplicidad.\nDetermine la forma real más general de un polinomio de grado cinco con raíces \\(1\\) doble y \\(2+3i\\) simple.\nDescomponga \\((2x^3+x^2+4)/[(x-1)^2(x^2+1)]\\) en fracciones parciales.\nDiseñe un polinomio cuya gráfica cruce el eje en \\(x=-2\\), toque el eje en \\(x=1\\) y tenga grado mínimo.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#proyecto-integrador",
+    "href": "04-polinomios.html#proyecto-integrador",
+    "title": "4  Polinomios",
+    "section": "Proyecto integrador",
+    "text": "Proyecto integrador\nElija un polinomio real de grado entre cuatro y seis y presente un estudio completo:\n\nidentifique grado y coeficientes;\nlocalice candidatos racionales;\naplique división sintética;\ndetermine todas las raíces y multiplicidades;\nfactorice sobre \\(\\mathbb R\\) y sobre \\(\\mathbb C\\);\ncompruebe dos relaciones de Viète;\nconstruya una función racional usando el polinomio como numerador o denominador;\nanalice dominio, ceros, huecos y asíntotas;\nobtenga, cuando corresponda, una descomposición en fracciones parciales;\nacompañe los cálculos con una representación gráfica y conclusiones.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#referencias-del-capítulo",
+    "href": "04-polinomios.html#referencias-del-capítulo",
+    "title": "4  Polinomios",
+    "section": "Referencias del capítulo",
+    "text": "Referencias del capítulo\nLa secuencia temática sigue la Unidad 4 del programa de Álgebra Superior (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). Las definiciones, el algoritmo de la división, la factorización y las funciones racionales se apoyan en Silva y Lazo (2007), Cárdenas et al. (1999) y Cox et al. (2015).\n\n\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, y Francisco Tomás. 1999. Álgebra superior. 2.ª ed. Trillas.\n\n\nCox, David A., John Little, y Donal O’Shea. 2015. Ideals, Varieties, and Algorithms. 4.ª ed. Springer.\n\n\nSilva, Juan Manuel, y Adriana Lazo. 2007. Fundamentos de Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo. 7.ª ed. Limusa.\n\n\nUniversidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico. Propuesta de modificación curricular.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html",
+    "href": "05-metodos-raices.html",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "",
+    "text": "Introducción\nEste capítulo desarrolla la Unidad 5 del programa de Álgebra Superior de la Facultad de Ciencias de la UASLP (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). El Teorema Fundamental del Álgebra garantiza que un polinomio no constante posee raíces complejas, pero no indica dónde se encuentran ni cómo calcularlas. Aquí se estudian herramientas para acotar, contar, separar y aproximar las raíces reales de un polinomio.\nSea\n\\[\np(x)=a_nx^n+a_{n-1}x^{n-1}+\\cdots+a_1x+a_0,\n\\qquad a_n\\ne0.\n\\]\nResolver \\(p(x)=0\\) puede significar dos cosas distintas:\nPara polinomios de grado alto, la segunda vía es indispensable. Un cálculo confiable requiere responder, en orden, cuatro preguntas:",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#introducción",
+    "href": "05-metodos-raices.html#introducción",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "",
+    "text": "obtener una expresión exacta para cada raíz, cuando es posible;\nproducir aproximaciones numéricas con un error controlado.\n\n\n\n¿en qué intervalo pueden estar las raíces reales?;\n¿cuántas raíces contiene un intervalo?;\n¿se ha aislado una sola raíz?;\n¿qué método conviene y qué error tiene la aproximación?\n\n\nObjetivos\nAl terminar el capítulo, el lector podrá:\n\nobtener cotas para las raíces de un polinomio;\nseparar raíces mediante cambios de signo y análisis de intervalos;\ncontar exactamente raíces reales con el teorema de Sturm;\nusar la regla de los signos de Descartes y el teorema de Budan-Fourier;\naplicar bisección, secante y Newton;\nestablecer criterios de paro y cotas de error;\nreconocer las condiciones de éxito y los posibles fallos de cada método.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#sec-acotacion-raices",
+    "href": "05-metodos-raices.html#sec-acotacion-raices",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.1 Acotación de raíces",
+    "text": "5.1 Acotación de raíces\nUna cota de raíces reduce la búsqueda de todo \\(\\mathbb R\\) a un intervalo finito.\n\n\n\n\n\n\nNotaCota de Cauchy\n\n\n\nToda raíz compleja \\(z\\) de \\(p\\) satisface\n\\[\n|z|\\le 1+\\max_{0\\le k&lt;n}\\left|\\frac{a_k}{a_n}\\right|.\n\\]\nEn particular, todas las raíces reales pertenecen al intervalo \\([-R,R]\\), donde \\(R\\) es el miembro derecho.\n\n\n\nJustificación\nSea\n\\[\nM=\\max_{0\\le k&lt;n}\\left|\\frac{a_k}{a_n}\\right|.\n\\]\nSi \\(|z|&gt;1+M\\), entonces \\(|z|-1&gt;M\\) y\n\\[\n\\begin{aligned}\n|a_{n-1}z^{n-1}+\\cdots+a_0|\n&\\le |a_n|M\\left(|z|^{n-1}+\\cdots+1\\right)\\\\\n&=|a_n|M\\frac{|z|^n-1}{|z|-1}\\\\\n&&lt;|a_n||z|^n.\n\\end{aligned}\n\\]\nPor la desigualdad triangular, el término principal no puede ser cancelado por la suma de los demás; por tanto, \\(p(z)\\ne0\\). Esto contradice que \\(z\\) sea raíz.\n\n\nEjemplo\nPara\n\\[\np(x)=x^4+x^3-7x^2-x+6,\n\\]\nla cota de Cauchy es\n\\[\nR=1+\\max\\{1,7,1,6\\}=8.\n\\]\nAsí, toda raíz real se encuentra en \\([-8,8]\\). La factorización\n\\[\np(x)=(x+3)(x+1)(x-1)(x-2)\n\\]\nconfirma que las raíces \\(-3,-1,1,2\\) respetan la cota. La cota no pretende ser exacta: su propósito es garantizar un intervalo de búsqueda.\n\n\nCotas mediante división sintética\nCuando \\(a_n&gt;0\\), la división sintética puede producir cotas más ajustadas:\n\nsi al dividir entre \\(x-b\\), con \\(b&gt;0\\), la fila final tiene únicamente números no negativos, entonces \\(b\\) es cota superior de las raíces reales;\nuna regla análoga, con signos alternantes al dividir entre \\(x-a\\) para \\(a&lt;0\\), permite obtener una cota inferior.\n\nEstas reglas deben aplicarse con todos los coeficientes, incluidos los ceros correspondientes a potencias ausentes.\n\n\n\n\n\n\nFigura 5.1: Acotar reduce la búsqueda a un intervalo finito; separar identifica subintervalos que contienen raíces individuales.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#sec-separacion-raices",
+    "href": "05-metodos-raices.html#sec-separacion-raices",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.2 Separación de raíces",
+    "text": "5.2 Separación de raíces\nSeparar una raíz significa encontrar un intervalo que contenga exactamente una raíz real.\n\n\n\n\n\n\nNotaCambio de signo\n\n\n\nSi \\(p\\) es continuo en \\([a,b]\\) y\n\\[\np(a)p(b)&lt;0,\n\\]\nentonces existe al menos una raíz en \\((a,b)\\).\n\n\nEl resultado se deduce del teorema del valor intermedio. Sin embargo, un cambio de signo no garantiza unicidad. Además, una raíz de multiplicidad par puede no producir cambio de signo.\n\nProcedimiento básico\n\nObtenga primero una cota global \\([-R,R]\\).\nDivida el intervalo en subintervalos.\nEvalúe \\(p\\) en los extremos.\nMarque cada intervalo con cambio de signo.\nUse información adicional para demostrar que cada intervalo contiene una sola raíz.\n\nLa unicidad puede establecerse si \\(p'\\) conserva signo en el intervalo, pues entonces \\(p\\) es estrictamente monótona. Si \\(p'\\) tiene ceros, estos puntos críticos ayudan a dividir el intervalo en regiones de monotonía.\n\n\nEjemplo\nSea\n\\[\nf(x)=x^3-x-1.\n\\]\nComo \\(f(1)=-1\\) y \\(f(2)=5\\), existe una raíz en \\((1,2)\\). Además,\n\\[\nf'(x)=3x^2-1&gt;0\\qquad\\text{para }x\\in[1,2].\n\\]\nPor tanto, \\(f\\) es estrictamente creciente en ese intervalo y la raíz es única.\n\n\n\n\n\n\nAdvertenciaRaíces pares\n\n\n\nPara \\(g(x)=(x-1)^2(x+2)\\), la raíz \\(x=1\\) tiene multiplicidad par y la gráfica toca el eje sin cruzarlo. Un muestreo basado solo en cambios de signo puede omitirla. Las raíces de \\(\\gcd(g,g')\\) revelan las raíces múltiples.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#sec-sturm",
+    "href": "05-metodos-raices.html#sec-sturm",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.3 Teorema de Sturm",
+    "text": "5.3 Teorema de Sturm\nEl teorema de Sturm permite contar exactamente las raíces reales distintas de un polinomio dentro de un intervalo, siempre que los extremos no sean raíces.\n\nSucesión de Sturm\nPara un polinomio \\(p\\) sin factores múltiples se construye\n\\[\np_0=p,\\qquad p_1=p',\n\\]\ny, mediante divisiones euclidianas sucesivas,\n\\[\np_{k-1}=q_kp_k-p_{k+1},\n\\]\ndonde \\(p_{k+1}\\) es el negativo del residuo. El proceso termina al llegar a una constante no nula.\nPara un número real \\(t\\) que no anule ningún polinomio de la sucesión, sea \\(V(t)\\) el número de cambios de signo de\n\\[\np_0(t),p_1(t),\\ldots,p_m(t),\n\\]\nignorando los valores cero.\n\n\n\n\n\n\nNotaTeorema de Sturm\n\n\n\nSi \\(a&lt;b\\) y ninguno es raíz de \\(p\\), el número de raíces reales distintas de \\(p\\) en \\((a,b)\\) es\n\\[\nV(a)-V(b).\n\\]\n\n\n\n\nEjemplo completo\nPara\n\\[\np(x)=x^3-x,\n\\]\nuna sucesión de Sturm es\n\\[\np_0=x^3-x,\\qquad\np_1=3x^2-1,\\qquad\np_2=\\frac{2}{3}x,\\qquad\np_3=1.\n\\]\nCuando \\(x\\to-\\infty\\), los signos son \\((-,+,-,+)\\), por lo que \\(V(-\\infty)=3\\). Cuando \\(x\\to+\\infty\\), todos los signos son positivos y \\(V(+\\infty)=0\\). En consecuencia, \\(p\\) tiene tres raíces reales distintas. En efecto,\n\\[\nx^3-x=x(x-1)(x+1).\n\\]\nSi el polinomio tiene raíces múltiples, primero se elimina el factor común de \\(p\\) y \\(p'\\) para obtener su parte libre de cuadrados; después se aplica Sturm.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#sec-descartes",
+    "href": "05-metodos-raices.html#sec-descartes",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.4 Regla de los signos de Descartes",
+    "text": "5.4 Regla de los signos de Descartes\nSea \\(V(p)\\) el número de variaciones de signo en la lista de coeficientes no nulos de \\(p\\), ordenados por potencias descendentes.\n\n\n\n\n\n\nNotaRegla de Descartes\n\n\n\nEl número \\(N_+\\) de raíces reales positivas de \\(p\\), contadas con multiplicidad, satisface\n\\[\nN_+=V(p)-2k\n\\]\npara algún entero \\(k\\ge0\\). El número de raíces negativas se obtiene aplicando la misma regla a \\(p(-x)\\).\n\n\n\nEjemplo\nConsidere\n\\[\np(x)=x^4+x^3-7x^2-x+6.\n\\]\nLos signos de \\(p(x)\\) son\n\\[\n+,+,-,-,+,\n\\]\ncon dos variaciones. Por tanto, \\(p\\) posee dos o cero raíces positivas. Para\n\\[\np(-x)=x^4-x^3-7x^2+x+6,\n\\]\ntambién hay dos variaciones; por tanto, existen dos o cero raíces negativas. La regla proporciona posibilidades, no un conteo exacto. La factorización muestra que en este caso hay dos positivas y dos negativas.\n\n\nTeorema de Budan-Fourier\nPara \\(t\\in\\mathbb R\\), considere la sucesión de derivadas\n\\[\np(t),p'(t),p''(t),\\ldots,p^{(n)}(t)\n\\]\ny sea \\(W(t)\\) su número de variaciones de signo, omitiendo ceros. El número de raíces reales de \\(p\\) en \\((a,b]\\), contadas con multiplicidad, es a lo sumo\n\\[\nW(a)-W(b),\n\\]\ny difiere de esta cantidad en un número par. Descartes puede interpretarse como un caso límite de esta idea.\nLa diferencia esencial es:\n\nDescartes restringe las posibilidades para raíces positivas o negativas;\nBudan-Fourier acota el número de raíces en un intervalo;\nSturm entrega el conteo exacto de raíces distintas.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#sec-biseccion",
+    "href": "05-metodos-raices.html#sec-biseccion",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.5 Estimación mediante bisección",
+    "text": "5.5 Estimación mediante bisección\nLa bisección conserva en cada iteración un intervalo cuyos extremos tienen signos opuestos.\nSuponga que \\(f\\) es continua en \\([a_0,b_0]\\) y \\(f(a_0)f(b_0)&lt;0\\). En la iteración \\(n\\) se calcula\n\\[\nm_n=\\frac{a_n+b_n}{2}.\n\\]\nSe conserva la mitad donde ocurre el cambio de signo. Si \\(f(m_n)=0\\), el proceso termina exactamente.\n\nCota de error\nDespués de \\(n\\) bisecciones, el intervalo tiene longitud\n\\[\n\\frac{b_0-a_0}{2^n}.\n\\]\nSi se usa el punto medio como aproximación \\(x_n\\), entonces\n\\[\n|x_n-r|\\le \\frac{b_0-a_0}{2^{n+1}},\n\\]\ndonde \\(r\\) es la raíz contenida en el intervalo.\nPara garantizar un error menor que \\(\\varepsilon\\) basta elegir\n\\[\nn\\ge\n\\left\\lceil\n\\log_2\\left(\\frac{b_0-a_0}{2\\varepsilon}\\right)\n\\right\\rceil.\n\\]\n\n\nEjemplo\nPara \\(f(x)=x^3-x-1\\) en \\([1,2]\\):\n\n\n\n\\(n\\)\n\\(a_n\\)\n\\(b_n\\)\n\\(m_n\\)\n\\(f(m_n)\\)\n\n\n\n\n1\n1.000000\n2.000000\n1.500000\n0.875000\n\n\n2\n1.000000\n1.500000\n1.250000\n-0.296875\n\n\n3\n1.250000\n1.500000\n1.375000\n0.224609\n\n\n4\n1.250000\n1.375000\n1.312500\n-0.051514\n\n\n5\n1.312500\n1.375000\n1.343750\n0.082611\n\n\n\nTras cinco pasos la raíz queda encerrada en \\([1.3125,1.34375]\\).\n\n\n\n\n\n\nFigura 5.2: La bisección conserva la mitad del intervalo en la que permanece el cambio de signo.\n\n\n\n\n\nVentajas y limitaciones\n\nConverge siempre bajo sus hipótesis.\nProduce una cota de error explícita.\nSolo necesita evaluaciones de la función.\nConverge linealmente y puede ser más lenta que los métodos abiertos.\nRequiere un cambio de signo, por lo que no detecta directamente raíces de multiplicidad par.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#sec-secante",
+    "href": "05-metodos-raices.html#sec-secante",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.6 Estimación mediante el método de la secante",
+    "text": "5.6 Estimación mediante el método de la secante\nLa secante reemplaza la curva por la recta que pasa por \\((x_{n-1},f(x_{n-1}))\\) y \\((x_n,f(x_n))\\). La intersección de esa recta con el eje \\(x\\) es\n\\[\nx_{n+1}=x_n-f(x_n)\n\\frac{x_n-x_{n-1}}{f(x_n)-f(x_{n-1})}.\n\\]\n\nEjemplo\nCon \\(f(x)=x^3-x-1\\), \\(x_0=1\\) y \\(x_1=2\\):\n\n\n\niteración\naproximación\n\\(f(x_n)\\)\ncambio absoluto\n\n\n\n\n1\n1.166666667\n-0.578703704\n0.833333333\n\n\n2\n1.253112033\n-0.285363030\n0.086445367\n\n\n3\n1.337206446\n0.053880587\n0.084094413\n\n\n4\n1.323850096\n-0.003698115\n0.013356349\n\n\n5\n1.324707937\n-0.000042734\n0.000857841\n\n\n6\n1.324717965\n\\(3.46\\times10^{-8}\\)\n0.000010029\n\n\n\nLa convergencia es superlineal cerca de una raíz simple, con orden aproximado \\(1.618\\). No requiere derivadas, pero puede fallar si\n\\[\nf(x_n)-f(x_{n-1})\n\\]\nes cero o extremadamente pequeño. Tampoco conserva necesariamente un intervalo que encierre la raíz.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#sec-newton",
+    "href": "05-metodos-raices.html#sec-newton",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.7 Estimación mediante el método de Newton",
+    "text": "5.7 Estimación mediante el método de Newton\nLa recta tangente a \\(y=f(x)\\) en \\((x_n,f(x_n))\\) es\n\\[\ny-f(x_n)=f'(x_n)(x-x_n).\n\\]\nAl imponer \\(y=0\\) se obtiene la iteración de Newton:\n\\[\nx_{n+1}=x_n-\\frac{f(x_n)}{f'(x_n)}.\n\\]\n\nEjemplo\nPara \\(f(x)=x^3-x-1\\), con \\(x_0=1.5\\):\n\n\n\niteración\n\\(x_n\\)\n\\(f(x_n)\\)\n\\(|x_n-x_{n-1}|\\)\n\n\n\n\n1\n1.347826087\n0.100682173\n0.152173913\n\n\n2\n1.325200399\n0.002058362\n0.022625688\n\n\n3\n1.324718174\n\\(9.24\\times10^{-7}\\)\n0.000482225\n\n\n4\n1.324717957\n\\(1.87\\times10^{-13}\\)\n\\(2.17\\times10^{-7}\\)\n\n\n\n\n\n\n\n\n\nFigura 5.3: La secante usa dos puntos de la curva; Newton usa la tangente en una aproximación.\n\n\n\n\n\nConvergencia y elección inicial\nSi \\(r\\) es una raíz simple, \\(f\\) tiene derivadas continuas cerca de \\(r\\) y \\(x_0\\) está suficientemente próximo, Newton converge cuadráticamente:\n\\[\n|e_{n+1}|\\approx C|e_n|^2,\n\\qquad e_n=x_n-r.\n\\]\nEsto significa que el número de cifras correctas puede aproximadamente duplicarse en cada paso. Sin embargo, Newton puede:\n\ndividir entre una derivada nula o muy pequeña;\nalejarse de la raíz si \\(x_0\\) es inadecuado;\nentrar en un ciclo;\nconverger lentamente en raíces múltiples.\n\n\n\nRaíces múltiples\nSi se conoce que \\(r\\) tiene multiplicidad \\(m\\), la iteración modificada\n\\[\nx_{n+1}=x_n-m\\frac{f(x_n)}{f'(x_n)}\n\\]\npuede recuperar convergencia cuadrática.\n\n\nEvaluación eficiente con Horner\nPara un polinomio, cada paso de Newton requiere \\(p(x_n)\\) y \\(p'(x_n)\\). El esquema de Horner permite evaluar ambos con costo lineal en el grado, sin calcular todas las potencias de \\(x_n\\). Por ello, Newton-Horner es una combinación natural para raíces de polinomios.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#criterios-de-paro-y-validación",
+    "href": "05-metodos-raices.html#criterios-de-paro-y-validación",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "Criterios de paro y validación",
+    "text": "Criterios de paro y validación\nEn los métodos iterativos se emplean, de manera conjunta, criterios como\n\\[\n|x_{n+1}-x_n|&lt;\\varepsilon_x,\n\\qquad\n|f(x_{n+1})|&lt;\\varepsilon_f,\n\\]\ny un número máximo de iteraciones. Ninguno debe confundirse automáticamente con el error verdadero \\(|x_n-r|\\).\nUna aproximación debe acompañarse de:\n\nel método utilizado;\nlos datos iniciales;\nla tolerancia;\nel número de iteraciones;\nel residuo \\(|f(x_n)|\\);\nuna cota de error, si el método la proporciona.\n\n\n\n\n\n\n\n\n\n\nMétodo\nDatos iniciales\nGarantía principal\nVelocidad cerca de raíz simple\n\n\n\n\nBisección\nintervalo con cambio de signo\nconvergencia y cota de error\nlineal\n\n\nSecante\ndos aproximaciones\nno requiere derivada\nsuperlineal\n\n\nNewton\nuna aproximación y derivada\nmuy rápido si inicia cerca\ncuadrática",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#errores-frecuentes",
+    "href": "05-metodos-raices.html#errores-frecuentes",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nInterpretar una cota de Cauchy como la ubicación exacta de una raíz.\nConcluir que todo cambio de signo encierra exactamente una raíz.\nSuponer que ausencia de cambio de signo significa ausencia de raíces.\nContar coeficientes cero como variaciones en la regla de Descartes.\nCambiar el signo equivocado durante la bisección.\nUsar secante cuando dos valores funcionales son casi iguales.\nAplicar Newton sin revisar que \\(f'(x_n)\\) sea segura.\nDetenerse únicamente porque dos iteraciones coinciden en la precisión de la máquina;\ninformar una aproximación sin residuo, tolerancia ni criterio de paro.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#ejercicios-graduados",
+    "href": "05-metodos-raices.html#ejercicios-graduados",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\n\nNivel 1\n\nObtenga la cota de Cauchy de \\(2x^4-3x^2+7x-5\\).\nDetermine las posibilidades de raíces positivas y negativas de \\(x^5-2x^4+x^2-3\\) mediante Descartes.\nCompruebe que \\(x^3-x-1\\) tiene una única raíz en \\([1,2]\\).\nRealice cuatro iteraciones de bisección para \\(x^3-2=0\\) en \\([1,2]\\).\n\n\n\nNivel 2\n\nConstruya la sucesión de Sturm de \\(x^3-x\\) y cuente sus raíces en \\((-2,1/2)\\).\nAísle las raíces reales de \\(x^4-5x^2+4\\) usando una tabla de signos y monotonía.\nAproxime la raíz de \\(x^3-x-1\\) con secante hasta que el cambio sea menor que \\(10^{-6}\\).\nAplique Newton a \\(x^3-2\\) con \\(x_0=1.5\\) y compare el error con bisección.\n\n\n\nNivel 3\n\nInvestigue por qué Newton converge linealmente para \\(f(x)=(x-1)^4\\) y aplique la versión modificada.\nEncuentre un ejemplo donde Newton entre en un ciclo de periodo dos.\nCompare Budan-Fourier y Sturm para contar raíces de \\(x^4+x^3-7x^2-x+6\\) en varios intervalos.\nDiseñe un método híbrido que comience con bisección y cambie a Newton sin abandonar el intervalo seguro.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#proyecto-integrador",
+    "href": "05-metodos-raices.html#proyecto-integrador",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "Proyecto integrador",
+    "text": "Proyecto integrador\nElija un polinomio real de grado entre \\(4\\) y \\(7\\) con al menos tres raíces reales. Obtenga una cota global, determine las posibilidades dadas por Descartes, cuente y separe las raíces con Sturm, y aproxime cada raíz mediante bisección, secante y Newton. Compare iteraciones, residuos y estabilidad. Presente tablas y gráficas, y distinga con claridad los resultados exactos de las aproximaciones.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#síntesis",
+    "href": "05-metodos-raices.html#síntesis",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "Síntesis",
+    "text": "Síntesis\nLa localización precede a la aproximación. Cauchy limita la región de búsqueda; el cambio de signo y la monotonía ayudan a separar; Descartes y Budan-Fourier restringen el número posible de raíces; Sturm entrega un conteo exacto. Bisección ofrece seguridad y error controlado; secante evita derivadas; Newton aprovecha información local para converger con gran rapidez. La elección responsable del método depende de las hipótesis, los datos iniciales y la verificación del residuo.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#referencias-del-capítulo",
+    "href": "05-metodos-raices.html#referencias-del-capítulo",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "Referencias del capítulo",
+    "text": "Referencias del capítulo\nLa secuencia temática sigue el programa de Álgebra Superior (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). La teoría de raíces y las reglas algebraicas se apoyan en Cárdenas et al. (1999) y Kurosh (1987). Los métodos iterativos, los criterios de error y el análisis de convergencia se desarrollan con apoyo de Burden y Faires (2011) y Chapra y Canale (2015).\n\n\n\n\nBurden, Richard L., y J. Douglas Faires. 2011. Numerical Analysis. 9.ª ed. Brooks/Cole, Cengage Learning.\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, y Francisco Tomás. 1999. Álgebra superior. 2.ª ed. Trillas.\n\n\nChapra, Steven C., y Raymond P. Canale. 2015. Numerical Methods for Engineers. 7.ª ed. McGraw-Hill Education.\n\n\nKurosh, Aleksandr G. 1987. Curso de álgebra superior. Editorial Mir.\n\n\nUniversidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico. Propuesta de modificación curricular.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "indices.html",
+    "href": "indices.html",
+    "title": "Índices de consulta",
+    "section": "",
+    "text": "Índice temático\nEstos índices complementan el índice general del libro. Los conceptos remiten a la primera sección principal donde se desarrollan; algunos reaparecen en ejercicios, demostraciones y aplicaciones posteriores.",
+    "crumbs": [
+      "Índices de consulta"
+    ]
+  },
+  {
+    "objectID": "indices.html#índice-temático",
+    "href": "indices.html#índice-temático",
+    "title": "Índices de consulta",
+    "section": "",
+    "text": "Tabla 1: Índice alfabético de conceptos principales.\n\n\n\n\n\nTérmino\nSección principal\n\n\n\n\nAlgoritmo de Euclides\n2.3 Divisibilidad\n\n\nÁlgebra de Boole\n1.3 Cuantificadores y equivalencias y aplicación del capítulo 1\n\n\nBézout, identidad de\n2.3 Divisibilidad\n\n\nBiyectiva, función\n1.8 Tipos de funciones\n\n\nBuen orden\n2.1 Propiedades de los enteros\n\n\nCardinalidad\n1.5 Conjuntos finitos y 1.9 Conjuntos infinitos\n\n\nCompletitud de los reales\n2.6 Propiedades de los reales\n\n\nConjunto potencia\n1.1 Lenguaje de conjuntos\n\n\nCuantificadores\n1.3 Cuantificadores y equivalencias\n\n\nDensidad\n2.5 Racionales y reales\n\n\nDivisibilidad\n2.3 Divisibilidad\n\n\nEquipotencia\n1.9 Cardinalidad infinita\n\n\nExponente racional\n2.7 Exponentes\n\n\nFactorización prima\n2.4 Primos y factorización\n\n\nFunción\n1.7 Funciones\n\n\nInducción fuerte\n2.2 Inducción\n\n\nInducción matemática\n2.2 Inducción\n\n\nInyectiva, función\n1.8 Tipos de funciones\n\n\nIrracional\n2.5 Racionales y reales\n\n\nMáximo común divisor\n2.3 Divisibilidad\n\n\nMínimo común múltiplo\n2.4 Primos y factorización\n\n\nNúmero primo\n2.4 Primos y factorización\n\n\nProducto cartesiano\n1.6 Producto y relaciones\n\n\nProposición\n1.2 Proposiciones\n\n\nRacional\n2.5 Racionales y reales\n\n\nRelación\n1.6 Producto y relaciones\n\n\nResiduo\n2.3 Divisibilidad\n\n\nSuprayectiva, función\n1.8 Tipos de funciones\n\n\nSupremo\n2.6 Propiedades de los reales\n\n\nValor absoluto\n2.8 Valor absoluto\n\n\nArgumento de un complejo\n3.4 Módulo y argumento\n\n\nComplejo conjugado\n3.7 Conjugado\n\n\nDivisión de complejos\n3.8 División\n\n\nFórmula de De Moivre\n3.9 Potencias y raíces\n\n\nForma polar\n3.2 Representaciones cartesiana y polar\n\n\nMódulo de un complejo\n3.4 Módulo y argumento\n\n\nNúmero complejo\n3.5 Imaginarios y complejos\n\n\nRaíces de la unidad\n3.9 Potencias y raíces\n\n\nAlgoritmo de la división polinomial\n4.3 Divisibilidad\n\n\nDivisión sintética\n4.5 Residuo y división sintética\n\n\nFactorización lineal\n4.8 Factores lineales\n\n\nFracciones parciales\n4.11 Fracciones parciales\n\n\nFunción racional\n4.10 Funciones racionales\n\n\nMultiplicidad de una raíz\n4.6 Raíces múltiples\n\n\nPolinomio\n4.1 Definición\n\n\nRaíz de un polinomio\n4.4 Raíz\n\n\nRaíces conjugadas\n4.9 Polinomios reales\n\n\nTeorema del factor\n4.4 Raíz\n\n\nTeorema del residuo\n4.5 Residuo y división sintética\n\n\nTeorema fundamental del álgebra\n4.7 Teorema fundamental\n\n\nBisección\n5.5 Estimación mediante bisección\n\n\nCota de Cauchy\n5.1 Acotación de raíces\n\n\nMétodo de Newton\n5.7 Estimación mediante Newton\n\n\nMétodo de la secante\n5.6 Estimación mediante secante\n\n\nRegla de Descartes\n5.4 Regla de los signos de Descartes\n\n\nSeparación de raíces\n5.2 Separación de raíces\n\n\nTeorema de Budan-Fourier\n5.4 Regla de Descartes\n\n\nTeorema de Sturm\n5.3 Teorema de Sturm",
+    "crumbs": [
+      "Índices de consulta"
+    ]
+  },
+  {
+    "objectID": "indices.html#índice-de-símbolos",
+    "href": "indices.html#índice-de-símbolos",
+    "title": "Índices de consulta",
+    "section": "Índice de símbolos",
+    "text": "Índice de símbolos\n\n\n\nTabla 2: Símbolos utilizados en los capítulos 1 a 5.\n\n\n\n\n\n\n\n\n\n\nSímbolo\nSignificado\nPrimera sección de uso\n\n\n\n\n\\(x\\in A\\)\n\\(x\\) pertenece a \\(A\\)\n1.1\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\)\n1.1\n\n\n\\(\\mathcal P(A)\\)\nconjunto potencia de \\(A\\)\n1.1\n\n\n\\(\\neg,\\land,\\lor\\)\nnegación, conjunción y disyunción\n1.2\n\n\n\\(\\Rightarrow,\\Leftrightarrow\\)\nimplicación y bicondicional\n1.2\n\n\n\\(\\forall,\\exists\\)\ncuantificadores universal y existencial\n1.3\n\n\n\\(A\\cup B,A\\cap B,A^c\\)\nunión, intersección y complemento\n1.4\n\n\n\\(|A|\\)\ncardinalidad de un conjunto\n1.5\n\n\n\\(A\\times B\\)\nproducto cartesiano\n1.6\n\n\n\\(f:A\\to B\\)\nfunción de \\(A\\) en \\(B\\)\n1.7\n\n\n\\(\\mathbb N,\\mathbb Z,\\mathbb Q,\\mathbb R\\)\nnaturales, enteros, racionales y reales\n2.1 y 2.5\n\n\n\\(a\\mid b\\)\n\\(a\\) divide a \\(b\\)\n2.3\n\n\n\\(\\gcd(a,b)\\)\nmáximo común divisor\n2.3\n\n\n\\(\\operatorname{mcm}(a,b)\\)\nmínimo común múltiplo\n2.4\n\n\n\\(\\sup A\\)\nsupremo de \\(A\\)\n2.6\n\n\n\\(|x-a|\\)\ndistancia entre \\(x\\) y \\(a\\)\n2.8\n\n\n\\(\\mathbb R^2,\\mathbb C\\)\nplano real y números complejos\n3.1 y 3.5\n\n\n\\(i^2=-1\\)\nunidad imaginaria\n3.5\n\n\n\\(\\overline z\\)\nconjugado de \\(z\\)\n3.7\n\n\n\\(|z|,\\arg(z)\\)\nmódulo y argumento\n3.4\n\n\n\\(e^{i\\theta}\\)\nforma exponencial compleja\n3.9\n\n\n\\(K[x]\\)\npolinomios en \\(x\\) con coeficientes en \\(K\\)\n4.1\n\n\n\\(\\deg p\\)\ngrado del polinomio \\(p\\)\n4.1\n\n\n\\(d\\mid p\\)\nel polinomio \\(d\\) divide a \\(p\\)\n4.3\n\n\n\\(p=dq+r\\)\nidentidad de la división polinomial\n4.3\n\n\n\\(p(\\alpha)=0\\)\n\\(\\alpha\\) es raíz de \\(p\\)\n4.4\n\n\n\\(R\\)\ncota global para el módulo de las raíces\n5.1\n\n\n\\(V(t)\\)\nnúmero de variaciones de signo\n5.3\n\n\n\\(\\varepsilon\\)\ntolerancia numérica\n5.5 a 5.7\n\n\n\\(f'(x)\\)\nderivada utilizada por Newton\n5.7",
+    "crumbs": [
+      "Índices de consulta"
+    ]
+  },
+  {
+    "objectID": "indices.html#índice-de-figuras",
+    "href": "indices.html#índice-de-figuras",
+    "title": "Índices de consulta",
+    "section": "Índice de figuras",
+    "text": "Índice de figuras\n\nCapítulo 1\n\nOperaciones con conjuntos: unión, intersección, complemento y diferencia simétrica (sección 1.4).\nRelaciones y funciones: relación general, función y no-función (sección 1.7).\nComposición de funciones: recorrido de \\(g\\circ f\\) (sección 1.7).\nTipos de funciones: inyectiva, suprayectiva y biyectiva (sección 1.8).\n\n\n\nCapítulo 2\n\nInducción y números impares: construcción de cuadrados (sección 2.2).\nAlgoritmo de Euclides: residuos sucesivos (sección 2.3).\nCadena de factorización: descomposición prima de \\(756\\) (sección 2.4).\nJerarquía de sistemas numéricos: \\(\\mathbb N\\subseteq\\mathbb Z\\subseteq\\mathbb Q\\subseteq\\mathbb R\\) (sección 2.5).\nValor absoluto: distancia e intervalo central (sección 2.8).\n\n\n\nCapítulo 3\n\nPlano complejo: representación cartesiana y polar (sección 3.2).\nSuma vectorial: regla del paralelogramo (sección 3.3).\nComplejo conjugado: reflexión respecto del eje real (sección 3.7).\nRaíces de la unidad: distribución sobre la circunferencia unitaria (sección 3.9).\n\n\n\nCapítulo 4\n\nDivisión polinomial: relación entre dividendo, divisor, cociente y residuo (sección 4.3).\nMultiplicidad: comportamiento local de raíces simples, dobles y triples (sección 4.6).\nRaíces conjugadas: simetría respecto del eje real (sección 4.9).\nFunciones racionales: huecos y asíntotas (sección 4.10).\n\n\n\nCapítulo 5\n\nAcotación y separación: cota global e intervalos con raíces (secciones 5.1 y 5.2).\nBisección: reducción sucesiva del intervalo (sección 5.5).\nSecante y Newton: comparación de cuerda y tangente (secciones 5.6 y 5.7).",
+    "crumbs": [
+      "Índices de consulta"
+    ]
+  },
+  {
+    "objectID": "indices.html#índice-de-cuadros",
+    "href": "indices.html#índice-de-cuadros",
+    "title": "Índices de consulta",
+    "section": "Índice de cuadros",
+    "text": "Índice de cuadros\n\nPropiedades básicas de las operaciones en \\(\\mathbb Z\\) (sección 2.1).\nCorrespondencia entre desigualdades e intervalos (sección 2.6).\nÍndice alfabético de conceptos principales (este apartado).\nSímbolos utilizados en los capítulos 1 a 5 (este apartado).",
+    "crumbs": [
+      "Índices de consulta"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Referencias generales",
+    "section": "",
+    "text": "Las referencias se presentan en una sola lista general para evitar duplicaciones. Cada capítulo conserva al final una nota breve que identifica sus fuentes principales.\n\n\nBrown, James Ward, and Ruel V. Churchill. 2014. Complex Variables\nand Applications. 9th ed. McGraw-Hill Education.\n\n\nBurden, Richard L., and J. Douglas Faires. 2011. Numerical\nAnalysis. 9th ed. Brooks/Cole, Cengage Learning.\n\n\nBurton, David M. 2011. Elementary Number Theory. 7th ed.\nMcGraw-Hill.\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1999. Álgebra Superior. 2nd ed. Trillas.\n\n\nChapra, Steven C., and Raymond P. Canale. 2015. Numerical Methods\nfor Engineers. 7th ed. McGraw-Hill Education.\n\n\nCox, David A., John Little, and Donal O’Shea. 2015. Ideals,\nVarieties, and Algorithms. 4th ed. Springer.\n\n\nEpp, Susanna S. 2011. Discrete Mathematics with Applications.\n4th ed. Brooks/Cole, Cengage Learning.\n\n\nHalmos, Paul R. 1960. Naive Set Theory. D. Van Nostrand\nCompany.\n\n\nKurosh, Aleksandr G. 1987. Curso de Álgebra Superior. Editorial\nMir.\n\n\nNeedham, Tristan. 1997. Visual Complex Analysis. Oxford\nUniversity Press.\n\n\nNiven, Ivan, Herbert S. Zuckerman, and Hugh L. Montgomery. 1991. An\nIntroduction to the Theory of Numbers. 5th ed. John Wiley &\nSons.\n\n\nRosen, Kenneth H. 2019. Discrete Mathematics and Its\nApplications. 8th ed. McGraw-Hill Education.\n\n\nSilva, Juan Manuel, and Adriana Lazo. 2007. Fundamentos de\nMatemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo.\n7th ed. Limusa.\n\n\nTocci, Ronald J., and Neal S. Widmer. 2003. Sistemas Digitales:\nPrincipios y Aplicaciones. 8th ed. Pearson Educación.\n\n\nUniversidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011.\nPrograma Sintético de Álgebra Superior, Carrera de Ingeniero\nElectrónico. Propuesta de modificación curricular.",
+    "crumbs": [
+      "Referencias generales"
+    ]
+  }
+]

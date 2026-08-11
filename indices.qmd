@@ -56,6 +56,14 @@ Estos índices complementan el índice general del libro. Los conceptos remiten 
 | **Teorema del factor** | [4.4 Raíz](04-polinomios.qmd#sec-raiz-polinomio) |
 | **Teorema del residuo** | [4.5 Residuo y división sintética](04-polinomios.qmd#sec-residuo-sintetica) |
 | **Teorema fundamental del álgebra** | [4.7 Teorema fundamental](04-polinomios.qmd#sec-teorema-fundamental-algebra) |
+| **Bisección** | [5.5 Estimación mediante bisección](05-metodos-raices.qmd#sec-biseccion) |
+| **Cota de Cauchy** | [5.1 Acotación de raíces](05-metodos-raices.qmd#sec-acotacion-raices) |
+| **Método de Newton** | [5.7 Estimación mediante Newton](05-metodos-raices.qmd#sec-newton) |
+| **Método de la secante** | [5.6 Estimación mediante secante](05-metodos-raices.qmd#sec-secante) |
+| **Regla de Descartes** | [5.4 Regla de los signos de Descartes](05-metodos-raices.qmd#sec-descartes) |
+| **Separación de raíces** | [5.2 Separación de raíces](05-metodos-raices.qmd#sec-separacion-raices) |
+| **Teorema de Budan-Fourier** | [5.4 Regla de Descartes](05-metodos-raices.qmd#sec-descartes) |
+| **Teorema de Sturm** | [5.3 Teorema de Sturm](05-metodos-raices.qmd#sec-sturm) |
 
 : Índice alfabético de conceptos principales. {#tbl-indice-tematico}
 
@@ -89,8 +97,12 @@ Estos índices complementan el índice general del libro. Los conceptos remiten 
 | $d\mid p$ | el polinomio $d$ divide a $p$ | 4.3 |
 | $p=dq+r$ | identidad de la división polinomial | 4.3 |
 | $p(\alpha)=0$ | $\alpha$ es raíz de $p$ | 4.4 |
+| $R$ | cota global para el módulo de las raíces | 5.1 |
+| $V(t)$ | número de variaciones de signo | 5.3 |
+| $\varepsilon$ | tolerancia numérica | 5.5 a 5.7 |
+| $f'(x)$ | derivada utilizada por Newton | 5.7 |
 
-: Símbolos utilizados en los capítulos 1 a 4. {#tbl-indice-simbolos}
+: Símbolos utilizados en los capítulos 1 a 5. {#tbl-indice-simbolos}
 
 ## Índice de figuras {.unnumbered}
 
@@ -123,9 +135,15 @@ Estos índices complementan el índice general del libro. Los conceptos remiten 
 3. **Raíces conjugadas:** simetría respecto del eje real (sección 4.9).
 4. **Funciones racionales:** huecos y asíntotas (sección 4.10).
 
+### Capítulo 5 {.unnumbered}
+
+1. **Acotación y separación:** cota global e intervalos con raíces (secciones 5.1 y 5.2).
+2. **Bisección:** reducción sucesiva del intervalo (sección 5.5).
+3. **Secante y Newton:** comparación de cuerda y tangente (secciones 5.6 y 5.7).
+
 ## Índice de cuadros {.unnumbered}
 
 1. Propiedades básicas de las operaciones en $\mathbb Z$ (sección 2.1).
 2. Correspondencia entre desigualdades e intervalos (sección 2.6).
 3. Índice alfabético de conceptos principales (este apartado).
-4. Símbolos utilizados en los capítulos 1 a 4 (este apartado).
+4. Símbolos utilizados en los capítulos 1 a 5 (este apartado).

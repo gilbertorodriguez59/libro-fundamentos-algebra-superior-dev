@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jesús Gilberto Rodríguez Escobedo">
 
-<title>Fundamentos Matemáticos del Álgebra Superior</title>
+<title>Referencias generales – Fundamentos Matemáticos del Álgebra Superior</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,7 +26,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -37,7 +55,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01-logica-conjuntos.html" rel="next">
+<link href="./indices.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -76,35 +94,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -118,7 +107,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Presentación</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">Referencias generales</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -149,7 +138,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Presentación</span></a>
   </div>
 </li>
@@ -191,7 +180,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="./references.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Referencias generales</span></a>
   </div>
 </li>
@@ -200,41 +189,22 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">En este capítulo</h2>
-   
-  <ul class="collapse">
-  <li><a href="#presentación" id="toc-presentación" class="nav-link active" data-scroll-target="#presentación">Presentación</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Fundamentos Matemáticos del Álgebra Superior</h1>
-<p class="subtitle lead">Conceptos, demostraciones y métodos</p>
+<h1 class="title">Referencias generales</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>Jesús Gilberto Rodríguez Escobedo </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de publicación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">11 de agosto de 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -244,43 +214,74 @@ window.Quarto = {
 </header>
 
 
-<section id="presentación" class="level1 unnumbered">
-<h1 class="unnumbered">Presentación</h1>
-<p>Este libro presenta los fundamentos del Álgebra Superior con rigor matemático y una exposición accesible. Cada tema parte de su significado intuitivo, establece después la definición formal y desarrolla propiedades, demostraciones, ejemplos, contraejemplos y ejercicios graduados.</p>
-<p>La obra está concebida como complemento teórico de <em>Álgebra Superior con aplicaciones en R y GeoGebra</em>. La numeración de los capítulos y de las secciones principales será compatible entre ambos libros para facilitar la consulta cruzada.</p>
-<p class="pdf-download-hero">
-<a class="btn btn-primary" href="Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-5.pdf" download="">Descargar el libro en PDF</a>
-</p>
-<section id="propósito" class="level2 unnumbered unlisted">
-<h2 class="unnumbered unlisted anchored" data-anchor-id="propósito">Propósito</h2>
-<p>El lector no solo aprenderá a efectuar operaciones. También aprenderá a:</p>
-<ul>
-<li>interpretar la notación matemática;</li>
-<li>distinguir una definición de una propiedad;</li>
-<li>reconocer por qué una afirmación es verdadera o falsa;</li>
-<li>construir demostraciones elementales;</li>
-<li>identificar hipótesis, conclusiones y contraejemplos;</li>
-<li>relacionar lógica, conjuntos, relaciones y funciones.</li>
-</ul>
-</section>
-<section id="organización-didáctica" class="level2 unnumbered unlisted">
-<h2 class="unnumbered unlisted anchored" data-anchor-id="organización-didáctica">Organización didáctica</h2>
-<p>Los capítulos contienen objetivos, definiciones destacadas, ejemplos resueltos, demostraciones, errores frecuentes, ejercicios por nivel, síntesis y referencias. Los apartados internos no se numeran para conservar un índice claro.</p>
-<p>La obra incluye, al final, un índice temático, un índice de símbolos, un índice de figuras, un índice de cuadros y una bibliografía general. En la versión PDF, el índice general y las listas automáticas de figuras y cuadros se generan junto con la numeración de páginas.</p>
-</section>
-<section id="estructura-actual" class="level2 unnumbered unlisted">
-<h2 class="unnumbered unlisted anchored" data-anchor-id="estructura-actual">Estructura actual</h2>
-<ul>
-<li><strong>Capítulo 1. Lógica y conjuntos:</strong> proposiciones, operaciones, relaciones, funciones, cardinalidad y álgebra de Boole.</li>
-<li><strong>Capítulo 2. Números enteros y reales:</strong> inducción, divisibilidad, primos, estructura de los reales, exponentes y valor absoluto.</li>
-<li><strong>Capítulo 3. Números complejos:</strong> plano real, forma polar, construcción de <span class="math inline">\(\mathbb C\)</span>, operaciones, conjugado, división, potencias y raíces.</li>
-<li><strong>Capítulo 4. Polinomios:</strong> aritmética y división, raíces y multiplicidades, teorema fundamental del álgebra, factorización, funciones racionales y fracciones parciales.</li>
-<li><strong>Capítulo 5. Métodos numéricos para la estimación de raíces:</strong> acotación, separación, Sturm, Descartes, bisección, secante y Newton, con criterios de error y evaluación mediante Horner.</li>
-</ul>
+<p>Las referencias se presentan en una sola lista general para evitar duplicaciones. Cada capítulo conserva al final una nota breve que identifica sus fuentes principales.</p>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-brownChurchill2014" class="csl-entry" role="listitem">
+Brown, James Ward, and Ruel V. Churchill. 2014. <em>Complex Variables
+and Applications</em>. 9th ed. McGraw-Hill Education.
+</div>
+<div id="ref-burdenFaires2011" class="csl-entry" role="listitem">
+Burden, Richard L., and J. Douglas Faires. 2011. <em>Numerical
+Analysis</em>. 9th ed. Brooks/Cole, Cengage Learning.
+</div>
+<div id="ref-burton2011" class="csl-entry" role="listitem">
+Burton, David M. 2011. <em>Elementary Number Theory</em>. 7th ed.
+McGraw-Hill.
+</div>
+<div id="ref-cardenas1999" class="csl-entry" role="listitem">
+Cárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.
+1999. <em>Álgebra Superior</em>. 2nd ed. Trillas.
+</div>
+<div id="ref-chapraCanale2015" class="csl-entry" role="listitem">
+Chapra, Steven C., and Raymond P. Canale. 2015. <em>Numerical Methods
+for Engineers</em>. 7th ed. McGraw-Hill Education.
+</div>
+<div id="ref-cox2015" class="csl-entry" role="listitem">
+Cox, David A., John Little, and Donal O’Shea. 2015. <em>Ideals,
+Varieties, and Algorithms</em>. 4th ed. Springer.
+</div>
+<div id="ref-epp2011" class="csl-entry" role="listitem">
+Epp, Susanna S. 2011. <em>Discrete Mathematics with Applications</em>.
+4th ed. Brooks/Cole, Cengage Learning.
+</div>
+<div id="ref-halmos1960" class="csl-entry" role="listitem">
+Halmos, Paul R. 1960. <em>Naive Set Theory</em>. D. Van Nostrand
+Company.
+</div>
+<div id="ref-kurosh1987" class="csl-entry" role="listitem">
+Kurosh, Aleksandr G. 1987. <em>Curso de Álgebra Superior</em>. Editorial
+Mir.
+</div>
+<div id="ref-needham1997" class="csl-entry" role="listitem">
+Needham, Tristan. 1997. <em>Visual Complex Analysis</em>. Oxford
+University Press.
+</div>
+<div id="ref-niven1991" class="csl-entry" role="listitem">
+Niven, Ivan, Herbert S. Zuckerman, and Hugh L. Montgomery. 1991. <em>An
+Introduction to the Theory of Numbers</em>. 5th ed. John Wiley &amp;
+Sons.
+</div>
+<div id="ref-rosen2019" class="csl-entry" role="listitem">
+Rosen, Kenneth H. 2019. <em>Discrete Mathematics and Its
+Applications</em>. 8th ed. McGraw-Hill Education.
+</div>
+<div id="ref-silvaLazo2007" class="csl-entry" role="listitem">
+Silva, Juan Manuel, and Adriana Lazo. 2007. <em>Fundamentos de
+Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo</em>.
+7th ed. Limusa.
+</div>
+<div id="ref-tocci2003" class="csl-entry" role="listitem">
+Tocci, Ronald J., and Neal S. Widmer. 2003. <em>Sistemas Digitales:
+Principios y Aplicaciones</em>. 8th ed. Pearson Educación.
+</div>
+<div id="ref-uaslp2011" class="csl-entry" role="listitem">
+Universidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011.
+<em>Programa Sintético de Álgebra Superior, Carrera de Ingeniero
+Electrónico</em>. Propuesta de modificación curricular.
+</div>
+</div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <button class="book-menu-toggle" type="button" aria-controls="TOC" aria-expanded="false">
@@ -739,11 +740,11 @@ document.addEventListener("DOMContentLoaded", function () {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./indices.html" class="pagination-link" aria-label="Índices de consulta">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Índices de consulta</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01-logica-conjuntos.html" class="pagination-link" aria-label="Lógica y conjuntos">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lógica y conjuntos</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

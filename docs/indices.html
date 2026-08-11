@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jesús Gilberto Rodríguez Escobedo">
 
-<title>Fundamentos Matemáticos del Álgebra Superior</title>
+<title>Índices de consulta – Fundamentos Matemáticos del Álgebra Superior</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -37,7 +36,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./01-logica-conjuntos.html" rel="next">
+<link href="./references.html" rel="next">
+<link href="./05-metodos-raices.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -118,7 +118,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Presentación</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./indices.html">Índices de consulta</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -149,7 +149,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Presentación</span></a>
   </div>
 </li>
@@ -185,7 +185,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./indices.html" class="sidebar-item-text sidebar-link">
+  <a href="./indices.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Índices de consulta</span></a>
   </div>
 </li>
@@ -205,7 +205,10 @@ window.Quarto = {
     <h2 id="toc-title">En este capítulo</h2>
    
   <ul class="collapse">
-  <li><a href="#presentación" id="toc-presentación" class="nav-link active" data-scroll-target="#presentación">Presentación</a></li>
+  <li><a href="#índice-temático" id="toc-índice-temático" class="nav-link active" data-scroll-target="#índice-temático">Índice temático</a></li>
+  <li><a href="#índice-de-símbolos" id="toc-índice-de-símbolos" class="nav-link" data-scroll-target="#índice-de-símbolos">Índice de símbolos</a></li>
+  <li><a href="#índice-de-figuras" id="toc-índice-de-figuras" class="nav-link" data-scroll-target="#índice-de-figuras">Índice de figuras</a></li>
+  <li><a href="#índice-de-cuadros" id="toc-índice-de-cuadros" class="nav-link" data-scroll-target="#índice-de-cuadros">Índice de cuadros</a></li>
   </ul>
 </nav>
     </div>
@@ -214,27 +217,14 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Fundamentos Matemáticos del Álgebra Superior</h1>
-<p class="subtitle lead">Conceptos, demostraciones y métodos</p>
+<h1 class="title">Índices de consulta</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor/a</div>
-    <div class="quarto-title-meta-contents">
-             <p>Jesús Gilberto Rodríguez Escobedo </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Fecha de publicación</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">11 de agosto de 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -244,42 +234,497 @@ window.Quarto = {
 </header>
 
 
-<section id="presentación" class="level1 unnumbered">
-<h1 class="unnumbered">Presentación</h1>
-<p>Este libro presenta los fundamentos del Álgebra Superior con rigor matemático y una exposición accesible. Cada tema parte de su significado intuitivo, establece después la definición formal y desarrolla propiedades, demostraciones, ejemplos, contraejemplos y ejercicios graduados.</p>
-<p>La obra está concebida como complemento teórico de <em>Álgebra Superior con aplicaciones en R y GeoGebra</em>. La numeración de los capítulos y de las secciones principales será compatible entre ambos libros para facilitar la consulta cruzada.</p>
-<p class="pdf-download-hero">
-<a class="btn btn-primary" href="Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-5.pdf" download="">Descargar el libro en PDF</a>
-</p>
-<section id="propósito" class="level2 unnumbered unlisted">
-<h2 class="unnumbered unlisted anchored" data-anchor-id="propósito">Propósito</h2>
-<p>El lector no solo aprenderá a efectuar operaciones. También aprenderá a:</p>
-<ul>
-<li>interpretar la notación matemática;</li>
-<li>distinguir una definición de una propiedad;</li>
-<li>reconocer por qué una afirmación es verdadera o falsa;</li>
-<li>construir demostraciones elementales;</li>
-<li>identificar hipótesis, conclusiones y contraejemplos;</li>
-<li>relacionar lógica, conjuntos, relaciones y funciones.</li>
-</ul>
+<p>Estos índices complementan el índice general del libro. Los conceptos remiten a la primera sección principal donde se desarrollan; algunos reaparecen en ejercicios, demostraciones y aplicaciones posteriores.</p>
+<section id="índice-temático" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="índice-temático">Índice temático</h2>
+<div id="tbl-indice-tematico" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-indice-tematico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1: Índice alfabético de conceptos principales.
+</figcaption>
+<div aria-describedby="tbl-indice-tematico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Término</th>
+<th>Sección principal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Algoritmo de Euclides</strong></td>
+<td><a href="./02-enteros-reales.html#sec-divisibilidad">2.3 Divisibilidad</a></td>
+</tr>
+<tr class="even">
+<td><strong>Álgebra de Boole</strong></td>
+<td><a href="./01-logica-conjuntos.html#sec-cuantificadores">1.3 Cuantificadores y equivalencias</a> y aplicación del capítulo 1</td>
+</tr>
+<tr class="odd">
+<td><strong>Bézout, identidad de</strong></td>
+<td><a href="./02-enteros-reales.html#sec-divisibilidad">2.3 Divisibilidad</a></td>
+</tr>
+<tr class="even">
+<td><strong>Biyectiva, función</strong></td>
+<td><a href="./01-logica-conjuntos.html#sec-tipos-funciones">1.8 Tipos de funciones</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Buen orden</strong></td>
+<td><a href="./02-enteros-reales.html#sec-propiedades-enteros">2.1 Propiedades de los enteros</a></td>
+</tr>
+<tr class="even">
+<td><strong>Cardinalidad</strong></td>
+<td><a href="./01-logica-conjuntos.html#sec-cardinalidad-finita">1.5 Conjuntos finitos</a> y <a href="./01-logica-conjuntos.html#sec-cardinalidad-infinita">1.9 Conjuntos infinitos</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Completitud de los reales</strong></td>
+<td><a href="./02-enteros-reales.html#sec-propiedades-reales">2.6 Propiedades de los reales</a></td>
+</tr>
+<tr class="even">
+<td><strong>Conjunto potencia</strong></td>
+<td><a href="./01-logica-conjuntos.html#sec-lenguaje-conjuntos">1.1 Lenguaje de conjuntos</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Cuantificadores</strong></td>
+<td><a href="./01-logica-conjuntos.html#sec-cuantificadores">1.3 Cuantificadores y equivalencias</a></td>
+</tr>
+<tr class="even">
+<td><strong>Densidad</strong></td>
+<td><a href="./02-enteros-reales.html#sec-racionales-reales">2.5 Racionales y reales</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Divisibilidad</strong></td>
+<td><a href="./02-enteros-reales.html#sec-divisibilidad">2.3 Divisibilidad</a></td>
+</tr>
+<tr class="even">
+<td><strong>Equipotencia</strong></td>
+<td><a href="./01-logica-conjuntos.html#sec-cardinalidad-infinita">1.9 Cardinalidad infinita</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Exponente racional</strong></td>
+<td><a href="./02-enteros-reales.html#sec-exponentes">2.7 Exponentes</a></td>
+</tr>
+<tr class="even">
+<td><strong>Factorización prima</strong></td>
+<td><a href="./02-enteros-reales.html#sec-primos-factorizacion">2.4 Primos y factorización</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Función</strong></td>
+<td><a href="./01-logica-conjuntos.html#sec-funciones">1.7 Funciones</a></td>
+</tr>
+<tr class="even">
+<td><strong>Inducción fuerte</strong></td>
+<td><a href="./02-enteros-reales.html#sec-induccion">2.2 Inducción</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Inducción matemática</strong></td>
+<td><a href="./02-enteros-reales.html#sec-induccion">2.2 Inducción</a></td>
+</tr>
+<tr class="even">
+<td><strong>Inyectiva, función</strong></td>
+<td><a href="./01-logica-conjuntos.html#sec-tipos-funciones">1.8 Tipos de funciones</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Irracional</strong></td>
+<td><a href="./02-enteros-reales.html#sec-racionales-reales">2.5 Racionales y reales</a></td>
+</tr>
+<tr class="even">
+<td><strong>Máximo común divisor</strong></td>
+<td><a href="./02-enteros-reales.html#sec-divisibilidad">2.3 Divisibilidad</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Mínimo común múltiplo</strong></td>
+<td><a href="./02-enteros-reales.html#sec-primos-factorizacion">2.4 Primos y factorización</a></td>
+</tr>
+<tr class="even">
+<td><strong>Número primo</strong></td>
+<td><a href="./02-enteros-reales.html#sec-primos-factorizacion">2.4 Primos y factorización</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Producto cartesiano</strong></td>
+<td><a href="./01-logica-conjuntos.html#sec-producto-relaciones">1.6 Producto y relaciones</a></td>
+</tr>
+<tr class="even">
+<td><strong>Proposición</strong></td>
+<td><a href="./01-logica-conjuntos.html#sec-proposiciones">1.2 Proposiciones</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Racional</strong></td>
+<td><a href="./02-enteros-reales.html#sec-racionales-reales">2.5 Racionales y reales</a></td>
+</tr>
+<tr class="even">
+<td><strong>Relación</strong></td>
+<td><a href="./01-logica-conjuntos.html#sec-producto-relaciones">1.6 Producto y relaciones</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Residuo</strong></td>
+<td><a href="./02-enteros-reales.html#sec-divisibilidad">2.3 Divisibilidad</a></td>
+</tr>
+<tr class="even">
+<td><strong>Suprayectiva, función</strong></td>
+<td><a href="./01-logica-conjuntos.html#sec-tipos-funciones">1.8 Tipos de funciones</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Supremo</strong></td>
+<td><a href="./02-enteros-reales.html#sec-propiedades-reales">2.6 Propiedades de los reales</a></td>
+</tr>
+<tr class="even">
+<td><strong>Valor absoluto</strong></td>
+<td><a href="./02-enteros-reales.html#sec-valor-absoluto">2.8 Valor absoluto</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Argumento de un complejo</strong></td>
+<td><a href="./03-numeros-complejos.html#sec-modulo-argumento">3.4 Módulo y argumento</a></td>
+</tr>
+<tr class="even">
+<td><strong>Complejo conjugado</strong></td>
+<td><a href="./03-numeros-complejos.html#sec-conjugado">3.7 Conjugado</a></td>
+</tr>
+<tr class="odd">
+<td><strong>División de complejos</strong></td>
+<td><a href="./03-numeros-complejos.html#sec-division-complejos">3.8 División</a></td>
+</tr>
+<tr class="even">
+<td><strong>Fórmula de De Moivre</strong></td>
+<td><a href="./03-numeros-complejos.html#sec-potencias-raices">3.9 Potencias y raíces</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Forma polar</strong></td>
+<td><a href="./03-numeros-complejos.html#sec-cartesiana-polar">3.2 Representaciones cartesiana y polar</a></td>
+</tr>
+<tr class="even">
+<td><strong>Módulo de un complejo</strong></td>
+<td><a href="./03-numeros-complejos.html#sec-modulo-argumento">3.4 Módulo y argumento</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Número complejo</strong></td>
+<td><a href="./03-numeros-complejos.html#sec-imaginarios-complejos">3.5 Imaginarios y complejos</a></td>
+</tr>
+<tr class="even">
+<td><strong>Raíces de la unidad</strong></td>
+<td><a href="./03-numeros-complejos.html#sec-potencias-raices">3.9 Potencias y raíces</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Algoritmo de la división polinomial</strong></td>
+<td><a href="./04-polinomios.html#sec-divisibilidad-polinomios">4.3 Divisibilidad</a></td>
+</tr>
+<tr class="even">
+<td><strong>División sintética</strong></td>
+<td><a href="./04-polinomios.html#sec-residuo-sintetica">4.5 Residuo y división sintética</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Factorización lineal</strong></td>
+<td><a href="./04-polinomios.html#sec-factorizacion-lineal">4.8 Factores lineales</a></td>
+</tr>
+<tr class="even">
+<td><strong>Fracciones parciales</strong></td>
+<td><a href="./04-polinomios.html#sec-fracciones-parciales">4.11 Fracciones parciales</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Función racional</strong></td>
+<td><a href="./04-polinomios.html#sec-funciones-racionales">4.10 Funciones racionales</a></td>
+</tr>
+<tr class="even">
+<td><strong>Multiplicidad de una raíz</strong></td>
+<td><a href="./04-polinomios.html#sec-raices-multiples">4.6 Raíces múltiples</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Polinomio</strong></td>
+<td><a href="./04-polinomios.html#sec-definicion-polinomio">4.1 Definición</a></td>
+</tr>
+<tr class="even">
+<td><strong>Raíz de un polinomio</strong></td>
+<td><a href="./04-polinomios.html#sec-raiz-polinomio">4.4 Raíz</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Raíces conjugadas</strong></td>
+<td><a href="./04-polinomios.html#sec-polinomios-reales">4.9 Polinomios reales</a></td>
+</tr>
+<tr class="even">
+<td><strong>Teorema del factor</strong></td>
+<td><a href="./04-polinomios.html#sec-raiz-polinomio">4.4 Raíz</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Teorema del residuo</strong></td>
+<td><a href="./04-polinomios.html#sec-residuo-sintetica">4.5 Residuo y división sintética</a></td>
+</tr>
+<tr class="even">
+<td><strong>Teorema fundamental del álgebra</strong></td>
+<td><a href="./04-polinomios.html#sec-teorema-fundamental-algebra">4.7 Teorema fundamental</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Bisección</strong></td>
+<td><a href="./05-metodos-raices.html#sec-biseccion">5.5 Estimación mediante bisección</a></td>
+</tr>
+<tr class="even">
+<td><strong>Cota de Cauchy</strong></td>
+<td><a href="./05-metodos-raices.html#sec-acotacion-raices">5.1 Acotación de raíces</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Método de Newton</strong></td>
+<td><a href="./05-metodos-raices.html#sec-newton">5.7 Estimación mediante Newton</a></td>
+</tr>
+<tr class="even">
+<td><strong>Método de la secante</strong></td>
+<td><a href="./05-metodos-raices.html#sec-secante">5.6 Estimación mediante secante</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Regla de Descartes</strong></td>
+<td><a href="./05-metodos-raices.html#sec-descartes">5.4 Regla de los signos de Descartes</a></td>
+</tr>
+<tr class="even">
+<td><strong>Separación de raíces</strong></td>
+<td><a href="./05-metodos-raices.html#sec-separacion-raices">5.2 Separación de raíces</a></td>
+</tr>
+<tr class="odd">
+<td><strong>Teorema de Budan-Fourier</strong></td>
+<td><a href="./05-metodos-raices.html#sec-descartes">5.4 Regla de Descartes</a></td>
+</tr>
+<tr class="even">
+<td><strong>Teorema de Sturm</strong></td>
+<td><a href="./05-metodos-raices.html#sec-sturm">5.3 Teorema de Sturm</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 </section>
-<section id="organización-didáctica" class="level2 unnumbered unlisted">
-<h2 class="unnumbered unlisted anchored" data-anchor-id="organización-didáctica">Organización didáctica</h2>
-<p>Los capítulos contienen objetivos, definiciones destacadas, ejemplos resueltos, demostraciones, errores frecuentes, ejercicios por nivel, síntesis y referencias. Los apartados internos no se numeran para conservar un índice claro.</p>
-<p>La obra incluye, al final, un índice temático, un índice de símbolos, un índice de figuras, un índice de cuadros y una bibliografía general. En la versión PDF, el índice general y las listas automáticas de figuras y cuadros se generan junto con la numeración de páginas.</p>
+<section id="índice-de-símbolos" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="índice-de-símbolos">Índice de símbolos</h2>
+<div id="tbl-indice-simbolos" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-indice-simbolos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;2: Símbolos utilizados en los capítulos 1 a 5.
+</figcaption>
+<div aria-describedby="tbl-indice-simbolos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Símbolo</th>
+<th>Significado</th>
+<th>Primera sección de uso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(x\in A\)</span></td>
+<td><span class="math inline">\(x\)</span> pertenece a <span class="math inline">\(A\)</span></td>
+<td>1.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(A\subseteq B\)</span></td>
+<td><span class="math inline">\(A\)</span> es subconjunto de <span class="math inline">\(B\)</span></td>
+<td>1.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(\mathcal P(A)\)</span></td>
+<td>conjunto potencia de <span class="math inline">\(A\)</span></td>
+<td>1.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(\neg,\land,\lor\)</span></td>
+<td>negación, conjunción y disyunción</td>
+<td>1.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(\Rightarrow,\Leftrightarrow\)</span></td>
+<td>implicación y bicondicional</td>
+<td>1.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(\forall,\exists\)</span></td>
+<td>cuantificadores universal y existencial</td>
+<td>1.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(A\cup B,A\cap B,A^c\)</span></td>
+<td>unión, intersección y complemento</td>
+<td>1.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(|A|\)</span></td>
+<td>cardinalidad de un conjunto</td>
+<td>1.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(A\times B\)</span></td>
+<td>producto cartesiano</td>
+<td>1.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(f:A\to B\)</span></td>
+<td>función de <span class="math inline">\(A\)</span> en <span class="math inline">\(B\)</span></td>
+<td>1.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(\mathbb N,\mathbb Z,\mathbb Q,\mathbb R\)</span></td>
+<td>naturales, enteros, racionales y reales</td>
+<td>2.1 y 2.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(a\mid b\)</span></td>
+<td><span class="math inline">\(a\)</span> divide a <span class="math inline">\(b\)</span></td>
+<td>2.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(\gcd(a,b)\)</span></td>
+<td>máximo común divisor</td>
+<td>2.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(\operatorname{mcm}(a,b)\)</span></td>
+<td>mínimo común múltiplo</td>
+<td>2.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(\sup A\)</span></td>
+<td>supremo de <span class="math inline">\(A\)</span></td>
+<td>2.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(|x-a|\)</span></td>
+<td>distancia entre <span class="math inline">\(x\)</span> y <span class="math inline">\(a\)</span></td>
+<td>2.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(\mathbb R^2,\mathbb C\)</span></td>
+<td>plano real y números complejos</td>
+<td>3.1 y 3.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(i^2=-1\)</span></td>
+<td>unidad imaginaria</td>
+<td>3.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(\overline z\)</span></td>
+<td>conjugado de <span class="math inline">\(z\)</span></td>
+<td>3.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(|z|,\arg(z)\)</span></td>
+<td>módulo y argumento</td>
+<td>3.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(e^{i\theta}\)</span></td>
+<td>forma exponencial compleja</td>
+<td>3.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(K[x]\)</span></td>
+<td>polinomios en <span class="math inline">\(x\)</span> con coeficientes en <span class="math inline">\(K\)</span></td>
+<td>4.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(\deg p\)</span></td>
+<td>grado del polinomio <span class="math inline">\(p\)</span></td>
+<td>4.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(d\mid p\)</span></td>
+<td>el polinomio <span class="math inline">\(d\)</span> divide a <span class="math inline">\(p\)</span></td>
+<td>4.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(p=dq+r\)</span></td>
+<td>identidad de la división polinomial</td>
+<td>4.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(p(\alpha)=0\)</span></td>
+<td><span class="math inline">\(\alpha\)</span> es raíz de <span class="math inline">\(p\)</span></td>
+<td>4.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(R\)</span></td>
+<td>cota global para el módulo de las raíces</td>
+<td>5.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(V(t)\)</span></td>
+<td>número de variaciones de signo</td>
+<td>5.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;"><span class="math inline">\(\varepsilon\)</span></td>
+<td>tolerancia numérica</td>
+<td>5.5 a 5.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;"><span class="math inline">\(f'(x)\)</span></td>
+<td>derivada utilizada por Newton</td>
+<td>5.7</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 </section>
-<section id="estructura-actual" class="level2 unnumbered unlisted">
-<h2 class="unnumbered unlisted anchored" data-anchor-id="estructura-actual">Estructura actual</h2>
-<ul>
-<li><strong>Capítulo 1. Lógica y conjuntos:</strong> proposiciones, operaciones, relaciones, funciones, cardinalidad y álgebra de Boole.</li>
-<li><strong>Capítulo 2. Números enteros y reales:</strong> inducción, divisibilidad, primos, estructura de los reales, exponentes y valor absoluto.</li>
-<li><strong>Capítulo 3. Números complejos:</strong> plano real, forma polar, construcción de <span class="math inline">\(\mathbb C\)</span>, operaciones, conjugado, división, potencias y raíces.</li>
-<li><strong>Capítulo 4. Polinomios:</strong> aritmética y división, raíces y multiplicidades, teorema fundamental del álgebra, factorización, funciones racionales y fracciones parciales.</li>
-<li><strong>Capítulo 5. Métodos numéricos para la estimación de raíces:</strong> acotación, separación, Sturm, Descartes, bisección, secante y Newton, con criterios de error y evaluación mediante Horner.</li>
-</ul>
+<section id="índice-de-figuras" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="índice-de-figuras">Índice de figuras</h2>
+<section id="capítulo-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="capítulo-1">Capítulo 1</h3>
+<ol type="1">
+<li><strong>Operaciones con conjuntos:</strong> unión, intersección, complemento y diferencia simétrica (sección 1.4).</li>
+<li><strong>Relaciones y funciones:</strong> relación general, función y no-función (sección 1.7).</li>
+<li><strong>Composición de funciones:</strong> recorrido de <span class="math inline">\(g\circ f\)</span> (sección 1.7).</li>
+<li><strong>Tipos de funciones:</strong> inyectiva, suprayectiva y biyectiva (sección 1.8).</li>
+</ol>
+</section>
+<section id="capítulo-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="capítulo-2">Capítulo 2</h3>
+<ol type="1">
+<li><strong>Inducción y números impares:</strong> construcción de cuadrados (sección 2.2).</li>
+<li><strong>Algoritmo de Euclides:</strong> residuos sucesivos (sección 2.3).</li>
+<li><strong>Cadena de factorización:</strong> descomposición prima de <span class="math inline">\(756\)</span> (sección 2.4).</li>
+<li><strong>Jerarquía de sistemas numéricos:</strong> <span class="math inline">\(\mathbb N\subseteq\mathbb Z\subseteq\mathbb Q\subseteq\mathbb R\)</span> (sección 2.5).</li>
+<li><strong>Valor absoluto:</strong> distancia e intervalo central (sección 2.8).</li>
+</ol>
+</section>
+<section id="capítulo-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="capítulo-3">Capítulo 3</h3>
+<ol type="1">
+<li><strong>Plano complejo:</strong> representación cartesiana y polar (sección 3.2).</li>
+<li><strong>Suma vectorial:</strong> regla del paralelogramo (sección 3.3).</li>
+<li><strong>Complejo conjugado:</strong> reflexión respecto del eje real (sección 3.7).</li>
+<li><strong>Raíces de la unidad:</strong> distribución sobre la circunferencia unitaria (sección 3.9).</li>
+</ol>
+</section>
+<section id="capítulo-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="capítulo-4">Capítulo 4</h3>
+<ol type="1">
+<li><strong>División polinomial:</strong> relación entre dividendo, divisor, cociente y residuo (sección 4.3).</li>
+<li><strong>Multiplicidad:</strong> comportamiento local de raíces simples, dobles y triples (sección 4.6).</li>
+<li><strong>Raíces conjugadas:</strong> simetría respecto del eje real (sección 4.9).</li>
+<li><strong>Funciones racionales:</strong> huecos y asíntotas (sección 4.10).</li>
+</ol>
+</section>
+<section id="capítulo-5" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="capítulo-5">Capítulo 5</h3>
+<ol type="1">
+<li><strong>Acotación y separación:</strong> cota global e intervalos con raíces (secciones 5.1 y 5.2).</li>
+<li><strong>Bisección:</strong> reducción sucesiva del intervalo (sección 5.5).</li>
+<li><strong>Secante y Newton:</strong> comparación de cuerda y tangente (secciones 5.6 y 5.7).</li>
+</ol>
+</section>
+</section>
+<section id="índice-de-cuadros" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="índice-de-cuadros">Índice de cuadros</h2>
+<ol type="1">
+<li>Propiedades básicas de las operaciones en <span class="math inline">\(\mathbb Z\)</span> (sección 2.1).</li>
+<li>Correspondencia entre desigualdades e intervalos (sección 2.6).</li>
+<li>Índice alfabético de conceptos principales (este apartado).</li>
+<li>Símbolos utilizados en los capítulos 1 a 5 (este apartado).</li>
+</ol>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -739,10 +1184,13 @@ document.addEventListener("DOMContentLoaded", function () {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./05-metodos-raices.html" class="pagination-link" aria-label="Métodos numéricos para la estimación de raíces">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Métodos numéricos para la estimación de raíces</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./01-logica-conjuntos.html" class="pagination-link" aria-label="Lógica y conjuntos">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lógica y conjuntos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="Referencias generales">
+        <span class="nav-page-text">Referencias generales</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

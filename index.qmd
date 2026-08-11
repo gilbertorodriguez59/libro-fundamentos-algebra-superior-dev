@@ -1,13 +1,11 @@
----
-title: "Presentación"
----
+# Presentación {.unnumbered}
 
 Este libro presenta los fundamentos del Álgebra Superior con rigor matemático y una exposición accesible. Cada tema parte de su significado intuitivo, establece después la definición formal y desarrolla propiedades, demostraciones, ejemplos, contraejemplos y ejercicios graduados.
 
 La obra está concebida como complemento teórico de *Álgebra Superior con aplicaciones en R y GeoGebra*. La numeración de los capítulos y de las secciones principales será compatible entre ambos libros para facilitar la consulta cruzada.
 
 ::: {.content-visible when-format="html"}
-<p class="pdf-download-hero"><a class="btn btn-primary" href="Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-4.pdf" download>Descargar el libro en PDF</a></p>
+<p class="pdf-download-hero"><a class="btn btn-primary" href="Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-5.pdf" download>Descargar el libro en PDF</a></p>
 :::
 
 ## Propósito {.unnumbered .unlisted}
@@ -33,3 +31,4 @@ La obra incluye, al final, un índice temático, un índice de símbolos, un ín
 - **Capítulo 2. Números enteros y reales:** inducción, divisibilidad, primos, estructura de los reales, exponentes y valor absoluto.
 - **Capítulo 3. Números complejos:** plano real, forma polar, construcción de $\mathbb C$, operaciones, conjugado, división, potencias y raíces.
 - **Capítulo 4. Polinomios:** aritmética y división, raíces y multiplicidades, teorema fundamental del álgebra, factorización, funciones racionales y fracciones parciales.
+- **Capítulo 5. Métodos numéricos para la estimación de raíces:** acotación, separación, Sturm, Descartes, bisección, secante y Newton, con criterios de error y evaluación mediante Horner.

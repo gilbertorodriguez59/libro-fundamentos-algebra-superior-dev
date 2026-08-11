@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>5&nbsp; Métodos numéricos para la estimación de raíces – Fundamentos Matemáticos del Álgebra Superior</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./indices.html" rel="next">
+<link href="./04-polinomios.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-b468ad7647d1a5046cec15f4388df248.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05-metodos-raices.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Métodos numéricos para la estimación de raíces</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Contenido del libro</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/gilbertorodriguez59/libro-fundamentos-algebra-superior-dev" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+    <a href="./Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-5.pdf" title="Descargar PDF" class="quarto-navigation-tool px-1" aria-label="Descargar PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-logica-conjuntos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lógica y conjuntos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-enteros-reales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Números enteros y reales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-numeros-complejos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Números complejos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-polinomios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Polinomios</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-metodos-raices.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Métodos numéricos para la estimación de raíces</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./indices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índices de consulta</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias generales</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En este capítulo</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-acotacion-raices" id="toc-sec-acotacion-raices" class="nav-link active" data-scroll-target="#sec-acotacion-raices"><span class="header-section-number">5.1</span> Acotación de raíces</a></li>
+  <li><a href="#sec-separacion-raices" id="toc-sec-separacion-raices" class="nav-link" data-scroll-target="#sec-separacion-raices"><span class="header-section-number">5.2</span> Separación de raíces</a></li>
+  <li><a href="#sec-sturm" id="toc-sec-sturm" class="nav-link" data-scroll-target="#sec-sturm"><span class="header-section-number">5.3</span> Teorema de Sturm</a></li>
+  <li><a href="#sec-descartes" id="toc-sec-descartes" class="nav-link" data-scroll-target="#sec-descartes"><span class="header-section-number">5.4</span> Regla de los signos de Descartes</a></li>
+  <li><a href="#sec-biseccion" id="toc-sec-biseccion" class="nav-link" data-scroll-target="#sec-biseccion"><span class="header-section-number">5.5</span> Estimación mediante bisección</a></li>
+  <li><a href="#sec-secante" id="toc-sec-secante" class="nav-link" data-scroll-target="#sec-secante"><span class="header-section-number">5.6</span> Estimación mediante el método de la secante</a></li>
+  <li><a href="#sec-newton" id="toc-sec-newton" class="nav-link" data-scroll-target="#sec-newton"><span class="header-section-number">5.7</span> Estimación mediante el método de Newton</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Métodos numéricos para la estimación de raíces</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Este capítulo desarrolla la Unidad 5 del programa de Álgebra Superior de la Facultad de Ciencias de la UASLP <span class="citation" data-cites="uaslp2011">(<a href="references.html#ref-uaslp2011" role="doc-biblioref">Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011</a>)</span>. El Teorema Fundamental del Álgebra garantiza que un polinomio no constante posee raíces complejas, pero no indica dónde se encuentran ni cómo calcularlas. Aquí se estudian herramientas para <strong>acotar</strong>, <strong>contar</strong>, <strong>separar</strong> y <strong>aproximar</strong> las raíces reales de un polinomio.</p>
+<section id="introducción" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="introducción">Introducción</h2>
+<p>Sea</p>
+<p><span class="math display">\[
+p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0,
+\qquad a_n\ne0.
+\]</span></p>
+<p>Resolver <span class="math inline">\(p(x)=0\)</span> puede significar dos cosas distintas:</p>
+<ol type="1">
+<li>obtener una expresión exacta para cada raíz, cuando es posible;</li>
+<li>producir aproximaciones numéricas con un error controlado.</li>
+</ol>
+<p>Para polinomios de grado alto, la segunda vía es indispensable. Un cálculo confiable requiere responder, en orden, cuatro preguntas:</p>
+<ol type="1">
+<li>¿en qué intervalo pueden estar las raíces reales?;</li>
+<li>¿cuántas raíces contiene un intervalo?;</li>
+<li>¿se ha aislado una sola raíz?;</li>
+<li>¿qué método conviene y qué error tiene la aproximación?</li>
+</ol>
+<section id="objetivos" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="objetivos">Objetivos</h3>
+<p>Al terminar el capítulo, el lector podrá:</p>
+<ul>
+<li>obtener cotas para las raíces de un polinomio;</li>
+<li>separar raíces mediante cambios de signo y análisis de intervalos;</li>
+<li>contar exactamente raíces reales con el teorema de Sturm;</li>
+<li>usar la regla de los signos de Descartes y el teorema de Budan-Fourier;</li>
+<li>aplicar bisección, secante y Newton;</li>
+<li>establecer criterios de paro y cotas de error;</li>
+<li>reconocer las condiciones de éxito y los posibles fallos de cada método.</li>
+</ul>
+</section>
+</section>
+<section id="sec-acotacion-raices" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="sec-acotacion-raices"><span class="header-section-number">5.1</span> Acotación de raíces</h2>
+<p>Una <strong>cota de raíces</strong> reduce la búsqueda de todo <span class="math inline">\(\mathbb R\)</span> a un intervalo finito.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Cota de Cauchy">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Cota de Cauchy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Toda raíz compleja <span class="math inline">\(z\)</span> de <span class="math inline">\(p\)</span> satisface</p>
+<p><span class="math display">\[
+|z|\le 1+\max_{0\le k&lt;n}\left|\frac{a_k}{a_n}\right|.
+\]</span></p>
+<p>En particular, todas las raíces reales pertenecen al intervalo <span class="math inline">\([-R,R]\)</span>, donde <span class="math inline">\(R\)</span> es el miembro derecho.</p>
+</div>
+</div>
+<section id="justificación" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="justificación">Justificación</h3>
+<p>Sea</p>
+<p><span class="math display">\[
+M=\max_{0\le k&lt;n}\left|\frac{a_k}{a_n}\right|.
+\]</span></p>
+<p>Si <span class="math inline">\(|z|&gt;1+M\)</span>, entonces <span class="math inline">\(|z|-1&gt;M\)</span> y</p>
+<p><span class="math display">\[
+\begin{aligned}
+|a_{n-1}z^{n-1}+\cdots+a_0|
+&amp;\le |a_n|M\left(|z|^{n-1}+\cdots+1\right)\\
+&amp;=|a_n|M\frac{|z|^n-1}{|z|-1}\\
+&amp;&lt;|a_n||z|^n.
+\end{aligned}
+\]</span></p>
+<p>Por la desigualdad triangular, el término principal no puede ser cancelado por la suma de los demás; por tanto, <span class="math inline">\(p(z)\ne0\)</span>. Esto contradice que <span class="math inline">\(z\)</span> sea raíz.</p>
+</section>
+<section id="ejemplo" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejemplo">Ejemplo</h3>
+<p>Para</p>
+<p><span class="math display">\[
+p(x)=x^4+x^3-7x^2-x+6,
+\]</span></p>
+<p>la cota de Cauchy es</p>
+<p><span class="math display">\[
+R=1+\max\{1,7,1,6\}=8.
+\]</span></p>
+<p>Así, toda raíz real se encuentra en <span class="math inline">\([-8,8]\)</span>. La factorización</p>
+<p><span class="math display">\[
+p(x)=(x+3)(x+1)(x-1)(x-2)
+\]</span></p>
+<p>confirma que las raíces <span class="math inline">\(-3,-1,1,2\)</span> respetan la cota. La cota no pretende ser exacta: su propósito es garantizar un intervalo de búsqueda.</p>
+</section>
+<section id="cotas-mediante-división-sintética" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="cotas-mediante-división-sintética">Cotas mediante división sintética</h3>
+<p>Cuando <span class="math inline">\(a_n&gt;0\)</span>, la división sintética puede producir cotas más ajustadas:</p>
+<ul>
+<li>si al dividir entre <span class="math inline">\(x-b\)</span>, con <span class="math inline">\(b&gt;0\)</span>, la fila final tiene únicamente números no negativos, entonces <span class="math inline">\(b\)</span> es cota superior de las raíces reales;</li>
+<li>una regla análoga, con signos alternantes al dividir entre <span class="math inline">\(x-a\)</span> para <span class="math inline">\(a&lt;0\)</span>, permite obtener una cota inferior.</li>
+</ul>
+<p>Estas reglas deben aplicarse con todos los coeficientes, incluidos los ceros correspondientes a potencias ausentes.</p>
+<div id="fig-acotacion-separacion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-acotacion-separacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/acotacion-separacion-raices.png" class="img-fluid figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-acotacion-separacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.1: Acotar reduce la búsqueda a un intervalo finito; separar identifica subintervalos que contienen raíces individuales.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="sec-separacion-raices" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="sec-separacion-raices"><span class="header-section-number">5.2</span> Separación de raíces</h2>
+<p><strong>Separar una raíz</strong> significa encontrar un intervalo que contenga exactamente una raíz real.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Cambio de signo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Cambio de signo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si <span class="math inline">\(p\)</span> es continuo en <span class="math inline">\([a,b]\)</span> y</p>
+<p><span class="math display">\[
+p(a)p(b)&lt;0,
+\]</span></p>
+<p>entonces existe al menos una raíz en <span class="math inline">\((a,b)\)</span>.</p>
+</div>
+</div>
+<p>El resultado se deduce del teorema del valor intermedio. Sin embargo, un cambio de signo no garantiza unicidad. Además, una raíz de multiplicidad par puede no producir cambio de signo.</p>
+<section id="procedimiento-básico" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="procedimiento-básico">Procedimiento básico</h3>
+<ol type="1">
+<li>Obtenga primero una cota global <span class="math inline">\([-R,R]\)</span>.</li>
+<li>Divida el intervalo en subintervalos.</li>
+<li>Evalúe <span class="math inline">\(p\)</span> en los extremos.</li>
+<li>Marque cada intervalo con cambio de signo.</li>
+<li>Use información adicional para demostrar que cada intervalo contiene una sola raíz.</li>
+</ol>
+<p>La unicidad puede establecerse si <span class="math inline">\(p'\)</span> conserva signo en el intervalo, pues entonces <span class="math inline">\(p\)</span> es estrictamente monótona. Si <span class="math inline">\(p'\)</span> tiene ceros, estos puntos críticos ayudan a dividir el intervalo en regiones de monotonía.</p>
+</section>
+<section id="ejemplo-1" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejemplo-1">Ejemplo</h3>
+<p>Sea</p>
+<p><span class="math display">\[
+f(x)=x^3-x-1.
+\]</span></p>
+<p>Como <span class="math inline">\(f(1)=-1\)</span> y <span class="math inline">\(f(2)=5\)</span>, existe una raíz en <span class="math inline">\((1,2)\)</span>. Además,</p>
+<p><span class="math display">\[
+f'(x)=3x^2-1&gt;0\qquad\text{para }x\in[1,2].
+\]</span></p>
+<p>Por tanto, <span class="math inline">\(f\)</span> es estrictamente creciente en ese intervalo y la raíz es única.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Raíces pares">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Raíces pares
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para <span class="math inline">\(g(x)=(x-1)^2(x+2)\)</span>, la raíz <span class="math inline">\(x=1\)</span> tiene multiplicidad par y la gráfica toca el eje sin cruzarlo. Un muestreo basado solo en cambios de signo puede omitirla. Las raíces de <span class="math inline">\(\gcd(g,g')\)</span> revelan las raíces múltiples.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-sturm" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="sec-sturm"><span class="header-section-number">5.3</span> Teorema de Sturm</h2>
+<p>El teorema de Sturm permite contar exactamente las raíces reales <strong>distintas</strong> de un polinomio dentro de un intervalo, siempre que los extremos no sean raíces.</p>
+<section id="sucesión-de-sturm" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="sucesión-de-sturm">Sucesión de Sturm</h3>
+<p>Para un polinomio <span class="math inline">\(p\)</span> sin factores múltiples se construye</p>
+<p><span class="math display">\[
+p_0=p,\qquad p_1=p',
+\]</span></p>
+<p>y, mediante divisiones euclidianas sucesivas,</p>
+<p><span class="math display">\[
+p_{k-1}=q_kp_k-p_{k+1},
+\]</span></p>
+<p>donde <span class="math inline">\(p_{k+1}\)</span> es el negativo del residuo. El proceso termina al llegar a una constante no nula.</p>
+<p>Para un número real <span class="math inline">\(t\)</span> que no anule ningún polinomio de la sucesión, sea <span class="math inline">\(V(t)\)</span> el número de cambios de signo de</p>
+<p><span class="math display">\[
+p_0(t),p_1(t),\ldots,p_m(t),
+\]</span></p>
+<p>ignorando los valores cero.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Teorema de Sturm">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Teorema de Sturm
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si <span class="math inline">\(a&lt;b\)</span> y ninguno es raíz de <span class="math inline">\(p\)</span>, el número de raíces reales distintas de <span class="math inline">\(p\)</span> en <span class="math inline">\((a,b)\)</span> es</p>
+<p><span class="math display">\[
+V(a)-V(b).
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="ejemplo-completo" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejemplo-completo">Ejemplo completo</h3>
+<p>Para</p>
+<p><span class="math display">\[
+p(x)=x^3-x,
+\]</span></p>
+<p>una sucesión de Sturm es</p>
+<p><span class="math display">\[
+p_0=x^3-x,\qquad
+p_1=3x^2-1,\qquad
+p_2=\frac{2}{3}x,\qquad
+p_3=1.
+\]</span></p>
+<p>Cuando <span class="math inline">\(x\to-\infty\)</span>, los signos son <span class="math inline">\((-,+,-,+)\)</span>, por lo que <span class="math inline">\(V(-\infty)=3\)</span>. Cuando <span class="math inline">\(x\to+\infty\)</span>, todos los signos son positivos y <span class="math inline">\(V(+\infty)=0\)</span>. En consecuencia, <span class="math inline">\(p\)</span> tiene tres raíces reales distintas. En efecto,</p>
+<p><span class="math display">\[
+x^3-x=x(x-1)(x+1).
+\]</span></p>
+<p>Si el polinomio tiene raíces múltiples, primero se elimina el factor común de <span class="math inline">\(p\)</span> y <span class="math inline">\(p'\)</span> para obtener su parte libre de cuadrados; después se aplica Sturm.</p>
+</section>
+</section>
+<section id="sec-descartes" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="sec-descartes"><span class="header-section-number">5.4</span> Regla de los signos de Descartes</h2>
+<p>Sea <span class="math inline">\(V(p)\)</span> el número de variaciones de signo en la lista de coeficientes no nulos de <span class="math inline">\(p\)</span>, ordenados por potencias descendentes.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Regla de Descartes">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Regla de Descartes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El número <span class="math inline">\(N_+\)</span> de raíces reales positivas de <span class="math inline">\(p\)</span>, contadas con multiplicidad, satisface</p>
+<p><span class="math display">\[
+N_+=V(p)-2k
+\]</span></p>
+<p>para algún entero <span class="math inline">\(k\ge0\)</span>. El número de raíces negativas se obtiene aplicando la misma regla a <span class="math inline">\(p(-x)\)</span>.</p>
+</div>
+</div>
+<section id="ejemplo-2" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejemplo-2">Ejemplo</h3>
+<p>Considere</p>
+<p><span class="math display">\[
+p(x)=x^4+x^3-7x^2-x+6.
+\]</span></p>
+<p>Los signos de <span class="math inline">\(p(x)\)</span> son</p>
+<p><span class="math display">\[
++,+,-,-,+,
+\]</span></p>
+<p>con dos variaciones. Por tanto, <span class="math inline">\(p\)</span> posee dos o cero raíces positivas. Para</p>
+<p><span class="math display">\[
+p(-x)=x^4-x^3-7x^2+x+6,
+\]</span></p>
+<p>también hay dos variaciones; por tanto, existen dos o cero raíces negativas. La regla proporciona posibilidades, no un conteo exacto. La factorización muestra que en este caso hay dos positivas y dos negativas.</p>
+</section>
+<section id="teorema-de-budan-fourier" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="teorema-de-budan-fourier">Teorema de Budan-Fourier</h3>
+<p>Para <span class="math inline">\(t\in\mathbb R\)</span>, considere la sucesión de derivadas</p>
+<p><span class="math display">\[
+p(t),p'(t),p''(t),\ldots,p^{(n)}(t)
+\]</span></p>
+<p>y sea <span class="math inline">\(W(t)\)</span> su número de variaciones de signo, omitiendo ceros. El número de raíces reales de <span class="math inline">\(p\)</span> en <span class="math inline">\((a,b]\)</span>, contadas con multiplicidad, es a lo sumo</p>
+<p><span class="math display">\[
+W(a)-W(b),
+\]</span></p>
+<p>y difiere de esta cantidad en un número par. Descartes puede interpretarse como un caso límite de esta idea.</p>
+<p>La diferencia esencial es:</p>
+<ul>
+<li>Descartes restringe las posibilidades para raíces positivas o negativas;</li>
+<li>Budan-Fourier acota el número de raíces en un intervalo;</li>
+<li>Sturm entrega el conteo exacto de raíces distintas.</li>
+</ul>
+</section>
+</section>
+<section id="sec-biseccion" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="sec-biseccion"><span class="header-section-number">5.5</span> Estimación mediante bisección</h2>
+<p>La bisección conserva en cada iteración un intervalo cuyos extremos tienen signos opuestos.</p>
+<p>Suponga que <span class="math inline">\(f\)</span> es continua en <span class="math inline">\([a_0,b_0]\)</span> y <span class="math inline">\(f(a_0)f(b_0)&lt;0\)</span>. En la iteración <span class="math inline">\(n\)</span> se calcula</p>
+<p><span class="math display">\[
+m_n=\frac{a_n+b_n}{2}.
+\]</span></p>
+<p>Se conserva la mitad donde ocurre el cambio de signo. Si <span class="math inline">\(f(m_n)=0\)</span>, el proceso termina exactamente.</p>
+<section id="cota-de-error" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="cota-de-error">Cota de error</h3>
+<p>Después de <span class="math inline">\(n\)</span> bisecciones, el intervalo tiene longitud</p>
+<p><span class="math display">\[
+\frac{b_0-a_0}{2^n}.
+\]</span></p>
+<p>Si se usa el punto medio como aproximación <span class="math inline">\(x_n\)</span>, entonces</p>
+<p><span class="math display">\[
+|x_n-r|\le \frac{b_0-a_0}{2^{n+1}},
+\]</span></p>
+<p>donde <span class="math inline">\(r\)</span> es la raíz contenida en el intervalo.</p>
+<p>Para garantizar un error menor que <span class="math inline">\(\varepsilon\)</span> basta elegir</p>
+<p><span class="math display">\[
+n\ge
+\left\lceil
+\log_2\left(\frac{b_0-a_0}{2\varepsilon}\right)
+\right\rceil.
+\]</span></p>
+</section>
+<section id="ejemplo-3" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejemplo-3">Ejemplo</h3>
+<p>Para <span class="math inline">\(f(x)=x^3-x-1\)</span> en <span class="math inline">\([1,2]\)</span>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(n\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(a_n\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(b_n\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(m_n\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(f(m_n)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.000000</td>
+<td style="text-align: right;">2.000000</td>
+<td style="text-align: right;">1.500000</td>
+<td style="text-align: right;">0.875000</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.000000</td>
+<td style="text-align: right;">1.500000</td>
+<td style="text-align: right;">1.250000</td>
+<td style="text-align: right;">-0.296875</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1.250000</td>
+<td style="text-align: right;">1.500000</td>
+<td style="text-align: right;">1.375000</td>
+<td style="text-align: right;">0.224609</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1.250000</td>
+<td style="text-align: right;">1.375000</td>
+<td style="text-align: right;">1.312500</td>
+<td style="text-align: right;">-0.051514</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1.312500</td>
+<td style="text-align: right;">1.375000</td>
+<td style="text-align: right;">1.343750</td>
+<td style="text-align: right;">0.082611</td>
+</tr>
+</tbody>
+</table>
+<p>Tras cinco pasos la raíz queda encerrada en <span class="math inline">\([1.3125,1.34375]\)</span>.</p>
+<div id="fig-biseccion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-biseccion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/biseccion-raiz.png" class="img-fluid figure-img" style="width:86.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-biseccion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.2: La bisección conserva la mitad del intervalo en la que permanece el cambio de signo.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="ventajas-y-limitaciones" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ventajas-y-limitaciones">Ventajas y limitaciones</h3>
+<ul>
+<li>Converge siempre bajo sus hipótesis.</li>
+<li>Produce una cota de error explícita.</li>
+<li>Solo necesita evaluaciones de la función.</li>
+<li>Converge linealmente y puede ser más lenta que los métodos abiertos.</li>
+<li>Requiere un cambio de signo, por lo que no detecta directamente raíces de multiplicidad par.</li>
+</ul>
+</section>
+</section>
+<section id="sec-secante" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="sec-secante"><span class="header-section-number">5.6</span> Estimación mediante el método de la secante</h2>
+<p>La secante reemplaza la curva por la recta que pasa por <span class="math inline">\((x_{n-1},f(x_{n-1}))\)</span> y <span class="math inline">\((x_n,f(x_n))\)</span>. La intersección de esa recta con el eje <span class="math inline">\(x\)</span> es</p>
+<p><span class="math display">\[
+x_{n+1}=x_n-f(x_n)
+\frac{x_n-x_{n-1}}{f(x_n)-f(x_{n-1})}.
+\]</span></p>
+<section id="ejemplo-4" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejemplo-4">Ejemplo</h3>
+<p>Con <span class="math inline">\(f(x)=x^3-x-1\)</span>, <span class="math inline">\(x_0=1\)</span> y <span class="math inline">\(x_1=2\)</span>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">iteración</th>
+<th style="text-align: right;">aproximación</th>
+<th style="text-align: right;"><span class="math inline">\(f(x_n)\)</span></th>
+<th style="text-align: right;">cambio absoluto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.166666667</td>
+<td style="text-align: right;">-0.578703704</td>
+<td style="text-align: right;">0.833333333</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.253112033</td>
+<td style="text-align: right;">-0.285363030</td>
+<td style="text-align: right;">0.086445367</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1.337206446</td>
+<td style="text-align: right;">0.053880587</td>
+<td style="text-align: right;">0.084094413</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1.323850096</td>
+<td style="text-align: right;">-0.003698115</td>
+<td style="text-align: right;">0.013356349</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1.324707937</td>
+<td style="text-align: right;">-0.000042734</td>
+<td style="text-align: right;">0.000857841</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1.324717965</td>
+<td style="text-align: right;"><span class="math inline">\(3.46\times10^{-8}\)</span></td>
+<td style="text-align: right;">0.000010029</td>
+</tr>
+</tbody>
+</table>
+<p>La convergencia es superlineal cerca de una raíz simple, con orden aproximado <span class="math inline">\(1.618\)</span>. No requiere derivadas, pero puede fallar si</p>
+<p><span class="math display">\[
+f(x_n)-f(x_{n-1})
+\]</span></p>
+<p>es cero o extremadamente pequeño. Tampoco conserva necesariamente un intervalo que encierre la raíz.</p>
+</section>
+</section>
+<section id="sec-newton" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="sec-newton"><span class="header-section-number">5.7</span> Estimación mediante el método de Newton</h2>
+<p>La recta tangente a <span class="math inline">\(y=f(x)\)</span> en <span class="math inline">\((x_n,f(x_n))\)</span> es</p>
+<p><span class="math display">\[
+y-f(x_n)=f'(x_n)(x-x_n).
+\]</span></p>
+<p>Al imponer <span class="math inline">\(y=0\)</span> se obtiene la iteración de Newton:</p>
+<p><span class="math display">\[
+x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.
+\]</span></p>
+<section id="ejemplo-5" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejemplo-5">Ejemplo</h3>
+<p>Para <span class="math inline">\(f(x)=x^3-x-1\)</span>, con <span class="math inline">\(x_0=1.5\)</span>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">iteración</th>
+<th style="text-align: right;"><span class="math inline">\(x_n\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(f(x_n)\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(|x_n-x_{n-1}|\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.347826087</td>
+<td style="text-align: right;">0.100682173</td>
+<td style="text-align: right;">0.152173913</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.325200399</td>
+<td style="text-align: right;">0.002058362</td>
+<td style="text-align: right;">0.022625688</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1.324718174</td>
+<td style="text-align: right;"><span class="math inline">\(9.24\times10^{-7}\)</span></td>
+<td style="text-align: right;">0.000482225</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1.324717957</td>
+<td style="text-align: right;"><span class="math inline">\(1.87\times10^{-13}\)</span></td>
+<td style="text-align: right;"><span class="math inline">\(2.17\times10^{-7}\)</span></td>
+</tr>
+</tbody>
+</table>
+<div id="fig-secante-newton" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-secante-newton-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/secante-newton.png" class="img-fluid figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-secante-newton-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5.3: La secante usa dos puntos de la curva; Newton usa la tangente en una aproximación.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="convergencia-y-elección-inicial" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="convergencia-y-elección-inicial">Convergencia y elección inicial</h3>
+<p>Si <span class="math inline">\(r\)</span> es una raíz simple, <span class="math inline">\(f\)</span> tiene derivadas continuas cerca de <span class="math inline">\(r\)</span> y <span class="math inline">\(x_0\)</span> está suficientemente próximo, Newton converge cuadráticamente:</p>
+<p><span class="math display">\[
+|e_{n+1}|\approx C|e_n|^2,
+\qquad e_n=x_n-r.
+\]</span></p>
+<p>Esto significa que el número de cifras correctas puede aproximadamente duplicarse en cada paso. Sin embargo, Newton puede:</p>
+<ul>
+<li>dividir entre una derivada nula o muy pequeña;</li>
+<li>alejarse de la raíz si <span class="math inline">\(x_0\)</span> es inadecuado;</li>
+<li>entrar en un ciclo;</li>
+<li>converger lentamente en raíces múltiples.</li>
+</ul>
+</section>
+<section id="raíces-múltiples" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="raíces-múltiples">Raíces múltiples</h3>
+<p>Si se conoce que <span class="math inline">\(r\)</span> tiene multiplicidad <span class="math inline">\(m\)</span>, la iteración modificada</p>
+<p><span class="math display">\[
+x_{n+1}=x_n-m\frac{f(x_n)}{f'(x_n)}
+\]</span></p>
+<p>puede recuperar convergencia cuadrática.</p>
+</section>
+<section id="evaluación-eficiente-con-horner" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="evaluación-eficiente-con-horner">Evaluación eficiente con Horner</h3>
+<p>Para un polinomio, cada paso de Newton requiere <span class="math inline">\(p(x_n)\)</span> y <span class="math inline">\(p'(x_n)\)</span>. El esquema de Horner permite evaluar ambos con costo lineal en el grado, sin calcular todas las potencias de <span class="math inline">\(x_n\)</span>. Por ello, Newton-Horner es una combinación natural para raíces de polinomios.</p>
+</section>
+</section>
+<section id="criterios-de-paro-y-validación" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="criterios-de-paro-y-validación">Criterios de paro y validación</h2>
+<p>En los métodos iterativos se emplean, de manera conjunta, criterios como</p>
+<p><span class="math display">\[
+|x_{n+1}-x_n|&lt;\varepsilon_x,
+\qquad
+|f(x_{n+1})|&lt;\varepsilon_f,
+\]</span></p>
+<p>y un número máximo de iteraciones. Ninguno debe confundirse automáticamente con el error verdadero <span class="math inline">\(|x_n-r|\)</span>.</p>
+<p>Una aproximación debe acompañarse de:</p>
+<ul>
+<li>el método utilizado;</li>
+<li>los datos iniciales;</li>
+<li>la tolerancia;</li>
+<li>el número de iteraciones;</li>
+<li>el residuo <span class="math inline">\(|f(x_n)|\)</span>;</li>
+<li>una cota de error, si el método la proporciona.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Método</th>
+<th>Datos iniciales</th>
+<th>Garantía principal</th>
+<th>Velocidad cerca de raíz simple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bisección</td>
+<td>intervalo con cambio de signo</td>
+<td>convergencia y cota de error</td>
+<td>lineal</td>
+</tr>
+<tr class="even">
+<td>Secante</td>
+<td>dos aproximaciones</td>
+<td>no requiere derivada</td>
+<td>superlineal</td>
+</tr>
+<tr class="odd">
+<td>Newton</td>
+<td>una aproximación y derivada</td>
+<td>muy rápido si inicia cerca</td>
+<td>cuadrática</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="errores-frecuentes" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ul>
+<li>Interpretar una cota de Cauchy como la ubicación exacta de una raíz.</li>
+<li>Concluir que todo cambio de signo encierra exactamente una raíz.</li>
+<li>Suponer que ausencia de cambio de signo significa ausencia de raíces.</li>
+<li>Contar coeficientes cero como variaciones en la regla de Descartes.</li>
+<li>Cambiar el signo equivocado durante la bisección.</li>
+<li>Usar secante cuando dos valores funcionales son casi iguales.</li>
+<li>Aplicar Newton sin revisar que <span class="math inline">\(f'(x_n)\)</span> sea segura.</li>
+<li>Detenerse únicamente porque dos iteraciones coinciden en la precisión de la máquina;</li>
+<li>informar una aproximación sin residuo, tolerancia ni criterio de paro.</li>
+</ul>
+</section>
+<section id="ejercicios-graduados" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="ejercicios-graduados">Ejercicios graduados</h2>
+<section id="nivel-1" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="nivel-1">Nivel 1</h3>
+<ol type="1">
+<li>Obtenga la cota de Cauchy de <span class="math inline">\(2x^4-3x^2+7x-5\)</span>.</li>
+<li>Determine las posibilidades de raíces positivas y negativas de <span class="math inline">\(x^5-2x^4+x^2-3\)</span> mediante Descartes.</li>
+<li>Compruebe que <span class="math inline">\(x^3-x-1\)</span> tiene una única raíz en <span class="math inline">\([1,2]\)</span>.</li>
+<li>Realice cuatro iteraciones de bisección para <span class="math inline">\(x^3-2=0\)</span> en <span class="math inline">\([1,2]\)</span>.</li>
+</ol>
+</section>
+<section id="nivel-2" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="nivel-2">Nivel 2</h3>
+<ol start="5" type="1">
+<li>Construya la sucesión de Sturm de <span class="math inline">\(x^3-x\)</span> y cuente sus raíces en <span class="math inline">\((-2,1/2)\)</span>.</li>
+<li>Aísle las raíces reales de <span class="math inline">\(x^4-5x^2+4\)</span> usando una tabla de signos y monotonía.</li>
+<li>Aproxime la raíz de <span class="math inline">\(x^3-x-1\)</span> con secante hasta que el cambio sea menor que <span class="math inline">\(10^{-6}\)</span>.</li>
+<li>Aplique Newton a <span class="math inline">\(x^3-2\)</span> con <span class="math inline">\(x_0=1.5\)</span> y compare el error con bisección.</li>
+</ol>
+</section>
+<section id="nivel-3" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="nivel-3">Nivel 3</h3>
+<ol start="9" type="1">
+<li>Investigue por qué Newton converge linealmente para <span class="math inline">\(f(x)=(x-1)^4\)</span> y aplique la versión modificada.</li>
+<li>Encuentre un ejemplo donde Newton entre en un ciclo de periodo dos.</li>
+<li>Compare Budan-Fourier y Sturm para contar raíces de <span class="math inline">\(x^4+x^3-7x^2-x+6\)</span> en varios intervalos.</li>
+<li>Diseñe un método híbrido que comience con bisección y cambie a Newton sin abandonar el intervalo seguro.</li>
+</ol>
+</section>
+</section>
+<section id="proyecto-integrador" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="proyecto-integrador">Proyecto integrador</h2>
+<p>Elija un polinomio real de grado entre <span class="math inline">\(4\)</span> y <span class="math inline">\(7\)</span> con al menos tres raíces reales. Obtenga una cota global, determine las posibilidades dadas por Descartes, cuente y separe las raíces con Sturm, y aproxime cada raíz mediante bisección, secante y Newton. Compare iteraciones, residuos y estabilidad. Presente tablas y gráficas, y distinga con claridad los resultados exactos de las aproximaciones.</p>
+</section>
+<section id="síntesis" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="síntesis">Síntesis</h2>
+<p>La localización precede a la aproximación. Cauchy limita la región de búsqueda; el cambio de signo y la monotonía ayudan a separar; Descartes y Budan-Fourier restringen el número posible de raíces; Sturm entrega un conteo exacto. Bisección ofrece seguridad y error controlado; secante evita derivadas; Newton aprovecha información local para converger con gran rapidez. La elección responsable del método depende de las hipótesis, los datos iniciales y la verificación del residuo.</p>
+</section>
+<section id="referencias-del-capítulo" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="referencias-del-capítulo">Referencias del capítulo</h2>
+<p>La secuencia temática sigue el programa de Álgebra Superior <span class="citation" data-cites="uaslp2011">(<a href="references.html#ref-uaslp2011" role="doc-biblioref">Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011</a>)</span>. La teoría de raíces y las reglas algebraicas se apoyan en <span class="citation" data-cites="cardenas1999">Cárdenas et&nbsp;al. (<a href="references.html#ref-cardenas1999" role="doc-biblioref">1999</a>)</span> y <span class="citation" data-cites="kurosh1987">Kurosh (<a href="references.html#ref-kurosh1987" role="doc-biblioref">1987</a>)</span>. Los métodos iterativos, los criterios de error y el análisis de convergencia se desarrollan con apoyo de <span class="citation" data-cites="burdenFaires2011">Burden y Faires (<a href="references.html#ref-burdenFaires2011" role="doc-biblioref">2011</a>)</span> y <span class="citation" data-cites="chapraCanale2015">Chapra y Canale (<a href="references.html#ref-chapraCanale2015" role="doc-biblioref">2015</a>)</span>.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-burdenFaires2011" class="csl-entry" role="listitem">
+Burden, Richard L., y J. Douglas Faires. 2011. <em>Numerical Analysis</em>. 9.ª ed. Brooks/Cole, Cengage Learning.
+</div>
+<div id="ref-cardenas1999" class="csl-entry" role="listitem">
+Cárdenas, Humberto, Emilio Lluis, Francisco Raggi, y Francisco Tomás. 1999. <em>Álgebra superior</em>. 2.ª ed. Trillas.
+</div>
+<div id="ref-chapraCanale2015" class="csl-entry" role="listitem">
+Chapra, Steven C., y Raymond P. Canale. 2015. <em>Numerical Methods for Engineers</em>. 7.ª ed. McGraw-Hill Education.
+</div>
+<div id="ref-kurosh1987" class="csl-entry" role="listitem">
+Kurosh, Aleksandr G. 1987. <em>Curso de álgebra superior</em>. Editorial Mir.
+</div>
+<div id="ref-uaslp2011" class="csl-entry" role="listitem">
+Universidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. <em>Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico</em>. Propuesta de modificación curricular.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<button class="book-menu-toggle" type="button" aria-controls="TOC" aria-expanded="false">
+  <span aria-hidden="true">☰</span> Menú del libro
+</button>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toc = document.querySelector("body > nav#TOC");
+  if (!toc) return;
+
+  toc.setAttribute("aria-label", "Capítulos y subtemas");
+
+  const download = document.createElement("a");
+  download.className = "sidebar-pdf-download";
+  download.href = "Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-5.pdf";
+  download.setAttribute("download", "");
+  download.textContent = "Descargar PDF";
+  toc.appendChild(download);
+
+  const toggle = document.querySelector(".book-menu-toggle");
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      const open = document.body.classList.toggle("book-menu-open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+  }
+
+  toc.querySelectorAll("a[href^='#']").forEach(function (link) {
+    link.addEventListener("click", function () {
+      document.body.classList.remove("book-menu-open");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  const links = Array.from(toc.querySelectorAll("a[href^='#']"));
+  const targets = links.map(function (link) {
+    const id = decodeURIComponent(link.getAttribute("href").slice(1));
+    return { link: link, target: document.getElementById(id) };
+  }).filter(function (item) { return item.target; });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      const visible = entries.filter(function (entry) { return entry.isIntersecting; })
+        .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
+      if (!visible.length) return;
+      links.forEach(function (link) { link.classList.remove("active"); });
+      const current = targets.find(function (item) { return item.target === visible[0].target; });
+      if (current) {
+        current.link.classList.add("active");
+        current.link.scrollIntoView({ block: "nearest" });
+      }
+    }, { rootMargin: "-12% 0px -76% 0px", threshold: 0 });
+    targets.forEach(function (item) { observer.observe(item.target); });
+  }
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./04-polinomios.html" class="pagination-link" aria-label="Polinomios">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Polinomios</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./indices.html" class="pagination-link" aria-label="Índices de consulta">
+        <span class="nav-page-text">Índices de consulta</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Licencia CC BY-NC-SA 4.0</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

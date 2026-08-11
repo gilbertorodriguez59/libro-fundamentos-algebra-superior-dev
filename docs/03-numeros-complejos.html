@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Números complejos – Fundamentos Matemáticos del Álgebra Superior</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./04-polinomios.html" rel="next">
+<link href="./02-enteros-reales.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-b468ad7647d1a5046cec15f4388df248.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-numeros-complejos.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Números complejos</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Contenido del libro</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/gilbertorodriguez59/libro-fundamentos-algebra-superior-dev" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+    <a href="./Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-5.pdf" title="Descargar PDF" class="quarto-navigation-tool px-1" aria-label="Descargar PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-logica-conjuntos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lógica y conjuntos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-enteros-reales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Números enteros y reales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-numeros-complejos.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Números complejos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-polinomios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Polinomios</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-metodos-raices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Métodos numéricos para la estimación de raíces</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./indices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índices de consulta</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias generales</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En este capítulo</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-r2" id="toc-sec-r2" class="nav-link active" data-scroll-target="#sec-r2"><span class="header-section-number">3.1</span> Definición de <span class="math inline">\(\mathbb R^2\)</span></a></li>
+  <li><a href="#sec-cartesiana-polar" id="toc-sec-cartesiana-polar" class="nav-link" data-scroll-target="#sec-cartesiana-polar"><span class="header-section-number">3.2</span> Representaciones cartesiana y polar de vectores en <span class="math inline">\(\mathbb R^2\)</span></a></li>
+  <li><a href="#sec-operaciones-r2" id="toc-sec-operaciones-r2" class="nav-link" data-scroll-target="#sec-operaciones-r2"><span class="header-section-number">3.3</span> Operaciones con vectores en <span class="math inline">\(\mathbb R^2\)</span></a></li>
+  <li><a href="#sec-modulo-argumento" id="toc-sec-modulo-argumento" class="nav-link" data-scroll-target="#sec-modulo-argumento"><span class="header-section-number">3.4</span> Módulo y argumento</a></li>
+  <li><a href="#sec-imaginarios-complejos" id="toc-sec-imaginarios-complejos" class="nav-link" data-scroll-target="#sec-imaginarios-complejos"><span class="header-section-number">3.5</span> Números imaginarios y complejos</a></li>
+  <li><a href="#sec-operaciones-complejos" id="toc-sec-operaciones-complejos" class="nav-link" data-scroll-target="#sec-operaciones-complejos"><span class="header-section-number">3.6</span> Operaciones básicas con números complejos</a></li>
+  <li><a href="#sec-conjugado" id="toc-sec-conjugado" class="nav-link" data-scroll-target="#sec-conjugado"><span class="header-section-number">3.7</span> Complejo conjugado y sus propiedades</a></li>
+  <li><a href="#sec-division-complejos" id="toc-sec-division-complejos" class="nav-link" data-scroll-target="#sec-division-complejos"><span class="header-section-number">3.8</span> División de complejos</a></li>
+  <li><a href="#sec-potencias-raices" id="toc-sec-potencias-raices" class="nav-link" data-scroll-target="#sec-potencias-raices"><span class="header-section-number">3.9</span> Potencias y raíces de complejos</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Números complejos</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Este capítulo desarrolla la Unidad 3 del programa oficial de Álgebra Superior de la Facultad de Ciencias de la UASLP <span class="citation" data-cites="uaslp2011">(<a href="references.html#ref-uaslp2011" role="doc-biblioref">Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011</a>)</span>. La idea central es construir los números complejos a partir del plano real: primero se estudia <span class="math inline">\(\mathbb R^2\)</span>, después se dota a los pares ordenados de una multiplicación especial y, finalmente, se interpreta cada operación en forma algebraica y geométrica.</p>
+<section id="introducción" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="introducción">Introducción</h2>
+<p>En <span class="math inline">\(\mathbb R\)</span> la ecuación <span class="math inline">\(x^2+1=0\)</span> no tiene solución, porque <span class="math inline">\(x^2\geq 0\)</span> para todo número real. Para resolverla sin perder las leyes usuales del álgebra es necesario ampliar el sistema numérico. Esa ampliación es <span class="math inline">\(\mathbb C\)</span>, el conjunto de los números complejos.</p>
+<p>La construcción no surge de un símbolo misterioso. Un número complejo puede entenderse como un par <span class="math inline">\((a,b)\in\mathbb R^2\)</span> con reglas precisas para sumar y multiplicar. La forma <span class="math inline">\(a+bi\)</span> resume ese par, y la identidad <span class="math inline">\(i^2=-1\)</span> es una consecuencia de la multiplicación definida en el plano.</p>
+<section id="objetivos-del-capítulo" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="objetivos-del-capítulo">Objetivos del capítulo</h3>
+<p>Al terminar el capítulo, el lector podrá:</p>
+<ul>
+<li>describir puntos y vectores de <span class="math inline">\(\mathbb R^2\)</span>;</li>
+<li>convertir entre coordenadas cartesianas y polares;</li>
+<li>operar vectores y justificar sus propiedades;</li>
+<li>calcular módulo y argumento;</li>
+<li>construir <span class="math inline">\(\mathbb C\)</span> a partir de <span class="math inline">\(\mathbb R^2\)</span>;</li>
+<li>sumar, restar, multiplicar y dividir números complejos;</li>
+<li>utilizar el conjugado y demostrar sus propiedades;</li>
+<li>calcular potencias mediante la fórmula de De Moivre;</li>
+<li>obtener todas las raíces <span class="math inline">\(n\)</span>-ésimas de un complejo;</li>
+<li>relacionar las operaciones algebraicas con movimientos del plano.</li>
+</ul>
+</section>
+</section>
+<section id="sec-r2" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-r2"><span class="header-section-number">3.1</span> Definición de <span class="math inline">\(\mathbb R^2\)</span></h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Definición">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Definición
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El plano real es el producto cartesiano</p>
+<p><span class="math display">\[
+\mathbb R^2=\mathbb R\times\mathbb R
+=\{(x,y):x\in\mathbb R,\ y\in\mathbb R\}.
+\]</span></p>
+<p>Dos pares son iguales si y solo si coinciden sus componentes:</p>
+<p><span class="math display">\[
+(x,y)=(u,v)\iff x=u\ \text{y}\ y=v.
+\]</span></p>
+</div>
+</div>
+<p>Un par <span class="math inline">\((x,y)\)</span> puede interpretarse como un <strong>punto</strong> del plano o como el <strong>vector</strong> que parte del origen y termina en ese punto. El contexto determina la interpretación, pero los cálculos con sus componentes son los mismos.</p>
+<p>Los vectores</p>
+<p><span class="math display">\[
+\mathbf e_1=(1,0),\qquad \mathbf e_2=(0,1)
+\]</span></p>
+<p>forman la base canónica. Todo vector <span class="math inline">\(\mathbf v=(x,y)\)</span> tiene una expresión única</p>
+<p><span class="math display">\[
+\mathbf v=x\mathbf e_1+y\mathbf e_2.
+\]</span></p>
+<section id="ejes-cuadrantes-y-distancia" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejes-cuadrantes-y-distancia">Ejes, cuadrantes y distancia</h3>
+<p>El eje horizontal corresponde a los puntos <span class="math inline">\((x,0)\)</span> y el vertical a <span class="math inline">\((0,y)\)</span>. Los signos de <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> determinan los cuatro cuadrantes.</p>
+<p>Por el teorema de Pitágoras, la distancia de <span class="math inline">\(P=(x,y)\)</span> a <span class="math inline">\(Q=(u,v)\)</span> es</p>
+<p><span class="math display">\[
+d(P,Q)=\sqrt{(x-u)^2+(y-v)^2}.
+\]</span></p>
+<p>En particular, la longitud del vector <span class="math inline">\((x,y)\)</span> es <span class="math inline">\(\sqrt{x^2+y^2}\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Ejemplo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si <span class="math inline">\(P=(-2,3)\)</span> y <span class="math inline">\(Q=(4,-1)\)</span>, entonces</p>
+<p><span class="math display">\[
+d(P,Q)=\sqrt{(-2-4)^2+(3+1)^2}=\sqrt{52}=2\sqrt{13}.
+\]</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-cartesiana-polar" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-cartesiana-polar"><span class="header-section-number">3.2</span> Representaciones cartesiana y polar de vectores en <span class="math inline">\(\mathbb R^2\)</span></h2>
+<p>La representación cartesiana <span class="math inline">\((x,y)\)</span> indica cuánto se avanza horizontal y verticalmente. La representación polar <span class="math inline">\((r,\theta)\)</span> indica una distancia al origen y un ángulo medido desde el eje positivo <span class="math inline">\(x\)</span>.</p>
+<p>Para <span class="math inline">\((x,y)\neq(0,0)\)</span>:</p>
+<p><span class="math display">\[
+r=\sqrt{x^2+y^2},\qquad
+x=r\cos\theta,\qquad
+y=r\sin\theta.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+\cos\theta=\frac{x}{r},\qquad
+\sin\theta=\frac{y}{r}.
+\]</span></p>
+<p>El ángulo debe elegirse en el cuadrante correcto. La igualdad <span class="math inline">\(\tan\theta=y/x\)</span> no basta por sí sola, porque la tangente tiene periodo <span class="math inline">\(\pi\)</span> y no distingue puntos opuestos.</p>
+<div id="fig-plano-complejo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-plano-complejo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/plano-complejo.png" class="img-fluid figure-img" style="width:78.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plano-complejo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.1: Representación cartesiana y polar del punto <span class="math inline">\(z=(3,4)\)</span>.
+</figcaption>
+</figure>
+</div>
+<section id="no-unicidad-del-ángulo" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="no-unicidad-del-ángulo">No unicidad del ángulo</h3>
+<p>El mismo vector queda representado por</p>
+<p><span class="math display">\[
+(r,\theta),\ (r,\theta+2\pi),\ (r,\theta-2\pi),\ldots
+\]</span></p>
+<p>En general, todos sus ángulos son <span class="math inline">\(\theta+2k\pi\)</span>, con <span class="math inline">\(k\in\mathbb Z\)</span>. Para evitar ambigüedad se elige un <strong>argumento principal</strong>, usualmente en <span class="math inline">\((-\pi,\pi]\)</span>.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Caso especial">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Caso especial
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El origen tiene radio <span class="math inline">\(r=0\)</span>, pero no tiene un ángulo determinado. Cualquier dirección termina en el mismo punto cuando la distancia es cero.</p>
+</div>
+</div>
+</section>
+<section id="ejemplo-resuelto" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejemplo-resuelto">Ejemplo resuelto</h3>
+<p>Para el vector <span class="math inline">\((-\sqrt3,1)\)</span>:</p>
+<p><span class="math display">\[
+r=\sqrt{3+1}=2.
+\]</span></p>
+<p>Como está en el segundo cuadrante y</p>
+<p><span class="math display">\[
+\cos\theta=-\frac{\sqrt3}{2},\qquad \sin\theta=\frac12,
+\]</span></p>
+<p>se obtiene <span class="math inline">\(\theta=5\pi/6\)</span>. Su forma polar principal es <span class="math inline">\((2,5\pi/6)\)</span>.</p>
+</section>
+</section>
+<section id="sec-operaciones-r2" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-operaciones-r2"><span class="header-section-number">3.3</span> Operaciones con vectores en <span class="math inline">\(\mathbb R^2\)</span></h2>
+<p>Sean <span class="math inline">\(\mathbf u=(u_1,u_2)\)</span>, <span class="math inline">\(\mathbf v=(v_1,v_2)\)</span> y <span class="math inline">\(\lambda\in\mathbb R\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Definiciones">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Definiciones
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf u+\mathbf v&amp;=(u_1+v_1,u_2+v_2),\\
+\mathbf u-\mathbf v&amp;=(u_1-v_1,u_2-v_2),\\
+\lambda\mathbf u&amp;=(\lambda u_1,\lambda u_2),\\
+\mathbf u\cdot\mathbf v&amp;=u_1v_1+u_2v_2.
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+<p>La suma obedece la regla del paralelogramo. Al colocar dos copias de <span class="math inline">\(\mathbf u\)</span> y <span class="math inline">\(\mathbf v\)</span> con el mismo origen, la diagonal del paralelogramo es <span class="math inline">\(\mathbf u+\mathbf v\)</span>.</p>
+<div id="fig-suma-vectores" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-suma-vectores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/suma-vectores.png" class="img-fluid figure-img" style="width:78.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-suma-vectores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.2: Suma vectorial mediante la regla del paralelogramo.
+</figcaption>
+</figure>
+</div>
+<section id="propiedades-algebraicas" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="propiedades-algebraicas">Propiedades algebraicas</h3>
+<p>Para cualesquiera <span class="math inline">\(\mathbf u,\mathbf v,\mathbf w\in\mathbb R^2\)</span> y <span class="math inline">\(\lambda,\mu\in\mathbb R\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbf u+\mathbf v&amp;=\mathbf v+\mathbf u,\\
+(\mathbf u+\mathbf v)+\mathbf w&amp;=\mathbf u+(\mathbf v+\mathbf w),\\
+\mathbf u+\mathbf 0&amp;=\mathbf u,\\
+\mathbf u+(-\mathbf u)&amp;=\mathbf 0,\\
+\lambda(\mathbf u+\mathbf v)&amp;=\lambda\mathbf u+\lambda\mathbf v,\\
+(\lambda+\mu)\mathbf u&amp;=\lambda\mathbf u+\mu\mathbf u,\\
+(\lambda\mu)\mathbf u&amp;=\lambda(\mu\mathbf u),\\
+1\mathbf u&amp;=\mathbf u.
+\end{aligned}
+\]</span></p>
+<p>Todas se demuestran comparando componentes. Por ejemplo,</p>
+<p><span class="math display">\[
+\lambda(\mathbf u+\mathbf v)
+=(\lambda(u_1+v_1),\lambda(u_2+v_2))
+=\lambda\mathbf u+\lambda\mathbf v.
+\]</span></p>
+</section>
+<section id="producto-punto-y-perpendicularidad" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="producto-punto-y-perpendicularidad">Producto punto y perpendicularidad</h3>
+<p>Si <span class="math inline">\(\varphi\)</span> es el ángulo entre dos vectores no nulos, entonces</p>
+<p><span class="math display">\[
+\mathbf u\cdot\mathbf v=|\mathbf u\|\|\mathbf v\|\cos\varphi.
+\]</span></p>
+<p>De aquí se deduce que <span class="math inline">\(\mathbf u\perp\mathbf v\)</span> si y solo si <span class="math inline">\(\mathbf u\cdot\mathbf v=0\)</span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Ejemplo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para <span class="math inline">\(\mathbf u=(2,1)\)</span> y <span class="math inline">\(\mathbf v=(-1,2)\)</span>,</p>
+<p><span class="math display">\[
+\mathbf u\cdot\mathbf v=2(-1)+1(2)=0.
+\]</span></p>
+<p>Por tanto, los vectores son perpendiculares.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-modulo-argumento" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sec-modulo-argumento"><span class="header-section-number">3.4</span> Módulo y argumento</h2>
+<p>Para un vector <span class="math inline">\(\mathbf v=(x,y)\)</span> se define su módulo o norma euclidiana como</p>
+<p><span class="math display">\[
+\|\mathbf v\|=\sqrt{x^2+y^2}.
+\]</span></p>
+<p>Si <span class="math inline">\(\mathbf v\neq\mathbf 0\)</span>, un argumento de <span class="math inline">\(\mathbf v\)</span> es cualquier ángulo <span class="math inline">\(\theta\)</span> que cumple</p>
+<p><span class="math display">\[
+\mathbf v=\|\mathbf v\|(\cos\theta,\sin\theta).
+\]</span></p>
+<section id="propiedades-del-módulo" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="propiedades-del-módulo">Propiedades del módulo</h3>
+<p>Para <span class="math inline">\(\mathbf u,\mathbf v\in\mathbb R^2\)</span> y <span class="math inline">\(\lambda\in\mathbb R\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\|\mathbf v\|&amp;\geq 0,\\
+\|\mathbf v\|=0&amp;\iff \mathbf v=\mathbf 0,\\
+\|\lambda\mathbf v\|&amp;=|\lambda|\,\|\mathbf v\|,\\
+|\mathbf u\cdot\mathbf v|&amp;\leq \|\mathbf u\|\|\mathbf v\|,\\
+\|\mathbf u+\mathbf v\|&amp;\leq \|\mathbf u\|+\|\mathbf v\|.
+\end{aligned}
+\]</span></p>
+<p>La cuarta desigualdad es la de Cauchy-Schwarz y la quinta es la desigualdad triangular.</p>
+</section>
+<section id="demostración-de-la-desigualdad-triangular" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="demostración-de-la-desigualdad-triangular">Demostración de la desigualdad triangular</h3>
+<p>Usando Cauchy-Schwarz:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\|\mathbf u+\mathbf v\|^2
+&amp;=(\mathbf u+\mathbf v)\cdot(\mathbf u+\mathbf v)\\
+&amp;=\|\mathbf u\|^2+2\mathbf u\cdot\mathbf v+\|\mathbf v\|^2\\
+&amp;\leq \|\mathbf u\|^2+2\|\mathbf u\|\|\mathbf v\|+\|\mathbf v\|^2\\
+&amp;=(\|\mathbf u\|+\|\mathbf v\|)^2.
+\end{aligned}
+\]</span></p>
+<p>Ambos lados son no negativos; al extraer raíz cuadrada se obtiene el resultado.</p>
+</section>
+</section>
+<section id="sec-imaginarios-complejos" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="sec-imaginarios-complejos"><span class="header-section-number">3.5</span> Números imaginarios y complejos</h2>
+<p>Definimos en <span class="math inline">\(\mathbb R^2\)</span> una suma usual y una multiplicación nueva:</p>
+<p><span class="math display">\[
+(a,b)+(c,d)=(a+c,b+d),
+\]</span></p>
+<p><span class="math display">\[
+(a,b)(c,d)=(ac-bd,ad+bc).
+\]</span></p>
+<p>Con estas operaciones, <span class="math inline">\(\mathbb R^2\)</span> se convierte en el campo de los números complejos <span class="math inline">\(\mathbb C\)</span>.</p>
+<p>Sea</p>
+<p><span class="math display">\[
+1=(1,0),\qquad i=(0,1).
+\]</span></p>
+<p>Entonces</p>
+<p><span class="math display">\[
+i^2=(0,1)(0,1)=(-1,0)=-1.
+\]</span></p>
+<p>Además,</p>
+<p><span class="math display">\[
+(a,b)=(a,0)+(0,b)=a(1,0)+b(0,1)=a+bi.
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled" title="Definición">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Definición
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un número complejo es una expresión</p>
+<p><span class="math display">\[
+z=a+bi,\qquad a,b\in\mathbb R,\qquad i^2=-1.
+\]</span></p>
+<p>Se llama <span class="math inline">\(a=\operatorname{Re}(z)\)</span> a su parte real y <span class="math inline">\(b=\operatorname{Im}(z)\)</span> a su parte imaginaria.</p>
+</div>
+</div>
+<p>Dos complejos son iguales exactamente cuando coinciden sus partes:</p>
+<p><span class="math display">\[
+a+bi=c+di\iff a=c\ \text{y}\ b=d.
+\]</span></p>
+<p>Los reales están incluidos en <span class="math inline">\(\mathbb C\)</span> mediante <span class="math inline">\(a=a+0i\)</span>. Un complejo de la forma <span class="math inline">\(bi\)</span> con <span class="math inline">\(b\neq0\)</span> se denomina imaginario puro.</p>
+</section>
+<section id="sec-operaciones-complejos" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="sec-operaciones-complejos"><span class="header-section-number">3.6</span> Operaciones básicas con números complejos</h2>
+<p>Sean <span class="math inline">\(z=a+bi\)</span> y <span class="math inline">\(w=c+di\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+z+w&amp;=(a+c)+(b+d)i,\\
+z-w&amp;=(a-c)+(b-d)i,\\
+zw&amp;=(ac-bd)+(ad+bc)i.
+\end{aligned}
+\]</span></p>
+<p>La regla de multiplicación se obtiene distribuyendo y sustituyendo <span class="math inline">\(i^2\)</span> por <span class="math inline">\(-1\)</span>:</p>
+<p><span class="math display">\[
+(a+bi)(c+di)=ac+adi+bci+bd i^2.
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Ejemplo resuelto">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo resuelto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para <span class="math inline">\(z=3-2i\)</span> y <span class="math inline">\(w=1+4i\)</span>:</p>
+<p><span class="math display">\[
+z+w=4+2i,
+\]</span></p>
+<p><span class="math display">\[
+zw=3+12i-2i-8i^2=11+10i.
+\]</span></p>
+</div>
+</div>
+<section id="interpretación-polar-de-la-multiplicación" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="interpretación-polar-de-la-multiplicación">Interpretación polar de la multiplicación</h3>
+<p>Si</p>
+<p><span class="math display">\[
+z=r(\cos\alpha+i\sin\alpha),\qquad
+w=s(\cos\beta+i\sin\beta),
+\]</span></p>
+<p>entonces, por las identidades de suma de ángulos,</p>
+<p><span class="math display">\[
+zw=rs\bigl(\cos(\alpha+\beta)+i\sin(\alpha+\beta)\bigr).
+\]</span></p>
+<p>Por tanto, multiplicar complejos significa <strong>multiplicar módulos y sumar argumentos</strong>. Geométricamente, multiplicar por <span class="math inline">\(w\)</span> produce una dilatación de factor <span class="math inline">\(|w|\)</span> y una rotación de ángulo <span class="math inline">\(\arg(w)\)</span>.</p>
+</section>
+<section id="ejemplo-geométrico" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejemplo-geométrico">Ejemplo geométrico</h3>
+<p>Multiplicar por <span class="math inline">\(i\)</span> conserva el módulo y suma <span class="math inline">\(\pi/2\)</span> al argumento. Por eso</p>
+<p><span class="math display">\[
+i(a+bi)=-b+ai
+\]</span></p>
+<p>representa una rotación de <span class="math inline">\(90^\circ\)</span> en sentido antihorario.</p>
+</section>
+</section>
+<section id="sec-conjugado" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="sec-conjugado"><span class="header-section-number">3.7</span> Complejo conjugado y sus propiedades</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Definición">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Definición
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El conjugado de <span class="math inline">\(z=a+bi\)</span> es</p>
+<p><span class="math display">\[
+\overline z=a-bi.
+\]</span></p>
+</div>
+</div>
+<p>Geométricamente, la conjugación refleja el punto respecto del eje real.</p>
+<div id="fig-conjugado-complejo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-conjugado-complejo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/conjugado-complejo.png" class="img-fluid figure-img" style="width:72.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-conjugado-complejo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.3: El conjugado <span class="math inline">\(\overline z\)</span> es el reflejo de <span class="math inline">\(z\)</span> respecto del eje real.
+</figcaption>
+</figure>
+</div>
+<section id="propiedades" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="propiedades">Propiedades</h3>
+<p>Para <span class="math inline">\(z,w\in\mathbb C\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\overline{\overline z}&amp;=z,\\
+\overline{z+w}&amp;=\overline z+\overline w,\\
+\overline{zw}&amp;=\overline z\,\overline w,\\
+z\overline z&amp;=|z|^2,\\
+|\overline z|&amp;=|z|,\\
+z\in\mathbb R&amp;\iff z=\overline z.
+\end{aligned}
+\]</span></p>
+<p>También permite recuperar las partes real e imaginaria:</p>
+<p><span class="math display">\[
+\operatorname{Re}(z)=\frac{z+\overline z}{2},
+\qquad
+\operatorname{Im}(z)=\frac{z-\overline z}{2i}.
+\]</span></p>
+</section>
+<section id="demostración-de-la-propiedad-multiplicativa" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="demostración-de-la-propiedad-multiplicativa">Demostración de la propiedad multiplicativa</h3>
+<p>Si <span class="math inline">\(z=a+bi\)</span> y <span class="math inline">\(w=c+di\)</span>, entonces</p>
+<p><span class="math display">\[
+zw=(ac-bd)+(ad+bc)i.
+\]</span></p>
+<p>Por consiguiente,</p>
+<p><span class="math display">\[
+\overline{zw}=(ac-bd)-(ad+bc)i.
+\]</span></p>
+<p>Por otro lado,</p>
+<p><span class="math display">\[
+\overline z\,\overline w=(a-bi)(c-di)
+=(ac-bd)-(ad+bc)i.
+\]</span></p>
+<p>Ambas expresiones son iguales.</p>
+</section>
+</section>
+<section id="sec-division-complejos" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="sec-division-complejos"><span class="header-section-number">3.8</span> División de complejos</h2>
+<p>Para dividir entre <span class="math inline">\(w=c+di\neq0\)</span> se multiplica numerador y denominador por <span class="math inline">\(\overline w\)</span>:</p>
+<p><span class="math display">\[
+\frac{z}{w}
+=\frac{z\overline w}{w\overline w}
+=\frac{(a+bi)(c-di)}{c^2+d^2}.
+\]</span></p>
+<p>Así,</p>
+<p><span class="math display">\[
+\frac{a+bi}{c+di}
+=\frac{ac+bd}{c^2+d^2}
++\frac{bc-ad}{c^2+d^2}i.
+\]</span></p>
+<p>El inverso de un complejo no nulo es</p>
+<p><span class="math display">\[
+z^{-1}=\frac{\overline z}{|z|^2}.
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Ejemplo resuelto">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo resuelto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+\frac{2+3i}{1-2i}
+=\frac{(2+3i)(1+2i)}{(1-2i)(1+2i)}
+=\frac{-4+7i}{5}
+=-\frac45+\frac75i.
+\]</span></p>
+<p>La comprobación consiste en multiplicar el resultado por <span class="math inline">\(1-2i\)</span> y recuperar <span class="math inline">\(2+3i\)</span>.</p>
+</div>
+</div>
+<section id="división-en-forma-polar" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="división-en-forma-polar">División en forma polar</h3>
+<p>Si <span class="math inline">\(z=r(\cos\alpha+i\sin\alpha)\)</span> y <span class="math inline">\(w=s(\cos\beta+i\sin\beta)\)</span>, con <span class="math inline">\(s&gt;0\)</span>, entonces</p>
+<p><span class="math display">\[
+\frac zw=\frac rs\bigl(\cos(\alpha-\beta)+i\sin(\alpha-\beta)\bigr).
+\]</span></p>
+<p>Dividir significa dividir módulos y restar argumentos.</p>
+</section>
+</section>
+<section id="sec-potencias-raices" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="sec-potencias-raices"><span class="header-section-number">3.9</span> Potencias y raíces de complejos</h2>
+<section id="fórmula-de-de-moivre" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="fórmula-de-de-moivre">Fórmula de De Moivre</h3>
+<p>Para <span class="math inline">\(n\in\mathbb Z\)</span> y</p>
+<p><span class="math display">\[
+z=r(\cos\theta+i\sin\theta),
+\]</span></p>
+<p>se cumple</p>
+<p><span class="math display">\[
+z^n=r^n\bigl(\cos(n\theta)+i\sin(n\theta)\bigr).
+\]</span></p>
+<p>Para <span class="math inline">\(n\geq1\)</span>, la demostración se obtiene por inducción usando las fórmulas de suma del seno y el coseno. Para exponentes negativos se aplica el inverso.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Ejemplo: una potencia grande">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo: una potencia grande
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Como</p>
+<p><span class="math display">\[
+1+i=\sqrt2\left(\cos\frac\pi4+i\sin\frac\pi4\right),
+\]</span></p>
+<p>entonces</p>
+<p><span class="math display">\[
+(1+i)^8=(\sqrt2)^8\left(\cos2\pi+i\sin2\pi\right)=16.
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="raíces-n-ésimas" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="raíces-n-ésimas">Raíces <span class="math inline">\(n\)</span>-ésimas</h3>
+<p>Sea</p>
+<p><span class="math display">\[
+z=r(\cos\theta+i\sin\theta),\qquad r&gt;0.
+\]</span></p>
+<p>Las soluciones de <span class="math inline">\(w^n=z\)</span> son</p>
+<p><span class="math display">\[
+w_k=\sqrt[n]{r}\left[
+\cos\left(\frac{\theta+2k\pi}{n}\right)
++i\sin\left(\frac{\theta+2k\pi}{n}\right)
+\right],
+\]</span></p>
+<p>para <span class="math inline">\(k=0,1,\ldots,n-1\)</span>.</p>
+<p>Son exactamente <span class="math inline">\(n\)</span> puntos igualmente espaciados sobre la circunferencia de radio <span class="math inline">\(\sqrt[n]{r}\)</span>.</p>
+</section>
+<section id="raíces-de-la-unidad" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="raíces-de-la-unidad">Raíces de la unidad</h3>
+<p>Las soluciones de <span class="math inline">\(w^n=1\)</span> son</p>
+<p><span class="math display">\[
+\omega_k=\cos\frac{2k\pi}{n}+i\sin\frac{2k\pi}{n}
+=e^{2k\pi i/n},
+\]</span></p>
+<p>con <span class="math inline">\(k=0,\ldots,n-1\)</span>. Forman los vértices de un polígono regular inscrito en la circunferencia unitaria.</p>
+<div id="fig-raices-unidad" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-raices-unidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/raices-unidad.png" class="img-fluid figure-img" style="width:72.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-raices-unidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.4: Las seis raíces de <span class="math inline">\(z^6=1\)</span> forman un hexágono regular.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Ejemplo: raíces cúbicas de $-8$">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo: raíces cúbicas de <span class="math inline">\(-8\)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Escribimos</p>
+<p><span class="math display">\[
+-8=8(\cos\pi+i\sin\pi).
+\]</span></p>
+<p>Las raíces son</p>
+<p><span class="math display">\[
+w_k=2\left[\cos\left(\frac{\pi+2k\pi}{3}\right)
++i\sin\left(\frac{\pi+2k\pi}{3}\right)\right],
+\quad k=0,1,2.
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+w_0=1+\sqrt3i,\qquad w_1=-2,\qquad w_2=1-\sqrt3i.
+\]</span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="síntesis-del-capítulo" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="síntesis-del-capítulo">Síntesis del capítulo</h2>
+<ul>
+<li><span class="math inline">\(\mathbb R^2\)</span> está formado por pares ordenados y proporciona el modelo geométrico de <span class="math inline">\(\mathbb C\)</span>.</li>
+<li>Las coordenadas cartesianas describen componentes; las polares describen módulo y argumento.</li>
+<li>La suma de complejos corresponde a suma vectorial.</li>
+<li>La multiplicación compleja multiplica módulos y suma argumentos.</li>
+<li>El conjugado refleja respecto del eje real y cumple <span class="math inline">\(z\overline z=|z|^2\)</span>.</li>
+<li>La división utiliza el conjugado o, en forma polar, divide módulos y resta argumentos.</li>
+<li>De Moivre transforma potencias en multiplicación de ángulos.</li>
+<li>Toda raíz <span class="math inline">\(n\)</span>-ésima no nula tiene <span class="math inline">\(n\)</span> valores igualmente espaciados.</li>
+</ul>
+</section>
+<section id="errores-frecuentes" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ol type="1">
+<li><strong>Usar <span class="math inline">\(\arctan(y/x)\)</span> sin revisar el cuadrante.</strong> Deben considerarse los signos de <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span>.</li>
+<li><strong>Asignar argumento al cero.</strong> El número <span class="math inline">\(0\)</span> no tiene argumento definido.</li>
+<li><strong>Olvidar que <span class="math inline">\(i^2=-1\)</span>.</strong> Es la fuente principal de errores de signo al multiplicar.</li>
+<li><strong>Conjugar solo una parte de una expresión.</strong> Se cumple <span class="math inline">\(\overline{z+w}=\overline z+\overline w\)</span> y <span class="math inline">\(\overline{zw}=\overline z\,\overline w\)</span>.</li>
+<li><strong>Dividir componentes directamente.</strong> En general, <span class="math inline">\((a+bi)/(c+di)\)</span> no es <span class="math inline">\(a/c+(b/d)i\)</span>.</li>
+<li><strong>Dar una sola raíz <span class="math inline">\(n\)</span>-ésima.</strong> Para <span class="math inline">\(z\neq0\)</span> existen exactamente <span class="math inline">\(n\)</span> raíces distintas.</li>
+<li><strong>Mezclar grados y radianes.</strong> Las fórmulas analíticas se escriben normalmente en radianes.</li>
+<li><strong>Confundir <span class="math inline">\(|z|\)</span> con <span class="math inline">\(\operatorname{Re}(z)\)</span>.</strong> El módulo siempre es real no negativo.</li>
+</ol>
+</section>
+<section id="ejercicios" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="ejercicios">Ejercicios</h2>
+<section id="nivel-básico" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="nivel-básico">Nivel básico</h3>
+<ol type="1">
+<li>Ubique en el plano <span class="math inline">\((3,-2)\)</span>, <span class="math inline">\((-1,4)\)</span>, <span class="math inline">\((-3,-3)\)</span> y <span class="math inline">\((0,5)\)</span> e indique su cuadrante o eje.</li>
+<li>Calcule la distancia entre <span class="math inline">\(P=(2,-1)\)</span> y <span class="math inline">\(Q=(-4,7)\)</span>.</li>
+<li>Convierta <span class="math inline">\((\sqrt3,1)\)</span> y <span class="math inline">\((-1,-\sqrt3)\)</span> a forma polar principal.</li>
+<li>Convierta <span class="math inline">\((r,\theta)=(4,5\pi/6)\)</span> a coordenadas cartesianas.</li>
+<li>Sean <span class="math inline">\(\mathbf u=(2,-3)\)</span> y <span class="math inline">\(\mathbf v=(-1,5)\)</span>. Calcule <span class="math inline">\(\mathbf u+\mathbf v\)</span>, <span class="math inline">\(2\mathbf u-\mathbf v\)</span> y <span class="math inline">\(\mathbf u\cdot\mathbf v\)</span>.</li>
+<li>Calcule <span class="math inline">\(|3-4i|\)</span>, <span class="math inline">\(\operatorname{Re}(3-4i)\)</span> y <span class="math inline">\(\operatorname{Im}(3-4i)\)</span>.</li>
+<li>Efectúe <span class="math inline">\((2+5i)+(-3+i)\)</span> y <span class="math inline">\((2+5i)(-3+i)\)</span>.</li>
+<li>Halle el conjugado de <span class="math inline">\(-7+2i\)</span> y compruebe <span class="math inline">\(z\overline z=|z|^2\)</span>.</li>
+</ol>
+</section>
+<section id="nivel-intermedio" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="nivel-intermedio">Nivel intermedio</h3>
+<ol start="9" type="1">
+<li>Determine el argumento principal de <span class="math inline">\(-2+2i\)</span>, <span class="math inline">\(-3-3i\)</span> y <span class="math inline">\(4-4i\)</span>.</li>
+<li>Pruebe por componentes que <span class="math inline">\(\lambda(\mathbf u+\mathbf v)=\lambda\mathbf u+\lambda\mathbf v\)</span>.</li>
+<li>Determine <span class="math inline">\(x,y\in\mathbb R\)</span> si <span class="math inline">\((2+i)(x+yi)=7-i\)</span>.</li>
+<li>Simplifique <span class="math inline">\((1-i)^6\)</span> mediante De Moivre y compruebe por multiplicación sucesiva.</li>
+<li>Calcule <span class="math inline">\((3+4i)/(2-i)\)</span> en forma cartesiana y polar.</li>
+<li>Encuentre las cuatro raíces de <span class="math inline">\(16\)</span> y represéntelas en el plano.</li>
+<li>Resuelva <span class="math inline">\(z^3=8i\)</span> y verifique cada resultado elevándolo al cubo.</li>
+<li>Describa geométricamente la transformación <span class="math inline">\(T(z)=(-1+i)z\)</span>.</li>
+</ol>
+</section>
+<section id="nivel-formal-y-aplicado" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="nivel-formal-y-aplicado">Nivel formal y aplicado</h3>
+<ol start="17" type="1">
+<li>Demuestre que <span class="math inline">\(|z+w|\leq|z|+|w|\)</span> usando <span class="math inline">\(\operatorname{Re}(z\overline w)\leq|z||w|\)</span>.</li>
+<li>Demuestre que <span class="math inline">\(|z-w|\geq\bigl||z|-|w|\bigr|\)</span>.</li>
+<li>Pruebe que <span class="math inline">\(z+\overline z\)</span> es real y <span class="math inline">\(z-\overline z\)</span> es imaginario puro.</li>
+<li>Demuestre que las raíces de <span class="math inline">\(z^n=1\)</span> son cerradas bajo la multiplicación.</li>
+<li>Si <span class="math inline">\(|z|=1\)</span>, pruebe que <span class="math inline">\(z^{-1}=\overline z\)</span>.</li>
+<li>En corriente alterna, un fasor tiene magnitud <span class="math inline">\(120\)</span> y ángulo <span class="math inline">\(-30^\circ\)</span>. Escríbalo en forma cartesiana y determine el resultado de multiplicarlo por un fasor de magnitud <span class="math inline">\(2\)</span> y ángulo <span class="math inline">\(45^\circ\)</span>.</li>
+</ol>
+</section>
+</section>
+<section id="respuestas-breves-a-ejercicios-seleccionados" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="respuestas-breves-a-ejercicios-seleccionados">Respuestas breves a ejercicios seleccionados</h2>
+<ol start="2" type="1">
+<li><p><span class="math inline">\(10\)</span>.</p></li>
+<li><p><span class="math inline">\((2,\pi/6)\)</span> y <span class="math inline">\((2,-2\pi/3)\)</span>.</p></li>
+<li><p><span class="math inline">\((-2\sqrt3,2)\)</span>.</p></li>
+<li><p><span class="math inline">\((1,2)\)</span>, <span class="math inline">\((5,-11)\)</span> y <span class="math inline">\(-17\)</span>.</p></li>
+<li><p><span class="math inline">\(-1+6i\)</span> y <span class="math inline">\(-11-13i\)</span>.</p></li>
+<li><p><span class="math inline">\(x=13/5\)</span>, <span class="math inline">\(y=-9/5\)</span>.</p></li>
+<li><p><span class="math inline">\(8i\)</span>.</p></li>
+<li><p><span class="math inline">\(\dfrac25+\dfrac{11}{5}i\)</span>.</p></li>
+<li><p><span class="math inline">\(2\)</span>, <span class="math inline">\(2i\)</span>, <span class="math inline">\(-2\)</span> y <span class="math inline">\(-2i\)</span>.</p></li>
+<li><p>De <span class="math inline">\(|z|^2=z\overline z=1\)</span> se sigue <span class="math inline">\(z^{-1}=\overline z\)</span>.</p></li>
+<li><p>Primer fasor: <span class="math inline">\(60\sqrt3-60i\)</span>; producto: magnitud <span class="math inline">\(240\)</span> y ángulo <span class="math inline">\(15^\circ\)</span>.</p></li>
+</ol>
+</section>
+<section id="proyecto-integrador" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="proyecto-integrador">Proyecto integrador</h2>
+<p><strong>Transformaciones complejas y fasores.</strong> Construya un informe que incluya:</p>
+<ol type="1">
+<li>tres números complejos en forma cartesiana y polar;</li>
+<li>su representación en el plano;</li>
+<li>una transformación <span class="math inline">\(T(z)=az\)</span> interpretada como rotación y cambio de escala;</li>
+<li>la comprobación algebraica de módulos y argumentos;</li>
+<li>las raíces cuartas de uno de los complejos;</li>
+<li>una aplicación breve a fasores, señales sinusoidales o rotaciones bidimensionales;</li>
+<li>una conclusión que conecte la geometría con las operaciones.</li>
+</ol>
+</section>
+<section id="referencias-del-capítulo" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="referencias-del-capítulo">Referencias del capítulo</h2>
+<p>La secuencia sigue la Unidad 3 del programa oficial <span class="citation" data-cites="uaslp2011">(<a href="references.html#ref-uaslp2011" role="doc-biblioref">Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011</a>)</span>. Para ampliar la teoría y la interpretación geométrica pueden consultarse <span class="citation" data-cites="silvaLazo2007">Silva y Lazo (<a href="references.html#ref-silvaLazo2007" role="doc-biblioref">2007</a>)</span>, <span class="citation" data-cites="brownChurchill2014">Brown y Churchill (<a href="references.html#ref-brownChurchill2014" role="doc-biblioref">2014</a>)</span> y <span class="citation" data-cites="needham1997">Needham (<a href="references.html#ref-needham1997" role="doc-biblioref">1997</a>)</span>.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-brownChurchill2014" class="csl-entry" role="listitem">
+Brown, James Ward, y Ruel V. Churchill. 2014. <em>Complex Variables and Applications</em>. 9.ª ed. McGraw-Hill Education.
+</div>
+<div id="ref-needham1997" class="csl-entry" role="listitem">
+Needham, Tristan. 1997. <em>Visual Complex Analysis</em>. Oxford University Press.
+</div>
+<div id="ref-silvaLazo2007" class="csl-entry" role="listitem">
+Silva, Juan Manuel, y Adriana Lazo. 2007. <em>Fundamentos de Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo</em>. 7.ª ed. Limusa.
+</div>
+<div id="ref-uaslp2011" class="csl-entry" role="listitem">
+Universidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. <em>Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico</em>. Propuesta de modificación curricular.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<button class="book-menu-toggle" type="button" aria-controls="TOC" aria-expanded="false">
+  <span aria-hidden="true">☰</span> Menú del libro
+</button>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toc = document.querySelector("body > nav#TOC");
+  if (!toc) return;
+
+  toc.setAttribute("aria-label", "Capítulos y subtemas");
+
+  const download = document.createElement("a");
+  download.className = "sidebar-pdf-download";
+  download.href = "Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-5.pdf";
+  download.setAttribute("download", "");
+  download.textContent = "Descargar PDF";
+  toc.appendChild(download);
+
+  const toggle = document.querySelector(".book-menu-toggle");
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      const open = document.body.classList.toggle("book-menu-open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+  }
+
+  toc.querySelectorAll("a[href^='#']").forEach(function (link) {
+    link.addEventListener("click", function () {
+      document.body.classList.remove("book-menu-open");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  const links = Array.from(toc.querySelectorAll("a[href^='#']"));
+  const targets = links.map(function (link) {
+    const id = decodeURIComponent(link.getAttribute("href").slice(1));
+    return { link: link, target: document.getElementById(id) };
+  }).filter(function (item) { return item.target; });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      const visible = entries.filter(function (entry) { return entry.isIntersecting; })
+        .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
+      if (!visible.length) return;
+      links.forEach(function (link) { link.classList.remove("active"); });
+      const current = targets.find(function (item) { return item.target === visible[0].target; });
+      if (current) {
+        current.link.classList.add("active");
+        current.link.scrollIntoView({ block: "nearest" });
+      }
+    }, { rootMargin: "-12% 0px -76% 0px", threshold: 0 });
+    targets.forEach(function (item) { observer.observe(item.target); });
+  }
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./02-enteros-reales.html" class="pagination-link" aria-label="Números enteros y reales">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Números enteros y reales</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./04-polinomios.html" class="pagination-link" aria-label="Polinomios">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Polinomios</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Licencia CC BY-NC-SA 4.0</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
