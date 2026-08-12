@@ -1,34 +1,13 @@
-# Presentación {.unnumbered}
-
-Este libro presenta los fundamentos del Álgebra Superior con rigor matemático y una exposición accesible. Cada tema parte de su significado intuitivo, establece después la definición formal y desarrolla propiedades, demostraciones, ejemplos, contraejemplos y ejercicios graduados.
-
-La obra está concebida como complemento teórico de *Álgebra Superior con aplicaciones en R y GeoGebra*. La numeración de los capítulos y de las secciones principales será compatible entre ambos libros para facilitar la consulta cruzada.
+# Portada {.unnumbered .unlisted}
 
 ::: {.content-visible when-format="html"}
-<p class="pdf-download-hero"><a class="btn btn-primary" href="Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-5.pdf" download>Descargar el libro en PDF</a></p>
+![](figures/portada-editorial.png){fig-alt="Portada de Fundamentos Matemáticos del Álgebra Superior" width=100%}
 :::
 
-## Propósito {.unnumbered .unlisted}
+::: {.content-visible when-format="html"}
+<p class="pdf-download-hero"><a class="btn btn-primary" href="Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-5.pdf" download>Descargar el libro completo en PDF</a></p>
+:::
 
-El lector no solo aprenderá a efectuar operaciones. También aprenderá a:
-
-- interpretar la notación matemática;
-- distinguir una definición de una propiedad;
-- reconocer por qué una afirmación es verdadera o falsa;
-- construir demostraciones elementales;
-- identificar hipótesis, conclusiones y contraejemplos;
-- relacionar lógica, conjuntos, relaciones y funciones.
-
-## Organización didáctica {.unnumbered .unlisted}
-
-Los capítulos contienen objetivos, definiciones destacadas, ejemplos resueltos, demostraciones, errores frecuentes, ejercicios por nivel, síntesis y referencias. Los apartados internos no se numeran para conservar un índice claro.
-
-La obra incluye, al final, un índice temático, un índice de símbolos, un índice de figuras, un índice de cuadros y una bibliografía general. En la versión PDF, el índice general y las listas automáticas de figuras y cuadros se generan junto con la numeración de páginas.
-
-## Estructura actual {.unnumbered .unlisted}
-
-- **Capítulo 1. Lógica y conjuntos:** proposiciones, operaciones, relaciones, funciones, cardinalidad y álgebra de Boole.
-- **Capítulo 2. Números enteros y reales:** inducción, divisibilidad, primos, estructura de los reales, exponentes y valor absoluto.
-- **Capítulo 3. Números complejos:** plano real, forma polar, construcción de $\mathbb C$, operaciones, conjugado, división, potencias y raíces.
-- **Capítulo 4. Polinomios:** aritmética y división, raíces y multiplicidades, teorema fundamental del álgebra, factorización, funciones racionales y fracciones parciales.
-- **Capítulo 5. Métodos numéricos para la estimación de raíces:** acotación, separación, Sturm, Descartes, bisección, secante y Newton, con criterios de error y evaluación mediante Horner.
+**Jesús Gilberto Rodríguez Escobedo**  
+Primera edición digital, 2026 · San Luis Potosí, México  
+Libro abierto bajo licencia CC BY-NC-SA 4.0.

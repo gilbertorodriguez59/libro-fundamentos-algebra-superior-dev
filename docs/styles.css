@@ -67,6 +67,13 @@ table { font-size: 0.96rem; }
 .pdf-download-hero { margin: 1.35rem 0 1.6rem; }
 .pdf-download-hero .btn::before { content: "↓ "; }
 
+.quarto-cover-image,
+.quarto-title-block img,
+main img[alt^="Portada"] {
+  border-radius: 0.55rem;
+  box-shadow: 0 0.55rem 1.5rem rgba(7, 31, 57, 0.22);
+}
+
 /* Navegación lateral para la salida autónoma de Pandoc. En una salida
    normal de Quarto, la barra propia del libro mantiene el control. */
 .book-menu-toggle { display: none; }

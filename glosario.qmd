@@ -1,0 +1,35 @@
+# Glosario {.unnumbered}
+
+**Algoritmo.** Procedimiento finito y ordenado para resolver un problema o efectuar un cálculo.
+
+**Biyectiva.** Función que es simultáneamente inyectiva y suprayectiva.
+
+**Cardinalidad.** Número de elementos de un conjunto finito o medida de tamaño para conjuntos más generales.
+
+**Conjunto.** Colección bien definida de objetos llamados elementos.
+
+**Contraejemplo.** Caso concreto que demuestra que una afirmación general es falsa.
+
+**Demostración.** Argumento lógico que establece una conclusión a partir de definiciones, hipótesis y resultados previos.
+
+**Dominio.** Conjunto de entradas para las que una función está definida.
+
+**Función.** Correspondencia que asigna a cada elemento del dominio exactamente un elemento del codominio.
+
+**Inyectiva.** Función en la que entradas distintas tienen imágenes distintas.
+
+**Iteración.** Repetición de un procedimiento utilizando el resultado anterior para obtener una nueva aproximación.
+
+**Número complejo.** Número de la forma $a+bi$, donde $a,b\in\mathbb R$ e $i^2=-1$.
+
+**Polinomio.** Expresión finita de potencias enteras no negativas de una variable con coeficientes en un conjunto dado.
+
+**Proposición.** Enunciado al que puede asignarse un valor de verdad.
+
+**Raíz.** Valor $\alpha$ para el cual $p(\alpha)=0$.
+
+**Relación.** Subconjunto de un producto cartesiano.
+
+**Suprayectiva.** Función cuya imagen coincide con todo el codominio.
+
+**Tolerancia.** Umbral previamente elegido para detener un método aproximado.

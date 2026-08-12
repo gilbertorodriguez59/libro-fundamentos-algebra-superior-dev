@@ -1,0 +1,7 @@
+# Agradecimientos {.unnumbered}
+
+Esta obra es resultado de muchos años de estudio, docencia y diálogo académico. Agradezco especialmente a los estudiantes cuyas preguntas, dificultades y formas diversas de aprender han impulsado la búsqueda de explicaciones más claras y ejemplos más útiles.
+
+Reconozco a los profesores, colegas e instituciones con quienes he compartido cursos y proyectos relacionados con matemáticas, computación, inteligencia artificial y tecnología educativa. Cada experiencia ha contribuido a la perspectiva didáctica de estas páginas.
+
+Agradezco también a mi familia por su acompañamiento, paciencia y apoyo durante el desarrollo de este proyecto editorial abierto.

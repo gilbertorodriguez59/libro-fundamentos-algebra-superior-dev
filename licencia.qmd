@@ -1,0 +1,16 @@
+# Licencia y uso académico {.unnumbered}
+
+Esta obra se distribuye bajo la licencia **Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)**.
+
+La licencia permite copiar, redistribuir, adaptar y utilizar el material con fines docentes y académicos, siempre que:
+
+1. se reconozca adecuadamente la autoría;
+2. no se utilice la obra con fines comerciales sin autorización;
+3. las adaptaciones se compartan bajo la misma licencia;
+4. no se sugiera que el autor respalda una adaptación o institución sin consentimiento.
+
+Los nombres de programas, plataformas y productos pertenecen a sus respectivos titulares. Para publicaciones comerciales o incorporaciones sustanciales en otras obras debe solicitarse autorización al autor.
+
+## Uso académico responsable {.unnumbered .unlisted}
+
+Profesores y estudiantes pueden enlazar, imprimir y adaptar fragmentos para cursos, siempre que conserven la atribución, la referencia bibliográfica y la licencia. Las soluciones y demostraciones deben emplearse como apoyo al aprendizaje, no como sustituto del trabajo intelectual del estudiante.

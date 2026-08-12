@@ -1,0 +1,30 @@
+# Créditos editoriales {.unnumbered}
+
+**Título:** *Fundamentos Matemáticos del Álgebra Superior*  
+**Subtítulo:** Conceptos, demostraciones y métodos  
+**Autor:** Jesús Gilberto Rodríguez Escobedo  
+**Edición:** Primera edición digital, 2026  
+**Lugar de edición:** San Luis Potosí, México  
+**Producción editorial:** edición académica abierta desarrollada con Quarto, LaTeX, Git y GitHub Pages.  
+**Formatos:** libro web navegable y PDF descargable.
+
+## Cómo citar esta obra {.unnumbered .unlisted}
+
+Rodríguez Escobedo, J. G. (2026). *Fundamentos Matemáticos del Álgebra Superior: conceptos, demostraciones y métodos*. Primera edición digital. San Luis Potosí, México.
+
+## Entrada BibTeX sugerida {.unnumbered .unlisted}
+
+```bibtex
+@book{rodriguez2026fundamentosalgebra,
+  author    = {Rodríguez Escobedo, Jesús Gilberto},
+  title     = {Fundamentos Matemáticos del Álgebra Superior},
+  subtitle  = {Conceptos, demostraciones y métodos},
+  year      = {2026},
+  address   = {San Luis Potosí, México},
+  note      = {Primera edición digital, libro web y PDF}
+}
+```
+
+## Volumen complementario {.unnumbered .unlisted}
+
+La obra se complementa con *Álgebra Superior con aplicaciones en R y GeoGebra*, cuya numeración y secuencia temática se coordinan con este volumen.

@@ -4,39 +4,129 @@
     "href": "index.html",
     "title": "Fundamentos Matemáticos del Álgebra Superior",
     "section": "",
-    "text": "Presentación\nEste libro presenta los fundamentos del Álgebra Superior con rigor matemático y una exposición accesible. Cada tema parte de su significado intuitivo, establece después la definición formal y desarrolla propiedades, demostraciones, ejemplos, contraejemplos y ejercicios graduados.\nLa obra está concebida como complemento teórico de Álgebra Superior con aplicaciones en R y GeoGebra. La numeración de los capítulos y de las secciones principales será compatible entre ambos libros para facilitar la consulta cruzada.\nDescargar el libro en PDF",
+    "text": "Portada\n\n\nDescargar el libro completo en PDF\n\nJesús Gilberto Rodríguez Escobedo\nPrimera edición digital, 2026 · San Luis Potosí, México\nLibro abierto bajo licencia CC BY-NC-SA 4.0.",
+    "crumbs": [
+      "Portada"
+    ]
+  },
+  {
+    "objectID": "bienvenida.html",
+    "href": "bienvenida.html",
+    "title": "Bienvenida",
+    "section": "",
+    "text": "Objetivos generales\nBienvenido a Fundamentos Matemáticos del Álgebra Superior. Este libro está pensado para acompañar al lector desde el significado intuitivo de una idea hasta su formulación rigurosa. Aquí no basta con aplicar una regla: interesa comprender qué afirma, por qué funciona, bajo qué hipótesis puede utilizarse y cómo se relaciona con otros conceptos.\nEl texto forma una pareja editorial con Álgebra Superior con aplicaciones en R y GeoGebra. El presente volumen desarrolla definiciones, propiedades, demostraciones y métodos; el volumen aplicado permite experimentar, visualizar y verificar resultados mediante recursos computacionales.\nSe recomienda leer cada sección con lápiz y papel, reproducir los ejemplos, explicar en palabras cada paso y resolver los ejercicios antes de consultar las respuestas breves.",
+    "crumbs": [
+      "Bienvenida"
+    ]
+  },
+  {
+    "objectID": "bienvenida.html#objetivos-generales",
+    "href": "bienvenida.html#objetivos-generales",
+    "title": "Bienvenida",
+    "section": "",
+    "text": "dominar el lenguaje de la lógica, los conjuntos y las funciones;\ncomprender las estructuras de los números enteros, reales y complejos;\nestudiar polinomios, raíces y funciones racionales con precisión;\njustificar resultados mediante argumentos matemáticos claros;\nresolver problemas de manera ordenada, verificable y crítica.",
+    "crumbs": [
+      "Bienvenida"
+    ]
+  },
+  {
+    "objectID": "creditos.html",
+    "href": "creditos.html",
+    "title": "Créditos editoriales",
+    "section": "",
+    "text": "Cómo citar esta obra\nTítulo: Fundamentos Matemáticos del Álgebra Superior\nSubtítulo: Conceptos, demostraciones y métodos\nAutor: Jesús Gilberto Rodríguez Escobedo\nEdición: Primera edición digital, 2026\nLugar de edición: San Luis Potosí, México\nProducción editorial: edición académica abierta desarrollada con Quarto, LaTeX, Git y GitHub Pages.\nFormatos: libro web navegable y PDF descargable.\nRodríguez Escobedo, J. G. (2026). Fundamentos Matemáticos del Álgebra Superior: conceptos, demostraciones y métodos. Primera edición digital. San Luis Potosí, México.",
+    "crumbs": [
+      "Créditos editoriales"
+    ]
+  },
+  {
+    "objectID": "creditos.html#entrada-bibtex-sugerida",
+    "href": "creditos.html#entrada-bibtex-sugerida",
+    "title": "Créditos editoriales",
+    "section": "Entrada BibTeX sugerida",
+    "text": "Entrada BibTeX sugerida\n@book{rodriguez2026fundamentosalgebra,\n  author    = {Rodríguez Escobedo, Jesús Gilberto},\n  title     = {Fundamentos Matemáticos del Álgebra Superior},\n  subtitle  = {Conceptos, demostraciones y métodos},\n  year      = {2026},\n  address   = {San Luis Potosí, México},\n  note      = {Primera edición digital, libro web y PDF}\n}",
+    "crumbs": [
+      "Créditos editoriales"
+    ]
+  },
+  {
+    "objectID": "creditos.html#volumen-complementario",
+    "href": "creditos.html#volumen-complementario",
+    "title": "Créditos editoriales",
+    "section": "Volumen complementario",
+    "text": "Volumen complementario\nLa obra se complementa con Álgebra Superior con aplicaciones en R y GeoGebra, cuya numeración y secuencia temática se coordinan con este volumen.",
+    "crumbs": [
+      "Créditos editoriales"
+    ]
+  },
+  {
+    "objectID": "licencia.html",
+    "href": "licencia.html",
+    "title": "Licencia y uso académico",
+    "section": "",
+    "text": "Uso académico responsable\nEsta obra se distribuye bajo la licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0).\nLa licencia permite copiar, redistribuir, adaptar y utilizar el material con fines docentes y académicos, siempre que:\nLos nombres de programas, plataformas y productos pertenecen a sus respectivos titulares. Para publicaciones comerciales o incorporaciones sustanciales en otras obras debe solicitarse autorización al autor.\nProfesores y estudiantes pueden enlazar, imprimir y adaptar fragmentos para cursos, siempre que conserven la atribución, la referencia bibliográfica y la licencia. Las soluciones y demostraciones deben emplearse como apoyo al aprendizaje, no como sustituto del trabajo intelectual del estudiante.",
+    "crumbs": [
+      "Licencia y uso académico"
+    ]
+  },
+  {
+    "objectID": "prefacio.html",
+    "href": "prefacio.html",
+    "title": "Prefacio",
+    "section": "",
+    "text": "Este libro nace de una convicción formada durante décadas de docencia universitaria: el Álgebra Superior se aprende mejor cuando el rigor se acompaña de explicaciones claras, ejemplos cuidadosamente graduados y oportunidades para comprobar cada razonamiento.\nEn muchos cursos, el estudiante aprende a manipular símbolos sin distinguir con precisión una definición, una propiedad, una hipótesis o una conclusión. En otros, la formalización aparece tan pronto y de manera tan compacta que resulta difícil construir una intuición inicial. Esta obra busca un punto de equilibrio: rigor sin oscuridad.\nLa secuencia didáctica parte del lenguaje lógico y de conjuntos, avanza por las estructuras numéricas y llega al estudio algebraico y numérico de polinomios y raíces. Cada capítulo combina conceptos, ejemplos, demostraciones, errores frecuentes, ejercicios graduados y referencias propias.\nEl volumen teórico dialoga con Álgebra Superior con aplicaciones en R y GeoGebra. Ambos pueden utilizarse por separado, pero juntos permiten recorrer un ciclo formativo completo: comprender, demostrar, calcular, visualizar, experimentar e interpretar.\nMi aspiración es que el lector no recuerde únicamente procedimientos, sino que adquiera una manera de pensar: formular con precisión, justificar lo que afirma, reconocer límites y verificar resultados.\nJesús Gilberto Rodríguez Escobedo\nSan Luis Potosí, México",
+    "crumbs": [
+      "Prefacio"
+    ]
+  },
+  {
+    "objectID": "agradecimientos.html",
+    "href": "agradecimientos.html",
+    "title": "Agradecimientos",
+    "section": "",
+    "text": "Esta obra es resultado de muchos años de estudio, docencia y diálogo académico. Agradezco especialmente a los estudiantes cuyas preguntas, dificultades y formas diversas de aprender han impulsado la búsqueda de explicaciones más claras y ejemplos más útiles.\nReconozco a los profesores, colegas e instituciones con quienes he compartido cursos y proyectos relacionados con matemáticas, computación, inteligencia artificial y tecnología educativa. Cada experiencia ha contribuido a la perspectiva didáctica de estas páginas.\nAgradezco también a mi familia por su acompañamiento, paciencia y apoyo durante el desarrollo de este proyecto editorial abierto.",
+    "crumbs": [
+      "Agradecimientos"
+    ]
+  },
+  {
+    "objectID": "presentacion.html",
+    "href": "presentacion.html",
+    "title": "Presentación",
+    "section": "",
+    "text": "Organización didáctica\nFundamentos Matemáticos del Álgebra Superior ofrece una exposición progresiva de los conceptos que sostienen buena parte de la matemática universitaria: lógica, conjuntos, relaciones, funciones, sistemas numéricos, números complejos, polinomios y métodos de aproximación de raíces.\nLa obra está dirigida principalmente a estudiantes y profesores de matemáticas, ingeniería, computación y ciencias aplicadas. También puede servir a lectores que desean reconstruir sus bases matemáticas antes de estudiar álgebra lineal, cálculo, probabilidad, métodos numéricos o aprendizaje automático.\nCada capítulo contiene objetivos, conceptos fundamentales, desarrollos paso a paso, ejemplos y contraejemplos, demostraciones, síntesis, errores frecuentes, ejercicios por nivel, proyecto integrador y referencias específicas.",
     "crumbs": [
       "Presentación"
     ]
   },
   {
-    "objectID": "index.html#propósito",
-    "href": "index.html#propósito",
-    "title": "Fundamentos Matemáticos del Álgebra Superior",
-    "section": "Propósito",
-    "text": "Propósito\nEl lector no solo aprenderá a efectuar operaciones. También aprenderá a:\n\ninterpretar la notación matemática;\ndistinguir una definición de una propiedad;\nreconocer por qué una afirmación es verdadera o falsa;\nconstruir demostraciones elementales;\nidentificar hipótesis, conclusiones y contraejemplos;\nrelacionar lógica, conjuntos, relaciones y funciones.",
-    "crumbs": [
-      "Presentación"
-    ]
-  },
-  {
-    "objectID": "index.html#organización-didáctica",
-    "href": "index.html#organización-didáctica",
-    "title": "Fundamentos Matemáticos del Álgebra Superior",
-    "section": "Organización didáctica",
-    "text": "Organización didáctica\nLos capítulos contienen objetivos, definiciones destacadas, ejemplos resueltos, demostraciones, errores frecuentes, ejercicios por nivel, síntesis y referencias. Los apartados internos no se numeran para conservar un índice claro.\nLa obra incluye, al final, un índice temático, un índice de símbolos, un índice de figuras, un índice de cuadros y una bibliografía general. En la versión PDF, el índice general y las listas automáticas de figuras y cuadros se generan junto con la numeración de páginas.",
-    "crumbs": [
-      "Presentación"
-    ]
-  },
-  {
-    "objectID": "index.html#estructura-actual",
-    "href": "index.html#estructura-actual",
-    "title": "Fundamentos Matemáticos del Álgebra Superior",
+    "objectID": "presentacion.html#estructura-actual",
+    "href": "presentacion.html#estructura-actual",
+    "title": "Presentación",
     "section": "Estructura actual",
-    "text": "Estructura actual\n\nCapítulo 1. Lógica y conjuntos: proposiciones, operaciones, relaciones, funciones, cardinalidad y álgebra de Boole.\nCapítulo 2. Números enteros y reales: inducción, divisibilidad, primos, estructura de los reales, exponentes y valor absoluto.\nCapítulo 3. Números complejos: plano real, forma polar, construcción de \\(\\mathbb C\\), operaciones, conjugado, división, potencias y raíces.\nCapítulo 4. Polinomios: aritmética y división, raíces y multiplicidades, teorema fundamental del álgebra, factorización, funciones racionales y fracciones parciales.\nCapítulo 5. Métodos numéricos para la estimación de raíces: acotación, separación, Sturm, Descartes, bisección, secante y Newton, con criterios de error y evaluación mediante Horner.",
+    "text": "Estructura actual\n\nLógica y conjuntos.\nNúmeros enteros y reales.\nNúmeros complejos.\nPolinomios.\nMétodos numéricos para la estimación de raíces.\n\nLos índices temático, de símbolos, figuras y cuadros facilitan la consulta transversal. El glosario reúne definiciones breves y la bibliografía general complementa las referencias de cada capítulo.",
     "crumbs": [
       "Presentación"
+    ]
+  },
+  {
+    "objectID": "introduccion.html",
+    "href": "introduccion.html",
+    "title": "Introducción",
+    "section": "",
+    "text": "El Álgebra Superior estudia estructuras, operaciones y relaciones que permiten expresar y resolver problemas con precisión. Su lenguaje aparece en todas las áreas de las matemáticas y sirve como fundamento para modelos científicos, algoritmos y métodos computacionales.\nLa primera pregunta no es únicamente “¿cómo se calcula?”, sino también “¿qué objeto se está estudiando?”, “¿qué propiedades se suponen?”, “¿qué conclusión se desea demostrar?” y “¿cómo puede verificarse el resultado?”. Por ello, el libro comienza con lógica, conjuntos, relaciones y funciones; después estudia los números enteros, reales y complejos; finalmente desarrolla la teoría de polinomios y los métodos numéricos para aproximar sus raíces.\nEl lector encontrará argumentos formales, pero siempre precedidos o acompañados por interpretación. Una demostración no se presenta como adorno: muestra por qué una afirmación se sigue necesariamente de sus hipótesis. Un contraejemplo tampoco es una excepción menor: permite reconocer exactamente dónde termina el alcance de una propiedad.\nPara aprovechar el texto conviene trabajar activamente: reconstruir cálculos, completar pasos omitidos, dibujar representaciones, comparar métodos y explicar cada resultado con lenguaje propio.",
+    "crumbs": [
+      "Introducción"
+    ]
+  },
+  {
+    "objectID": "notacion.html",
+    "href": "notacion.html",
+    "title": "Notación general",
+    "section": "",
+    "text": "Notación\nSignificado general\n\n\n\n\n\\(A,B,U\\)\nconjuntos; \\(U\\) suele denotar el conjunto universal\n\n\n\\(x\\in A\\), \\(x\\notin A\\)\npertenencia y no pertenencia\n\n\n\\(A\\subseteq B\\)\n\\(A\\) es subconjunto de \\(B\\)\n\n\n\\(\\varnothing\\)\nconjunto vacío\n\n\n\\(A\\cup B\\), \\(A\\cap B\\), \\(A^c\\)\nunión, intersección y complemento\n\n\n\\(\\forall\\), \\(\\exists\\)\ncuantificadores universal y existencial\n\n\n\\(\\neg\\), \\(\\land\\), \\(\\lor\\), \\(\\Rightarrow\\), \\(\\Leftrightarrow\\)\nconectivos lógicos\n\n\n\\(\\mathbb N,\\mathbb Z,\\mathbb Q,\\mathbb R,\\mathbb C\\)\nnaturales, enteros, racionales, reales y complejos\n\n\n\\(|A|\\)\ncardinalidad de \\(A\\)\n\n\n\\(|x|\\)\nvalor absoluto de \\(x\\); el contexto lo distingue de la cardinalidad\n\n\n\\(a\\mid b\\)\n\\(a\\) divide a \\(b\\)\n\n\n\\(f:A\\to B\\)\nfunción con dominio \\(A\\) y codominio \\(B\\)\n\n\n\\(\\deg p\\)\ngrado del polinomio \\(p\\)\n\n\n\\(p'(x)\\)\nderivada de \\(p\\) respecto de \\(x\\)\n\n\n\\(\\varepsilon\\)\ntolerancia o cota de error\n\n\n\nLas letras mayúsculas suelen representar conjuntos; las minúsculas, elementos o escalares; \\(p,q,r\\) se usan con frecuencia para polinomios. Toda convención local se declara al comenzar la sección correspondiente.",
+    "crumbs": [
+      "Notación general"
     ]
   },
   {
@@ -880,6 +970,16 @@
     ]
   },
   {
+    "objectID": "glosario.html",
+    "href": "glosario.html",
+    "title": "Glosario",
+    "section": "",
+    "text": "Algoritmo. Procedimiento finito y ordenado para resolver un problema o efectuar un cálculo.\nBiyectiva. Función que es simultáneamente inyectiva y suprayectiva.\nCardinalidad. Número de elementos de un conjunto finito o medida de tamaño para conjuntos más generales.\nConjunto. Colección bien definida de objetos llamados elementos.\nContraejemplo. Caso concreto que demuestra que una afirmación general es falsa.\nDemostración. Argumento lógico que establece una conclusión a partir de definiciones, hipótesis y resultados previos.\nDominio. Conjunto de entradas para las que una función está definida.\nFunción. Correspondencia que asigna a cada elemento del dominio exactamente un elemento del codominio.\nInyectiva. Función en la que entradas distintas tienen imágenes distintas.\nIteración. Repetición de un procedimiento utilizando el resultado anterior para obtener una nueva aproximación.\nNúmero complejo. Número de la forma \\(a+bi\\), donde \\(a,b\\in\\mathbb R\\) e \\(i^2=-1\\).\nPolinomio. Expresión finita de potencias enteras no negativas de una variable con coeficientes en un conjunto dado.\nProposición. Enunciado al que puede asignarse un valor de verdad.\nRaíz. Valor \\(\\alpha\\) para el cual \\(p(\\alpha)=0\\).\nRelación. Subconjunto de un producto cartesiano.\nSuprayectiva. Función cuya imagen coincide con todo el codominio.\nTolerancia. Umbral previamente elegido para detener un método aproximado.",
+    "crumbs": [
+      "Glosario"
+    ]
+  },
+  {
     "objectID": "indices.html",
     "href": "indices.html",
     "title": "Índices de consulta",
@@ -937,6 +1037,16 @@
     "text": "Las referencias se presentan en una sola lista general para evitar duplicaciones. Cada capítulo conserva al final una nota breve que identifica sus fuentes principales.\n\n\nBrown, James Ward, and Ruel V. Churchill. 2014. Complex Variables\nand Applications. 9th ed. McGraw-Hill Education.\n\n\nBurden, Richard L., and J. Douglas Faires. 2011. Numerical\nAnalysis. 9th ed. Brooks/Cole, Cengage Learning.\n\n\nBurton, David M. 2011. Elementary Number Theory. 7th ed.\nMcGraw-Hill.\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1999. Álgebra Superior. 2nd ed. Trillas.\n\n\nChapra, Steven C., and Raymond P. Canale. 2015. Numerical Methods\nfor Engineers. 7th ed. McGraw-Hill Education.\n\n\nCox, David A., John Little, and Donal O’Shea. 2015. Ideals,\nVarieties, and Algorithms. 4th ed. Springer.\n\n\nEpp, Susanna S. 2011. Discrete Mathematics with Applications.\n4th ed. Brooks/Cole, Cengage Learning.\n\n\nHalmos, Paul R. 1960. Naive Set Theory. D. Van Nostrand\nCompany.\n\n\nKurosh, Aleksandr G. 1987. Curso de Álgebra Superior. Editorial\nMir.\n\n\nNeedham, Tristan. 1997. Visual Complex Analysis. Oxford\nUniversity Press.\n\n\nNiven, Ivan, Herbert S. Zuckerman, and Hugh L. Montgomery. 1991. An\nIntroduction to the Theory of Numbers. 5th ed. John Wiley &\nSons.\n\n\nRosen, Kenneth H. 2019. Discrete Mathematics and Its\nApplications. 8th ed. McGraw-Hill Education.\n\n\nSilva, Juan Manuel, and Adriana Lazo. 2007. Fundamentos de\nMatemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo.\n7th ed. Limusa.\n\n\nTocci, Ronald J., and Neal S. Widmer. 2003. Sistemas Digitales:\nPrincipios y Aplicaciones. 8th ed. Pearson Educación.\n\n\nUniversidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011.\nPrograma Sintético de Álgebra Superior, Carrera de Ingeniero\nElectrónico. Propuesta de modificación curricular.",
     "crumbs": [
       "Referencias generales"
+    ]
+  },
+  {
+    "objectID": "autor.html",
+    "href": "autor.html",
+    "title": "Acerca del autor",
+    "section": "",
+    "text": "Jesús Gilberto Rodríguez Escobedo es Licenciado en Físico-Matemáticas, Maestro en Ciencias de la Computación y Maestro en Inteligencia Artificial. Cuenta con cerca de 45 años de experiencia en docencia universitaria y ha impartido cursos de matemáticas, estadística, computación, ciencia de datos y aprendizaje automático.\nSu labor académica se ha desarrollado principalmente en la Universidad Autónoma de San Luis Potosí, en las facultades de Ciencias e Ingeniería. Entre sus intereses se encuentran la enseñanza rigurosa y accesible de las matemáticas, la informática educativa, los sistemas tutoriales inteligentes, la ciencia de datos y las aplicaciones de la inteligencia artificial.\nEste libro forma parte de un proyecto editorial abierto que integra textos teóricos, ejemplos paso a paso, recursos interactivos y materiales computacionales para apoyar tanto el aprendizaje autónomo como la enseñanza universitaria.",
+    "crumbs": [
+      "Acerca del autor"
     ]
   }
 ]

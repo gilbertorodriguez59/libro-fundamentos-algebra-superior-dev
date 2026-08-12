@@ -1,0 +1,14 @@
+# Prefacio {.unnumbered}
+
+Este libro nace de una convicción formada durante décadas de docencia universitaria: el Álgebra Superior se aprende mejor cuando el rigor se acompaña de explicaciones claras, ejemplos cuidadosamente graduados y oportunidades para comprobar cada razonamiento.
+
+En muchos cursos, el estudiante aprende a manipular símbolos sin distinguir con precisión una definición, una propiedad, una hipótesis o una conclusión. En otros, la formalización aparece tan pronto y de manera tan compacta que resulta difícil construir una intuición inicial. Esta obra busca un punto de equilibrio: **rigor sin oscuridad**.
+
+La secuencia didáctica parte del lenguaje lógico y de conjuntos, avanza por las estructuras numéricas y llega al estudio algebraico y numérico de polinomios y raíces. Cada capítulo combina conceptos, ejemplos, demostraciones, errores frecuentes, ejercicios graduados y referencias propias.
+
+El volumen teórico dialoga con *Álgebra Superior con aplicaciones en R y GeoGebra*. Ambos pueden utilizarse por separado, pero juntos permiten recorrer un ciclo formativo completo: comprender, demostrar, calcular, visualizar, experimentar e interpretar.
+
+Mi aspiración es que el lector no recuerde únicamente procedimientos, sino que adquiera una manera de pensar: formular con precisión, justificar lo que afirma, reconocer límites y verificar resultados.
+
+Jesús Gilberto Rodríguez Escobedo  
+San Luis Potosí, México

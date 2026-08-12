@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b2748"/><stop offset="0.55" stop-color="#154f82"/><stop offset="1" stop-color="#07182d"/>
+    </linearGradient>
+    <pattern id="reticula" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#a9c8df" stroke-opacity=".10" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="1600" fill="url(#fondo)"/><rect width="1200" height="1600" fill="url(#reticula)"/>
+  <circle cx="955" cy="235" r="290" fill="#d8a83e" opacity=".13"/><circle cx="955" cy="235" r="205" fill="none" stroke="#e6bd63" stroke-width="3" opacity=".45"/>
+  <path d="M770 315 C850 115 1060 105 1115 285 C1175 480 925 570 805 435 C715 335 820 230 930 270 C1020 300 1015 410 935 435" fill="none" stroke="#f1d58c" stroke-width="8" opacity=".85"/>
+  <g fill="none" stroke="#83c5e8" stroke-width="5" opacity=".78">
+    <path d="M120 1140 C280 960 420 1240 570 1040 S850 980 1060 790"/>
+    <path d="M120 1205 L275 1050 L430 1180 L605 930 L775 1045 L1060 700" opacity=".48"/>
+  </g>
+  <g fill="#f4c95d"><circle cx="275" cy="1050" r="11"/><circle cx="430" cy="1180" r="11"/><circle cx="605" cy="930" r="11"/><circle cx="775" cy="1045" r="11"/><circle cx="1060" cy="700" r="11"/></g>
+  <text x="90" y="170" fill="#f4c95d" font-family="DejaVu Sans, sans-serif" font-size="34" letter-spacing="5">LIBRO ABIERTO · EDICIÓN DIGITAL</text>
+  <text x="90" y="420" fill="white" font-family="DejaVu Sans, sans-serif" font-size="64" font-weight="700">Fundamentos Matemáticos</text>
+  <text x="90" y="505" fill="white" font-family="DejaVu Sans, sans-serif" font-size="64" font-weight="700">del Álgebra Superior</text>
+  <rect x="92" y="575" width="185" height="8" fill="#f4c95d"/>
+  <text x="90" y="650" fill="#d8e8f4" font-family="DejaVu Sans, sans-serif" font-size="39">Conceptos, demostraciones y métodos</text>
+  <text x="90" y="1370" fill="white" font-family="DejaVu Sans, sans-serif" font-size="39" font-weight="600">Jesús Gilberto Rodríguez Escobedo</text>
+  <text x="90" y="1430" fill="#bcd3e4" font-family="DejaVu Sans, sans-serif" font-size="28">Primera edición digital · San Luis Potosí, México · 2026</text>
+  <text x="90" y="1500" fill="#f4c95d" font-family="DejaVu Sans, sans-serif" font-size="25">RIGOR SIN OSCURIDAD · COMPRENSIÓN PASO A PASO</text>
+</svg>

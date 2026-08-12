@@ -4,5 +4,7 @@
 .RData
 .Rproj.user/
 *.tex
+!header.tex
+!before-body.tex
 
 **/*.quarto_ipynb

@@ -1,0 +1,9 @@
+# Introducción {.unnumbered}
+
+El Álgebra Superior estudia estructuras, operaciones y relaciones que permiten expresar y resolver problemas con precisión. Su lenguaje aparece en todas las áreas de las matemáticas y sirve como fundamento para modelos científicos, algoritmos y métodos computacionales.
+
+La primera pregunta no es únicamente “¿cómo se calcula?”, sino también “¿qué objeto se está estudiando?”, “¿qué propiedades se suponen?”, “¿qué conclusión se desea demostrar?” y “¿cómo puede verificarse el resultado?”. Por ello, el libro comienza con lógica, conjuntos, relaciones y funciones; después estudia los números enteros, reales y complejos; finalmente desarrolla la teoría de polinomios y los métodos numéricos para aproximar sus raíces.
+
+El lector encontrará argumentos formales, pero siempre precedidos o acompañados por interpretación. Una demostración no se presenta como adorno: muestra por qué una afirmación se sigue necesariamente de sus hipótesis. Un contraejemplo tampoco es una excepción menor: permite reconocer exactamente dónde termina el alcance de una propiedad.
+
+Para aprovechar el texto conviene trabajar activamente: reconstruir cálculos, completar pasos omitidos, dibujar representaciones, comparar métodos y explicar cada resultado con lenguaje propio.

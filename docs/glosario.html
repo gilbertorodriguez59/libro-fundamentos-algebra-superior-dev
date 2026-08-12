@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Referencias generales – Fundamentos Matemáticos del Álgebra Superior</title>
+<title>Glosario – Fundamentos Matemáticos del Álgebra Superior</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,26 +26,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -55,8 +36,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./autor.html" rel="next">
-<link href="./indices.html" rel="prev">
+<link href="./indices.html" rel="next">
+<link href="./05-metodos-raices.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -95,6 +76,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -108,7 +118,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">Referencias generales</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./glosario.html">Glosario</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -223,7 +233,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./glosario.html" class="sidebar-item-text sidebar-link">
+  <a href="./glosario.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Glosario</span></a>
   </div>
 </li>
@@ -235,7 +245,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Referencias generales</span></a>
   </div>
 </li>
@@ -258,7 +268,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Referencias generales</h1>
+<h1 class="title">Glosario</h1>
 </div>
 
 
@@ -275,72 +285,23 @@ div.csl-indent {
 </header>
 
 
-<p>Las referencias se presentan en una sola lista general para evitar duplicaciones. Cada capítulo conserva al final una nota breve que identifica sus fuentes principales.</p>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-brownChurchill2014" class="csl-entry" role="listitem">
-Brown, James Ward, and Ruel V. Churchill. 2014. <em>Complex Variables
-and Applications</em>. 9th ed. McGraw-Hill Education.
-</div>
-<div id="ref-burdenFaires2011" class="csl-entry" role="listitem">
-Burden, Richard L., and J. Douglas Faires. 2011. <em>Numerical
-Analysis</em>. 9th ed. Brooks/Cole, Cengage Learning.
-</div>
-<div id="ref-burton2011" class="csl-entry" role="listitem">
-Burton, David M. 2011. <em>Elementary Number Theory</em>. 7th ed.
-McGraw-Hill.
-</div>
-<div id="ref-cardenas1999" class="csl-entry" role="listitem">
-Cárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.
-1999. <em>Álgebra Superior</em>. 2nd ed. Trillas.
-</div>
-<div id="ref-chapraCanale2015" class="csl-entry" role="listitem">
-Chapra, Steven C., and Raymond P. Canale. 2015. <em>Numerical Methods
-for Engineers</em>. 7th ed. McGraw-Hill Education.
-</div>
-<div id="ref-cox2015" class="csl-entry" role="listitem">
-Cox, David A., John Little, and Donal O’Shea. 2015. <em>Ideals,
-Varieties, and Algorithms</em>. 4th ed. Springer.
-</div>
-<div id="ref-epp2011" class="csl-entry" role="listitem">
-Epp, Susanna S. 2011. <em>Discrete Mathematics with Applications</em>.
-4th ed. Brooks/Cole, Cengage Learning.
-</div>
-<div id="ref-halmos1960" class="csl-entry" role="listitem">
-Halmos, Paul R. 1960. <em>Naive Set Theory</em>. D. Van Nostrand
-Company.
-</div>
-<div id="ref-kurosh1987" class="csl-entry" role="listitem">
-Kurosh, Aleksandr G. 1987. <em>Curso de Álgebra Superior</em>. Editorial
-Mir.
-</div>
-<div id="ref-needham1997" class="csl-entry" role="listitem">
-Needham, Tristan. 1997. <em>Visual Complex Analysis</em>. Oxford
-University Press.
-</div>
-<div id="ref-niven1991" class="csl-entry" role="listitem">
-Niven, Ivan, Herbert S. Zuckerman, and Hugh L. Montgomery. 1991. <em>An
-Introduction to the Theory of Numbers</em>. 5th ed. John Wiley &amp;
-Sons.
-</div>
-<div id="ref-rosen2019" class="csl-entry" role="listitem">
-Rosen, Kenneth H. 2019. <em>Discrete Mathematics and Its
-Applications</em>. 8th ed. McGraw-Hill Education.
-</div>
-<div id="ref-silvaLazo2007" class="csl-entry" role="listitem">
-Silva, Juan Manuel, and Adriana Lazo. 2007. <em>Fundamentos de
-Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo</em>.
-7th ed. Limusa.
-</div>
-<div id="ref-tocci2003" class="csl-entry" role="listitem">
-Tocci, Ronald J., and Neal S. Widmer. 2003. <em>Sistemas Digitales:
-Principios y Aplicaciones</em>. 8th ed. Pearson Educación.
-</div>
-<div id="ref-uaslp2011" class="csl-entry" role="listitem">
-Universidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011.
-<em>Programa Sintético de Álgebra Superior, Carrera de Ingeniero
-Electrónico</em>. Propuesta de modificación curricular.
-</div>
-</div>
+<p><strong>Algoritmo.</strong> Procedimiento finito y ordenado para resolver un problema o efectuar un cálculo.</p>
+<p><strong>Biyectiva.</strong> Función que es simultáneamente inyectiva y suprayectiva.</p>
+<p><strong>Cardinalidad.</strong> Número de elementos de un conjunto finito o medida de tamaño para conjuntos más generales.</p>
+<p><strong>Conjunto.</strong> Colección bien definida de objetos llamados elementos.</p>
+<p><strong>Contraejemplo.</strong> Caso concreto que demuestra que una afirmación general es falsa.</p>
+<p><strong>Demostración.</strong> Argumento lógico que establece una conclusión a partir de definiciones, hipótesis y resultados previos.</p>
+<p><strong>Dominio.</strong> Conjunto de entradas para las que una función está definida.</p>
+<p><strong>Función.</strong> Correspondencia que asigna a cada elemento del dominio exactamente un elemento del codominio.</p>
+<p><strong>Inyectiva.</strong> Función en la que entradas distintas tienen imágenes distintas.</p>
+<p><strong>Iteración.</strong> Repetición de un procedimiento utilizando el resultado anterior para obtener una nueva aproximación.</p>
+<p><strong>Número complejo.</strong> Número de la forma <span class="math inline">\(a+bi\)</span>, donde <span class="math inline">\(a,b\in\mathbb R\)</span> e <span class="math inline">\(i^2=-1\)</span>.</p>
+<p><strong>Polinomio.</strong> Expresión finita de potencias enteras no negativas de una variable con coeficientes en un conjunto dado.</p>
+<p><strong>Proposición.</strong> Enunciado al que puede asignarse un valor de verdad.</p>
+<p><strong>Raíz.</strong> Valor <span class="math inline">\(\alpha\)</span> para el cual <span class="math inline">\(p(\alpha)=0\)</span>.</p>
+<p><strong>Relación.</strong> Subconjunto de un producto cartesiano.</p>
+<p><strong>Suprayectiva.</strong> Función cuya imagen coincide con todo el codominio.</p>
+<p><strong>Tolerancia.</strong> Umbral previamente elegido para detener un método aproximado.</p>
 
 
 
@@ -801,13 +762,13 @@ document.addEventListener("DOMContentLoaded", function () {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./indices.html" class="pagination-link" aria-label="Índices de consulta">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Índices de consulta</span>
+      <a href="./05-metodos-raices.html" class="pagination-link" aria-label="Métodos numéricos para la estimación de raíces">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Métodos numéricos para la estimación de raíces</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./autor.html" class="pagination-link" aria-label="Acerca del autor">
-        <span class="nav-page-text">Acerca del autor</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./indices.html" class="pagination-link" aria-label="Índices de consulta">
+        <span class="nav-page-text">Índices de consulta</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,0 +1,15 @@
+# Bienvenida {.unnumbered}
+
+Bienvenido a *Fundamentos Matemáticos del Álgebra Superior*. Este libro está pensado para acompañar al lector desde el significado intuitivo de una idea hasta su formulación rigurosa. Aquí no basta con aplicar una regla: interesa comprender qué afirma, por qué funciona, bajo qué hipótesis puede utilizarse y cómo se relaciona con otros conceptos.
+
+El texto forma una pareja editorial con *Álgebra Superior con aplicaciones en R y GeoGebra*. El presente volumen desarrolla definiciones, propiedades, demostraciones y métodos; el volumen aplicado permite experimentar, visualizar y verificar resultados mediante recursos computacionales.
+
+## Objetivos generales {.unnumbered .unlisted}
+
+- dominar el lenguaje de la lógica, los conjuntos y las funciones;
+- comprender las estructuras de los números enteros, reales y complejos;
+- estudiar polinomios, raíces y funciones racionales con precisión;
+- justificar resultados mediante argumentos matemáticos claros;
+- resolver problemas de manera ordenada, verificable y crítica.
+
+Se recomienda leer cada sección con lápiz y papel, reproducir los ejemplos, explicar en palabras cada paso y resolver los ejercicios antes de consultar las respuestas breves.

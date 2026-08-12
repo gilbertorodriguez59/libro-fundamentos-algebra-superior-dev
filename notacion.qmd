@@ -1,0 +1,21 @@
+# Notación general {.unnumbered}
+
+| Notación | Significado general |
+|---|---|
+| $A,B,U$ | conjuntos; $U$ suele denotar el conjunto universal |
+| $x\in A$, $x\notin A$ | pertenencia y no pertenencia |
+| $A\subseteq B$ | $A$ es subconjunto de $B$ |
+| $\varnothing$ | conjunto vacío |
+| $A\cup B$, $A\cap B$, $A^c$ | unión, intersección y complemento |
+| $\forall$, $\exists$ | cuantificadores universal y existencial |
+| $\neg$, $\land$, $\lor$, $\Rightarrow$, $\Leftrightarrow$ | conectivos lógicos |
+| $\mathbb N,\mathbb Z,\mathbb Q,\mathbb R,\mathbb C$ | naturales, enteros, racionales, reales y complejos |
+| $|A|$ | cardinalidad de $A$ |
+| $|x|$ | valor absoluto de $x$; el contexto lo distingue de la cardinalidad |
+| $a\mid b$ | $a$ divide a $b$ |
+| $f:A\to B$ | función con dominio $A$ y codominio $B$ |
+| $\deg p$ | grado del polinomio $p$ |
+| $p'(x)$ | derivada de $p$ respecto de $x$ |
+| $\varepsilon$ | tolerancia o cota de error |
+
+Las letras mayúsculas suelen representar conjuntos; las minúsculas, elementos o escalares; $p,q,r$ se usan con frecuencia para polinomios. Toda convención local se declara al comenzar la sección correspondiente.

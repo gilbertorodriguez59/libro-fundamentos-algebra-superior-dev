@@ -1,0 +1,7 @@
+# Acerca del autor {.unnumbered}
+
+**Jesús Gilberto Rodríguez Escobedo** es Licenciado en Físico-Matemáticas, Maestro en Ciencias de la Computación y Maestro en Inteligencia Artificial. Cuenta con cerca de 45 años de experiencia en docencia universitaria y ha impartido cursos de matemáticas, estadística, computación, ciencia de datos y aprendizaje automático.
+
+Su labor académica se ha desarrollado principalmente en la Universidad Autónoma de San Luis Potosí, en las facultades de Ciencias e Ingeniería. Entre sus intereses se encuentran la enseñanza rigurosa y accesible de las matemáticas, la informática educativa, los sistemas tutoriales inteligentes, la ciencia de datos y las aplicaciones de la inteligencia artificial.
+
+Este libro forma parte de un proyecto editorial abierto que integra textos teóricos, ejemplos paso a paso, recursos interactivos y materiales computacionales para apoyar tanto el aprendizaje autónomo como la enseñanza universitaria.
