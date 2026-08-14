@@ -5,7 +5,7 @@
 :::
 
 ::: {.content-visible when-format="html"}
-<p class="pdf-download-hero"><a class="btn btn-primary" href="Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-5.pdf" download>Descargar el libro completo en PDF</a></p>
+<p class="pdf-download-hero"><a class="btn btn-primary" href="https://gilbertorodriguez59.github.io/libro-fundamentos-algebra-superior-dev/Fundamentos-Matematicos-Algebra-Superior-Capitulos-1-5.pdf">Descargar el libro completo en PDF</a></p>
 :::
 
 **Jesús Gilberto Rodríguez Escobedo**  
